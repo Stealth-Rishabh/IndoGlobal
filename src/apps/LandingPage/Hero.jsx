@@ -1,8 +1,11 @@
 import React from 'react'
+import Container from '../../components/wrappers/Container'
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <section className="">
+        hero
+    </section>
   )
 }
 

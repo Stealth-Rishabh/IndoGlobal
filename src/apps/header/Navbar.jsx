@@ -12,7 +12,7 @@ export default function Navbar() {
           <img src={logo2} alt="22 Years" className="h-12 object-contain" />
         </div>
         <nav>
-          <ul className="flex space-x-4">
+          <ul className=" space-x-4 hidden md:flex">
             {["Home", "About-Us", "Courses", "Admissions", "Events", "Placements", "Why Indo Global", "Contact-Us"].map(
               (item) => (
                 <li key={item}>
