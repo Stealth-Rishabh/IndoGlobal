@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button"
 import logo from "../../assets/IndoGlobalLogo.svg"
 import logo2 from "../../assets/nav-logo-2.svg"
 export default function Navbar() {
+
+const navlinks = ["Home", "About-Us", "Courses", "Admissions", "Events", "Placements", "Why Indo Global", "Contact-Us"]
+
   return (
     <div className="bg-red-600 py-4 px-4">
       <div className="container mx-auto flex justify-between items-center">
@@ -13,7 +16,7 @@ export default function Navbar() {
         </div>
         <nav>
           <ul className=" space-x-4 hidden md:flex">
-            {["Home", "About-Us", "Courses", "Admissions", "Events", "Placements", "Why Indo Global", "Contact-Us"].map(
+            {navlinks.map(
               (item) => (
                 <li key={item}>
                   <Button variant="ghost" className="text-white hover:text-red-200 hover:bg-red-700">
