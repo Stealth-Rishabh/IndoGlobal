@@ -16,7 +16,7 @@ const Hero = () => {
       <img
         src={title}
         alt="title"
-        className=" absolute top-20 left-10 sm:top-28 sm:left-28 w-[80vw] sm:w-[40vw] top"
+        className=" absolute top-20 left-10 sm:top-28 sm:left-32 w-[80vw] sm:w-[40vw] top"
       />
     </section>
   );
