@@ -23,7 +23,7 @@ const RankSlider = () => {
                   <CardContent className="p-0  h-96 sm:h-[600px] shadow-none ">
                     <div className="w-full flex justify-between">
                       <h2 className="scroll-m-20 text-4xl font-semibold tracking-tight first:mt-0">
-                        Rankings, Accereditations &amp; Tie-up.
+                        Rankings, Accereditations <br /> &amp; Tie-up.
                       </h2>
                       <ButtonSq
                         label="Know more..."
@@ -34,11 +34,12 @@ const RankSlider = () => {
                     </div>
                     <div className="div">
                       <div className="">
-
+                        <span className="text-[15rem] font-extrabold stroke-primary-color text-transparent">
+                          {" "}
+                          3
+                        </span>
                       </div>
-                      <div className="">
-
-                      </div>
+                      <div className=""></div>
                     </div>
                   </CardContent>
                 </Card>
