@@ -38,7 +38,7 @@ const RankSlider = () => {
         alt=""
         className="absolute object-cover w-full h-full -z-10 "
       />
-      <Container className="relative lg:mb-14">
+      <Container className="relative lg:mb">
         <Carousel
           plugins={[plugin.current]}
           setApi={setApi}
