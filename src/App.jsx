@@ -8,7 +8,7 @@ import {
 import Header from "./apps/header/Header";
 import Landing from "./apps/LandingPage/Landing";
 
-
+import './App.css'
 function App() {
   return (
     <Router>
