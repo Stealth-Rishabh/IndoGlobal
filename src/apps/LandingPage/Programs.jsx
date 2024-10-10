@@ -111,16 +111,16 @@ export default function Programs() {
                         </p>
                       </>
                     )}
-                    <div className="flex gap-4 mt-8 flex-co">
+                    <div className="flex gap-1 mt-8 flex-co">
                       <ButtonSq
-                        className="text-sm text-white bg-red-500 hover:bg-red-600"
+                        className="text-xs sm:text-base text-white bg-red-500 hover:bg-red-600 w-fit"
                         iconDiv="bg-red-800"
                         label="Apply Now"
                       />
                       <ButtonSq
-                        className="text-sm text-gray-800 bg-white hover:bg-slate-100"
+                        className="text-xs sm:text-base text-gray-800 bg-white hover:bg-slate-100 w-fit"
                         iconDiv="bg-gray-400"
-                        label="Know More..."
+                        label="Know More"
                       />
                     </div>
                   </CardContent>
