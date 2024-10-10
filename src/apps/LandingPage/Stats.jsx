@@ -1,65 +1,42 @@
-"use client"
+import React from 'react';
+import bg from "../../assets/stats-bg.svg";
 
-import { useEffect, useRef } from "react"
-import { motion, useInView, useAnimation } from "framer-motion"
-import bg from '../../assets/stats-bg.svg'
-const stats = [
-  { value: 70, label: "Acres of Campus" },
-  { value: 22, label: "Years of Excellence", suffix: "+" },
-  { value: 10000, label: "Alumni", suffix: "+" },
-  { value: 20, label: "Coures", suffix: "+" },
-]
-
-const CountUp = ({ value, suffix = "" }) => {
-  const controls = useAnimation()
-  const ref = useRef(null)
-  const inView = useInView(ref)
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.5, ease: "easeOut" }
-      })
-    }
-  }, [controls, inView])
+const Stats = () => {
+  const stats = [
+    { data: "70", title: "Acres of Campus" },
+    { data: "22+", title: "Years of Excellence" },
+    { data: "10000+", title: "Alumni" },
+    { data: "20+", title: "Courses" },
+  ];
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={controls}
-      className="text-6xl font-bold text-white"
-    >
-      {value}{suffix}
-    </motion.div>
-  )
-}
-
-
-export default function Stats() {
-  return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <section className="py-28 relative">
       <img
         src={bg}
-        alt="College Building"
-        className="absolute inset-0 w-full h-full object-cover"
+        alt="stats"
+        className="absolute object-cover top-0 h-full w-full -z-10"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-50" />
-      <div className="relative z-10 h-full flex flex-col justify-center items-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center px-4">
-          INDO GLOBAL GROUPS OF COLLEGES
-        </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <CountUp value={stat.value} suffix={stat.suffix} className=""/>
-              <div className="text-sm text-white mt-2 text-center border-b-4 border-red-600">{stat.label}</div>
+      <div className="bg-black inset-0 opacity-70 absolute z-20" />
+      <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative z-30">
+        {/* text - start */}
+        <div className="mb-10 md:mb-16">
+          <h2 className="mb-4 text-center text-3xl font-semibold text-white sm:text-5xl">INDO GLOBAL GROUPS OF COLLEGES</h2>
+          <p className="mx-auto max-w-screen-md text-center text-gray-300 sm:text-lg lg:text-xl">
+            Spanning 70 acres, with 22+ years of academic excellence, over 10,000 alumni, and 20+ specialized courses, we continue to shape future professionals.
+          </p>
+        </div>
+        {/* text - end */}
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-0 md:divide-x-2  md:divide-red-700">
+          {stats.map((item, index) => (
+            <div key={index} className="flex flex-col items-center md:p-4">
+              <div className="text-4xl font-semibold text-white sm:text-6xl">{item.data}</div>
+              <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">{item.title}</div>
             </div>
           ))}
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
+
+export default Stats;
