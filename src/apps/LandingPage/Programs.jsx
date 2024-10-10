@@ -33,7 +33,8 @@ export default function Programs() {
           title="Programs Offered"
           subtitle='Explore our program offerings, including degree programs, undergraduate and graduate programs, and more.'
           subtitleClassName="text-gray-500"
-          titleClassName="text-blue-800 mb-6 md:text-6xl"
+          titleClassName="text-blue-800 mb-6 md:text-6xl text-4xl font-bold"
+        //   className="font-bold text-center"
         />
         <Tabs defaultValue="undergraduate" className="w-full relative">
           <TabsList className="grid w-full grid-cols-3 h-8 sm:h-16 rounded-none bg-white p-0">
@@ -58,7 +59,7 @@ export default function Programs() {
                         onClick={() => handleProgramClick(category.id, index)}
                         className={`cursor-pointer  flex items-center ${
                           activePrograms[category.id] === index
-                            ? "text-red-500 text-lg sm:text-2xl font-semibold"
+                            ? "text-red-500 text-lg drop-shadow-md sm:text-2xl font-semibold"
                             : " text-black text-base sm:text-xl"
                         }`}
                       >
@@ -106,23 +107,16 @@ export default function Programs() {
                         </p>
                       </>
                     )}
-                    <div className="flex space-x-4 mt-8">
-                      {/* <Button className="bg-red-500 hover:bg-red-600">
-                        Apply Now <ChevronRight className="ml-2 h-4 w-4" />
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="text-white border-white hover:bg-white hover:text-gray-900"
-                      >
-                        Know more... <ChevronRight className="ml-2 h-4 w-4" />
-                      </Button> */}
+                    <div className="flex flex-co gap-4  mt-8">
+                    
+                     
                       <ButtonSq
-                        className="bg-red-500 hover:bg-red-600 text-white "
+                        className="bg-red-500 hover:bg-red-600 text-white text-sm"
                         iconDiv="bg-red-800"
                         label="Apply Now"
                       />
                       <ButtonSq
-                        className="bg-white hover:bg-slate-100 text-gray-800"
+                        className="bg-white hover:bg-slate-100 text-gray-800 text-sm"
                         iconDiv="bg-gray-400"
                         label="Know More..."
                       />
