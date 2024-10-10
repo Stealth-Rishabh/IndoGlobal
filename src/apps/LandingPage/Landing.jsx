@@ -1,5 +1,6 @@
 import Container from "../../components/wrappers/Container"
 import Hero from "./Hero"
+import Programs from "./Programs"
 import RankSlider from "./RankSlider"
 import Stats from "./Stats"
 
@@ -9,6 +10,7 @@ const Landing = () => {
     <Hero/>
     <RankSlider/>
     <Stats/>
+    <Programs/>
     </>
   )
 }
