@@ -13,6 +13,7 @@ import Container from "../../components/wrappers/Container";
 import Heading from "../../components/Heading";
 import { programData } from "./programData";
 import ButtonSq from "../../components/ButtonSq";
+import { div } from "framer-motion/client";
 
 export default function Programs() {
   const [activePrograms, setActivePrograms] = useState(
@@ -27,22 +28,25 @@ export default function Programs() {
   };
 
   return (
-    <Container className="container md:px-0">
+    <div className="  ">
+
+    
+    <Container className="container md:px-0 ">
       <div className="mx-auto">
         <Heading
           title="Programs Offered"
-          subtitle='Explore our program offerings, including degree programs, undergraduate and graduate programs, and more.'
+          subtitle="Explore our program offerings, including degree programs, undergraduate and graduate programs, and more."
           subtitleClassName="text-gray-500"
           titleClassName="text-blue-800 mb-6 md:text-6xl text-4xl font-bold"
-        //   className="font-bold text-center"
+          //   className="font-bold text-center"
         />
-        <Tabs defaultValue="undergraduate" className="w-full relative">
-          <TabsList className="grid w-full grid-cols-3 h-8 sm:h-16 rounded-none bg-white p-0">
+        <Tabs defaultValue="undergraduate" className="relative w-full">
+          <TabsList className="grid w-full h-8 grid-cols-3 p-0 bg-white rounded-none sm:h-16">
             {programData.map((category) => (
               <TabsTrigger
                 key={category.id}
                 value={category.id}
-                className="data-[state=active]:bg-red-500 data-[state=inactive]:bg-gray-200 py-1 h-full data-[state=active]:text-white text-sm sm:text-xl rounded-none border-r-2 border-gray-300 last:border-r-0"
+                className="data-[state=active]:bg-red-500 data-[state=inactive]:bg-gray-200 py-1 h-full data-[state=active]:text-white text-sm sm:text-xl rounded-none border-r-2 border-gray-300 active:scale-95 transition-all   last:border-r-0"
               >
                 {category.title}
               </TabsTrigger>
@@ -50,24 +54,24 @@ export default function Programs() {
           </TabsList>
           {programData.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
                 <div className="space-y-2">
-                  <ul className="list-inside list-disc space-y-4">
+                  <ul className="space-y-4 list-disc list-inside">
                     {category.programs.map((program, index) => (
                       <li
                         key={index}
                         onClick={() => handleProgramClick(category.id, index)}
-                        className={`cursor-pointer  flex items-center ${
+                        className={`cursor-pointer   flex items-center ${
                           activePrograms[category.id] === index
                             ? "text-red-500 text-lg drop-shadow-md sm:text-2xl font-semibold"
                             : " text-black text-base sm:text-xl"
                         }`}
                       >
                         {activePrograms[category.id] === index && (
-                          <SendHorizontal className="mr-2 h-5 w-5" />
+                          <SendHorizontal className="w-5 h-5 mr-2" />
                         )}
                         {activePrograms[category.id] != index && (
-                          <ChevronRight className="mr-2 h-5 w-5" />
+                          <ChevronRight className="w-5 h-5 mr-2" />
                         )}
                         {program.name}
                       </li>
@@ -76,14 +80,14 @@ export default function Programs() {
                 </div>
                 <Card className="bg-gray-900 text-white sm:absolute sm:w-[70%] sm:-right-64 sm:top-8 rounded-none  sm:py-10 sm:px-14 sm:-z-10">
                   <CardHeader>
-                    <CardTitle className="text-3xl sm:text-5xl font-bold">
+                    <CardTitle className="text-3xl font-bold sm:text-5xl">
                       {activePrograms[category.id] !== null
                         ? category.programs[activePrograms[category.id]].name
                         : category.defaultCard.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="sm:w-2/3">
-                    <CardDescription className="text-gray-300 text-lg">
+                    <CardDescription className="text-lg text-gray-300">
                       {activePrograms[category.id] !== null
                         ? category.programs[activePrograms[category.id]]
                             .description
@@ -91,14 +95,14 @@ export default function Programs() {
                     </CardDescription>
                     {activePrograms[category.id] !== null && (
                       <>
-                        <p className="text-white mt-4">
+                        <p className="mt-4 text-white">
                           <strong>Duration:</strong>{" "}
                           {
                             category.programs[activePrograms[category.id]]
                               .duration
                           }
                         </p>
-                        <p className="text-white mt-2">
+                        <p className="mt-2 text-white">
                           <strong>Eligibility:</strong>{" "}
                           {
                             category.programs[activePrograms[category.id]]
@@ -107,16 +111,14 @@ export default function Programs() {
                         </p>
                       </>
                     )}
-                    <div className="flex flex-co gap-4  mt-8">
-                    
-                     
+                    <div className="flex gap-4 mt-8 flex-co">
                       <ButtonSq
-                        className="bg-red-500 hover:bg-red-600 text-white text-sm"
+                        className="text-sm text-white bg-red-500 hover:bg-red-600"
                         iconDiv="bg-red-800"
                         label="Apply Now"
                       />
                       <ButtonSq
-                        className="bg-white hover:bg-slate-100 text-gray-800 text-sm"
+                        className="text-sm text-gray-800 bg-white hover:bg-slate-100"
                         iconDiv="bg-gray-400"
                         label="Know More..."
                       />
@@ -129,5 +131,6 @@ export default function Programs() {
         </Tabs>
       </div>
     </Container>
+    </div>
   );
 }
