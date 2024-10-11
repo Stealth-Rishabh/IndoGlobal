@@ -75,7 +75,7 @@ export default function Footer() {
     const socialIcons = [
         { name: "Linkedin", icon: Linkedin },
         { name: "Facebook", icon: Facebook },
-        { name: "Twitter", icon: Twitter },
+        // { name: "Twitter", icon: Twitter },
         { name: "Instagram", icon: Instagram },
         { name: "YouTube", icon: Youtube },
     ];
@@ -86,8 +86,8 @@ export default function Footer() {
                 {/* First section with social icons and address */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-8">
                     <div>
-                        <h2 className="text-3xl font-bold text-red-600 mb-4">Indo Global Education Foundation</h2>
-                        <div className="flex space-x-4 mb-6 ">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-red-600 mb-4">Indo Global Education Foundation</h2>
+                        <div className="flex flex-wrap gap-4 mb-6 ">
                             {socialIcons.map((platform) => (
                                 <a
                                     key={platform.name}
