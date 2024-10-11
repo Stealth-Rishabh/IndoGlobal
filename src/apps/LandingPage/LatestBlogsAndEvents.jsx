@@ -7,6 +7,7 @@ import img3 from "../../assets/blogs3.svg";
 import img4 from "../../assets/blogs4.svg";
 import { Calendar } from "lucide-react";
 import Heading from "../../components/Heading";
+import Container from "../../components/wrappers/Container";
 export default function LatestBlogsAndEvents() {
   const events = [
     {
@@ -30,7 +31,7 @@ export default function LatestBlogsAndEvents() {
   ];
 
   return (
-    <div className="container px-4 py-8 mx-auto">
+    <Container className="">
       <Heading
         title="Latest Blogs & Events"
         titleClassName="lg:font-extrabold font-bold text-secondary-color"
@@ -86,6 +87,6 @@ export default function LatestBlogsAndEvents() {
           ))}
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

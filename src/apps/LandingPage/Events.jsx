@@ -14,7 +14,8 @@ const Events = () => {
       registerLabel: "Register Now",
     },
     {
-      title: "Productivity Session on Ground Breaking Ideas and Inventive Methodologies",
+      title:
+        "Productivity Session on Ground Breaking Ideas and Inventive Methodologies",
       date: "20th June 2023",
       image: img2,
       registerLabel: "Register Now",
@@ -56,9 +57,7 @@ const Events = () => {
           <EventCard
             key={index}
             eventData={eventData}
-            className={
-              index == 1 ? "sm:col-span-2 sm:row-span-2" : "h-96 "
-            }
+            className={index == 1 ? "sm:col-span-2 sm:row-span-2" : "h-96 "}
             imgClassname={index == 1 ? "sm:h-[75%]" : "h-3/5 sm:h-1/2"}
             contentClassname={index == 1 ? "sm:h-[25%]" : "h-2/5 sm:h-1/2"}
           />
@@ -68,7 +67,12 @@ const Events = () => {
   );
 };
 
-const EventCard = ({ className, imgClassname, contentClassname , eventData: { title, date, image: img, registerLabel }}) => {
+const EventCard = ({
+  className,
+  imgClassname,
+  contentClassname,
+  eventData: { title, date, image: img, registerLabel },
+}) => {
   return (
     <div className={` ${className}`}>
       <div className={` ${imgClassname}`}>
@@ -84,7 +88,12 @@ const EventCard = ({ className, imgClassname, contentClassname , eventData: { ti
         <div className="flex items-center text-xs sm:text-sm font-medium">
           <Calendar size={20} className="mr-2 text-white" /> {date}
         </div>
-        <ButtonSq className="w-fit bg-secondary-color  hover:bg-blue-700 text-sm sm:text-base" label={registerLabel} iconStyle='text-primary-color' iconDiv='bg-white' />
+        <ButtonSq
+          className="w-fit bg-secondary-color  hover:bg-blue-700 text-sm sm:text-base"
+          label={registerLabel}
+          iconStyle="text-primary-color"
+          iconDiv="bg-white"
+        />
       </div>
     </div>
   );
