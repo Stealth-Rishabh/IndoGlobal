@@ -1,5 +1,6 @@
 // import Container from "../../components/wrappers/Container"
 import AboutIndoGlobal from "./AboutIndoGolbal"
+import Events from "./Events"
 import Hero from "./Hero"
 import Placements from "./Placements"
 import Programs from "./Programs"
@@ -15,6 +16,7 @@ const Landing = () => {
     <Programs/>
     <AboutIndoGlobal />
     <Placements/>
+    <Events/>
     </div>
   )
 }
