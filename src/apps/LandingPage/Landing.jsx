@@ -2,6 +2,7 @@
 import AboutIndoGlobal from "./AboutIndoGolbal"
 import Events from "./Events"
 import Hero from "./Hero"
+import LatestBlogsAndEvents from "./LatestBlogsAndEvents"
 import Placements from "./Placements"
 import Programs from "./Programs"
 import RankSlider from "./RankSlider"
@@ -17,6 +18,7 @@ const Landing = () => {
     <AboutIndoGlobal />
     <Placements/>
     <Events/>
+    <LatestBlogsAndEvents/>
     </div>
   )
 }

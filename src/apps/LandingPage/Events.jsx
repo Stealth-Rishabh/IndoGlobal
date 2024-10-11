@@ -46,7 +46,7 @@ const Events = () => {
         <Heading
           title="Explore Educational Events"
           titleClassName="lg:font-extrabold font-bold text-secondary-color"
-          className="w-full sm:col-span-4 pb-0 text-center sm:pb-0"
+          className="w-full sm:col-span-4 pb-0 text-center sm:pb-0 lg:pb-0"
         />
         <div className="h-2 bg-primary-color hidden sm:block"></div>
       </div>
