@@ -41,14 +41,14 @@ const Events = () => {
 
   return (
     <Container className="pt-0 lg:pt-0">
-      <div className="grid items-center justify-center grid-cols-6 pb-8 sm:pb-28">
-        <div className="h-2 bg-primary-color"></div>
+      <div className="grid items-center justify-center sm:grid-cols-6 pb-8 sm:pb-28">
+        <div className="h-2 bg-primary-color hidden sm:block"></div>
         <Heading
           title="Explore Educational Events"
-          titleClassName="lg:font-extrabold text-secondary-color"
-          className="w-full col-span-4 pb-0 text-center sm:pb-0"
+          titleClassName="lg:font-extrabold font-bold text-secondary-color"
+          className="w-full sm:col-span-4 pb-0 text-center sm:pb-0"
         />
-        <div className="h-2 bg-primary-color"></div>
+        <div className="h-2 bg-primary-color hidden sm:block"></div>
       </div>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
@@ -57,10 +57,10 @@ const Events = () => {
             key={index}
             eventData={eventData}
             className={
-              index == 1 ? "col-span-2 row-span-2" : "h-96 "
+              index == 1 ? "sm:col-span-2 sm:row-span-2" : "h-96 "
             }
-            imgClassname={index == 1 ? "h-[75%]" : "h-1/2"}
-            contentClassname={index == 1 ? "h-[25%]" : "h-1/2"}
+            imgClassname={index == 1 ? "sm:h-[75%]" : "h-3/5 sm:h-1/2"}
+            contentClassname={index == 1 ? "sm:h-[25%]" : "h-2/5 sm:h-1/2"}
           />
         ))}
       </div>
@@ -76,12 +76,12 @@ const EventCard = ({ className, imgClassname, contentClassname , eventData: { ti
       </div>
 
       <div
-        className={`p-5  bg-red-600  grid text-white content-between ${contentClassname}`}
+        className={`p-5  bg-red-600  grid text-white space-y-2 sm:space-y-0 content-between ${contentClassname}`}
       >
-        <h1 className="text-xl font-bold flex items-center tracking-wide text-white">
+        <h1 className="text-sm sm:text-xl font-bold flex items-center tracking-wide text-white">
           {title.toUpperCase()}
         </h1>
-        <div className="flex items-center text-sm font-medium">
+        <div className="flex items-center text-xs sm:text-sm font-medium">
           <Calendar size={20} className="mr-2 text-white" /> {date}
         </div>
         <ButtonSq className="w-fit bg-secondary-color  hover:bg-blue-700 text-sm sm:text-base" label={registerLabel} iconStyle='text-primary-color' iconDiv='bg-white' />
