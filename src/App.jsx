@@ -9,6 +9,7 @@ import Header from "./apps/header/Header";
 import Landing from "./apps/LandingPage/Landing";
 
 import './App.css'
+import Footer from "./apps/footer/Footer";
 function App() {
   return (
     <Router>
@@ -16,8 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
       </Routes>
-
-      {/* <h1>Hello</h1> */}
+      <Footer/>
     </Router>
   );
 }
