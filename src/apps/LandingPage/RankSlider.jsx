@@ -96,7 +96,7 @@ const RankSlider = () => {
                           <img
                             src={img}
                             alt="Slider imgs "
-                            className="object-contain h-48 sm:h-[90%] mx-auto"
+                            className="object-contain h-48 sm:h-[90%] mx-auto bg-blend-"
                           />
                         </div>
                       </div>
