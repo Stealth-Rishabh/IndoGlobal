@@ -24,7 +24,7 @@ const Heading = ({
 
       {subtitle && (
         <WordFadeIn
-          className={`mx-auto max-w-screen-md text-base text-center sm:text-lg lg:text-xl ${subtitleClassName}`}
+          className={`mx-auto max-w-screen-md text-base text-center sm:text-lg lg:text-xl font-semibold ${subtitleClassName}`}
           words={subtitle}
           delay={0.05}
         />

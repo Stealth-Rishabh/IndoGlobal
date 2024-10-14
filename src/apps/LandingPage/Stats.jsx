@@ -2,6 +2,8 @@ import React from "react";
 import bg from "../../assets/stats-bg.svg";
 import Heading from "../../components/Heading";
 import WordPullUp from "../../components/ui/word-pull-up";
+import NumberTicker from "../../components/ui/number-ticker";
+
 const Stats = () => {
   const stats = [
     { data: "70", title: "Acres of Campus" },
@@ -36,7 +38,8 @@ const Stats = () => {
           {stats.map((item, index) => (
             <div key={index} className="flex flex-col items-center md:p-4">
               <div className="text-5xl font-bold font text-white sm:text-6xl">
-                {item.data}
+                {/* {item.data} */}
+                <NumberTicker value={item.data}  className="text-5xl font-bold font text-white sm:text-6xl"/>
               </div>
               <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">
                 {item.title}
