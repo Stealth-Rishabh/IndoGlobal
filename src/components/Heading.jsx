@@ -1,20 +1,33 @@
+import React from 'react';
+import WordPullUp from '../components/ui/word-pull-up';  // Assuming this component exists
+import WordFadeIn from '../components/ui/word-fade-in';
+// import GradualSpacing from '../components/ui/gradual-spacing';  // Assuming this component exists
 
-const Heading = ({ 
-  title, 
-  subtitle, 
+
+const Heading = ({
+  title,
+  subtitle,
   className = "",
   titleClassName = "",
-  subtitleClassName = ""
+  subtitleClassName = "",
 }) => {
   return (
-    <div className={`pb-8 sm:pb-16 md:pb-20  space-y-4 sm:space-y-8 ${className}`}>
-      <h2 className={` text-center text-3xl font-bold sm:font-bold md:font-extrabold  sm:text-5xl lg:text-6xl ${titleClassName}`}>
-        {title}
-      </h2>
+    <div
+      className={`pb-8 sm:pb-16 md:pb-20 space-y-4 sm:space-y-8 ${className}`}
+    >
+      {title && (
+        <WordPullUp 
+          className={`text-center text-3xl font-bold sm:font-bold md:font-extrabold sm:text-5xl lg:text-6xl ${titleClassName}`}
+          words={title}
+        />
+      )}
+
       {subtitle && (
-        <p className={`mx-auto max-w-screen-md text-base text-center sm:text-lg lg:text-xl ${subtitleClassName}`}>
-          {subtitle}
-        </p>
+        <WordFadeIn
+          className={`mx-auto max-w-screen-md text-base text-center sm:text-lg lg:text-xl ${subtitleClassName}`}
+          words={subtitle}
+          delay={0.05}
+        />
       )}
     </div>
   );

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import bg from "../../assets/stats-bg.svg";
-import Heading from '../../components/Heading';
-
+import Heading from "../../components/Heading";
+import WordPullUp from "../../components/ui/word-pull-up";
 const Stats = () => {
   const stats = [
     { data: "70", title: "Acres of Campus" },
@@ -19,19 +19,28 @@ const Stats = () => {
       />
       <div className="bg-black inset-0 opacity-70 absolute z-20" />
       <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative z-30">
-        <Heading 
-          title="INDO GLOBAL GROUPS OF COLLEGES"
+        <WordPullUp
+          className="text-4xl md:text-6xl font-bold text-white mb-8  text-center text-3xl font-bold sm:font-bold md:font-extrabold  sm:text-5xl lg:text-6xl "
+          words="INDO GLOBAL GROUPS OF COLLEGES"
+        />
+        <Heading
+          // title="INDO GLOBAL GROUPS OF COLLEGES"
           subtitle="Spanning 70 acres, with 22+ years of academic excellence, over 10,000 alumni, and 20+ specialized courses, we continue to shape future professionals."
           titleClassName="text-4xl md:text-6xl font-bold text-white"
           subtitleClassName="text-gray-300 text-base md:text-lg"
         />
+
         {/* Example of Heading without subtitle */}
-       
+
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-0 md:divide-x-2 md:divide-red-700">
           {stats.map((item, index) => (
             <div key={index} className="flex flex-col items-center md:p-4">
-              <div className="text-4xl font-semibold text-white sm:text-6xl">{item.data}</div>
-              <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">{item.title}</div>
+              <div className="text-5xl font-bold font text-white sm:text-6xl">
+                {item.data}
+              </div>
+              <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">
+                {item.title}
+              </div>
             </div>
           ))}
         </div>

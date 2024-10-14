@@ -117,17 +117,17 @@ const RankSlider = () => {
             className="absolute sm:left-[110px] left-[55%] top-[96.5%] sm:top-[110%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-8 sm:h-10  rounded-none opacity-100 active:bg-red-700"
           />
         </Carousel>
-        <div className="flex justify-center mt-4 space-x-2">
-          {Array.from({ length: count }).map((_, index) => (
-            <button
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === current ? "bg-destructive/70" : "bg-gray-300"
-              }`}
-              onClick={() => api?.scrollTo(index)}
-            />
-          ))}
-        </div>
+        <div className="sm:hidden flex justify-center mt-4 space-x-2">
+        {Array.from({ length: count }).map((_, index) => (
+          <button
+            key={index}
+            className={`w-4 h-[2px] rounded-sm ${
+              index === current ? "bg-destructive/70" : "bg-gray-300"
+            }`}
+            onClick={() => api?.scrollTo(index)}
+          />
+        ))}
+      </div>
       </Container>
     </div>
   );

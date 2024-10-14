@@ -124,7 +124,7 @@ const Events = () => {
         {Array.from({ length: count }).map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-4 h-[2px] rounded-sm ${
               index === current ? "bg-destructive/70" : "bg-gray-300"
             }`}
             onClick={() => api?.scrollTo(index)}

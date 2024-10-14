@@ -14,7 +14,7 @@ const StatCard = ({ icon, value, description }) => (
 
 const PlacementStats = () => {
   return (
-    <div className="py-8 sm:py-12">
+    <div className="pt-24 pb-8 sm:py-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3  gap-5 sm:gap-8">
           <StatCard
