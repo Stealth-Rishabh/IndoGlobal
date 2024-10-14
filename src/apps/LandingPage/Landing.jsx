@@ -7,6 +7,7 @@ import Placements from "./Placements"
 import Programs from "./Programs"
 import RankSlider from "./RankSlider"
 import Stats from "./Stats"
+import { Testimonials } from "./testimonials/Testimonial"
 
 const Landing = () => {
   return (
@@ -18,6 +19,7 @@ const Landing = () => {
     <AboutIndoGlobal />
     <Placements/>
     <Events/>
+    <Testimonials/>
     <LatestBlogsAndEvents/>
     </div>
   )

@@ -86,7 +86,7 @@ export default function Footer() {
                 {/* First section with social icons and address */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-8">
                     <div>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-red-600 mb-4">Indo Global Education Foundation</h2>
+                        <h2 className="text-2xl sm:text-3xl font-bold text-red-600 mb-4">Explore. Discover. Connect.</h2>
                         <div className="flex flex-wrap gap-4 mb-6 ">
                             {socialIcons.map((platform) => (
                                 <a
@@ -133,7 +133,9 @@ export default function Footer() {
                     © Copyright - Indo Global Education Foundation All Rights Reserved
                 </p>
                 <div className="text-base text-white">
-                    <p>Phone: 07307211222 | Website: www.igef.net | Email: contact@igef.net</p>
+                    <p>
+                        Phone: <a href="tel:+91-7307211222">+91-7307211222</a> | Website: <a href="https://www.igef.net" target="_blank" rel="noopener noreferrer">www.igef.net</a> | Email: <a href="mailto:contact@igef.net">contact@igef.net</a>
+                    </p>
                 </div>
             </div>
         </footer>
