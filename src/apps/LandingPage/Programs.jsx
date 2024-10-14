@@ -34,7 +34,7 @@ export default function Programs() {
             title="Programs Offered"
             subtitle="Explore our program offerings, including degree programs, undergraduate and graduate programs, and more."
             subtitleClassName="text-gray-500"
-            titleClassName="text-blue-800 mb-6 md:text-6xl text-4xl font-bold"
+            titleClassName="text-secondary-color mb-6 md:text-6xl text-4xl font-bold"
             //   className="font-bold text-center"
           />
           <Tabs defaultValue="undergraduate" className="relative w-full">

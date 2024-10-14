@@ -51,7 +51,7 @@ const RankSlider = () => {
               <CarouselItem key={index}>
                 <div className="p-1">
                   <Card className="bg-transparent border-none rounded-none shadow-none">
-                    <CardContent className="p-0  h-[550px] sm:h-[400px] border-none shadow-none grid ">
+                    <CardContent className="p-0  h-[550px] sm:h-[500px] border-none shadow-none grid ">
                       <div className="flex md:flex-row flex-col sm:justify-between w-full gap-5 sm:gap-0">
                         <h2 className=" text-2xl  sm:text-4xl font-semibold tracking-tight scroll-m-20 first:mt-0">
                           Rankings, Accereditations <br /> &amp; Tie-up.
@@ -59,7 +59,7 @@ const RankSlider = () => {
                         <ButtonSq
                           label="Know more..."
                           iconDiv="bg-primary-color sm:h-14 flex item-center justify-center"
-                          className="text-white text-xs  sm:h-14 bg-secondary-color hover:bg-secondary-color/90 w-fit"
+                          className="text-white text-xs md:text-lg sm:h-14 bg-secondary-color hover:bg-secondary-color/90 w-fit"
                           iconStyle="h sm:mt-3"
                         />
                       </div>
@@ -69,25 +69,25 @@ const RankSlider = () => {
                             <h2 className="flex items-center sm:text-4xl font-bold tracking-tight scroll-m-20 first:mt-0 text-secondary-color">
                               Ranked
                             </h2>
-                            <span className="text-[7rem] sm:text-[10rem] my-0 pt-0 font-medium sm:font-extrabold stroke-text leading-none">
+                            <span className="text-[7rem] sm:text-[15rem] my-0 pt-0 font-medium sm:font-extrabold stroke-text leading-none">
                               #
                             </span>
                           </div>
 
-                          <span className="text-[9rem] sm:text-[15rem] font-semibold sm:font-extrabold stroke-text flex leading-none p-0 ">
+                          <span className="text-[9rem] sm:text-[25rem] font-semibold sm:font-extrabold stroke-text flex leading-none p-0 ">
                             3
                           </span>
                           <div className="flex flex-col justify-end sm:gap-2 pb-5 leading-none text-left">
-                            <p className="text-2xl sm:text-4xl font-bold text-secondary-color">
+                            <p className="text-2xl sm:text-5xl font-bold text-secondary-color">
                               Among
                             </p>
-                            <p className="text-2xl sm:text-4xl font-bold text-secondary-color">
+                            <p className="text-2xl sm:text-5xl font-bold text-secondary-color">
                               Group of
                             </p>
-                            <p className="text-2xl sm:text-4xl font-bold text-red-500">
+                            <p className="text-2xl sm:text-5xl font-bold text-red-500">
                               Colleges
                             </p>
-                            <p className="text-2xl sm:text-4xl font-bold text-red-500">
+                            <p className="text-2xl sm:text-5xl font-bold text-red-500">
                               by PTU
                             </p>
                           </div>
@@ -96,7 +96,7 @@ const RankSlider = () => {
                           <img
                             src={img}
                             alt="Slider imgs "
-                            className="object-contain h-48 sm:h-[90%] mx-auto bg-blend-"
+                            className="object-contain h-48 sm:h-[100%] mx-auto bg-blend-"
                           />
                         </div>
                       </div>
@@ -109,12 +109,12 @@ const RankSlider = () => {
           <CarouselPrevious
            
             iconStyle="text-white h-4 lg:h-8"
-            className="absolute sm:left-[0px] left-[20%] top-[96.5%] sm:top-[110%] bg-gray-300 hover:bg-red-600 h-8  w-20 active:bg-red-700 sm:w-24 rounded-none opacity-100"
+            className="absolute sm:left-[0px] left-[20%] top-[96.5%] sm:top-[110%] bg-gray-300 hover:bg-red-600 h-8 sm:h-10  w-20 active:bg-red-700 sm:w-24 rounded-none opacity-100"
           />
           <CarouselNext
             
             iconStyle="text-white h-4 lg:h-8"
-            className="absolute sm:left-[110px] left-[55%] top-[96.5%] sm:top-[110%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-8  rounded-none opacity-100 active:bg-red-700"
+            className="absolute sm:left-[110px] left-[55%] top-[96.5%] sm:top-[110%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-8 sm:h-10  rounded-none opacity-100 active:bg-red-700"
           />
         </Carousel>
         <div className="flex justify-center mt-4 space-x-2">

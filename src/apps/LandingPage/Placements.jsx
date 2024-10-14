@@ -50,7 +50,7 @@ const Placements = () => {
         title="Our Top Placements"
         subtitle="We are proud to announce that our students have got placed in top companies with highest salary package of 60 Lacs. We also have a strong network of alumni who are working in top MNCs."
         subtitleClassName="text-gray-500"
-          titleClassName="text-blue-800 mb-6 md:text-6xl text-4xl font-bold"
+        titleClassName="text-secondary-color mb-6 md:text-6xl text-4xl font-bold"
       />
       <div className="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-0">
         {profiles.map((profile, index) => (
