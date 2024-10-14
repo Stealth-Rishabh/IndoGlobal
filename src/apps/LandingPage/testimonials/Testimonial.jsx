@@ -110,7 +110,7 @@ export function Testimonials() {
   };
 
   return (
-    <Container className="grid grid-cols-1 gap-8 md:gap-20 md:grid-cols-2">
+    <Container className="grid ">
       <Heading
         title="Student Testimonials"
         titleClassName="lg:font-extrabold lg:text-left  text-secondary-color rem]"

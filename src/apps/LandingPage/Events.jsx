@@ -1,47 +1,75 @@
-import ButtonSq from "../../components/ButtonSq";
+import { useEffect, useState, useRef } from "react";
+// import Container from "../../../components/wrappers/Container";
+import Autoplay from "embla-carousel-autoplay";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
+import ButtonSq from "../../components/ButtonSq";
 import Container from "../../components/wrappers/Container";
 import img from "../../assets/EventImg.svg";
 import img2 from "../../assets/EventImg2.svg";
 import { Calendar } from "lucide-react";
 import Heading from "../../components/Heading";
 const Events = () => {
+  const [api, setApi] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   const eventDataArray = [
     {
       title: "DENGUE AWARENESS CAMPAIGN",
       date: "15th May 2023",
       image: img,
-      registerLabel: "Register Now",
+      registerLabel: "Know Now",
     },
     {
       title:
         "Productivity Session on Ground Breaking Ideas and Inventive Methodologies",
       date: "20th June 2023",
       image: img2,
-      registerLabel: "Register Now",
+      registerLabel: "Know Now",
     },
     {
       title: "FITNESS AWARENESS CAMPAIGN",
       date: "10th July 2023",
       image: img,
-      registerLabel: "Register Now",
+      registerLabel: "Know more",
     },
     {
       title: "NUTRITION AWARENESS CAMPAIGN",
       date: "25th August 2023",
       image: img,
-      registerLabel: "Register Now",
+      registerLabel: "Know Now",
     },
     {
       title: "WELLNESS AWARENESS CAMPAIGN",
       date: "1st September 2023",
       image: img,
-      registerLabel: "Register Now",
+      registerLabel: "Know Now",
     },
   ];
 
   return (
-    <Container className="pt-0 lg:pt-0">
+    <Container className="pt-0 lg:pt-0 pb-20">
       <div className="grid items-center justify-center sm:grid-cols-6 pb-8 sm:pb-28">
         <div className="h-2 bg-primary-color hidden sm:block"></div>
         <Heading
@@ -52,7 +80,7 @@ const Events = () => {
         <div className="h-2 bg-primary-color hidden sm:block"></div>
       </div>
 
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
+      <div className="hidden md:grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
         {eventDataArray.map((eventData, index) => (
           <EventCard
             key={index}
@@ -63,6 +91,47 @@ const Events = () => {
           />
         ))}
       </div>
+
+
+      <Carousel
+        plugins={[plugin.current]}
+        setApi={setApi}
+        onMouseEnter={plugin.current.stop}
+        className="w-full grid grid-cols-1 gap-3 md:hidden"
+      >
+        <CarouselContent>
+          {eventDataArray.map((eventData,index) => (
+            <CarouselItem key={eventData.id}>
+              <EventCard
+                key={index}
+                eventData={eventData}
+                className="h-96 "
+                imgClassname="h-3/5 sm:h-1/2"
+                contentClassname="h-2/5 sm:h-1/2"
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious
+          iconStyle="text-white h-4 lg:h-8"
+          className="absolute sm:left-[0px] left-[20%] top-[118%] sm:top-[110%] bg-gray-300 hover:bg-red-600 h-10 w-20 active:bg-red-700 sm:w-24 rounded-none opacity-100"
+        />
+        <CarouselNext
+          iconStyle="text-white h-4 lg:h-8"
+          className="absolute sm:left-[110px] left-[55%] top-[118%] sm:top-[110%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-10 rounded-none opacity-100 active:bg-red-700"
+        />
+      </Carousel>
+      <div className="flex justify-center mt-4 space-x-2">
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                index === current ? "bg-destructive/70" : "bg-gray-300"
+              }`}
+              onClick={() => api?.scrollTo(index)}
+            />
+          ))}
+        </div>
     </Container>
   );
 };
