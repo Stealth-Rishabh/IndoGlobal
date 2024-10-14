@@ -4,15 +4,15 @@ import Container from '../../components/wrappers/Container';
 export default function AboutIndoGlobal() {
     return (
       <Container className="container mx-auto lg:pt-60 pt-10 ">
-        <div className="flex sm:flex-col flex-col-reverse md:flex-row gap-14 md:gap-28">
-          <div className="w-full md:w-1/2 mb-6 md:mb-0">
+        <div className="flex sm:flex-col flex-col-reverse lg:flex-row gap-10 md:gap-28">
+          <div className="w-full lg:w-1/2 mb-6 md:mb-0">
             <img 
               src={img}
               alt="Indo Global Campus" 
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-lg md:p-28 lg:p-0"
             />
           </div>
-          <div className="w-full md:w-1/2 md:pl space-y-6 relative">
+          <div className="w-full lg:w-1/2 md:pl space-y-6 relative">
             <div className="w-fit top-0  sm:mx-0 bg-red-600 text-white sm:text-2xl px-4 py-1 ">
               About
             </div>
