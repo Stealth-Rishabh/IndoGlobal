@@ -85,13 +85,12 @@ const Events = () => {
           <EventCard
             key={index}
             eventData={eventData}
-            className={index == 1 ? "sm:col-span-2 sm:row-span-2" : "h-96 "}
+            className={index == 1 ? "sm:col-span-2 sm:row-span-2" : "min-h-96 "}
             imgClassname={index == 1 ? "sm:h-[75%]" : "h-3/5 sm:h-1/2"}
             contentClassname={index == 1 ? "sm:h-[25%]" : "h-2/5 sm:h-1/2"}
           />
         ))}
       </div>
-
 
       <Carousel
         plugins={[plugin.current]}
@@ -100,7 +99,7 @@ const Events = () => {
         className="w-full grid grid-cols-1 gap-3 md:hidden"
       >
         <CarouselContent>
-          {eventDataArray.map((eventData,index) => (
+          {eventDataArray.map((eventData, index) => (
             <CarouselItem key={eventData.id}>
               <EventCard
                 key={index}
@@ -121,17 +120,17 @@ const Events = () => {
           className="absolute sm:left-[110px] left-[55%] top-[118%] sm:top-[110%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-10 rounded-none opacity-100 active:bg-red-700"
         />
       </Carousel>
-      <div className="flex justify-center mt-4 space-x-2">
-          {Array.from({ length: count }).map((_, index) => (
-            <button
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === current ? "bg-destructive/70" : "bg-gray-300"
-              }`}
-              onClick={() => api?.scrollTo(index)}
-            />
-          ))}
-        </div>
+      <div className="sm:hidden flex justify-center mt-4 space-x-2">
+        {Array.from({ length: count }).map((_, index) => (
+          <button
+            key={index}
+            className={`w-3 h-3 rounded-full ${
+              index === current ? "bg-destructive/70" : "bg-gray-300"
+            }`}
+            onClick={() => api?.scrollTo(index)}
+          />
+        ))}
+      </div>
     </Container>
   );
 };
@@ -158,7 +157,7 @@ const EventCard = ({
           <Calendar size={20} className="mr-2 text-white" /> {date}
         </div>
         <ButtonSq
-          className="w-fit bg-secondary-color  hover:bg-blue-700 text-sm sm:text-base"
+          className="w-fit bg-secondary-color  hover:bg-blue-700 text-xs sm:text-base"
           label={registerLabel}
           iconStyle="text-primary-color"
           iconDiv="bg-white"
