@@ -51,7 +51,7 @@ const RankSlider = () => {
               <CarouselItem key={index}>
                 <div className="p-1">
                   <Card className="bg-transparent border-none rounded-none shadow-none">
-                    <CardContent className="p-0  h-[640px] sm:h-[400px] border-none shadow-none grid ">
+                    <CardContent className="p-0  h-[550px] sm:h-[400px] border-none shadow-none grid ">
                       <div className="flex md:flex-row flex-col sm:justify-between w-full gap-5 sm:gap-0">
                         <h2 className=" text-2xl  sm:text-4xl font-semibold tracking-tight scroll-m-20 first:mt-0">
                           Rankings, Accereditations <br /> &amp; Tie-up.

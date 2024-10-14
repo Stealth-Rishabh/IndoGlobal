@@ -111,7 +111,7 @@ export default function Programs() {
                         </p>
                       </>
                     )}
-                    <div className="flex gap-1 mt-8 flex-co">
+                    <div className="flex gap-1 mt-8 justify-between sm:justify-start">
                       <ButtonSq
                         className="text-xs sm:text-base text-white bg-red-500 hover:bg-red-600 w-fit"
                         iconDiv="bg-red-800"
