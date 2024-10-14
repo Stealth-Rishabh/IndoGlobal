@@ -9,7 +9,7 @@ const Heading = ({
 }) => {
   return (
     <div className={`pb-8 sm:pb-16 md:pb-20  space-y-4 sm:space-y-8 ${className}`}>
-      <h2 className={` text-center text-3xl font-semibold sm:font-bold  sm:text-5xl lg:text-6xl ${titleClassName}`}>
+      <h2 className={` text-center text-3xl font-bold sm:font-bold  sm:text-5xl lg:text-6xl ${titleClassName}`}>
         {title}
       </h2>
       {subtitle && (
