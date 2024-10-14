@@ -12,7 +12,7 @@ import {
 import ButtonSq from "../../components/ButtonSq";
 import img from "../../assets/sliderImg.png";
 import bg from "../../assets/slider-bg.png";
-import { div } from "framer-motion/client";
+
 const RankSlider = () => {
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);

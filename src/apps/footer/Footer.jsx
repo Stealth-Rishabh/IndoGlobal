@@ -86,7 +86,7 @@ export default function Footer() {
                 {/* First section with social icons and address */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-8">
                     <div>
-                        <h2 className="text-2xl sm:text-3xl font-bold text-red-600 mb-4">Explore. Discover. Connect.</h2>
+                        <h2 className=" sm:text-3xl font-bold text-red-600 mb-4">Explore. Discover. Connect.</h2>
                         <div className="flex flex-wrap gap-4 mb-6 ">
                             {socialIcons.map((platform) => (
                                 <a
@@ -102,7 +102,7 @@ export default function Footer() {
                        
                     </div>
                     <div className="space-y-2">
-                            <h3 className="text-2xl font-bold text-red-600 mb-4">Campus Address </h3>
+                            <h3 className="sm:text-2xl font-bold text-red-600 mb-4">Campus Address </h3>
                             <p className='text-sm'>INDO GLOBAL EDUCATION CITY</p>
                             <p className='text-sm'>ABHIPUR-New Chandigarh-140109, District Mohali (Punjab)</p>
                             <p className="flex items-center text-sm"><Phone size={18} className="mr-2" /> 0160-5036000</p>
@@ -113,7 +113,7 @@ export default function Footer() {
                     {/* Footer sections with links */}
                     {footerSections.map((section) => (
                         <div key={section.label}>
-                            <h3 className="text-2xl font-bold text-red-600 mb-4">{section.label}</h3>
+                            <h3 className="sm:text-2xl font-bold text-red-600 mb-4">{section.label}</h3>
                             <ul className="space-y-2">
                                 {section.items.map((item) => (
                                     <li key={item.name} className='text-sm'>
@@ -128,11 +128,11 @@ export default function Footer() {
                 </div>
             </div>
             {/* Footer Bottom */}
-            <div className="py-6 border-t border-gray-800 bg-primary-color text-center">
-                <p className="text-white mb-2 text-xl">
+            <div className="py-6 px-2 border-t border-gray-800 bg-primary-color text-center">
+                <p className="text-white mb-2  text-sm sm:text-xl">
                     © Copyright - Indo Global Education Foundation All Rights Reserved
                 </p>
-                <div className="text-base text-white">
+                <div className=" text-xs sm:text-base text-white">
                     <p>
                         Phone: <a href="tel:+91-7307211222">+91-7307211222</a> | Website: <a href="https://www.igef.net" target="_blank" rel="noopener noreferrer">www.igef.net</a> | Email: <a href="mailto:contact@igef.net">contact@igef.net</a>
                     </p>

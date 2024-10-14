@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import{ useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Card,
@@ -7,13 +7,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { ChevronRight, SendHorizontal } from "lucide-react";
 import Container from "../../components/wrappers/Container";
 import Heading from "../../components/Heading";
 import { programData } from "./programData";
 import ButtonSq from "../../components/ButtonSq";
-import { div } from "framer-motion/client";
+
 
 export default function Programs() {
   const [activePrograms, setActivePrograms] = useState(
