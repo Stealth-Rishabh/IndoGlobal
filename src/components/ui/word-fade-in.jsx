@@ -22,8 +22,9 @@ export default function WordFadeIn({
 
   // Use the useInView hook to detect when the component is in view
   const { ref, inView } = useInView({
-    threshold: 0.1, // Trigger when 10% of the component is visible
-    triggerOnce: false, // Allow re-animation each time it comes into view
+    threshold: 0.5, // Trigger when 50% of the component is visible
+    rootMargin: "-20% 0px", // Adjust to trigger animation closer to the center of the viewport
+    triggerOnce: false, // Re-animate every time the component enters the viewport
   });
 
   return (
@@ -38,7 +39,7 @@ export default function WordFadeIn({
       )}
     >
       {_words.map((word, i) => (
-        <motion.span key={word} variants={variants} custom={i}>
+        <motion.span key={i} variants={variants} custom={i}>
           {word}{" "}
         </motion.span>
       ))}

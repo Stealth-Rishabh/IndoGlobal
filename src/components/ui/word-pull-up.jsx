@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer"; // Import the useInView hook
+import { useInView } from "react-intersection-observer";
 import { cn } from "@/lib/utils";
 
 export default function WordPullUp({
@@ -11,7 +11,8 @@ export default function WordPullUp({
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.2, // Stagger the animation for each word
+        delayChildren: 0.3,   // Delay before starting to stagger the words
       },
     },
   },
@@ -23,10 +24,11 @@ export default function WordPullUp({
 
   className,
 }) {
-  // Use the useInView hook to detect when the component is in view
+  // Detect when the component is near the center of the viewport
   const { ref, inView } = useInView({
-    threshold: 0.1, // Trigger when 10% of the component is visible
-    triggerOnce: false, // Remove triggerOnce to animate every time the component is in view
+    threshold: 0.5, // Trigger when 50% of the component is visible
+    rootMargin: "-20% 0px", // Start animation when component is 20% above the center
+    triggerOnce: false, // Animate every time the component enters the viewport
   });
 
   return (
@@ -34,7 +36,7 @@ export default function WordPullUp({
       ref={ref} // Attach ref to the element to track its visibility
       variants={wrapperFramerProps}
       initial="hidden"
-      animate={inView ? "show" : "hidden"} // Animate only if the component is in view
+      animate={inView ? "show" : "hidden"} // Animate only when the component is in view
       className={cn(
         "font-display text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
         className
@@ -43,7 +45,7 @@ export default function WordPullUp({
       {words.split(" ").map((word, i) => (
         <motion.span
           key={i}
-          variants={framerProps}
+          variants={framerProps} // Animate each word separately
           style={{ display: "inline-block", paddingRight: "8px" }}
         >
           {word === "" ? <span>&nbsp;</span> : word}
