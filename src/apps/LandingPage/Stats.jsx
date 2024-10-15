@@ -13,7 +13,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-28 relative">
+    <section className="lg:py-28 md:py-12 py-6 sm:px-0 px-6 relative">
       <img
         src={bg}
         alt="stats"
@@ -39,10 +39,15 @@ const Stats = () => {
             <div key={index} className="flex flex-col items-center md:p-4">
               <div className="text-5xl font-bold font text-white sm:text-6xl">
                 {/* {item.data} */}
-                <NumberTicker value={item.data}  className="text-5xl font-bold font text-white sm:text-6xl"/>
+                <NumberTicker
+                  value={item.data}
+                  className="text-5xl font-bold font text-white sm:text-6xl"
+                />{" "}
+                {index != 0 && <span className="-ml-3 ">+</span>}
               </div>
               <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">
                 {item.title}
+                {}
               </div>
             </div>
           ))}
