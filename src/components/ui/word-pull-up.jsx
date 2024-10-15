@@ -27,7 +27,7 @@ export default function WordPullUp({
   // Detect when the component is near the center of the viewport
   const { ref, inView } = useInView({
     threshold: 0.5, // Trigger when 50% of the component is visible
-    rootMargin: "-20% 0px", // Start animation when component is 20% above the center
+    rootMargin: "-8% 0px -20% 0px", // Start animation when component is 20% above the center
     triggerOnce: false, // Animate every time the component enters the viewport
   });
 
