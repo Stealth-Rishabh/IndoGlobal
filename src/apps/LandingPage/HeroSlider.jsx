@@ -63,11 +63,11 @@ const HeroSlider = () => {
         <CarouselContent>
           {imgSlider.map((img, index) => (
             <CarouselItem key={index} className="w-full sm:h-full relative h-96 md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]">
-              <img
+              {/* <img
                 src={img.image}
                 alt="a student holding a laptop"
-                className="object-cover w-screen blur-sm"
-              />
+                className="object-cover w-screen  h-96 md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]"
+              /> */}
               <div className="bg-black inset-0 opacity-50 absolute z-20 " />
               <div className="size-full max-w-4xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[8%] left-[10%]  z-20 space-y-5 sm:space-y-10">
                 <BoxReveal boxColor={"#DC2626"} duration={0.5} className="">
@@ -96,9 +96,9 @@ const HeroSlider = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious iconStyle='h-4' className="absolute left-10 top-1/2 -translate-y-1/2"
+        <CarouselPrevious iconStyle='h-4' className="absolute left-10 top-1/2 -translate-y-1/2"
         />
-        <CarouselNext iconStyle='h-4' className="absolute right-10 top-1/2 -translate-y-1/2"/> */}
+        <CarouselNext iconStyle='h-4' className="absolute right-10 top-1/2 -translate-y-1/2"/>
       </Carousel>
     </section>
   );

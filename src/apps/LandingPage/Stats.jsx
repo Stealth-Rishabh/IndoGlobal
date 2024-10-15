@@ -13,11 +13,11 @@ const Stats = () => {
   ];
 
   return (
-    <section className="lg:py-28 md:py-12 py-6 sm:px-0 px-6 relative">
+    <section className="lg:py-28 md:py-12 py-6 sm:px-0 px-0 relative">
       <img
         src={bg}
         alt="stats"
-        className="absolute object-cover top-0 h-full w-full -z-10"
+        className="absolute object-cover top-0 left-0 h-full w-full -z-10"
       />
       <div className="bg-black inset-0 opacity-70 absolute z-20" />
       <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative z-30">
@@ -41,9 +41,9 @@ const Stats = () => {
                 {/* {item.data} */}
                 <NumberTicker
                   value={item.data}
-                  className="text-5xl font-bold font text-white sm:text-6xl"
+                  className="text-4xl font-bold font text-white sm:text-6xl"
                 />{" "}
-                {index != 0 && <span className="-ml-3 ">+</span>}
+                {index != 0 && <span className="-ml-3 text-4xl font-bold font text-white sm:text-6xl">+</span>}
               </div>
               <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">
                 {item.title}
