@@ -1,7 +1,7 @@
 // import Container from "../../components/wrappers/Container"
 import AboutIndoGlobal from "./AboutIndoGolbal"
 import Events from "./Events"
-import Hero from "./Hero"
+import Hero from "./HeroSlider"
 import LatestBlogsAndEvents from "./LatestBlogsAndEvents"
 import Placements from "./Placements"
 import Programs from "./Programs"

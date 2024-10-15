@@ -109,12 +109,12 @@ const RankSlider = () => {
           <CarouselPrevious
            
             iconStyle="text-white h-4 lg:h-8"
-            className="absolute sm:left-[0px] left-[20%] top-[96.5%] sm:top-[110%] bg-gray-300 hover:bg-red-600 h-8 sm:h-10  w-20 active:bg-red-700 sm:w-24 rounded-none opacity-100"
+            className="absolute sm:left-[0px] left-[20%] top-[96.5%] sm:top-[106%] bg-gray-300 hover:bg-red-600 h-8 sm:h-10  w-20 active:bg-red-700 sm:w-24 rounded-none opacity-100"
           />
           <CarouselNext
             
             iconStyle="text-white h-4 lg:h-8"
-            className="absolute sm:left-[110px] left-[55%] top-[96.5%] sm:top-[110%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-8 sm:h-10  rounded-none opacity-100 active:bg-red-700"
+            className="absolute sm:left-[110px] left-[55%] top-[96.5%] sm:top-[106%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-8 sm:h-10  rounded-none opacity-100 active:bg-red-700"
           />
         </Carousel>
         <div className="sm:hidden flex justify-center mt-4 space-x-2">
