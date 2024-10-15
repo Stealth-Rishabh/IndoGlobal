@@ -62,14 +62,14 @@ const HeroSlider = () => {
       <Carousel>
         <CarouselContent>
           {imgSlider.map((img, index) => (
-            <CarouselItem key={index} className="w-full h-full relative h-96 md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]">
+            <CarouselItem key={index} className="w-full sm:h-full relative h-96 md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]">
               <img
                 src={img.image}
                 alt="a student holding a laptop"
-                className="object-cover w-full h-full blur-sm"
+                className="object-cover w-screen blur-sm"
               />
               <div className="bg-black inset-0 opacity-50 absolute z-20 " />
-              <div className="size-full max-w-4xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[10%] left-[10%]  z-20 space-y-5 sm:space-y-10">
+              <div className="size-full max-w-4xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[8%] left-[10%]  z-20 space-y-5 sm:space-y-10">
                 <BoxReveal boxColor={"#DC2626"} duration={0.5} className="">
                   <p className=" md:text-6xl font- text-5xl lg:text-8xl text-white font-extrabold sm:py-4 sm:tracking-wide leading-tight drop-shadow-lg">
                     {img.tagline.split(" ").map((word, index) => {
@@ -89,15 +89,16 @@ const HeroSlider = () => {
 
                 <WordPullUp
                   words={img.highlight}
-                  className=" text-xl font-bold md:text-3xl text-white md:font-bold text-left max-w-[20rem]  md:max-w-3xl"
+                  className=" text-xl font-semibold md:text-3xl text-white md:font-bold text-left max-w-[20rem]  md:max-w-3xl"
                 />
                 <ShinyButton className='text-white bg-white sm:py-5 sm:px-10 rounded-none lg:text-lg text-sm font-bold'>Explore Courses</ShinyButton>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {/* <CarouselPrevious iconStyle='h-4' className="absolute left-10 top-1/2 -translate-y-1/2"
+        />
+        <CarouselNext iconStyle='h-4' className="absolute right-10 top-1/2 -translate-y-1/2"/> */}
       </Carousel>
     </section>
   );
