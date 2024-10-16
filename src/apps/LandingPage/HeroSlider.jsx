@@ -6,12 +6,12 @@ import {
   CarouselContent,
   CarouselItem,
 } from "../../components/ui/carousel";
-import Education from "../../assets/Education.webp";
-import Placement from "../../assets/Placements.webp";
-import Events from "../../assets/Events.webp";
-import Labs from "../../assets/Labs.webp";
-import Sports from "../../assets/Sports.webp";
-import Auditorium from "../../assets/Auditorium.webp";
+import Education from "../../assets/Hero/Education.webp";
+import Placement from "../../assets/Hero/Placements.webp";
+import Events from "../../assets/Hero/Events.webp";
+import Labs from "../../assets/Hero/Labs.webp";
+import Sports from "../../assets/Hero/Sports.webp";
+import Auditorium from "../../assets/Hero/Auditorium.webp";
 import BoxReveal from "../../components/ui/box-reveal";
 import WordPullUp from "../../components/ui/word-pull-up";
 import ShinyButton from "../../components/ui/shiny-button";
