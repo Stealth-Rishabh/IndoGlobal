@@ -1,23 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 import { ChevronRight, SendHorizontal } from "lucide-react";
 import Container from "../../components/wrappers/Container";
 import Heading from "../../components/Heading";
 import { programData } from "./programData";
 import ButtonSq from "../../components/ButtonSq";
+import { useInView } from "react-intersection-observer";
 
 export default function Programs() {
+  // Set default active tab to "undergraduate"
   const [activePrograms, setActivePrograms] = useState(
     programData.reduce((acc, category) => ({ ...acc, [category.id]: null }), {})
   );
+  
+  const [selectedTab, setSelectedTab] = useState("undergraduate");
 
   const handleProgramClick = (categoryId, programIndex) => {
     setActivePrograms((prev) => ({
@@ -26,18 +24,31 @@ export default function Programs() {
     }));
   };
 
+  // Hook for checking if the card content is in view
+  const { ref, inView } = useInView({
+    threshold: 0.5, // Trigger when 50% of the card is in the viewport
+    triggerOnce: false, // Re-trigger on each tab change
+  });
+
+  useEffect(() => {
+    // Reset the active program when the tab changes
+    setActivePrograms((prev) => ({
+      ...prev,
+      [selectedTab]: null,
+    }));
+  }, [selectedTab]);
+
   return (
-    <div className="">
-      <Container className="container md:px-0 ">
+    <div>
+      <Container className="container md:px-0">
         <div className="mx-auto">
           <Heading
             title="Programs Offered"
             subtitle="Explore our program offerings, including degree programs, undergraduate and graduate programs, and more."
             subtitleClassName="text-gray-500"
             titleClassName="text-secondary-color mb-6 md:text-6xl text-4xl font-bold"
-            //   className="font-bold text-center"
           />
-          <Tabs defaultValue="undergraduate" className="relative w-full">
+          <Tabs value={selectedTab} onValueChange={setSelectedTab} className="relative w-full">
             <TabsList className="grid w-full h-8 grid-cols-3 p-0 bg-white rounded-none sm:h-16">
               {programData.map((category) => (
                 <TabsTrigger
@@ -50,36 +61,44 @@ export default function Programs() {
               ))}
             </TabsList>
             {programData.map((category) => (
-              <TabsContent
-                key={category.id}
-                value={category.id}
-                className="mt-6"
-              >
+              <TabsContent key={category.id} value={category.id} className="mt-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
                   <div className="space-y-2">
                     <ul className="space-y-4 list-disc list-inside">
                       {category.programs.map((program, index) => (
-                        <li
+                        <motion.li
                           key={index}
                           onClick={() => handleProgramClick(category.id, index)}
-                          className={`cursor-pointer   flex items-center ${
+                          className={`cursor-pointer flex items-center ${
                             activePrograms[category.id] === index
                               ? "text-red-500 text-lg drop-shadow-md sm:text-2xl font-semibold"
                               : " text-black text-base sm:text-xl"
                           }`}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={inView ? { opacity: 1, y: 0 } : {}}
+                          transition={{
+                            delay: index * 0.5,
+                            duration: 0.5,
+                          }}
                         >
-                          {activePrograms[category.id] === index && (
+                          {activePrograms[category.id] === index ? (
                             <SendHorizontal className="w-5 h-5 mr-2" />
-                          )}
-                          {activePrograms[category.id] != index && (
+                          ) : (
                             <ChevronRight className="w-5 h-5 mr-2" />
                           )}
                           {program.name}
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
-                  <Card className="bg-gray-900 text-white md:absolute md:w-[70%] md:-right-64 md:top-8 rounded-none  md:py-10 md:px-14 md:-z-10">
+                  <Card
+                    as={motion.div}
+                    ref={ref}
+                    initial={{ opacity: 0, x: 100 }} // Start offscreen to the right
+                    animate={inView ? { opacity: 1, x: 0 } : {}} // Translate into view
+                    transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                    className="bg-gray-900 text-white md:absolute md:w-[70%] md:-right-64 md:top-8 rounded-none  md:py-10 md:px-14 md:-z-10"
+                  >
                     <CardHeader>
                       <CardTitle className="text-3xl font-bold sm:text-3xl lg:text-5xl">
                         {activePrograms[category.id] !== null
@@ -87,28 +106,24 @@ export default function Programs() {
                           : category.defaultCard.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="md:w-2/3">
+                    <CardContent
+                     
+                      className="md:w-2/3"
+                    >
                       <CardDescription className="text-lg text-gray-300">
                         {activePrograms[category.id] !== null
-                          ? category.programs[activePrograms[category.id]]
-                              .description
+                          ? category.programs[activePrograms[category.id]].description
                           : category.defaultCard.description}
                       </CardDescription>
                       {activePrograms[category.id] !== null && (
                         <>
                           <p className="mt-4 text-white">
                             <strong>Duration:</strong>{" "}
-                            {
-                              category.programs[activePrograms[category.id]]
-                                .duration
-                            }
+                            {category.programs[activePrograms[category.id]].duration}
                           </p>
                           <p className="mt-2 text-white">
                             <strong>Eligibility:</strong>{" "}
-                            {
-                              category.programs[activePrograms[category.id]]
-                                .eligibility
-                            }
+                            {category.programs[activePrograms[category.id]].eligibility}
                           </p>
                         </>
                       )}
