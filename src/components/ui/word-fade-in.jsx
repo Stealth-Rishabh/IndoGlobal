@@ -23,7 +23,7 @@ export default function WordFadeIn({
   // Use the useInView hook to detect when the component is in view
   const { ref, inView } = useInView({
     threshold: 0.5, // Trigger when 50% of the component is visible
-    rootMargin: "-20% 0px", // Adjust to trigger animation closer to the center of the viewport
+    rootMargin: "-5% 0px -20% 0px", // Adjust to trigger animation closer to the center of the viewport
     triggerOnce: false, // Re-animate every time the component enters the viewport
   });
 
