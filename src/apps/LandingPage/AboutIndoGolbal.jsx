@@ -6,11 +6,11 @@ import { useInView } from 'react-intersection-observer';
 
 export default function AboutIndoGlobal() {
   const { ref: imgRef, inView: imgInView } = useInView({
-    threshold: 0.1,
+    threshold: 0.0,
   });
 
   const { ref: pRef, inView: pInView } = useInView({
-    threshold: 0.1,
+    threshold: 0.0,
   });
 
   return (
@@ -18,9 +18,9 @@ export default function AboutIndoGlobal() {
       <div className="flex flex-col-reverse lg:flex-row gap-10 md:gap-28">
         <motion.div
           ref={imgRef}
-          initial={{ opacity: 0, x: -200 }} // Reduced the x value for testing
+          initial={{ opacity: 0, x: -400 }} // Reduced the x value for testing
           animate={imgInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ type: "spring", stiffness: 50, damping: 20 }}
+          transition={{ type: "spring", stiffness: 70, damping: 20 }}
           className="w-full lg:w-1/2 mb-6 md:mb-0"
         >
           <img
@@ -42,9 +42,9 @@ export default function AboutIndoGlobal() {
 
           <motion.p
             ref={pRef}
-            initial={{ opacity: 0, x: 200 }} // Reduced the x value for testing
+            initial={{ opacity: 0, x: 400 }} // Reduced the x value for testing
             animate={pInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ type: "spring", stiffness: 50, damping: 20 }}
+            transition={{ type: "spring", stiffness: 70, damping: 20 }}
             className="text-gray-600 sm:font-semibold md:leading-loose tracking-wide text-base text-justify sm:text-left sm:text-xl"
           >
             Indo Global Colleges is Punjab&apos;s leading Education Group, located in a lush green, 30+ acre Campus in the foothills of Shivalik Ranges hardly 12 KMs from Chandigarh, with 4 Institutions, 4000 + Alumni, 3000+ Students and 250+ Faculty drawn from distinguished and highly accomplished backgrounds. It is a self-financed, unaided institute set up in 2003 by the INDO GLOBAL EDUCATION FOUNDATION with a vision to provide world-class quality education to its students.

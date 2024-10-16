@@ -17,7 +17,7 @@ const Stats = () => {
       <img
         src={bg}
         alt="stats"
-        className="absolute object-cover top-0 left-0 h-full w-full -z-10"
+        className="absolute object-cover top-0 left-0 h-full w-full -z-10 blur-sm"
       />
       <div className="bg-black inset-0 opacity-70 absolute z-20" />
       <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative z-30">
