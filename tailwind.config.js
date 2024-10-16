@@ -96,6 +96,22 @@ export default {
   				to: {
   					'background-position': '0% 0%'
   				}
+  			},
+  			grid: {
+  				'0%': {
+  					transform: 'translateY(-50%)'
+  				},
+  				'100%': {
+  					transform: 'translateY(0)'
+  				}
+  			},
+  			ripple: {
+  				'0%, 100%': {
+  					transform: 'translate(-50%, -50%) scale(1)'
+  				},
+  				'50%': {
+  					transform: 'translate(-50%, -50%) scale(0.9)'
+  				}
   			}
   		},
   		animation: {
@@ -103,7 +119,9 @@ export default {
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-  			shine: 'shine var(--duration) infinite linear'
+  			shine: 'shine var(--duration) infinite linear',
+  			grid: 'grid 15s linear infinite',
+  			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite'
   		}
   	}
   },
