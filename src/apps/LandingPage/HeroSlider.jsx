@@ -15,41 +15,71 @@ import Auditorium from "../../assets/Hero/Auditorium.webp";
 import BoxReveal from "../../components/ui/box-reveal";
 import WordPullUp from "../../components/ui/word-pull-up";
 import ShinyButton from "../../components/ui/shiny-button";
-
+import WordRotate from "@/components/ui/word-rotate";
 const HeroSlider = () => {
   const imgSlider = [
     {
       image: Events,
       tagline: "Shaping Bright Futures",
       highlight: "World-class curriculum, experienced faculty, and state-of-the-art classrooms.",
+      highlights: [
+        "World-class curriculum",
+        "Experienced faculty",
+        "State-of-the-art classrooms"
+      ],
     },
     {
       image: Education,
       tagline: "Celebrate Every Moment",
       highlight: "Cultural festivals, workshops, and leadership opportunities.",
+      highlights: [
+        "Cultural festivals",
+        "Workshops",
+        "Leadership opportunities"
+      ],
     },
     {
       image: Sports,
       tagline: "Fuel Your Passion",
       highlight: "Top-notch facilities, diverse sports options, and vibrant athletic culture.",
+      highlights: [
+        "Top-notch facilities",
+        "Diverse sports options",
+        "Vibrant athletic culture"
+      ],
     },
     {
       image: Labs,
       tagline: "Innovate and Experiment",
       highlight: "Cutting-edge labs for practical learning, research, and discovery.",
+      highlights: [
+        "Cutting-edge labs",
+        "Practical learning",
+        "Research and discovery"
+      ],
     },
     {
       image: Auditorium,
       tagline: "Inspire and Engage",
       highlight: "Modern auditorium for events, seminars, and cultural programs.",
+      highlights: [
+        "Modern auditorium",
+        "Events and seminars",
+        "Cultural programs"
+      ],
     },
     {
       image: Placement,
       tagline: "Launch Your Career",
       highlight: "Strong industry connections and 100% placement assistance.",
+      highlights: [
+        "Strong industry connections",
+        "100% placement assistance",
+        "Career launch support"
+      ],
     },
   ];
-
+  
   // Initialize Embla Carousel
   const [emblaRef, emblaApi] = useEmblaCarousel({
     draggable: true,
@@ -84,18 +114,21 @@ const HeroSlider = () => {
   }, [emblaApi]);
 
   return (
-    <section className="hero-section h-96 md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] w-full relative">
+    <section className="hero-section h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] w-full relative">
       <Carousel ref={emblaRef}>
         <CarouselContent>
           {imgSlider.map((img, index) => (
-            <CarouselItem key={index} className="w-full sm:h-full relative h-96 md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]">
+            <CarouselItem
+              key={index}
+              className="w-full sm:h-full relative h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]"
+            >
               <img
                 src={img.image}
                 alt={img.tagline}
-                className="object-cover w-screen h-full blur-sm"
+                className="object-cover w-screen h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
               />
               <div className="bg-black inset-0 opacity-50 absolute z-20" />
-              <div className="size-full max-w-4xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[8%] left-[10%] z-20 space-y-5 sm:space-y-10">
+              <div className="size-full max-w-4xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[8%] left-[10%] z-20 space-y-6 sm:space-y-">
                 <BoxReveal boxColor={"#DC2626"} duration={0.5}>
                   <p className="md:text-6xl text-5xl lg:text-8xl text-white font-extrabold sm:py-4 sm:tracking-wide leading-tight drop-shadow-lg">
                     {img.tagline.split(" ").map((word, index) => {
@@ -115,9 +148,13 @@ const HeroSlider = () => {
 
                 <WordPullUp
                   words={img.highlight}
-                  className="text-xl font-semibold md:text-3xl text-white md:font-bold text-left max-w-[20rem] md:max-w-3xl"
+                  className="hidden sm:block text-xl font-semibold md:text-3xl text-slate-200  md:font-bold text-left max-w-[20rem] md:max-w-3xl"
                 />
-                <ShinyButton className='text-white bg-white sm:py-5 sm:px-10 rounded-none lg:text-lg text-sm font-bold'>
+                <WordRotate
+                  className="sm:hidden block text-2xl font-bold md:text-3xl text-white  md:font-bold text-left max-w-[20rem] md:max-w-3xl"
+                  words={img.highlights}
+                />
+                <ShinyButton className="text-white bg-white sm:py-5 sm:px-10 rounded-none lg:text-lg text-sm font-bold">
                   Explore Courses
                 </ShinyButton>
               </div>

@@ -13,17 +13,17 @@ const Stats = () => {
   ];
 
   return (
-    <section className="lg:py-28 md:py-12 py-6 sm:px-0 px-0 relative">
+    <section className=" relative px-0 py-10 lg:py-28 md:py-12 sm:px-0">
       <img
         src={bg}
         alt="stats"
-        className="absolute object-cover top-0 left-0 h-full w-full -z-10 blur-sm"
+        className="absolute top-0 left-0 object-cover w-full h-full -z-10 blur-sm"
       />
-      <div className="bg-black inset-0 opacity-70 absolute z-20" />
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8 relative z-30">
+      <div className="absolute inset-0 z-20 bg-black opacity-70" />
+      <div className="relative z-30 max-w-screen-xl px-4 mx-auto md:px-8">
         <WordPullUp
-          className="text-4xl md:text-6xl font-bold text-white mb-8  text-center text-3xl font-bold sm:font-bold md:font-extrabold  sm:text-5xl lg:text-6xl "
-          words="INDO GLOBAL GROUPS OF COLLEGES"
+          className="mb-8 text-4xl font-bold text-center text-white md:text-6xl sm:font-bold md:font-extrabold sm:text-5xl lg:text-6xl "
+          words="INDO GLOBAL GROUP OF COLLEGES"
         />
         <Heading
           // title="INDO GLOBAL GROUPS OF COLLEGES"
@@ -37,13 +37,17 @@ const Stats = () => {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-0 md:divide-x-2 md:divide-red-700">
           {stats.map((item, index) => (
             <div key={index} className="flex flex-col items-center md:p-4">
-              <div className="text-5xl font-bold font text-white sm:text-6xl">
+              <div className="text-5xl font-bold text-white font sm:text-6xl">
                 {/* {item.data} */}
                 <NumberTicker
                   value={item.data}
-                  className="text-4xl font-bold font text-white sm:text-6xl"
+                  className="text-4xl font-bold text-white font sm:text-6xl"
                 />{" "}
-                {index != 0 && <span className="-ml-3 text-4xl font-bold font text-white sm:text-6xl">+</span>}
+                {index != 0 && (
+                  <span className="-ml-3 text-4xl font-bold text-white font sm:text-6xl">
+                    +
+                  </span>
+                )}
               </div>
               <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">
                 {item.title}

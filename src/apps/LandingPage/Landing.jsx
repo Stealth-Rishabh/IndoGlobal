@@ -15,26 +15,55 @@ import { Testimonials } from "./testimonials/Testimonial";
 
 const sectionVariants = {
   hidden: { scale: 0.8, opacity: 0 }, // Starting state (small and transparent)
-  visible: { 
-    scale: 1, 
-    opacity: 1, 
-    transition: { 
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
       duration: 0.6, // Animation duration
-      ease: "easeOut" 
-    } 
+      ease: "easeOut",
+    },
   },
 };
 
 const Landing = () => {
-  const [heroRef, heroInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [rankSliderRef, rankSliderInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [statsRef, statsInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [programsRef, programsInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [aboutRef, aboutInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [placementsRef, placementsInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [eventsRef, eventsInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [testimonialsRef, testimonialsInView] = useInView({ threshold: 0.2, triggerOnce: true });
-  const [blogsRef, blogsInView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [heroRef, heroInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [placementsRef, placementsInView] = useInView({
+    threshold: 0.0,
+    triggerOnce: true,
+  });
+  const [statsRef, statsInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [rankSliderRef, rankSliderInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  const [programsRef, programsInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [aboutRef, aboutInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  const [eventsRef, eventsInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [testimonialsRef, testimonialsInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+  const [blogsRef, blogsInView] = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
   return (
     <div className="overflow-x-hidden">
@@ -48,12 +77,12 @@ const Landing = () => {
       </motion.div>
 
       <motion.div
-        ref={rankSliderRef}
+        ref={placementsRef}
         variants={sectionVariants}
         initial="hidden"
-        animate={rankSliderInView ? "visible" : "hidden"}
+        animate={placementsInView ? "visible" : "hidden"}
       >
-        <RankSlider />
+        <Placements />
       </motion.div>
 
       <motion.div
@@ -63,6 +92,15 @@ const Landing = () => {
         animate={statsInView ? "visible" : "hidden"}
       >
         <Stats />
+      </motion.div>
+
+      <motion.div
+        ref={rankSliderRef}
+        variants={sectionVariants}
+        initial="hidden"
+        animate={rankSliderInView ? "visible" : "hidden"}
+      >
+        <RankSlider />
       </motion.div>
 
       <motion.div
@@ -81,15 +119,6 @@ const Landing = () => {
         animate={aboutInView ? "visible" : "hidden"}
       >
         <AboutIndoGlobal />
-      </motion.div>
-
-      <motion.div
-        ref={placementsRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={placementsInView ? "visible" : "hidden"}
-      >
-        <Placements />
       </motion.div>
 
       <motion.div

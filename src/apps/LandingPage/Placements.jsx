@@ -132,7 +132,7 @@ const Placements = () => {
           ref={cardRefs[0]}
           initial={{ opacity: 0, x: -400 }} // Animate from left
           animate={{ opacity: inView[0] ? 1 : 0, x: inView[0] ? 0 : -400 }} // Animate based on inView state
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.9 }}
         >
           <PlacementCard
             bgColor={profiles[0].bgColor}
@@ -150,7 +150,7 @@ const Placements = () => {
           ref={cardRefs[1]}
           initial={{ opacity: 0, x: -200 }} // Animate from left
           animate={{ opacity: inView[1] ? 1 : 0, x: inView[1] ? 0 : -200 }} // Animate based on inView state
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.5 }}
         >
           <PlacementCard
             bgColor={profiles[1].bgColor}
@@ -168,7 +168,7 @@ const Placements = () => {
           ref={cardRefs[2]}
           initial={{ opacity: 0, x: 200 }} // Animate from right
           animate={{ opacity: inView[2] ? 1 : 0, x: inView[2] ? 0 : 200 }} // Animate based on inView state
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.5 }}
         >
           <PlacementCard
             bgColor={profiles[2].bgColor}
@@ -186,7 +186,7 @@ const Placements = () => {
           ref={cardRefs[3]}
           initial={{ opacity: 0, x: 400 }} // Animate from right
           animate={{ opacity: inView[3] ? 1 : 0, x: inView[3] ? 0 : 400 }} // Animate based on inView state
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.9 }}
         >
           <PlacementCard
             bgColor={profiles[3].bgColor}

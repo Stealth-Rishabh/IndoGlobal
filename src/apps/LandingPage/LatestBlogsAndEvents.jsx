@@ -1,5 +1,4 @@
-import React from "react";
-// import Image from "next/image";
+
 import { Card, CardContent } from "@/components/ui/card";
 import img1 from "../../assets/blogs1.svg";
 import img2 from "../../assets/blogs2.svg";

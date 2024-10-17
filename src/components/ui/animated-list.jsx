@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 export const AnimatedList = React.memo(({
   className,
   children,
-  delay = 1000
+  delay = 1500
 }) => {
   const [index, setIndex] = useState(0);
   const childrenArray = React.Children.toArray(children);
@@ -42,7 +42,7 @@ export function AnimatedListItem({
     initial: { scale: 0, opacity: 0 },
     animate: { scale: 1, opacity: 1, originY: 0 },
     exit: { scale: 0, opacity: 0 },
-    transition: { type: "spring", stiffness: 350, damping: 40 },
+    transition: { type: "spring", stiffness: 80, damping: 20 },
   };
 
   return (
