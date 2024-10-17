@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -22,6 +23,24 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
 const HeroSlider = () => {
+  const [api, setApi] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   const imgSlider = [
     {
       image: Events,
@@ -124,7 +143,13 @@ const HeroSlider = () => {
 
   return (
     <section className="hero-section h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] w-full relative">
-      <Carousel ref={emblaRef}>
+      <Carousel
+        ref={emblaRef}
+        plugins={[plugin.current]}
+        setApi={setApi}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.play}
+      >
         <CarouselContent>
           {imgSlider.map((img, index) => (
             <CarouselItem
@@ -136,10 +161,10 @@ const HeroSlider = () => {
                 alt={img.tagline}
                 className="object-cover w-screen  h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
               />
-              <div className="bg-black inset-0 opacity-50 absolute z-20" />
+              <div className="absolute inset-0 z-20 bg-black opacity-50" />
               <div className="size-full sm:max-w-5xl items-center justify-center overflow-hidden sm:pt-8 absolute top-16 sm:top-[4%] left-[10%] z-20 space-y-6 sm:space-y-">
                 <AnimatedGradientText className="mx-0 rounded-md">
-                🔔 <hr className="mx-2 h-4 w-" />{" "}
+                  🔔 <hr className="h-4 mx-2 w-" />{" "}
                   <span
                     className={cn(
                       `inline animate-gradient bg- text-base sm:text-xl bg-gradient-to-r from-[#fff] via-[#a80808] to-[#fff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
@@ -150,7 +175,7 @@ const HeroSlider = () => {
                   <ChevronRight className="ml-1 mt-1 size-3 sm:size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 text-white/70" />
                 </AnimatedGradientText>
                 <BoxReveal boxColor={"#DC2626"} duration={0.5}>
-                  <p className="md:text-6xl text-4xl lg:text-8xl text-white font-extrabold sm:py-4 sm:tracking-wide leading-tight drop-shadow-lg">
+                  <p className="text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-8xl sm:py-4 sm:tracking-wide drop-shadow-lg">
                     {img.tagline.split(" ").map((word, index) => {
                       if (index === 1) {
                         return (
@@ -180,7 +205,7 @@ const HeroSlider = () => {
                   className="sm:hidden block text-2xl font-bold md:text-3xl text-white  md:font-bold text-left max-w-[20rem] md:max-w-3xl"
                   words={img.highlights}
                 />
-                <ShinyButton className="text-white bg-white sm:py-5 sm:px-10 rounded-none lg:text-lg text-sm font-bold">
+                <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
                   Explore Courses
                 </ShinyButton>
               </div>
@@ -188,6 +213,17 @@ const HeroSlider = () => {
           ))}
         </CarouselContent>
       </Carousel>
+      <div className="absolute justify-center hidden mt-4 space-x-2 -rotate-90 sm:flex -right-5 bottom-28">
+        {Array.from({ length: count }).map((_, index) => (
+          <button
+            key={index}
+            className={`w-4 h-[2px] rounded-sm ${
+              index === current ? "bg-destructive/70" : "bg-gray-300"
+            }`}
+            onClick={() => api?.scrollTo(index)}
+          />
+        ))}
+      </div>
     </section>
   );
 };

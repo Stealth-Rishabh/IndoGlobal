@@ -16,6 +16,7 @@ import img from "../../assets/EventImg.svg";
 import img2 from "../../assets/EventImg2.svg";
 import { Calendar } from "lucide-react";
 import Heading from "../../components/Heading";
+// import BlurFade from "@/components/ui/blur-fade";
 const Events = () => {
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);
@@ -86,7 +87,7 @@ const Events = () => {
             key={index}
             eventData={eventData}
             className={index == 1 ? "sm:col-span-2 sm:row-span-2" : "min-h-96 "}
-            imgClassname={index == 1 ? "sm:h-[75%]" : "h-3/5 sm:h-1/2"}
+            imgClassname={index == 1 ? "sm:h-[75%]" : "h-3/5 sm:h-1/2 "}
             contentClassname={index == 1 ? "sm:h-[25%]" : "h-2/5 sm:h-1/2"}
           />
         ))}
@@ -142,9 +143,9 @@ const EventCard = ({
   eventData: { title, date, image: img, registerLabel },
 }) => {
   return (
-    <div className={` ${className}`}>
-      <div className={` ${imgClassname}`}>
-        <img src={img} alt="Event Img" className="object-cover w-full h-full" />
+    <div className={`shadow-lg ${className}`}>
+      <div className={`overflow-hidden ${imgClassname}`}>
+        <img src={img} alt="Event Img" className="object-cover w-full h-full hover:scale-125 transition-all duration-300" />
       </div>
 
       <div

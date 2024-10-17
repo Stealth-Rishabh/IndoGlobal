@@ -53,6 +53,7 @@ export default function LatestBlogsAndEvents() {
                 <span className="top-0 px-4 py-1 mx-auto text-sm font-semibold tracking-wide text-white sm:text-lg w-fit sm:mx-0 bg-secondary-color ">
                   Trending
                 </span>
+                
                 <p className="flex items-center mr-2 text-base font-semibold text-white sm:text-lg">
                   <Calendar size={20} className="mr-2 text-white" /> September
                   2023

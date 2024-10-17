@@ -192,6 +192,7 @@ export function Testimonials() {
             plugins={[plugin.current]}
             setApi={setApi}
             onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.play}
             className="w-full"
           >
             <CarouselContent>

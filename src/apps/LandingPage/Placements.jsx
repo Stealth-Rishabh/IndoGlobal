@@ -15,7 +15,7 @@ import img1 from "../../assets/placement-img.svg";
 import logo from "../../assets/placement-logo.svg";
 import PlacementStats from "./PlacementStats";
 import { motion } from 'framer-motion';
-
+import BlurFade from "@/components/ui/blur-fade";
 const Placements = () => {
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);
@@ -205,6 +205,7 @@ const Placements = () => {
         plugins={[plugin.current]}
         setApi={setApi}
         onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.play}
         className="w-full grid grid-cols-1 gap-3 md:hidden "
       >
         <CarouselContent>
