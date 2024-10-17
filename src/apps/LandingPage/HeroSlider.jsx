@@ -26,7 +26,7 @@ const HeroSlider = () => {
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 8000, stopOnInteraction: true }));
 
   useEffect(() => {
     if (!api) {
@@ -142,7 +142,7 @@ const HeroSlider = () => {
   }, [emblaApi]);
 
   return (
-    <section className="hero-section h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] w-full relative">
+    <section className="hero-section h-[420px] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] w-full relative">
       <Carousel
         ref={emblaRef}
         plugins={[plugin.current]}
@@ -154,12 +154,12 @@ const HeroSlider = () => {
           {imgSlider.map((img, index) => (
             <CarouselItem
               key={index}
-              className="w-full sm:h-full relative h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]"
+              className="w-full sm:h-full relative h-[420px] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]"
             >
               <img
                 src={img.image}
                 alt={img.tagline}
-                className="object-cover w-screen  h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
+                className="object-cover w-screen  h-[420px] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
               />
               <div className="absolute inset-0 z-20 bg-black opacity-50" />
               <div className="size-full sm:max-w-5xl items-center justify-center overflow-hidden sm:pt-8 absolute top-16 sm:top-[4%] left-[10%] z-20 space-y-6 sm:space-y-">
@@ -167,7 +167,7 @@ const HeroSlider = () => {
                   🔔 <hr className="h-4 mx-2 w-" />{" "}
                   <span
                     className={cn(
-                      `inline animate-gradient bg- text-base sm:text-xl bg-gradient-to-r from-[#fff] via-[#a80808] to-[#fff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+                      `inline animate-gradient bg- text-sm sm:text-xl bg-gradient-to-r from-[#fff] via-[#a80808] to-[#fff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
                     )}
                   >
                     Enroll now
