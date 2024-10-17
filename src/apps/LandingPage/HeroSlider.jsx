@@ -16,70 +16,79 @@ import BoxReveal from "../../components/ui/box-reveal";
 import WordPullUp from "../../components/ui/word-pull-up";
 import ShinyButton from "../../components/ui/shiny-button";
 import WordRotate from "@/components/ui/word-rotate";
+import { ChevronRight } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+
 const HeroSlider = () => {
   const imgSlider = [
     {
       image: Events,
-      tagline: "Shaping Bright Futures",
-      highlight: "World-class curriculum, experienced faculty, and state-of-the-art classrooms.",
+      tagline: "Shaping Bright Futures Together",
+      highlight:
+        "World-class curriculum, experienced faculty, and state-of-the-art classrooms.",
       highlights: [
         "World-class curriculum",
         "Experienced faculty",
-        "State-of-the-art classrooms"
+        "State-of-the-art classrooms",
       ],
     },
     {
       image: Education,
-      tagline: "Celebrate Every Moment",
+      tagline: "Celebrate Every Special Moment",
       highlight: "Cultural festivals, workshops, and leadership opportunities.",
       highlights: [
         "Cultural festivals",
         "Workshops",
-        "Leadership opportunities"
+        "Leadership opportunities",
       ],
     },
     {
       image: Sports,
-      tagline: "Fuel Your Passion",
-      highlight: "Top-notch facilities, diverse sports options, and vibrant athletic culture.",
+      tagline: "Fuel Your Passion Daily",
+      highlight:
+        "Top-notch facilities, diverse sports options, and vibrant athletic culture.",
       highlights: [
         "Top-notch facilities",
         "Diverse sports options",
-        "Vibrant athletic culture"
+        "Vibrant athletic culture",
       ],
     },
     {
       image: Labs,
-      tagline: "Innovate and Experiment",
-      highlight: "Cutting-edge labs for practical learning, research, and discovery.",
+      tagline: "Innovate, Learn, Discover Together ",
+      highlight:
+        "Cutting-edge labs for practical learning, research, and discovery.",
       highlights: [
         "Cutting-edge labs",
         "Practical learning",
-        "Research and discovery"
+        "Research and discovery",
       ],
     },
     {
       image: Auditorium,
-      tagline: "Inspire and Engage",
-      highlight: "Modern auditorium for events, seminars, and cultural programs.",
+      tagline: "Inspire, Engage, Create Together",
+      highlight:
+        "Modern auditorium for events, seminars, and cultural programs.",
       highlights: [
         "Modern auditorium",
         "Events and seminars",
-        "Cultural programs"
+        "Cultural programs",
       ],
     },
     {
       image: Placement,
-      tagline: "Launch Your Career",
+      tagline: "Launch Your Career Successfully",
       highlight: "Strong industry connections and 100% placement assistance.",
       highlights: [
         "Strong industry connections",
         "100% placement assistance",
-        "Career launch support"
+        "Career launch support",
       ],
     },
   ];
-  
+
   // Initialize Embla Carousel
   const [emblaRef, emblaApi] = useEmblaCarousel({
     draggable: true,
@@ -125,18 +134,35 @@ const HeroSlider = () => {
               <img
                 src={img.image}
                 alt={img.tagline}
-                className="object-cover w-screen h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
+                className="object-cover w-screen  h-[50vh] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
               />
               <div className="bg-black inset-0 opacity-50 absolute z-20" />
-              <div className="size-full max-w-4xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[8%] left-[10%] z-20 space-y-6 sm:space-y-">
+              <div className="size-full sm:max-w-5xl items-center justify-center overflow-hidden sm:pt-8 absolute top-16 sm:top-[4%] left-[10%] z-20 space-y-6 sm:space-y-">
+                <AnimatedGradientText className="mx-0 rounded-md">
+                🔔 <hr className="mx-2 h-4 w-" />{" "}
+                  <span
+                    className={cn(
+                      `inline animate-gradient bg- text-base sm:text-xl bg-gradient-to-r from-[#fff] via-[#a80808] to-[#fff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+                    )}
+                  >
+                    Enroll now
+                  </span>
+                  <ChevronRight className="ml-1 mt-1 size-3 sm:size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 text-white/70" />
+                </AnimatedGradientText>
                 <BoxReveal boxColor={"#DC2626"} duration={0.5}>
-                  <p className="md:text-6xl text-5xl lg:text-8xl text-white font-extrabold sm:py-4 sm:tracking-wide leading-tight drop-shadow-lg">
+                  <p className="md:text-6xl text-4xl lg:text-8xl text-white font-extrabold sm:py-4 sm:tracking-wide leading-tight drop-shadow-lg">
                     {img.tagline.split(" ").map((word, index) => {
                       if (index === 1) {
                         return (
                           <span key={index}>
                             <span style={{ color: "#DC2626" }}>{word}</span>{" "}
                             <br />
+                          </span>
+                        );
+                      } else if (index === 2) {
+                        return (
+                          <span key={index}>
+                            <span style={{ color: "#DC2626" }}>{word}</span>{" "}
                           </span>
                         );
                       } else {
