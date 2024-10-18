@@ -44,7 +44,7 @@ export default function AboutIndoGlobal() {
           {/* Title Animations */}
           <WordPullUp
             className="w-fit top-0 sm:mx-0 bg-red-600 text-white font-semibold text-sm sm:text-2xl px-4 py-1"
-            words="About Us"
+            words="About"
           />
           <WordPullUp
             className="text-left sm:text-left text-4xl md:text-6xl font-bold sm:font-bold md:font-extrabold text-secondary-color mt-8 mb-4"

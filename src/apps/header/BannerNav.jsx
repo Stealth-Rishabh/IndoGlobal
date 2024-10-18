@@ -1,5 +1,5 @@
 
-import { FacebookIcon, Twitter, Instagram, Youtube, Rss, MapPin, Mail, Phone } from "lucide-react"
+import { FacebookIcon, Twitter, Instagram, Youtube, Rss, MapPin, Mail, Phone, Linkedin } from "lucide-react"
 import { Link } from "react-router-dom"
 
 export default function BannerNav() {
@@ -9,21 +9,20 @@ export default function BannerNav() {
         <div className="hidden md:flex items-center space-x-4">
           <span>Follow us</span>
           <div className="flex space-x-2">
+          <Link to="#" className="text-red-600 hover:text-red-700">
+              <Instagram size={16} />
+            </Link>
             <Link to="#" className="text-red-600 hover:text-red-700">
               <FacebookIcon size={16} />
             </Link>
             <Link to="#" className="text-red-600 hover:text-red-700">
-              <Twitter size={16} />
+              <Linkedin size={16} />
             </Link>
-            <Link to="#" className="text-red-600 hover:text-red-700">
-              <Instagram size={16} />
-            </Link>
+            
             <Link to="#" className="text-red-600 hover:text-red-700">
               <Youtube size={16} />
             </Link>
-            <Link to="#" className="text-red-600 hover:text-red-700">
-              <Rss size={16} />
-            </Link>
+            
           </div>
         </div>
         <div className="flex justify-end sm:items-center space-x-4">
