@@ -34,7 +34,7 @@ const Contact = () => {
     <div className="bg-slate-50">
       <Container>
         <section className="grid grid-cols-1 gap-0 space-y-5 sm:space-y-0 sm:gap-5 md:grid-cols-3">
-          <Card className="bg-white shadow-sm rounded-none">
+          <Card className="bg-white shadow-sm ">
             <CardHeader>
               <CardTitle className="text-3xl font-bold sm:text-4xl sm:pb-5 text-primary-color">
                 Need more help?
@@ -44,7 +44,7 @@ const Contact = () => {
               {supportData.map(({ icon: Icon, title, details }, index) => (
                 <div
                   key={index}
-                  className="grid grid-cols-3 gap-5 p-6 rounded-none shadow-sm hover:shadow-md transition-all duration-300 bg-secondary-color cursor-pointer justify-center items-center"
+                  className="grid grid-cols-3 gap-5 p-6  shadow-sm hover:shadow-md transition-all duration-300 bg-secondary-color cursor-pointer justify-center items-center rounded-lg"
                 >
                   <div className="group flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 p-4 sm:p-8 bg-primary-color  rounded-full transition-transform duration-500 hover:rotate-[360deg] overflow-hidden">
                     <Icon className="w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-125 text-white " />
@@ -66,7 +66,7 @@ const Contact = () => {
           </Card>
 
           {/* Form section */}
-          <Card className="col-span-2 bg-white shadow-sm rounded-none">
+          <Card className="col-span-2 bg-white shadow-sm ">
             <CardHeader>
               <CardTitle className="text-3xl font-bold sm:text-4xl sm:pb-5 text-primary-color">
                 Get in touch with us.
