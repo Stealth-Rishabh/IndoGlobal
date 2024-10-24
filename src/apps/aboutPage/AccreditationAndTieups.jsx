@@ -7,6 +7,7 @@ import IconMarquee from "./IconMarquee";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Stats from "../../components/Stats";
+import Newsletter from "../../components/Newsletter";
 //imgs
 import ashoklayland from "../../assets/about/tieUps/ashoklayland.png";
 import cisco from "../../assets/about/tieUps/cisco.png";
@@ -113,7 +114,7 @@ const AccreditationAndTieups = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block py-2 px-4 hover:pl-6 transition-all duration-200 hover:text-secondary-color text-gray-500 hover:bg-gray-100 rounded hover:font-medium"
+                  className="block py-2 px-4 hover:pl-6 transition-all duration-200 hover:text-secondary-color text-gray-500 hover:bg-gray-100 rounded hover:font-medium text-sm"
                 >
                   {link.label}
                 </Link>
@@ -139,6 +140,7 @@ const AccreditationAndTieups = () => {
         </div>
       </Container>
       <Stats />
+      <Newsletter />
     </div>
   );
 };
