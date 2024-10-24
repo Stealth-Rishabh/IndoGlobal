@@ -22,10 +22,11 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { Ellipsis, ChevronRightIcon } from "lucide-react";
+import WordPullUp from "./ui/word-pull-up";
 
 const ITEMS_TO_DISPLAY = 3;
 
-const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems }) => {
+const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems,title }) => {
   const [open, setOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -36,6 +37,7 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems }) => {
         alt={imageAlt || "Image"}
         className="absolute top-0 left-0 object-cover w-full h-full shadow-sm -z-10"
       />
+      <WordPullUp words={title} className='text-6xl text-white font-extrabold absolute top-[45%] tracking-wide'/>
       <Breadcrumb className="relative z-10 -mb-8 transition-all duration-300 ease-in-out hover:drop-shadow-2xl drop-shadow-xl hover:scale-105">
         <BreadcrumbList className='px-8 py-4 bg-red-500 rounded-full'>
           {isDesktop ? (
