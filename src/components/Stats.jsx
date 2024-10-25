@@ -8,6 +8,8 @@ const Stats = () => {
     { data: "20+", title: "Courses", icon: BookOpen },
   ];
 
+  
+
   return (
     <section className="py-20 bg-gradient-to-l from-primary-color via-red-600 to-primary-color">
       <div className="max-w-screen-xl mx-auto px-4 text-white md:px-8">
