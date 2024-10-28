@@ -67,7 +67,7 @@ const locations = [
 const CollegeLocation = () => {
   
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       <ImgAndBreadcrumb
         title="About Us"
         imageSrc={img}
@@ -95,8 +95,10 @@ const CollegeLocation = () => {
           </div>
         </div>
 
+        <div className="md:sticky md:top-20 self-start">
+        <AboutSidebar sidebarLinks={sidebarLinks} />  
+        </div>
         
-        <AboutSidebar sidebarLinks={sidebarLinks} />
       </Container>
       <Stats />
       <Newsletter />

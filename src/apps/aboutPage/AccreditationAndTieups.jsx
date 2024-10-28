@@ -4,7 +4,7 @@ import Container from "../../components/wrappers/Container";
 // import Header from "../header/Header";
 import img from "../../assets/breadcrumb.png";
 import IconMarquee from "./IconMarquee";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 // import { Button } from "@/components/ui/button";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
@@ -55,7 +55,7 @@ const AccreditationAndTieups = () => {
     { label: "Accreditation & Tie-ups" },
   ];
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       <ImgAndBreadcrumb
         title="About Us"
         imageSrc={img}
@@ -73,7 +73,9 @@ const AccreditationAndTieups = () => {
           <IconMarquee icons={icons} />
         </div>
 
-        <AboutSidebar sidebarLinks={sidebarLinks} />
+        <div className="md:sticky md:top-20 self-start">
+        <AboutSidebar sidebarLinks={sidebarLinks} />  
+        </div>
       </Container>
       <Stats />
       <Newsletter />

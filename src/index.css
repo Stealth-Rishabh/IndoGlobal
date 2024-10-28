@@ -72,3 +72,7 @@
       max-width: 1280px;
   }
 }
+
+.npf_wgts .widget_container {
+  max-width: 600px;
+}
