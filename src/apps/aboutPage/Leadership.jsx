@@ -44,7 +44,7 @@ const CollegeLocation = () => {
 
           <section className="ezy__about2 light pt-10 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
             <div className="container px-4">
-              <div className="grid lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div>
                   <h2 className="lg:text-end text-4xl md:text-6xl leading-tight md:leading-normal tracking-wide font-light lg:pl-6 mb-0">
                     Late Sukhdev Kumar Singla
