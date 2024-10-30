@@ -16,6 +16,7 @@ import AccreditationAndTieups from "./apps/aboutPage/AccreditationAndTieups";
 import CollegeLocation from "./apps/aboutPage/CollegeLocation";
 import VisionAndMission from "./apps/aboutPage/VisionAndMission";
 import Leadership from "./apps/aboutPage/Leadership";
+import EminentFaculty from "./apps/aboutPage/EminentFaculty";
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about/location" element={<CollegeLocation/>} />
         <Route path="/about/vision-mission" element={<VisionAndMission/>} />
         <Route path="/about/leadership" element={<Leadership/>} />
+        <Route path="/about/eminent-faculty" element={<EminentFaculty/>} />
         <Route path="/contact-us" element={<Contact/>} />
       </Routes>
       <Footer/>

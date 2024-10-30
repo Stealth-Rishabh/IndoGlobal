@@ -44,7 +44,7 @@ const sidebarLinks = [
   { href: "/about/location", label: "College Location" },
   { href: "/about/vision-mission", label: "Vision and Mission" },
   { href: "/about/leadership", label: "Leadership" },
-  { href: "/about/faculty", label: "Eminent Faculty" },
+  { href: "/about/eminent-faculty", label: "Eminent Faculty" },
 ];
 const AccreditationAndTieups = () => {
 
