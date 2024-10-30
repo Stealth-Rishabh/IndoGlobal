@@ -67,7 +67,7 @@ const breadcrumbItems = [
 
 const sidebarLinks = [
   { href: "/about/accreditation", label: "Accreditation and Tie-ups" },
-  { href: "/about/location", label: "College Location" },
+  { href: "/about/location", label: "Campus Location" },
   { href: "/about/vision-mission", label: "Vision and Mission" },
   { href: "/about/leadership", label: "Leadership" },
   { href: "/about/eminent-faculty", label: "Eminent Faculty" },
@@ -83,7 +83,6 @@ const VisionAndMission = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14 relative">
-        
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
             title="Vision & Mission"

@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import Header from "./apps/header/Header";
-import Landing from "./apps/landingPage/Landing";
+import Landing from "./apps/LandingPage/Landing";
 
 import './App.css'
 import Footer from "./apps/footer/Footer";
@@ -17,6 +17,7 @@ import CollegeLocation from "./apps/aboutPage/CollegeLocation";
 import VisionAndMission from "./apps/aboutPage/VisionAndMission";
 import Leadership from "./apps/aboutPage/Leadership";
 import EminentFaculty from "./apps/aboutPage/EminentFaculty";
+import Admission from "./apps/admissions/Admission";
 function App() {
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
         <Route path="/about/vision-mission" element={<VisionAndMission/>} />
         <Route path="/about/leadership" element={<Leadership/>} />
         <Route path="/about/eminent-faculty" element={<EminentFaculty/>} />
+        <Route path="/admissions" element={<Admission/>} />
         <Route path="/contact-us" element={<Contact/>} />
       </Routes>
       <Footer/>

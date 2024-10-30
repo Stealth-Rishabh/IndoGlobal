@@ -17,7 +17,7 @@ const breadcrumbItems = [
 
 const sidebarLinks = [
   { href: "/about/accreditation", label: "Accreditation and Tie-ups" },
-  { href: "/about/location", label: "College Location" },
+  { href: "/about/location", label: "Campus Location" },
   { href: "/about/vision-mission", label: "Vision and Mission" },
   { href: "/about/leadership", label: "Leadership" },
   { href: "/about/eminent-faculty", label: "Eminent Faculty" },
@@ -48,7 +48,9 @@ const CollegeLocation = () => {
                 <div>
                   <h2 className="lg:text-end text-4xl md:text-6xl leading-tight md:leading-normal tracking-wide font-light lg:pl-6 mb-0">
                     Late Sukhdev Kumar Singla
-                    <span className="block text-4xl mt-2 text-primary-color">Chairman</span>
+                    <span className="block text-4xl mt-2 text-primary-color">
+                      Chairman
+                    </span>
                   </h2>
                 </div>
                 <div className="lg:px-4 my-6 lg:my-0">
@@ -64,16 +66,31 @@ const CollegeLocation = () => {
                     Dear Education Aspirants,
                   </p>
                   <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
-                    Welcome to Indo Global Colleges. Our degrees in Engineering, Architecture, MBA & Paramedical are a key step towards senior positions in industry, commerce & public sector.
+                    Welcome to Indo Global Colleges. Our degrees in Engineering,
+                    Architecture, MBA & Paramedical are a key step towards
+                    senior positions in industry, commerce & public sector.
                   </p>
                   <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
-                    Our programmes will provide you with challenge, stimulation, variety and flexibility. The highly trained staff and your fellow students will provide an unrivalled contribution to your graduate and post-graduate education. Our fully equipped laboratories and workshops with latest machines prepare you to meet the challenges in the fast developing technological world.
+                    Our programmes will provide you with challenge, stimulation,
+                    variety and flexibility. The highly trained staff and your
+                    fellow students will provide an unrivalled contribution to
+                    your graduate and post-graduate education. Our fully
+                    equipped laboratories and workshops with latest machines
+                    prepare you to meet the challenges in the fast developing
+                    technological world.
                   </p>
                   <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
-                    Our students have made us proud with university positions and appreciable pass percentage in all courses. I hope the students joining us will work with same fervour and enthusiasm as their seniors. Your stay at this Institute of excellence will not only broaden your knowledge but also open many doors for you.
+                    Our students have made us proud with university positions
+                    and appreciable pass percentage in all courses. I hope the
+                    students joining us will work with same fervour and
+                    enthusiasm as their seniors. Your stay at this Institute of
+                    excellence will not only broaden your knowledge but also
+                    open many doors for you.
                   </p>
                   <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
-                    I pray that your stay at this institute of excellence will not only broaden your knowledge but also open many doors for you.
+                    I pray that your stay at this institute of excellence will
+                    not only broaden your knowledge but also open many doors for
+                    you.
                   </p>
                 </div>
               </div>

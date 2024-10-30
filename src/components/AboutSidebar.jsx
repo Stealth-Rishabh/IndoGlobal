@@ -35,7 +35,7 @@ const AboutSidebar = ({ sidebarLinks }) => {
 
   return (
     <div
-      className={`sidebar col-span-1  pt-8  ${
+      className={`sidebar col-span-1 hidden md:block  pt-8  ${
         isSticky ? "md:sticky md:top-4" : ""
       }`}
     >

@@ -41,14 +41,12 @@ const icons = [
 
 const sidebarLinks = [
   { href: "/about/accreditation", label: "Accreditation and Tie-ups" },
-  { href: "/about/location", label: "College Location" },
+  { href: "/about/location", label: "Campus Location" },
   { href: "/about/vision-mission", label: "Vision and Mission" },
   { href: "/about/leadership", label: "Leadership" },
   { href: "/about/eminent-faculty", label: "Eminent Faculty" },
 ];
 const AccreditationAndTieups = () => {
-
-
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -74,7 +72,7 @@ const AccreditationAndTieups = () => {
         </div>
 
         <div className="md:sticky md:top-20 self-start">
-        <AboutSidebar sidebarLinks={sidebarLinks} />  
+          <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
       </Container>
       <Stats />
