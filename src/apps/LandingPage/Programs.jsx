@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { ChevronRight, SendHorizontal } from "lucide-react";
 import Container from "../../components/wrappers/Container";
@@ -14,7 +20,7 @@ export default function Programs() {
   const [activePrograms, setActivePrograms] = useState(
     programData.reduce((acc, category) => ({ ...acc, [category.id]: null }), {})
   );
-  
+
   const [selectedTab, setSelectedTab] = useState("undergraduate");
 
   const handleProgramClick = (categoryId, programIndex) => {
@@ -48,7 +54,11 @@ export default function Programs() {
             subtitleClassName="text-gray-500"
             titleClassName="text-secondary-color mb-6 md:text-6xl text-4xl font-bold"
           />
-          <Tabs value={selectedTab} onValueChange={setSelectedTab} className="relative w-full">
+          <Tabs
+            value={selectedTab}
+            onValueChange={setSelectedTab}
+            className="relative w-full"
+          >
             <TabsList className="grid w-full h-8 grid-cols-3 p-0 bg-white rounded-none sm:h-16">
               {programData.map((category) => (
                 <TabsTrigger
@@ -61,7 +71,11 @@ export default function Programs() {
               ))}
             </TabsList>
             {programData.map((category) => (
-              <TabsContent key={category.id} value={category.id} className="mt-6">
+              <TabsContent
+                key={category.id}
+                value={category.id}
+                className="mt-6"
+              >
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
                   <div className="space-y-2">
                     <ul className="space-y-4 list-disc list-inside">
@@ -106,24 +120,28 @@ export default function Programs() {
                           : category.defaultCard.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent
-                     
-                      className="md:w-2/3"
-                    >
+                    <CardContent className="md:w-2/3">
                       <CardDescription className="text-lg text-gray-300">
                         {activePrograms[category.id] !== null
-                          ? category.programs[activePrograms[category.id]].description
+                          ? category.programs[activePrograms[category.id]]
+                              .description
                           : category.defaultCard.description}
                       </CardDescription>
                       {activePrograms[category.id] !== null && (
                         <>
                           <p className="mt-4 text-white">
                             <strong>Duration:</strong>{" "}
-                            {category.programs[activePrograms[category.id]].duration}
+                            {
+                              category.programs[activePrograms[category.id]]
+                                .duration
+                            }
                           </p>
                           <p className="mt-2 text-white">
                             <strong>Eligibility:</strong>{" "}
-                            {category.programs[activePrograms[category.id]].eligibility}
+                            {
+                              category.programs[activePrograms[category.id]]
+                                .eligibility
+                            }
                           </p>
                         </>
                       )}
