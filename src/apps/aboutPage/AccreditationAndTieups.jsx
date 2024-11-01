@@ -61,6 +61,9 @@ const AccreditationAndTieups = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
+      <div className="md:sticky md:top-20 self-start">
+          <AboutSidebar sidebarLinks={sidebarLinks} />
+        </div>
         <div className="col-span-1 md:col-span-3 pt-12">
           <Heading
             title="Accreditation & Tie-ups"
@@ -71,9 +74,7 @@ const AccreditationAndTieups = () => {
           <IconMarquee icons={icons} />
         </div>
 
-        <div className="md:sticky md:top-20 self-start">
-          <AboutSidebar sidebarLinks={sidebarLinks} />
-        </div>
+       
       </Container>
       <Stats />
       <Newsletter />

@@ -33,6 +33,9 @@ const CollegeLocation = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14 ">
+      <div className="md:sticky md:top-20 self-start">
+          <AboutSidebar sidebarLinks={sidebarLinks} />
+        </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
             title="Leadership"
@@ -98,9 +101,7 @@ const CollegeLocation = () => {
           </section>
         </div>
 
-        <div className="md:sticky md:top-20 self-start">
-          <AboutSidebar sidebarLinks={sidebarLinks} />
-        </div>
+       
       </Container>
       <Stats />
       <Newsletter />
