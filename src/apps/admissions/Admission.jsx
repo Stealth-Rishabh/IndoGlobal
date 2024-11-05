@@ -240,7 +240,7 @@ const renderTable = (courses) => (
 
 const AdmissionAbout = () => {
   return (
-    <section className="ezy__about1 light py-12 md:py-24 bg-blue-950 dark:bg-[#0b1727] text-zinc-900 dark:text-white">
+    <section className="ezy__about1 light py-12 md:py-24 px-6 md:px-0 bg-blue-950 dark:bg-[#0b1727] text-zinc-900 dark:text-white">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row gap-6 justify-center max-w-7xl mx-auto">
           <div className="md:w-1/2 flex flex-col gap-6">
@@ -248,7 +248,7 @@ const AdmissionAbout = () => {
               Shaping Future Leaders Since 1996
             </h2>
             <div className="flex-grow rounded overflow-hidden h-48 relative">
-              <div className="inset-0 absolute bg-gradient-to-t from-black/60 to-transparent"></div>
+              {/* <div className="inset-0 absolute bg-gradient-to-t from-black/60 to-transparent "></div> */}
                 <img
                   src="https://images.unsplash.com/photo-1620458738323-4148c6093433?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Admission"

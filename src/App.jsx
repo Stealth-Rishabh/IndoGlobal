@@ -18,6 +18,7 @@ import VisionAndMission from "./apps/aboutPage/VisionAndMission";
 import Leadership from "./apps/aboutPage/Leadership";
 import EminentFaculty from "./apps/aboutPage/EminentFaculty";
 import Admission from "./apps/admissions/Admission";
+import Event from "./apps/eventsPage/Event";
 function App() {
   return (
     <Router>
@@ -31,7 +32,9 @@ function App() {
         <Route path="/about/leadership" element={<Leadership/>} />
         <Route path="/about/eminent-faculty" element={<EminentFaculty/>} />
         <Route path="/admissions" element={<Admission/>} />
+        <Route path="/events" element={<Event/>} />
         <Route path="/contact-us" element={<Contact/>} />
+
       </Routes>
       <Footer/>
     </Router>

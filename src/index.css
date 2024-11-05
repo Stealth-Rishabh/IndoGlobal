@@ -76,3 +76,21 @@
 .npf_wgts .widget_container {
   max-width: 600px;
 }
+
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(231, 42, 42, 0.211);
+  /* border-radius: 3px; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #414141;
+}
