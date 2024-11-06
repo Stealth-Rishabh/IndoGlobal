@@ -8,7 +8,14 @@ import Newsletter from "../../components/Newsletter";
 import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent,CardDescription,CardFooter,CardHeader,CardTitle, } from "../../components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Pagination,
@@ -19,7 +26,7 @@ import {
   PaginationNext,
   PaginationEllipsis,
 } from "@/components/ui/pagination";
-
+import { Search } from "lucide-react";
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Event" }];
 
 const Event = () => {
@@ -27,129 +34,132 @@ const Event = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
   const eventsPerPage = 6;
-  const events = useMemo(() => [
-    {
-      id: 1,
-      title: "Cultural Fest",
-      date: "2023-10-15",
-      tags: ["Culture", "Festivals"],
-      image:
-        "https://plus.unsplash.com/premium_photo-1683121128953-9a7f08b82198?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 2,
-      title: "Tech Conference",
-      date: "2023-11-20",
-      tags: ["Technology", "Conference"],
-      image:
-        "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 3,
-      title: "Art Exhibition",
-      date: "2023-12-01",
-      tags: ["Art", "Exhibition"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 4,
-      title: "Science Fair",
-      date: "2023-10-30",
-      tags: ["Science", "Education"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 5,
-      title: "Music Festival",
-      date: "2023-11-05",
-      tags: ["Music", "Festival"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 6,
-      title: "Career Fair",
-      date: "2023-11-15",
-      tags: ["Career", "Networking"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 7,
-      title: "Sports Day",
-      date: "2023-10-25",
-      tags: ["Sports", "Competition"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 8,
-      title: "Literature Festival",
-      date: "2023-12-10",
-      tags: ["Literature", "Festival"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 9,
-      title: "Health Awareness Camp",
-      date: "2023-11-12",
-      tags: ["Health", "Awareness"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 10,
-      title: "Film Screening",
-      date: "2023-11-25",
-      tags: ["Film", "Screening"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 11,
-      title: "Dance Workshop",
-      date: "2023-12-05",
-      tags: ["Dance", "Workshop"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 12,
-      title: "Coding Bootcamp",
-      date: "2023-11-18",
-      tags: ["Technology", "Education"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 13,
-      title: "Environmental Awareness Day",
-      date: "2023-10-28",
-      tags: ["Environment", "Awareness"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 14,
-      title: "Photography Contest",
-      date: "2023-12-15",
-      tags: ["Photography", "Contest"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      id: 15,
-      title: "Charity Run",
-      date: "2023-11-30",
-      tags: ["Charity", "Sports"],
-      image:
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    // ... more events
-  ], []);
+  const events = useMemo(
+    () => [
+      {
+        id: 1,
+        title: "Cultural Fest",
+        date: "2023-10-15",
+        tags: ["Culture", "Festivals"],
+        image:
+          "https://plus.unsplash.com/premium_photo-1683121128953-9a7f08b82198?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 2,
+        title: "Tech Conference",
+        date: "2023-11-20",
+        tags: ["Technology", "Conference"],
+        image:
+          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 3,
+        title: "Art Exhibition",
+        date: "2023-12-01",
+        tags: ["Art", "Exhibition"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 4,
+        title: "Science Fair",
+        date: "2023-10-30",
+        tags: ["Science", "Education"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 5,
+        title: "Music Festival",
+        date: "2023-11-05",
+        tags: ["Music", "Festival"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 6,
+        title: "Career Fair",
+        date: "2023-11-15",
+        tags: ["Career", "Networking"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 7,
+        title: "Sports Day",
+        date: "2023-10-25",
+        tags: ["Sports", "Competition"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 8,
+        title: "Literature Festival",
+        date: "2023-12-10",
+        tags: ["Literature", "Festival"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 9,
+        title: "Health Awareness Camp",
+        date: "2023-11-12",
+        tags: ["Health", "Awareness"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 10,
+        title: "Film Screening",
+        date: "2023-11-25",
+        tags: ["Film", "Screening"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 11,
+        title: "Dance Workshop",
+        date: "2023-12-05",
+        tags: ["Dance", "Workshop"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 12,
+        title: "Coding Bootcamp",
+        date: "2023-11-18",
+        tags: ["Technology", "Education"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 13,
+        title: "Environmental Awareness Day",
+        date: "2023-10-28",
+        tags: ["Environment", "Awareness"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 14,
+        title: "Photography Contest",
+        date: "2023-12-15",
+        tags: ["Photography", "Contest"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      {
+        id: 15,
+        title: "Charity Run",
+        date: "2023-11-30",
+        tags: ["Charity", "Sports"],
+        image:
+          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      },
+      // ... more events
+    ],
+    []
+  );
 
   // Extract unique tags from all events
   const allTags = useMemo(() => {
@@ -254,19 +264,21 @@ const Event = () => {
             className="lg:pb-10"
           />
 
-          <div className="search-section mb-14 space-y-8" id="top">
-            <Input
-              id="search"
-              type="text"
-              placeholder="Search events by title or tags..."
-              value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-                setCurrentPage(1);
-              }}
-              className=" placeholder:text-gray-400 py-6 px-6 rounded-full max-w-6xl mx-auto border-secondary-color border-2"
-            />
-
+          <div className="search-section mb-24 space-y-8" id="top">
+            <div className="relative w-full max-w-6xl mx-auto">
+              <Input
+                id="search"
+                type="text"
+                placeholder="Search events by title or tags..."
+                value={searchTerm}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className=" placeholder:text-gray-400 py-6 pl-12 rounded-full  border-secondary-color border-2"
+              />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+            </div>
             <div className="tags-filter justify-center flex flex-wrap sm:gap-4 gap-2 max-w-6xl mx-auto">
               {allTags.map((tag) => (
                 <Badge
