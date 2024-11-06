@@ -6,10 +6,10 @@ import EminentFaculty from "./EminentFaculty";
 const AboutUs = () => {
   return (
     <div className="about-us">
-        {/* <AccreditationAndTieups /> */}
-        {/* <CollegeLocation /> */}
-        {/* <VisionAndMission /> */}
-        {/* <Leadership /> */}
+        <AccreditationAndTieups />
+        <CollegeLocation />
+        <VisionAndMission />
+        <Leadership />
         <EminentFaculty />
     </div>
   )
