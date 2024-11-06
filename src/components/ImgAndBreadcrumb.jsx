@@ -26,30 +26,33 @@ import WordPullUp from "./ui/word-pull-up";
 
 const ITEMS_TO_DISPLAY = 3;
 
-const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems,title }) => {
+const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
   const [open, setOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div className="relative flex items-end justify-center h-96">
+    <div className="relative flex items-end justify-center h-44 sm:h-96">
       <img
         src={imageSrc}
         alt={imageAlt || "Image"}
         className="absolute top-0 left-0 object-cover w-full h-full shadow-sm -z-10"
       />
-      <WordPullUp words={title} className='text-6xl text-white font-extrabold absolute top-[45%] tracking-wide'/>
+      <WordPullUp
+        words={title}
+        className="sm:text-6xl text-white font-extrabold absolute top-10 sm:top-[45%] tracking-wide"
+      />
       <Breadcrumb className="relative z-10 -mb-8 transition-all duration-300 ease-in-out hover:drop-shadow-2xl drop-shadow-xl hover:scale-105">
-        <BreadcrumbList className='px-8 py-4 bg-red-500 rounded-full'>
+        <BreadcrumbList className="px-8 py-4 bg-red-500 rounded-full">
           {isDesktop ? (
             // Desktop view: show all breadcrumbs
             breadcrumbItems.map((item, index) => (
               <BreadcrumbItem key={index}>
                 {item.href ? (
                   <>
-                    <BreadcrumbLink asChild className=''>
+                    <BreadcrumbLink asChild className="">
                       <Link
                         to={item.href}
-                        className="text-xl font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 "
+                        className="text-lg font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 "
                       >
                         {item.label}
                       </Link>
@@ -61,7 +64,7 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems,title }) => {
                     )}
                   </>
                 ) : (
-                  <BreadcrumbPage className="text-xl font-semibold text-slate-200">
+                  <BreadcrumbPage className="text-lg font-semibold text-slate-200">
                     {item.label}
                   </BreadcrumbPage>
                 )}
@@ -73,8 +76,10 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems,title }) => {
               {breadcrumbItems.length > 0 && (
                 <BreadcrumbItem>
                   <BreadcrumbLink asChild>
-                    <Link to={breadcrumbItems[0].href}>
+                    <Link to={breadcrumbItems[0].href}
+                     className=" font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 ">
                       {breadcrumbItems[0].label}
+                      
                     </Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>

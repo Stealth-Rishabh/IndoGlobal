@@ -170,12 +170,13 @@ const Gallery = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="py-12">
+      <Container className="py-12 ">
         <Heading
           title="Explore Our Gallery"
           subtitle="Discover the highlights of our events and activities."
           titleClassName="text-secondary-color text-center text-4xl lg:text-5xl mb-4"
-          subtitleClassName="text-gray-500 text-center mb-12"
+          subtitleClassName="text-gray-500 text-center mb-12 "
+          className="pt-10"
         />
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
