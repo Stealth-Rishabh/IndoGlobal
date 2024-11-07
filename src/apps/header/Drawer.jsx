@@ -15,36 +15,10 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Menu, ChevronDown, ChevronRight } from 'lucide-react';
+import {navlinks} from './navData';
 
 const Drawer = () => {
-    const navlinks = [
-        { name: "Home", path: "/" },
-        { 
-          name: "About Us", 
-          path: "/about",
-          dropdown: [
-            { name: "Accreditation & Tie-ups", path: "/about/accreditation" },
-            { name: "Location", path: "/about/location" },
-            { name: "Vision & Mission", path: "/about/vision-mission" },
-            { name: "Leadership", path: "/about/leadership" },
-            { name: "Eminent Faculty", path: "/about/eminent-faculty" },
-          ],
-        },
-        { name: "Courses", path: "/courses" },
-        { name: "Admissions", path: "/admissions" },
-        {
-          name: "Highlights",
-          path: "/events",
-          dropdown: [
-            { name: "Events", path: "/events" },
-            { name: "Gallery", path: "/gallery" },
-          ],
-        },
-        { name: "Why Indo Global", path: "/why-indo-global" },
-        { name: "Blogs", path: "/blogs" },
-        { name: "Careers", path: "/careers" },
-        { name: "Contact Us", path: "/contact-us" },
-    ];
+   
 
     const CollapsibleNavItem = ({ item }) => {
         const [isOpen, setIsOpen] = useState(false);

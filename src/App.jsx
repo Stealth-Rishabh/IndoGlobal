@@ -20,6 +20,7 @@ import EminentFaculty from "./apps/aboutPage/EminentFaculty";
 import Admission from "./apps/admissions/Admission";
 import Event from "./apps/highlights/Event";
 import Gallery from "./apps/highlights/Gallery";
+import CampusRecruitments from "./apps/placements/CampusRecruitments";
 function App() {
   return (
     <Router>
@@ -35,6 +36,7 @@ function App() {
         <Route path="/admissions" element={<Admission/>} />
         <Route path="/events" element={<Event/>} />
         <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/placements/campus-recruitments" element={<CampusRecruitments/>} />
         <Route path="/contact-us" element={<Contact/>} />
 
       </Routes>

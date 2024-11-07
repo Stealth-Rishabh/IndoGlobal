@@ -6,11 +6,11 @@ import EminentFaculty from "./EminentFaculty";
 const AboutUs = () => {
   return (
     <div className="about-us">
-        <AccreditationAndTieups />
+        {/* <AccreditationAndTieups />
         <CollegeLocation />
         <VisionAndMission />
         <Leadership />
-        <EminentFaculty />
+        <EminentFaculty /> */}
     </div>
   )
 }

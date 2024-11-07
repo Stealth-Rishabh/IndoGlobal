@@ -9,36 +9,11 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
+import {navlinks} from './navData';
+
 export default function Navbar() {
   const location = useLocation();
-  const navlinks = [
-    { name: "Home", path: "/" },
-    { 
-      name: "About Us", 
-      path: "/about",
-      dropdown: [
-        { name: "Accreditation & Tie-ups", path: "/about/accreditation" },
-        { name: "Location", path: "/about/location" },
-        { name: "Vision & Mission", path: "/about/vision-mission" },
-        { name: "Leadership", path: "/about/leadership" },
-        { name: "Eminent Faculty", path: "/about/eminent-faculty" },
-      ],
-    },
-    { name: "Courses", path: "/courses" },
-    { name: "Admissions", path: "/admissions" },
-    {
-      name: "Highlights",
-      path: "/events",
-      dropdown: [
-        { name: "Events", path: "/events" },
-        { name: "Gallery", path: "/gallery" },
-      ],
-    },
-    { name: "Why Indo Global", path: "/why-indo-global" },
-    { name: "Blogs", path: "/blogs" },
-    { name: "Careers", path: "/careers" },
-    { name: "Contact Us", path: "/contact-us" },
-  ];
+  
 
   return (
     <div className="bg-red-600 px-4 py-4">
@@ -60,17 +35,23 @@ export default function Navbar() {
                     <DropdownMenuTrigger asChild>
                       <button
                         className={
-                          link.dropdown.some(item => item.path === location.pathname)
-                            ? "rounded bg-red-700 px-3 py-2 -mt-2 text-red-100"
+                          link.dropdown.some(
+                            (item) => item.path === location.pathname
+                          )
+                            ? "rounded bg-red-700 px-3 py-2 -mt-2 text-red-100 outline-0"
                             : "rounded px-3 py-2 text-white -mt-2 hover:bg-red-700 hover:text-red-200"
                         }
                       >
                         {link.name}
                       </button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent  align='start'>
+                    <DropdownMenuContent align="start">
                       {link.dropdown.map((dropdownLink) => (
-                        <DropdownMenuItem key={dropdownLink.name} asChild className='pr-6'>
+                        <DropdownMenuItem
+                          key={dropdownLink.name}
+                          asChild
+                          className="pr-6"
+                        >
                           <NavLink
                             to={dropdownLink.path}
                             className={({ isActive }) =>
