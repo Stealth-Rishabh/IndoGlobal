@@ -57,7 +57,7 @@ const AboutSidebar = ({ sidebarLinks }) => {
         <Button className="w-full px-4 py-2 mb-6 font-bold text-white rounded bg-primary-color hover:bg-red-600">
           Apply Online
         </Button>
-        <div className="relative flex-grow overflow-hidden rounded-md  min-h-48 max-h-96">
+        <div className="relative flex-grow overflow-hidden rounded-md  h-56">
           <img
             src={img}
             alt="cta"
