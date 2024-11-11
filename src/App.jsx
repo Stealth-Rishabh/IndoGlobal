@@ -23,6 +23,7 @@ import Gallery from "./apps/highlights/Gallery";
 import CampusRecruitments from "./apps/placements/CampusRecruitments";
 import IndustrySpeaks from "./apps/placements/IndustrySpeaks";
 import IndustryTieUps from "./apps/placements/IndustryTieUps";
+import PlacementActivities from "./apps/placements/PlacementActivities";
 function App() {
   return (
     <Router>
@@ -41,6 +42,8 @@ function App() {
         <Route path="/placements/campus-recruitments" element={<CampusRecruitments/>} />
         <Route path="/placements/industry-speaks" element={<IndustrySpeaks/>} />
         <Route path="/placements/industry-tie-ups" element={<IndustryTieUps/>} />
+        <Route path="/placements/placement-activities" element={<PlacementActivities/>} />
+
         <Route path="/contact-us" element={<Contact/>} />
 
       </Routes>
