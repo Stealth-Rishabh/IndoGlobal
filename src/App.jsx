@@ -22,6 +22,7 @@ import Event from "./apps/highlights/Event";
 import Gallery from "./apps/highlights/Gallery";
 import CampusRecruitments from "./apps/placements/CampusRecruitments";
 import IndustrySpeaks from "./apps/placements/IndustrySpeaks";
+import IndustryTieUps from "./apps/placements/IndustryTieUps";
 function App() {
   return (
     <Router>
@@ -39,6 +40,7 @@ function App() {
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/placements/campus-recruitments" element={<CampusRecruitments/>} />
         <Route path="/placements/industry-speaks" element={<IndustrySpeaks/>} />
+        <Route path="/placements/industry-tie-ups" element={<IndustryTieUps/>} />
         <Route path="/contact-us" element={<Contact/>} />
 
       </Routes>
