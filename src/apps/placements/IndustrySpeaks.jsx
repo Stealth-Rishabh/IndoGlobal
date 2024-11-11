@@ -3,7 +3,7 @@ import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
 // import Header from "../header/Header";
 import img from "../../assets/breadcrumb.png";
-import IconMarquee from "./IconMarquee";
+import IconMarquee from "../aboutPage/IconMarquee";
 // import { useEffect, useState } from "react";
 // import { Button } from "@/components/ui/button";
 import Stats from "../../components/Stats";
@@ -40,22 +40,22 @@ const icons = [
 ];
 
 const sidebarLinks = [
-  { href: "/about/accreditation", label: "Accreditation and Tie-ups" },
-  { href: "/about/location", label: "Campus Location" },
-  { href: "/about/vision-mission", label: "Vision and Mission" },
-  { href: "/about/leadership", label: "Leadership" },
-  { href: "/about/eminent-faculty", label: "Eminent Faculty" },
-];
-const AccreditationAndTieups = () => {
-  const breadcrumbItems = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { label: "Accreditation & Tie-ups" },
+    { href: "/placements/campus-recruitments", label: "Campus Recruitments" },
+    { href: "/placements/industry-speaks", label: "Industry Speaks" },
+    { href: "/placements/industry-tie-ups", label: "Industry Tie-ups" },
+    { href: "/placements/placement-activities", label: "Placement Activities" },
+    { href: "/placements/our-recruiters", label: "Our Recruiters" },
   ];
+const IndustrySpeaks = () => {
+    const breadcrumbItems = [
+        { href: "/", label: "Home" },
+        { href: "/industry-speaks", label: "Placements" },
+        { label: "Industry Speaks" },
+      ];
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="About Us"
+        title="Placements"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
@@ -66,10 +66,10 @@ const AccreditationAndTieups = () => {
         </div>
         <div className="col-span-1 md:col-span-3 pt-12">
           <Heading
-            title="Accreditation & Tie-ups"
+            title="Industry Insights"
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
-            subtitle="To provide a learning environment in which all students are challenged to develop their intellectual, practical and social skills in a holistic way focusing on leadership, socially responsible behaviour and lifelong learning."
+            subtitle="Gain valuable insights from industry experts on developing intellectual, practical, and social skills, with a focus on leadership, socially responsible behavior, and lifelong learning."
           />
           <IconMarquee icons={icons} />
         </div>
@@ -80,4 +80,4 @@ const AccreditationAndTieups = () => {
   );
 };
 
-export default AccreditationAndTieups;
+export default IndustrySpeaks;
