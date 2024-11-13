@@ -1,9 +1,11 @@
+import Entrepreneurship from './Entrepreneurship'
 import IndustryOrientedCurriculum from './IndustryOrientedCurriculum'
 
 const WhyIndoGlobal = () => {
   return (
     <>
-    <IndustryOrientedCurriculum/>
+    {/* <IndustryOrientedCurriculum/> */}
+    <Entrepreneurship/>
     </>
   )
 }

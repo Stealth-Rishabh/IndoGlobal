@@ -17,7 +17,7 @@ import {
   HeartIcon,
 } from "lucide-react";
 
-const institutionalData = [
+const data = [
   {
     section: "Outcome-Based Education",
     icon: <BarChart className="w-10 h-10 text-blue-600" />,
@@ -100,7 +100,7 @@ const sidebarLinks = [
 const IndustryOrientedCurriculum = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/industry-oriented-curriculum ", label: "Why Indo Global" },
+    { href: "/industry-oriented-curriculum", label: "Why Indo Global" },
     { label: "Industry Oriented Curriculum" },
   ];
   return (
@@ -124,8 +124,8 @@ const IndustryOrientedCurriculum = () => {
             className=""
           />
           <div className="grid grid-cols-1 gap-20">
-            {institutionalData.map((data, index) => (
-              <VisionAndMissionSection key={index} data={data} order={index} />
+            {data.map((data, index) => (
+              <IndustryOrientedCurriculumSection key={index} data={data} order={index} />
             ))}
           </div>
         </div>
@@ -138,7 +138,7 @@ const IndustryOrientedCurriculum = () => {
 
 export default IndustryOrientedCurriculum;
 
-const VisionAndMissionSection = ({ data, order }) => {
+const IndustryOrientedCurriculumSection = ({ data, order }) => {
   return (
     <section className="ezy__featured7 light relative bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white z-[1]">
       <div className="">
