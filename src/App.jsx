@@ -4,7 +4,7 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-
+import { Helmet } from 'react-helmet';
 import Header from "./apps/header/Header";
 import Landing from "./apps/LandingPage/Landing";
 
@@ -25,6 +25,7 @@ import IndustrySpeaks from "./apps/placements/IndustrySpeaks";
 import IndustryTieUps from "./apps/placements/IndustryTieUps";
 import PlacementActivities from "./apps/placements/PlacementActivities";
 import OurRecruiters from "./apps/placements/OurRecruiters";
+import WhyIndoGlobal from "./apps/whyIndoGlobal/WhyIndoGlobal";
 function App() {
   return (
     <Router>
@@ -45,8 +46,16 @@ function App() {
         <Route path="/placements/industry-tie-ups" element={<IndustryTieUps/>} />
         <Route path="/placements/placement-activities" element={<PlacementActivities/>} />
         <Route path="/placements/our-recruiters" element={<OurRecruiters/>} />
+        <Route path="/why-indo-global" element={<WhyIndoGlobal/>} />
 
-        <Route path="/contact-us" element={<Contact/>} />
+        <Route path="/contact-us" element={
+          <>
+          <Helmet>
+            <title>Contact Us</title>
+          </Helmet>
+          <Contact/>
+          </>
+          } />
 
       </Routes>
       <Footer/>

@@ -5,19 +5,18 @@ import img from "../../assets/breadcrumb.png";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
-import { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
+
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Badge } from "@/components/ui/badge";
 import {
   ChevronDown,
   ChevronUp,
@@ -33,22 +32,22 @@ import {
   Brain,
   Heart,
 } from "lucide-react";
-import InfiniteCarousel from "../../components/ui/InfiniteCarousel";
+// import InfiniteCarousel from "../../components/ui/InfiniteCarousel";
 import IconMarquee from "./IconMarquee";
-import ashoklayland from "../../assets/about/tieUps/ashoklayland.png";
+// import ashoklayland from "../../assets/about/tieUps/ashoklayland.png";
 import cisco from "../../assets/about/tieUps/cisco.png";
-import ibm from "../../assets/about/tieUps/ibm.png";
-import IETE from "../../assets/about/tieUps/IETE.png";
-import IIT_BOMBAY from "../../assets/about/tieUps/IIT_BOMBAY.png";
-import IIT_Kanpur from "../../assets/about/tieUps/IIT_Kanpur.jpg";
-import ISTE_logo from "../../assets/about/tieUps/ISTE_logo.png";
+// import ibm from "../../assets/about/tieUps/ibm.png";
+// import IETE from "../../assets/about/tieUps/IETE.png";
+// import IIT_BOMBAY from "../../assets/about/tieUps/IIT_BOMBAY.png";
+// import IIT_Kanpur from "../../assets/about/tieUps/IIT_Kanpur.jpg";
+// import ISTE_logo from "../../assets/about/tieUps/ISTE_logo.png";
 import oracle from "../../assets/about/tieUps/oracle.png";
 import redhat_logo from "../../assets/about/tieUps/redhat_logo.png";
 import Roundglass from "../../assets/about/tieUps/Roundglass.png";
-import toyota from "../../assets/about/tieUps/toyota.png";
+// import toyota from "../../assets/about/tieUps/toyota.png";
 import university_of_quebec from "../../assets/about/tieUps/university_of_quebec.png";
 import IBM from "../../assets/placements/recruiters/ibm.jpg";
-import Infosys from "../../assets/placements/recruiters/infosys.jpg";
+// import Infosys from "../../assets/placements/recruiters/infosys.jpg";
 import Ashok from "../../assets/placements/recruiters/Ashok.png";
 import LT from "../../assets/placements/recruiters/Lt.png";
 import Wipro from "../../assets/placements/recruiters/Wipro.png";
