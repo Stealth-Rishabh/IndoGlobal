@@ -1,6 +1,6 @@
-import Entrepreneurship from './Entrepreneurship'
-import IndustryOrientedCurriculum from './IndustryOrientedCurriculum'
-import SportsArena from './SportsArena'
+// import Entrepreneurship from './Entrepreneurship'
+// import IndustryOrientedCurriculum from './IndustryOrientedCurriculum'
+// import SportsArena from './SportsArena'
 import Infrastructure from './Infrastructure'
 
 const WhyIndoGlobal = () => {

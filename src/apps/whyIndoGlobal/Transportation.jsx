@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
@@ -26,7 +27,7 @@ const sidebarLinks = [
 const Transportation = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/great-transportation", label: "Why Indo Global" },
+    { href: "/why-indo-global/great-transportation", label: "Why Indo Global" },
     { label: "Transportation" },
   ];
   return (
@@ -119,7 +120,7 @@ const FeatureItem = ({ feature, index }) => (
 						{feature.title}
 					</span>
 				</div>
-				<p className="mb-6 lg:mb-12 leading-loose">{feature.description}</p>
+				<p className="mb-6 lg:mb-12 leading-loose text-justify">{feature.description}</p>
 				
 			</div>
 		</div>

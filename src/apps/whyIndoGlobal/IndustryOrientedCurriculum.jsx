@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";

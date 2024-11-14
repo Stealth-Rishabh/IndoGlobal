@@ -1,4 +1,5 @@
-import { cn } from "@/lib/utils";
+/* eslint-disable react/prop-types */
+// import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 
 const IconItem = ({ src, alt }) => {
@@ -12,6 +13,7 @@ const IconItem = ({ src, alt }) => {
 };
 
 export function IconMarquee({ icons }) {
+  // eslint-disable-next-line react/prop-types
   const firstRow = icons.slice(0, Math.ceil(icons.length / 2));
   const secondRow = icons.slice(Math.ceil(icons.length / 2));
 
