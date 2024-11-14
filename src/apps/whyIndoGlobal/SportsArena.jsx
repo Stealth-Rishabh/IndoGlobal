@@ -14,7 +14,7 @@ const sidebarLinks = [
   },
   { href: "/why-indo-global/entrepreneurship", label: "Entrepreneurship" },
   { href: "/why-indo-global/sports-arena", label: "Sports Arena" },
-  { href: "/why-indo-global/students-zone", label: "Students Zone" },
+  { href: "/why-indo-global/infrastructure", label: "Infrastructure" },
   {
     href: "/why-indo-global/great-transportation",
     label: "Great Transportation",
@@ -66,7 +66,7 @@ const SportsArena = () => {
 export default SportsArena;
 
 const Gallery = ({ imageItems }) => {
-    const{ title,description, items } = imageItems;
+  const { title, description, items } = imageItems;
   return (
     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 ">
       {items.map((item, index) => (

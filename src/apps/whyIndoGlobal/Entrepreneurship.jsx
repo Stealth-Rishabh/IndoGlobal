@@ -13,7 +13,7 @@ const sidebarLinks = [
   },
   { href: "/why-indo-global/entrepreneurship", label: "Entrepreneurship" },
   { href: "/why-indo-global/sports-arena", label: "Sports Arena" },
-  { href: "/why-indo-global/students-zone", label: "Students Zone" },
+  { href: "/why-indo-global/infrastructure", label: "Infrastructure" },
   {
     href: "/why-indo-global/great-transportation",
     label: "Great Transportation",

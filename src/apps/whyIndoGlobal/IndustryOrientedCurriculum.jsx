@@ -87,7 +87,7 @@ const sidebarLinks = [
   },
   { href: "/why-indo-global/entrepreneurship", label: "Entrepreneurship" },
   { href: "/why-indo-global/sports-arena", label: "Sports Arena" },
-  { href: "/why-indo-global/students-zone", label: "Students Zone" },
+  { href: "/why-indo-global/infrastructure", label: "Infrastructure" },
   {
     href: "/why-indo-global/great-transportation",
     label: "Great Transportation",
@@ -125,7 +125,11 @@ const IndustryOrientedCurriculum = () => {
           />
           <div className="grid grid-cols-1 gap-20">
             {data.map((data, index) => (
-              <IndustryOrientedCurriculumSection key={index} data={data} order={index} />
+              <IndustryOrientedCurriculumSection
+                key={index}
+                data={data}
+                order={index}
+              />
             ))}
           </div>
         </div>
