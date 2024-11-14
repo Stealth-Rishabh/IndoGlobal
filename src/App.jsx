@@ -29,6 +29,7 @@ import WhyIndoGlobal from "./apps/whyIndoGlobal/WhyIndoGlobal";
 import IndustryOrientedCurriculum from "./apps/whyIndoGlobal/IndustryOrientedCurriculum";
 import SportsArena from "./apps/whyIndoGlobal/SportsArena";
 import Infrastructure from "./apps/whyIndoGlobal/Infrastructure";
+import Transportation from "./apps/whyIndoGlobal/Transportation";
 function App() {
   return (
     <Router>
@@ -64,6 +65,8 @@ function App() {
         <Route path="/why-indo-global/industry-oriented-curriculum" element={<IndustryOrientedCurriculum/>} />
         <Route path="/why-indo-global/sports-arena" element={<SportsArena/>} />
         <Route path="/why-indo-global/infrastructure" element={<Infrastructure/>} />
+        <Route path="/why-indo-global/great-transportation" element={<Transportation/>} />
+
 
 
         <Route path="/contact-us" element={
