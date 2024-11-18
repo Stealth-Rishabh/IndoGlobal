@@ -32,6 +32,7 @@ import Infrastructure from "./apps/whyIndoGlobal/Infrastructure";
 import Transportation from "./apps/whyIndoGlobal/Transportation";
 import StudentSecurity from "./apps/whyIndoGlobal/StudentSecurity";
 import AiciteSpices from "./apps/whyIndoGlobal/AiciteSpices";
+import Hostels from "./apps/whyIndoGlobal/Hostels";
 function App() {
   return (
     <Router>
@@ -70,6 +71,7 @@ function App() {
         <Route path="/why-indo-global/great-transportation" element={<Transportation/>} />
         <Route path="/why-indo-global/students-security" element={<StudentSecurity/>} />
         <Route path="/why-indo-global/aicte-spices" element={<AiciteSpices/>} />
+        <Route path="/why-indo-global/hostel" element={<Hostels/>} />
 
 
 

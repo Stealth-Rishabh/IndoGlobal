@@ -102,14 +102,14 @@ function AiciteSpicesItem() {
       </header> */}
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="about">About</TabsTrigger>
-          <TabsTrigger value="objectives">Objectives</TabsTrigger>
-          <TabsTrigger value="departments">Departments</TabsTrigger>
-          <TabsTrigger value="get-involved">Get Involved</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-4 sm:h-12 ">
+          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="about">About</TabsTrigger>
+          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="objectives">Objectives</TabsTrigger>
+          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="departments">Departments</TabsTrigger>
+          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="get-involved">Get Involved</TabsTrigger>
         </TabsList>
         <TabsContent value="about" className="mt-6 ">
-          <Card>
+          <Card className='rounded-sm shadow-sm'>
             <CardHeader>
               <CardTitle className="flex items-center">
                 <BookOpen className="mr-2" />
@@ -130,7 +130,7 @@ function AiciteSpicesItem() {
           </Card>
         </TabsContent>
         <TabsContent value="objectives" className="mt-6">
-          <Card>
+          <Card className='rounded-sm shadow-sm'>
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Target className="mr-2" />
@@ -150,7 +150,7 @@ function AiciteSpicesItem() {
           </Card>
         </TabsContent>
         <TabsContent value="departments" className="mt-6">
-          <Card>
+          <Card className='rounded-sm shadow-sm'>
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Users className="mr-2" />
@@ -172,7 +172,7 @@ function AiciteSpicesItem() {
           </Card>
         </TabsContent>
         <TabsContent value="get-involved" className="mt-6">
-          <Card>
+          <Card className='rounded-sm shadow-sm'>
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Lightbulb className="mr-2" />
