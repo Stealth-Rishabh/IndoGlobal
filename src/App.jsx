@@ -33,6 +33,7 @@ import Transportation from "./apps/whyIndoGlobal/Transportation";
 import StudentSecurity from "./apps/whyIndoGlobal/StudentSecurity";
 import AiciteSpices from "./apps/whyIndoGlobal/AiciteSpices";
 import Hostels from "./apps/whyIndoGlobal/Hostels";
+import Courses from "./apps/courses/Courses";
 function App() {
   return (
     <Router>
@@ -48,6 +49,9 @@ function App() {
         <Route path="/about/vision-mission" element={<VisionAndMission/>} />
         <Route path="/about/leadership" element={<Leadership/>} />
         <Route path="/about/eminent-faculty" element={<EminentFaculty/>} />
+
+        {/* courses page */}
+        <Route path="/courses" element={<Courses/>} />
 
         {/* admissions page */}
         <Route path="/admissions" element={<Admission/>} />
