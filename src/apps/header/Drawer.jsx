@@ -14,7 +14,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { Menu, ChevronDown, ChevronRight } from 'lucide-react';
+import { PanelLeft, ChevronDown, ChevronRight,  } from 'lucide-react';
 import {navlinks} from './navData';
 
 const Drawer = () => {
@@ -52,9 +52,9 @@ const Drawer = () => {
     return (
         <Sheet>
             <SheetTrigger className="lg:hidden block">
-                <Menu className="w-8 h-8 text-white" />
+                <PanelLeft className="w-8 h-8 text-slate-200" />
             </SheetTrigger>
-            <SheetContent className="bg-primary-color">
+            <SheetContent className="bg-primary-color overflow-auto">
                 <SheetHeader>
                     <SheetTitle className="text-white text-2xl font-bold text-left">Indo Global</SheetTitle>
                     <SheetDescription className="text-white text-left pt-5">

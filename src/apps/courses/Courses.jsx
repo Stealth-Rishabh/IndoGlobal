@@ -1,30 +1,31 @@
-import { useState, useMemo } from "react"
-import { Search } from "lucide-react"
-import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb"
-import img from "../../assets/breadcrumb.png"
-import Container from "../../components/wrappers/Container"
-import Heading from "../../components/Heading"
-import Stats from "../../components/Stats"
-import Newsletter from "../../components/Newsletter"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
-import { Card } from "../../components/ui/card"
-import { Button } from "@/components/ui/button"
+import { useState, useMemo } from "react";
+import { Search } from "lucide-react";
+import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
+import img from "../../assets/breadcrumb.png";
+import Container from "../../components/wrappers/Container";
+import Heading from "../../components/Heading";
+import Stats from "../../components/Stats";
+import Newsletter from "../../components/Newsletter";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "../../components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
+import { Link } from "react-router-dom";
 
-const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Courses" }]
+const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Courses" }];
 
 export default function Courses() {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategories, setSelectedCategories] = useState([])
-  const [selectedCategory, setSelectedCategory] = useState("")
-  const [selectedCourse, setSelectedCourse] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState("");
 
   const courses = useMemo(
     () => [
@@ -32,43 +33,50 @@ export default function Courses() {
         id: 1,
         title: "B.Tech in Mechanical Engineering",
         category: "B.Tech / B.tech Lateral Entry",
-        image: "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+        image:
+          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
       },
       {
         id: 2,
         title: "B.Tech in Computer Science Engineering",
         category: "B.Tech / B.tech Lateral Entry",
-        image: "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+        image:
+          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
       },
       {
         id: 3,
         title: "B.Tech in Electronics and Communication Engineering",
         category: "B.Tech / B.tech Lateral Entry",
-        image: "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+        image:
+          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
       },
       {
         id: 4,
         title: "B.Tech in Civil Engineering",
         category: "B.Tech / B.tech Lateral Entry",
-        image: "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+        image:
+          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
       },
       {
         id: 5,
         title: "M.Tech in Civil Engineering",
         category: "M.Tech",
-        image: "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
+        image:
+          "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
       },
       {
         id: 6,
         title: "M.Tech in Computer Science Engineering",
         category: "M.Tech",
-        image: "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
+        image:
+          "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
       },
       {
         id: 7,
         title: "M.Tech in Electronics and Communication",
         category: "M.Tech",
-        image: "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
+        image:
+          "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
       },
       {
         id: 8,
@@ -86,48 +94,54 @@ export default function Courses() {
         id: 10,
         title: "Master in Of Business Administration (MBA)",
         category: "Management and Technology",
-        image: "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
+        image:
+          "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
       },
       {
         id: 11,
         title: "Bachelor in Of Business Administration (BBA)",
         category: "Management and Technology",
-        image: "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
+        image:
+          "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
       },
       {
         id: 12,
         title: "Bachelor in of Computer Application (BCA)",
         category: "Management and Technology",
-        image: "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
+        image:
+          "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
       },
       {
         id: 13,
         title: "Bachelor in of Architecture",
         category: "Architecture",
-        image: "https://www.krmangalam.edu.in/wp-content/uploads/2024/02/347bs_BlogBanner3-1024x576.webp",
+        image:
+          "https://www.krmangalam.edu.in/wp-content/uploads/2024/02/347bs_BlogBanner3-1024x576.webp",
       },
       {
         id: 14,
         title: "B.Sc. in Medical Laboratory Sciences (MLS)",
         category: "Paramedical Courses",
-        image: "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
+        image:
+          "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
       },
       {
         id: 15,
         title: "B.Sc in Radiology & Imaging Technology",
         category: "Paramedical Courses",
-        image: "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
+        image:
+          "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
       },
       {
         id: 16,
         title: "B.Sc in Operation Theatre Technology",
         category: "Paramedical Courses",
-        image: "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
+        image:
+          "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
       },
     ],
     []
   );
-  
 
   const categories = useMemo(
     () => [
@@ -139,40 +153,40 @@ export default function Courses() {
       "Paramedical Courses",
     ],
     []
-  )
+  );
 
   const toggleCategory = (category) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
         ? prev.filter((c) => c !== category)
         : [...prev, category]
-    )
-  }
+    );
+  };
 
   const handleCategorySelect = (value) => {
-    setSelectedCategory(value)
-    setSelectedCourse("")
-  }
+    setSelectedCategory(value);
+    setSelectedCourse("");
+  };
 
   const handleCourseSelect = (value) => {
-    setSelectedCourse(value)
-    setSelectedCategories([selectedCategory])
-  }
+    setSelectedCourse(value);
+    setSelectedCategories([selectedCategory]);
+  };
 
   const filteredCourses = useMemo(() => {
     return courses.filter((course) => {
       const matchesSearch = course.title
         .toLowerCase()
-        .includes(searchTerm.toLowerCase())
+        .includes(searchTerm.toLowerCase());
       const matchesCategory =
         selectedCategories.length === 0 ||
-        selectedCategories.includes(course.category)
+        selectedCategories.includes(course.category);
       const matchesSelectedCourse = selectedCourse
         ? course.title === selectedCourse
-        : true
-      return matchesSearch && matchesCategory && matchesSelectedCourse
-    })
-  }, [courses, searchTerm, selectedCategories, selectedCourse])
+        : true;
+      return matchesSearch && matchesCategory && matchesSelectedCourse;
+    });
+  }, [courses, searchTerm, selectedCategories, selectedCourse]);
 
   return (
     <section className="relative min-h-screen">
@@ -266,7 +280,9 @@ export default function Courses() {
                 />
                 <h3 className="text-lg font-bold mt-2">{course.title}</h3>
                 <p className="text-gray-500">{course.category}</p>
-                <Button className="mt-4 w-full">View Details</Button>
+                <Link to='/courses/b.tech-in-mechanical-engineering'>
+                  <Button className="mt-4 w-full">View Details</Button>
+                </Link>
               </Card>
             ))}
           </div>
@@ -282,5 +298,5 @@ export default function Courses() {
       <Stats />
       <Newsletter />
     </section>
-  )
+  );
 }

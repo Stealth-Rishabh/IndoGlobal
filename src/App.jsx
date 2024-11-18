@@ -34,6 +34,7 @@ import StudentSecurity from "./apps/whyIndoGlobal/StudentSecurity";
 import AiciteSpices from "./apps/whyIndoGlobal/AiciteSpices";
 import Hostels from "./apps/whyIndoGlobal/Hostels";
 import Courses from "./apps/courses/Courses";
+import CoursesDetails from "./apps/courses/CoursesDetails";
 function App() {
   return (
     <Router>
@@ -52,6 +53,7 @@ function App() {
 
         {/* courses page */}
         <Route path="/courses" element={<Courses/>} />
+        <Route path="/courses/b.tech-in-mechanical-engineering" element={<CoursesDetails/>} />
 
         {/* admissions page */}
         <Route path="/admissions" element={<Admission/>} />
