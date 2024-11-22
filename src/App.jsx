@@ -35,6 +35,8 @@ import AiciteSpices from "./apps/whyIndoGlobal/AiciteSpices";
 import Hostels from "./apps/whyIndoGlobal/Hostels";
 import Courses from "./apps/courses/Courses";
 import CoursesDetails from "./apps/courses/CoursesDetails";
+import Blogs from "./apps/blogs/Blogs";
+import BlogDetails from "./apps/blogs/BlogDetails";
 function App() {
   return (
     <Router>
@@ -80,7 +82,14 @@ function App() {
         <Route path="/why-indo-global/hostel" element={<Hostels/>} />
 
 
+         {/* Blogs page  */}
+         <Route path="/blogs" element={<Blogs/>} />
+         {/* Blog details page  */}
+         <Route path="/blogs/:slug" element={<BlogDetails/>} />
 
+
+
+         {/* Contact us page  */}
         <Route path="/contact-us" element={
           <>
           <Helmet>

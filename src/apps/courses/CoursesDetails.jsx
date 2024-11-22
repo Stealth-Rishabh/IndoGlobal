@@ -19,6 +19,7 @@ import {
   List,
   User,
   HelpCircle,
+  IndianRupee
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -78,7 +79,7 @@ const COURSE_INFO = {
     { icon: Calendar, text: "Next Intake: Sept 2024" },
     { icon: Users, text: "120 students" },
     { icon: BookOpen, text: "Full-time" },
-    { icon: DollarSign, text: "$10,000/year" },
+    { icon: IndianRupee, text: "10,000/year" },
     { icon: MapPin, text: "On-campus" },
   ],
   breadcrumbs: [
