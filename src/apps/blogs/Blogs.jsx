@@ -5,17 +5,19 @@ import img from "../../assets/breadcrumb.png";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
 
 const Blogs = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/blogs", label: "Why Indo Global" },
     { label: "Blogs" },
   ];
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Why Indo Global"
+        title="Blogs"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
@@ -41,7 +43,6 @@ const Blogs = () => {
 
 export default Blogs;
 
-import PropTypes from "prop-types";
 
 const blogs = [
   {
@@ -98,7 +99,7 @@ const BlogItem = ({ blog }) => {
   const { title, description, author, date, image } = blog;
 
   return (
-    <article className="shadow-lg bg-white dark:shadow-none dark:bg-[#1E2735] rounded overflow-hidden h-full">
+    <article className="drop-shadow-lg bg-white dark:shadow-none dark:bg-[#1E2735] rounded overflow-hidden h-full">
       <img src={image} alt={title} className="h-auto w-full" />
       <div className="p-3 pb-8 md:p-6 md:pb-12">
         <h4 className="font-medium text-2xl leading-7 mb-2">{title}</h4>
@@ -114,12 +115,12 @@ const BlogItem = ({ blog }) => {
           </span>
         </p>
         <p className="opacity-60 mt-3 mb-8">{description}</p>
-        <a
-          href="#!"
+        <Link
+          to='/blogs/blog-details'
           className="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white py-2 px-5 rounded transition"
         >
           Read More
-        </a>
+        </Link>
       </div>
     </article>
   );
@@ -133,7 +134,7 @@ const Blog2 = () => {
   return (
     <section className="ezy__blog2 light  text-stone-800 dark:text-white bg-white dark:bg-[#0b1727] overflow-hidden">
       <div className="container ">
-        <div className="grid grid-cols-12 sm:px-8 px-0 gap-6">
+        <div className="grid grid-cols-12 sm:px-8 pb-5 px-0 gap-6">
           {blogs.map((blog, i) => (
             <div className="col-span-12 md:col-span-6 lg:col-span-4" key={i}>
               <BlogItem blog={blog} />

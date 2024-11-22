@@ -103,7 +103,7 @@ const VisionAndMission = () => {
       </Container>
       <Stats />
       <Newsletter />
-      {/* <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2"/> */}
+      <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2"/>
     </div>
   );
 };

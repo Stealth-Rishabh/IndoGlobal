@@ -85,7 +85,7 @@ function App() {
          {/* Blogs page  */}
          <Route path="/blogs" element={<Blogs/>} />
          {/* Blog details page  */}
-         <Route path="/blogs/:slug" element={<BlogDetails/>} />
+         <Route path="/blogs/blog-details" element={<BlogDetails/>} />
 
 
 
