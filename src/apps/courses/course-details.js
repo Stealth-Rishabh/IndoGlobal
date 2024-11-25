@@ -1,4 +1,3 @@
-
 import {
   Clock,
   GraduationCap,
@@ -20,10 +19,10 @@ export const COURSE_DETAILS = {
   badges: [
     { icon: Clock, text: "4 Years" },
     { icon: GraduationCap, text: "Bachelor's Degree" },
-    { icon: Calendar, text: "Next Intake: Sept 2024" },
-    { icon: Users, text: "120 students" },
+    // { icon: Calendar, text: "Next Intake: Sept 2024" },
+    // { icon: Users, text: "120 students" },
     { icon: BookOpen, text: "Full-time" },
-    { icon: DollarSign, text: "$10,000/year" },
+    // { icon: DollarSign, text: "10,000/year" },
     { icon: MapPin, text: "On-campus" },
   ],
   breadcrumbs: [
@@ -31,6 +30,17 @@ export const COURSE_DETAILS = {
     { text: "Courses", href: "/courses" },
     { text: "B.Tech Computer Science Engineering", current: true },
   ],
+  overview: {
+    description:
+      "The B.Tech in Computer Science Engineering program is designed to equip students with a strong foundation in computer science principles and cutting-edge technologies. This comprehensive course covers various aspects of software development,algorithms, data structures, artificial intelligence, and more.",
+    overviewHighlights: [
+      "Comprehensive curriculum covering core CS concepts and emerging technologies",
+      "Hands-on projects and internship opportunities",
+      "State-of-the-art computer labs and learning resources",
+      "Industry-experienced faculty members",
+      "Strong placement record with top tech companies",
+    ],
+  },
   curriculumYears: ["Year 1", "Year 2", "Year 3", "Year 4"],
   subjects: [
     "Introduction to Programming",
@@ -82,11 +92,26 @@ export const COURSE_DETAILS = {
     },
   ],
   tabs: [
-    { label: "overview", icon: React.createElement(BookOpen, { className: "w-4 h-4" }) },
-    { label: "curriculum", icon: React.createElement(List, { className: "w-4 h-4" }) },
-    { label: "instructor", icon: React.createElement(User, { className: "w-4 h-4" }) },
-    { label: "faqs", icon: React.createElement(HelpCircle, { className: "w-4 h-4" }) },
-    { label: "reviews", icon: React.createElement(Star, { className: "w-4 h-4" }) },
+    {
+      label: "overview",
+      icon: React.createElement(BookOpen, { className: "w-4 h-4" }),
+    },
+    {
+      label: "curriculum",
+      icon: React.createElement(List, { className: "w-4 h-4" }),
+    },
+    {
+      label: "instructor",
+      icon: React.createElement(User, { className: "w-4 h-4" }),
+    },
+    {
+      label: "faqs",
+      icon: React.createElement(HelpCircle, { className: "w-4 h-4" }),
+    },
+    {
+      label: "reviews",
+      icon: React.createElement(Star, { className: "w-4 h-4" }),
+    },
   ],
   instructor: {
     name: "Dr. Jane Smith",
@@ -96,11 +121,4 @@ export const COURSE_DETAILS = {
     bio: "Dr. Jane Smith has over 15 years of experience in teaching and research in computer science. She has published numerous papers in top-tier conferences and journals, and has worked on several industry-sponsored projects. Her teaching philosophy emphasizes practical application of theoretical concepts.",
     avatar: "/placeholder.svg?height=64&width=64",
   },
-  overviewHighlights: [
-    "Comprehensive curriculum covering core CS concepts and emerging technologies",
-    "Hands-on projects and internship opportunities",
-    "State-of-the-art computer labs and learning resources",
-    "Industry-experienced faculty members",
-    "Strong placement record with top tech companies",
-  ],
 };
