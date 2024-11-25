@@ -1,9 +1,9 @@
 const Newsletter = () => {
 
     return (
-        <section className="py-14 max-w-screen-xl mx-auto">
-            <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-secondary-color md:px-8 md:mx-8">
-                <div className="relative z-10 max-w-xl mx-auto sm:text-center">
+        <section className="py-6 sm:py-14 max-w-screen-xl mx-auto">
+            <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-lg sm:rounded-2xl bg-secondary-color md:px-8 md:mx-8">
+                <div className="relative z-10 max-w-xl mx-auto text-center">
                     <div className="space-y-3">
 
                         <h3 className="text-3xl text-white font-bold">
@@ -28,7 +28,7 @@ const Newsletter = () => {
                                 Subscribe
                             </button>
                         </form>
-                        <p className="mt-3 max-w-lg text-[15px] text-blue-100 sm:mx-auto">
+                        <p className="mt-3 max-w-lg text-[15px] text-blue-100 sm:mx-auto text-center ">
                             No spam ever, we are care about the protection of your data.
                             Read our <a className="underline" href="javascript:void(0)"> Privacy Policy </a>
                         </p>
