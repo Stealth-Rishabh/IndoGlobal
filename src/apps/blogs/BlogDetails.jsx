@@ -27,8 +27,8 @@ const BlogDetails = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-5 px-0">
-        <div className="col-span-1 pt-12  md:col-span-3">
+      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-5 px-0 ">
+        <div className="col-span-1 pt-12 sm:pt-0  md:col-span-3">
           {/* <Heading
             title="Explore Our Blogs"
             titleClassName="text-secondary-color text-center lg:text-5xl"
