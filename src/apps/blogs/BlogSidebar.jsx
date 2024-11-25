@@ -29,7 +29,7 @@ const img =
   "https://img.freepik.com/free-photo/man-working-dark-home-office-with-laptop_53876-16041.jpg?t=st=1732531763~exp=1732535363~hmac=53eb8d064bc4e95578a1b0cddd294be0ed92aa6d5bca32bd4b720fbfe4c9517b&w=1060";
 function BlogSidebar() {
   return (
-    <div className="rounded-lg border bg-card text-card-foreground shadow sm:shadow-lg">
+    <div className="rounded-md border bg-card text-card-foreground shadow-sm sm:shadow-lg">
       <div className="flex flex-col space-y-1.5 p-6">
         <h3 className="text-2xl text-secondary-color font-bold leading-none tracking-tight ">
           Latest Blog Posts
