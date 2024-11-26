@@ -20,7 +20,7 @@ const BlogDetails = () => {
     { label: "Blogs Details" },
   ];
   return (
-    <div className="relative z-0 min-h-screen bg-slate-50">
+    <div className="relative z-0 min-h-screen bg-white sm:bg-slate-50">
       <ImgAndBreadcrumb
         title="Blog Details"
         imageSrc={img}
