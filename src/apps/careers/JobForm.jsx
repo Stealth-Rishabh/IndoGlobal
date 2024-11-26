@@ -7,7 +7,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { submitApplication } from './actions'
-import { Building2, GraduationCap, Mail, MapPin, Phone, User, Sparkle,LetterText, Book } from 'lucide-react'
+import { Building2, GraduationCap, Mail, MapPin, Phone, User, Sparkle,LetterText, Book,CalendarClockIcon } from 'lucide-react'
 
 const QUALIFICATIONS = {
   undergraduate: [
@@ -186,7 +186,7 @@ export default function JobForm() {
                 </Select>
                 
                 {/* Dynamic input for 'Other' qualification */}
-                {selectedQualification === 'other' && (
+                {selectedQualification === 'Other' && (
                   <div className="mt-2 space-y-4 animate-fade-in">
                     <Label htmlFor="otherQualification" className="flex items-center gap-2">
                       <Book className="h-4 w-4" /> Specify Qualification
@@ -204,7 +204,7 @@ export default function JobForm() {
               </div>
               <div className="space-y-4">
                 <Label htmlFor="experience" className="flex items-center gap-2">
-                  <Sparkle className="h-4 w-4" /> Years of Experience
+                  <CalendarClockIcon className="h-4 w-4" /> Years of Experience
                 </Label>
                 <Input 
                   id="experience" 

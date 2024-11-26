@@ -4,6 +4,8 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
+import { useEffect } from "react";
+
 import { Helmet } from "react-helmet";
 import Header from "./apps/header/Header";
 import Landing from "./apps/LandingPage/Landing";
@@ -39,8 +41,18 @@ import Blogs from "./apps/blogs/Blogs";
 import BlogDetails from "./apps/blogs/BlogDetails";
 import Careers from "./apps/careers/Careers";
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  };
   return (
     <Router>
+         <ScrollToTop />
       <Header />
       <Routes>
         {/* home page */}
