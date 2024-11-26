@@ -1,12 +1,12 @@
-import Heading from "../../components/Heading";
+// import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
 import img from "../../assets/breadcrumb.png";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
-import AboutSidebar from "../../components/AboutSidebar";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import AboutSidebar from "../../components/AboutSidebar";
+// import PropTypes from "prop-types";
+// import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";

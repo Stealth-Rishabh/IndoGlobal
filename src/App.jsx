@@ -40,6 +40,7 @@ import CoursesDetails from "./apps/courses/CoursesDetails";
 import Blogs from "./apps/blogs/Blogs";
 import BlogDetails from "./apps/blogs/BlogDetails";
 import Careers from "./apps/careers/Careers";
+import Spotlights from "./apps/highlights/Spotlights";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -80,6 +81,7 @@ function App() {
 
         {/* highlights page */}
         <Route path="/events" element={<Event />} />
+        <Route path="/spotlights" element={<Spotlights/>} />
         <Route path="/gallery" element={<Gallery />} />
 
         {/* placements page */}

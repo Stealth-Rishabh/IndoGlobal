@@ -18,6 +18,7 @@ export const navlinks = [
     path: "/events",
     dropdown: [
       { name: "Events", path: "/events" },
+      { name: "Spotlights", path: "/spotlights" },
       { name: "Gallery", path: "/gallery" },
     ],
   },

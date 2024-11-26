@@ -83,7 +83,6 @@ const Gallery = ({ imageItems }) => {
             className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
           />
 
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
           <div className="w-full relative pl-4 py-3 inline-block text-sm text-white md:pl-5 md:text-lg translate-y-14 group-hover:translate-y-0 group-hover:transition-all duration-300">
             {item.label}
