@@ -302,7 +302,7 @@ const Spotlights = () => {
                   <Carousel>
                     <CarouselContent className="relative">
                       {selectedEvent.gallery.map((image) => (
-                        <CarouselItem key={image.id}>
+                        <CarouselItem key={image.id} className="w-full">
                           <img
                             src={image}
                             alt={image}
@@ -313,11 +313,11 @@ const Spotlights = () => {
                     </CarouselContent>
                     <CarouselPrevious
                       className="absolute -translate-y-1/2  top-1/2 left-4"
-                      iconStyle="w-1/2 sm:w-full"
+                      iconStyle="w-1/2 sm:w-3/4"
                     />
                     <CarouselNext
                       className="absolute -translate-y-1/2  top-1/2 right-4"
-                      iconStyle="w-1/2 sm:w-full"
+                      iconStyle="w-1/2 sm:w-3/4"
                     />
                   </Carousel>
                 ) : (
