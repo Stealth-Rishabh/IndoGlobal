@@ -8,8 +8,9 @@ import {
   Phone,
   Mail,
   Globe,
+  // Download,
 } from "lucide-react";
-
+import MandatoryDisclosure from "../../assets/pdfs/Mandatory-Discl-IGCE.pdf";
 export default function Footer() {
   const footerSections = [
     {
@@ -37,12 +38,12 @@ export default function Footer() {
     {
       label: "Quick Links",
       items: [
-        { name: "Contact Us", path: "/contact" },
+        { name: "Contact Us", path: "/contact-us" },
         { name: "Pay Fee Online", path: "/pay-fee" },
         { name: "Enquire Now", path: "/enquire" },
         { name: "Refund Policy", path: "/refund-policy" },
         { name: "Online Learning Resources", path: "/online-learning-resources" },
-        { name: "Blog", path: "/blog" },
+        { name: "Blogs", path: "/blogs" },
       ],
     },
     {
@@ -63,18 +64,23 @@ export default function Footer() {
         { name: "Scholarship", path: "/scholarship" },
         { name: "Grievance Redressal", path: "/grievance-redressal" },
         { name: "Online Grievance Mechanism", path: "/online-grievance" },
-        { name: "Student Feedback System", path: "/feedback" },
+        // { name: "Student Feedback System", path: "/feedback" },
         { name: "Alumni Login", path: "/alumni-login" },
       ],
     },
     {
       label: "More Info",
       items: [
+        { 
+          name: "Mandatory Disclosure", 
+          path: MandatoryDisclosure,
+          isDownload: true,
+          // icon: Download
+        },
         { name: "International Admissions", path: "/international-admissions" },
-        { name: "Jobs @Indo Global", path: "/jobs" },
+        { name: "Jobs @Indo Global", path: "/careers" },
         { name: "View Virtual Tour", path: "/virtual-tour" },
         { name: "Contact Directory", path: "/contact-directory" },
-        { name: "Blogs", path: "/blogs" },
         { name: "Admission Procedure", path: "/admission-procedure" },
       ],
     },
@@ -87,6 +93,18 @@ export default function Footer() {
     { name: "Instagram", icon: Instagram },
     { name: "YouTube", icon: Youtube },
   ];
+
+  const handleItemClick = (item) => {
+    if (item.isDownload) {
+      // Trigger download
+      const link = document.createElement('a');
+      link.href = item.path;
+      link.download = 'Mandatory_Disclosure.pdf'; // Name for the downloaded file
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
 
   return (
     <footer className="bg-gray-900 text-white pt-10 text-lg">
@@ -138,12 +156,22 @@ export default function Footer() {
               <ul className="space-y-2">
                 {section.items.map((item) => (
                   <li key={item.name} className="text-sm">
-                    <Link
-                      to={item.path}
-                      className="hover:text-red-600 transition-colors"
-                    >
-                      {item.name}
-                    </Link>
+                    {item.isDownload ? (
+                      <button
+                        onClick={() => handleItemClick(item)}
+                        className="flex items-center hover:text-red-600 transition-colors"
+                      >
+                        {item.name}
+                        {/* <Download size={16} className="ml-2" /> */}
+                      </button>
+                    ) : (
+                      <Link
+                        to={item.path}
+                        className="hover:text-red-600 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
