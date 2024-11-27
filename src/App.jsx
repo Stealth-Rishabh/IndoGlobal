@@ -41,6 +41,7 @@ import Blogs from "./apps/blogs/Blogs";
 import BlogDetails from "./apps/blogs/BlogDetails";
 import Careers from "./apps/careers/Careers";
 import Spotlights from "./apps/highlights/Spotlights";
+import OnlineLearningResources from "./apps/footer/OnlineLearningResources";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -158,6 +159,9 @@ function App() {
             </>
           }
         />
+
+
+        <Route path="/online-learning-resources" element={<OnlineLearningResources />} />   
       </Routes>
       <Footer />
     </Router>

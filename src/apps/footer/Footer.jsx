@@ -41,7 +41,7 @@ export default function Footer() {
         { name: "Pay Fee Online", path: "/pay-fee" },
         { name: "Enquire Now", path: "/enquire" },
         { name: "Refund Policy", path: "/refund-policy" },
-        { name: "Careers", path: "/careers" },
+        { name: "Online Learning Resources", path: "/online-learning-resources" },
         { name: "Blog", path: "/blog" },
       ],
     },

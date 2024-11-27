@@ -300,9 +300,9 @@ const Spotlights = () => {
               <div className="mt-2 space-y-3">
                 {selectedEvent.gallery.length > 0 ? (
                   <Carousel>
-                    <CarouselContent className="relative">
+                    <CarouselContent className="relative ml-0">
                       {selectedEvent.gallery.map((image) => (
-                        <CarouselItem key={image.id} className="w-full">
+                        <CarouselItem key={image.id} className="w-full px-1">
                           <img
                             src={image}
                             alt={image}
