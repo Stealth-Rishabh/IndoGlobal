@@ -16,11 +16,10 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {COURSE_DETAILS} from "./course-details"
-import {Star} from "lucide-react";
+import { COURSE_DETAILS } from "./course-details";
+import { Star, List, CheckSquare } from "lucide-react";
 
 const CoursesDetails = () => {
-
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/courses", label: "Courses" },
@@ -34,13 +33,12 @@ const CoursesDetails = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
+      <Container className="container grid grid-cols-1 gap-14 md:grid-cols-4">
         <div className="self-start md:sticky md:top-5">
           <CourseSidebar />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
- 
-          <CourseDetailsPage  {...COURSE_DETAILS}/>
+          <CourseDetailsPage {...COURSE_DETAILS} />
         </div>
       </Container>
       <Stats />
@@ -51,15 +49,13 @@ const CoursesDetails = () => {
 
 export default CoursesDetails;
 
-
-
 const InfoBadges = ({ badges }) => (
   <div className="flex flex-wrap gap-4 mb-6">
     {badges.map((badge, index) => (
       <Badge
         key={index}
         variant="secondary"
-        className="flex items-center gap-1"
+        className="flex gap-1 items-center"
       >
         <badge.icon className="w-4 h-4" />
         {badge.text}
@@ -83,7 +79,7 @@ const StarRating = ({ rating }) => (
 
 const ReviewCard = ({ review }) => (
   <div className="pb-4 border-b last:border-b-0">
-    <div className="flex items-center justify-between">
+    <div className="flex justify-between items-center">
       <h4 className="font-semibold">{review.name}</h4>
       <StarRating rating={review.rating} />
     </div>
@@ -91,20 +87,41 @@ const ReviewCard = ({ review }) => (
   </div>
 );
 
-function CourseDetailsPage({badges,title,overview,curriculumYears,subjects,faqs,instructor,reviews,tabs,}) {
+// Validate `COURSE_DETAILS` data before using it
+function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
+  // Extract content from tabs
+  const overview = tabs.find((tab) => tab.label === "overview")?.content || [];
+
+  const subjects =
+    tabs
+      .find((tab) => tab.label === "curriculum")
+      ?.content?.find((item) => item.label === "Subjects")?.data || [];
+
+  // const instructor =
+  //   Object.fromEntries(
+  //     tabs
+  //       .find((tab) => tab.label === "instructor")
+  //       ?.content?.map((item) => [item.label.toLowerCase(), item.data]) || []
+  //   ) || {};
+
+  const faqs = tabs.find((tab) => tab.label === "faqs")?.content || [];
+
+  const reviews = tabs.find((tab) => tab.label === "reviews")?.content || [];
+
+  const eligibility =
+    tabs.find((tab) => tab.label === "eligibility")?.content || {};
+
   return (
     <div className="container mx-auto">
-      {/* <Breadcrumb items={breadcrumbs} /> */}
-
       <h1 className="mb-4 text-3xl font-bold md:text-4xl text-secondary-color">
         {title}
       </h1>
       <InfoBadges badges={badges} />
 
       <img
-        src="https://v0.dev/placeholder.svg?height=400&width=800"
+        src={image}
         alt={title}
-        className="object-cover w-full h-64 mb-6 rounded-lg"
+        className="object-cover mb-6 w-full aspect-video sm:aspect-auto  sm:h-96 rounded-lg"
       />
 
       <div className="flex flex-wrap gap-4 mb-8">
@@ -115,10 +132,10 @@ function CourseDetailsPage({badges,title,overview,curriculumYears,subjects,faqs,
       </div>
 
       <Tabs defaultValue="overview" className="mb-8">
-        <TabsList className="grid w-full grid-cols-2 gap-1 mb-4 md:grid-cols-5 sm:h-12 h-max sm:gap-0 ">
+        <TabsList className="grid grid-cols-2 gap-1 mb-4 w-full md:grid-cols-5 sm:h-12 h-max sm:gap-0">
           {tabs.map((tab) => (
             <TabsTrigger
-              key={tab}
+              key={tab.label}
               value={tab.label}
               className="data-[state=active]:bg-gray-800  data-[state=active]:text-white sm:h-full rounded-sm"
             >
@@ -128,39 +145,62 @@ function CourseDetailsPage({badges,title,overview,curriculumYears,subjects,faqs,
           ))}
         </TabsList>
 
-        <TabsContent value="overview" className="">
-          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
+        {/* Overview Tab */}
+        <TabsContent value="overview">
+          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="px-0 text-3xl">Course Overview</CardTitle>
+              <CardTitle className="px-0 text-3xl text-secondary-color">Course Overview</CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
-              <p>
-                {overview.description}
-              </p>
-              <h3 className="mt-4 mb-2 font-semibold">Key Highlights</h3>
-              <ul className="pl-5 space-y-1 list-disc">
-                {overview.overviewHighlights.map((highlight, index) => (
-                  <li key={index}>{highlight}</li>
-                ))}
-              </ul>
+              {overview.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.type === "heading" && (
+                      <h2 className="mt-5 mb-2 font-semibold text-xl sm:text-xl text-secondary-color/90">
+                        {item.data}
+                      </h2>
+                    )}
+                    {item.type === "sub-heading" && (
+                      <h3 className="mt-5 mb-2 font-semibold text-lg sm:text-lg text-secondary-color/80">
+                        {item.data}
+                      </h3>
+                    )}
+                    {item.type === "paragraph" && <p className="text-gray-700 ">{item.data}</p>}
+                    {item.type === "list" && (
+                      <ul className=" space-y-2 list-disc">
+                        {item.data.map((item, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start list-none justify-start text-gray-600"
+                          >
+                            <CheckSquare className="w-6 mt-1 h-6 sm:w-4 sm:h-4 mr-2 " />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
             </CardContent>
           </Card>
         </TabsContent>
 
+        {/* Curriculum Tab */}
         <TabsContent value="curriculum">
-          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
+          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl">Course Curriculum</CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">Course Curriculum</CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               <Accordion type="single" collapsible className="w-full">
-                {curriculumYears.map((year, index) => (
-                  <AccordionItem key={year} value={`year${index + 1}`}>
-                    <AccordionTrigger>{year}</AccordionTrigger>
+                {subjects.map((subject, index) => (
+                  <AccordionItem key={subject} value={`subject${index + 1}`}>
+                    <AccordionTrigger className="text-gray-600 text-lg">{subject.year}</AccordionTrigger>
                     <AccordionContent>
                       <ul className="pl-5 space-y-1 list-disc">
-                        {subjects.map((subject, i) => (
-                          <li key={i}>{subject}</li>
+                        {(subject.data || []).map((syllabus, i) => (
+                          <li key={i} className="text-gray-500 list-decimal">{syllabus}</li>
                         ))}
                       </ul>
                     </AccordionContent>
@@ -170,57 +210,45 @@ function CourseDetailsPage({badges,title,overview,curriculumYears,subjects,faqs,
             </CardContent>
           </Card>
         </TabsContent>
-
-        <TabsContent value="instructor">
-          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
+        {/* Eligibility Tab */}
+        <TabsContent value="eligibility">
+          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl">Course Instructor</CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">Eligibility Criteria</CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
-              <div className="flex items-center space-x-4">
-                <Avatar className="w-16 h-16">
-                  <AvatarImage
-                    src="/placeholder.svg?height=64&width=64"
-                    alt="Dr. Jane Smith"
-                  />
-                  <AvatarFallback>JS</AvatarFallback>
-                </Avatar>
-                <div>
-                  <h3 className="text-lg font-semibold">{instructor.name}</h3>
-                  <p className="text-sm text-gray-500">
-                   {instructor.title}
-                  </p>
-                  <p className="mt-1 text-sm">
-                    {instructor.degree}
-                  </p>
-                  <p className="text-sm">
-                   {instructor.specialization}
-                  </p>
-                </div>
-              </div>
-              <div className="mt-4">
-                <h4 className="mb-2 font-semibold">About the Instructor</h4>
-                <p className="text-sm">
-                  {instructor.bio}
-                </p>
-              </div>
+              {eligibility.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.type === "heading" && (
+                      <h2 className="mt-5 mb-2 font-semibold text-xl sm:text-xl text-secondary-color/90">
+                        {item.data}
+                      </h2>
+                    )}
+                    {item.type === "paragraph" && <p className="text-gray-600">{item.data}</p>}
+                  </div>
+                );
+              })}
             </CardContent>
           </Card>
         </TabsContent>
 
+        {/* FAQs Tab */}
         <TabsContent value="faqs">
-          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
+          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl">
-                Frequently Asked Questions
-              </CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">FAQs</CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               <Accordion type="single" collapsible>
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`faq-${index}`}>
-                    <AccordionTrigger>{faq.question}</AccordionTrigger>
-                    <AccordionContent>{faq.answer}</AccordionContent>
+                    <AccordionTrigger >
+                      {faq.data?.question || "FAQ"}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      {faq.data?.answer || "No Answer"}
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -229,14 +257,21 @@ function CourseDetailsPage({badges,title,overview,curriculumYears,subjects,faqs,
         </TabsContent>
 
         <TabsContent value="reviews">
-          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
+          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl">Student Reviews</CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">Student Reviews</CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               <div className="space-y-4">
                 {reviews.map((review, index) => (
-                  <ReviewCard key={index} review={review} />
+                  <ReviewCard
+                    key={index}
+                    review={{
+                      name: review.label,
+                      rating: review.data.rating,
+                      comment: review.data.comment,
+                    }}
+                  />
                 ))}
               </div>
             </CardContent>
@@ -246,3 +281,30 @@ function CourseDetailsPage({badges,title,overview,curriculumYears,subjects,faqs,
     </div>
   );
 }
+
+//   {/* Instructor Tab */}
+//   <TabsContent value="instructor">
+//   <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
+//     <CardHeader className="px-0 sm:px-6">
+//       <CardTitle className="text-3xl">Course Instructor</CardTitle>
+//     </CardHeader>
+//     <CardContent className="px-0 sm:px-6">
+//       <div className="flex items-center space-x-4">
+//         <Avatar className="w-16 h-16">
+//           <AvatarImage src={instructor.avatar} alt="Instructor" />
+//           <AvatarFallback>NA</AvatarFallback>
+//         </Avatar>
+//         <div>
+//           <h3 className="text-lg font-semibold">
+//             {instructor.name || "Not Available"}
+//           </h3>
+//           <p className="text-sm text-gray-500">{instructor.title}</p>
+//         </div>
+//         <div>
+//           <p className="text-sm text-gray-500">{instructor.degree}</p>
+//           <p className="text-sm text-gray-500">{instructor.specialization}</p>
+//         </div>
+//       </div>
+//     </CardContent>
+//   </Card>
+// </TabsContent>
