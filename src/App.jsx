@@ -3,7 +3,9 @@ import {
   Route,
   Routes,
   useLocation,
+  useParams
 } from "react-router-dom";
+
 import { useEffect } from "react";
 
 import { Helmet } from "react-helmet";
@@ -72,10 +74,12 @@ function App() {
 
         {/* courses page */}
         <Route path="/courses" element={<Courses />} />
-        <Route
+        {/* <Route
           path="/courses/b.tech-in-mechanical-engineering"
           element={<CoursesDetails />}
-        />
+        /> */}
+        <Route path="/courses/:courseTitle" element={<CoursesDetails />} />
+        
 
         {/* admissions page */}
         <Route path="/admissions" element={<Admission />} />

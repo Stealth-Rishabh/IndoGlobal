@@ -15,11 +15,20 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { COURSE_DETAILS } from "./course-details";
-import { Star, List, CheckSquare } from "lucide-react";
-
+import { Star, CheckSquare } from "lucide-react";
+import { useParams } from "react-router-dom";
 const CoursesDetails = () => {
+  const { courseTitle } = useParams();
+  const formattedTitle = courseTitle.replace(/-/g, " ");
+  const courseData = COURSE_DETAILS.find(
+    (course) => course.title.toLowerCase() === formattedTitle
+  );
+
+  if (!courseData) {
+    return <div>Course not found</div>;
+  }
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/courses", label: "Courses" },
@@ -38,7 +47,7 @@ const CoursesDetails = () => {
           <CourseSidebar />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
-          <CourseDetailsPage {...COURSE_DETAILS} />
+          <CourseDetailsPage {...courseData} />
         </div>
       </Container>
       <Stats />
@@ -156,18 +165,18 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                 return (
                   <div key={index}>
                     {item.type === "heading" && (
-                      <h2 className="mt-5 mb-2 font-semibold text-xl sm:text-xl text-secondary-color/90">
+                      <h2 className="mt-6 mb-3 font-semibold text-xl sm:text-2xl text-secondary-color/90">
                         {item.data}
                       </h2>
                     )}
                     {item.type === "sub-heading" && (
-                      <h3 className="mt-5 mb-2 font-semibold text-lg sm:text-lg text-secondary-color/80">
+                      <h3 className="mt-6 mb-3 font-semibold text-lg sm:text-lg text-secondary-color/80">
                         {item.data}
                       </h3>
                     )}
                     {item.type === "paragraph" && <p className="text-gray-700 ">{item.data}</p>}
                     {item.type === "list" && (
-                      <ul className=" space-y-2 list-disc">
+                      <ul className=" space- list-disc grid grid-cols-1 sm:grid-cols-2 justify-items-start gap-4 items-start mb-4">
                         {item.data.map((item, index) => (
                           <li
                             key={index}
@@ -267,7 +276,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                   <ReviewCard
                     key={index}
                     review={{
-                      name: review.label,
+                      name: review.data.name,
                       rating: review.data.rating,
                       comment: review.data.comment,
                     }}

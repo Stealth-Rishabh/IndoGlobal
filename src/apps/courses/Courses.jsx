@@ -17,8 +17,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { COURSE_DETAILS } from "./course-details";
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Courses" }];
 
 export default function Courses() {
@@ -27,121 +27,129 @@ export default function Courses() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("");
 
-  const courses = useMemo(
-    () => [
-      {
-        id: 1,
-        title: "B.Tech in Mechanical Engineering",
-        category: "B.Tech / B.tech Lateral Entry",
-        image:
-          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
-      },
-      {
-        id: 2,
-        title: "B.Tech in Computer Science Engineering",
-        category: "B.Tech / B.tech Lateral Entry",
-        image:
-          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
-      },
-      {
-        id: 3,
-        title: "B.Tech in Electronics and Communication Engineering",
-        category: "B.Tech / B.tech Lateral Entry",
-        image:
-          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
-      },
-      {
-        id: 4,
-        title: "B.Tech in Civil Engineering",
-        category: "B.Tech / B.tech Lateral Entry",
-        image:
-          "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
-      },
-      {
-        id: 5,
-        title: "M.Tech in Civil Engineering",
-        category: "M.Tech",
-        image:
-          "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
-      },
-      {
-        id: 6,
-        title: "M.Tech in Computer Science Engineering",
-        category: "M.Tech",
-        image:
-          "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
-      },
-      {
-        id: 7,
-        title: "M.Tech in Electronics and Communication",
-        category: "M.Tech",
-        image:
-          "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
-      },
-      {
-        id: 8,
-        title: "Polytechnic in Mechanical Engineering",
-        category: "Polytechnic / Polytechnic Lateral Entry",
-        image: "https://www.accurate.in/img/college/1711704889-1.webp",
-      },
-      {
-        id: 9,
-        title: "Polytechnic in Civil Engineering",
-        category: "Polytechnic / Polytechnic Lateral Entry",
-        image: "https://www.accurate.in/img/college/1711704889-1.webp",
-      },
-      {
-        id: 10,
-        title: "Master in Of Business Administration (MBA)",
-        category: "Management and Technology",
-        image:
-          "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
-      },
-      {
-        id: 11,
-        title: "Bachelor in Of Business Administration (BBA)",
-        category: "Management and Technology",
-        image:
-          "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
-      },
-      {
-        id: 12,
-        title: "Bachelor in of Computer Application (BCA)",
-        category: "Management and Technology",
-        image:
-          "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
-      },
-      {
-        id: 13,
-        title: "Bachelor in of Architecture",
-        category: "Architecture",
-        image:
-          "https://www.krmangalam.edu.in/wp-content/uploads/2024/02/347bs_BlogBanner3-1024x576.webp",
-      },
-      {
-        id: 14,
-        title: "B.Sc. in Medical Laboratory Sciences (MLS)",
-        category: "Paramedical Courses",
-        image:
-          "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
-      },
-      {
-        id: 15,
-        title: "B.Sc in Radiology & Imaging Technology",
-        category: "Paramedical Courses",
-        image:
-          "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
-      },
-      {
-        id: 16,
-        title: "B.Sc in Operation Theatre Technology",
-        category: "Paramedical Courses",
-        image:
-          "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
-      },
-    ],
-    []
-  );
+  const navigate = useNavigate();
+
+  const handleViewDetails = (courseTitle) => {
+    const formattedTitle = courseTitle.toLowerCase().replace(/ /g, "-");
+    navigate(`/courses/${formattedTitle}`);
+  };
+  // const courses = useMemo(
+  //   () => [
+  //     {
+  //       id: 1,
+  //       title: "B.Tech in Mechanical Engineering",
+  //       category: "B.Tech / B.tech Lateral Entry",
+  //       image:
+  //         "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+  //     },
+  //     {
+  //       id: 2,
+  //       title: "B.Tech in Computer Science Engineering",
+  //       category: "B.Tech / B.tech Lateral Entry",
+  //       image:
+  //         "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+  //     },
+  //     {
+  //       id: 3,
+  //       title: "B.Tech in Electronics and Communication Engineering",
+  //       category: "B.Tech / B.tech Lateral Entry",
+  //       image:
+  //         "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+  //     },
+  //     {
+  //       id: 4,
+  //       title: "B.Tech in Civil Engineering",
+  //       category: "B.Tech / B.tech Lateral Entry",
+  //       image:
+  //         "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+  //     },
+  //     {
+  //       id: 5,
+  //       title: "M.Tech in Civil Engineering",
+  //       category: "M.Tech",
+  //       image:
+  //         "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
+  //     },
+  //     {
+  //       id: 6,
+  //       title: "M.Tech in Computer Science Engineering",
+  //       category: "M.Tech",
+  //       image:
+  //         "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
+  //     },
+  //     {
+  //       id: 7,
+  //       title: "M.Tech in Electronics and Communication",
+  //       category: "M.Tech",
+  //       image:
+  //         "https://images.javatpoint.com/fullformpages/images/m-tech-full-form.png",
+  //     },
+  //     {
+  //       id: 8,
+  //       title: "Polytechnic in Mechanical Engineering",
+  //       category: "Polytechnic / Polytechnic Lateral Entry",
+  //       image: "https://www.accurate.in/img/college/1711704889-1.webp",
+  //     },
+  //     {
+  //       id: 9,
+  //       title: "Polytechnic in Civil Engineering",
+  //       category: "Polytechnic / Polytechnic Lateral Entry",
+  //       image: "https://www.accurate.in/img/college/1711704889-1.webp",
+  //     },
+  //     {
+  //       id: 10,
+  //       title: "Master in Of Business Administration (MBA)",
+  //       category: "Management and Technology",
+  //       image:
+  //         "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
+  //     },
+  //     {
+  //       id: 11,
+  //       title: "Bachelor in Of Business Administration (BBA)",
+  //       category: "Management and Technology",
+  //       image:
+  //         "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
+  //     },
+  //     {
+  //       id: 12,
+  //       title: "Bachelor in of Computer Application (BCA)",
+  //       category: "Management and Technology",
+  //       image:
+  //         "https://trio.dev/wp-content/uploads/2024/04/Technology_Management__What_Is_It_and_Why_Is_It_Important__.png",
+  //     },
+  //     {
+  //       id: 13,
+  //       title: "Bachelor in of Architecture",
+  //       category: "Architecture",
+  //       image:
+  //         "https://www.krmangalam.edu.in/wp-content/uploads/2024/02/347bs_BlogBanner3-1024x576.webp",
+  //     },
+  //     {
+  //       id: 14,
+  //       title: "B.Sc. in Medical Laboratory Sciences (MLS)",
+  //       category: "Paramedical Courses",
+  //       image:
+  //         "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
+  //     },
+  //     {
+  //       id: 15,
+  //       title: "B.Sc in Radiology & Imaging Technology",
+  //       category: "Paramedical Courses",
+  //       image:
+  //         "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
+  //     },
+  //     {
+  //       id: 16,
+  //       title: "B.Sc in Operation Theatre Technology",
+  //       category: "Paramedical Courses",
+  //       image:
+  //         "https://www.virohan.com/_next/image?url=https%3A%2F%2Fmedia-cms.virohan.com%2Fstaging%2FParamedical_Courses_1188d33c7e.jpg&w=1080&q=75",
+  //     },
+  //   ],
+  //   []
+  // );
+
+  const courses = useMemo(() => COURSE_DETAILS, []);
 
   const categories = useMemo(
     () => [
@@ -280,9 +288,14 @@ export default function Courses() {
                 />
                 <h3 className="text-lg font-bold mt-2">{course.title}</h3>
                 <p className="text-gray-500">{course.category}</p>
-                <Link to='/courses/b.tech-in-mechanical-engineering'>
-                  <Button className="mt-4 w-full">View Details</Button>
-                </Link>
+                {/* <Link to={`/courses/${course.title}`}> */}
+                  <Button
+                    className="mt-4 w-full"
+                    onClick={() => handleViewDetails(course.title)}
+                  >
+                    View Details
+                  </Button>
+                {/* </Link> */} 
               </Card>
             ))}
           </div>
