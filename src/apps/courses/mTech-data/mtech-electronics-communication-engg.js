@@ -8,13 +8,12 @@ import {
     HelpCircle,
   } from "lucide-react";
   import React from "react";
-  
+  import img from "../../../assets/courses/mtech-elec.webp";
   export const MTECH_IN_ELECTRONICS_COMMUNICATION_ENGINEERING = {
     
     title: "M.Tech Electronics and Communication Engineering",
     category: "M.Tech",
-    image:
-      "https://example.com/path/to/image.jpg", // Replace with actual image URL
+    image: img,
     badges: [
       { icon: Clock, text: "2 Years" },
       { icon: GraduationCap, text: "Master's Degree" },

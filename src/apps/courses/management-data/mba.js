@@ -11,6 +11,7 @@ import {
   import React from "react";
   import img from "../../../assets/courses/mba.webp";
 
+  
   export const MBA = {
 
     title: "Master of Business Administration (MBA)",

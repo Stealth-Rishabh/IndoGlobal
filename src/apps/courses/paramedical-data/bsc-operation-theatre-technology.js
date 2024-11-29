@@ -8,12 +8,13 @@ import {
   HelpCircle,
 } from "lucide-react";
 import React from "react";
+import img from "../../../assets/courses/bsc-operation.webp";
 
 export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
   
   title: "B.Sc. Operation Theatre Technology",
   category: "Paramedical Courses",
-  image: "https://example.com/bsc-operation-theatre-technology-banner.jpg",
+  image: img,
   badges: [
     { icon: Clock, text: "4 Years" },
     { icon: GraduationCap, text: "Bachelor's Degree" },

@@ -8,13 +8,13 @@ import {
     HelpCircle,
   } from "lucide-react";
   import React from "react";
-  
+  import img from "../../../assets/courses/barch.webp";
+
   export const BACHELOR_OF_ARCHITECTURE = {
     
     title: "Bachelor of Architecture (B.Arch)",
     category: "Architecture",
-    image:
-      "https://example.com/path/to/image.jpg", // Replace with actual image URL
+    image: img,
     badges: [
       { icon: Clock, text: "5 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },

@@ -8,12 +8,13 @@ import {
     HelpCircle,
 } from "lucide-react";
 import React from "react";
+import img from "../../../assets/courses/mtech-comp.webp";
 
 export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
     
     title: "M.Tech in Computer Science & Engineering",
     category: "M.Tech",
-    image: "https://example.com/mtech-computer-science-banner.jpg",
+    image: img,
     badges: [
         { icon: Clock, text: "2 Years" },
         { icon: GraduationCap, text: "Master's Degree" },

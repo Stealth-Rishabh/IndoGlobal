@@ -8,12 +8,13 @@ import {
   HelpCircle,
 } from "lucide-react";
 import React from "react";
+import img from "../../../assets/courses/bsc-medical.webp";
 
 export const BSC_MEDICAL_LABORATORY_SCIENCES = {
   
   title: "B.Sc. (Medical Laboratory Sciences)",
   category: "Paramedical Courses",
-  image: "https://example.com/bsc-medical-laboratory-sciences-banner.jpg",
+  image: img,
   badges: [
     { icon: Clock, text: "3 Years" },
     { icon: GraduationCap, text: "Bachelor's Degree" },

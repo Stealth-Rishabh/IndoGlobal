@@ -8,12 +8,13 @@ import {
   HelpCircle,
 } from "lucide-react";
 import React from "react";
+import img from "../../../assets/courses/bsc-radio.webp";
 
 export const BSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
   
   title: "B.Sc. Radiology and Imaging Technology",
   category: "Paramedical Courses",
-  image: "https://example.com/bsc-radiology-imaging-technology-banner.jpg",
+  image: img,
   badges: [
     { icon: Clock, text: "4 Years" },
     { icon: GraduationCap, text: "Bachelor's Degree" },

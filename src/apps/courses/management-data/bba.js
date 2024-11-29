@@ -9,13 +9,13 @@ import {
     User,
   } from "lucide-react";
   import React from "react";
-  
+  import img from "../../../assets/courses/bba.webp";
+
   export const BBA = {
     
     title: "Bachelor of Business Administration (BBA)",
     category: "Management and Technology",
-    image:
-      "https://example.com/path/to/image.jpg", // Replace with actual image URL
+    image: img,
     badges: [
       { icon: Clock, text: "3 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },
