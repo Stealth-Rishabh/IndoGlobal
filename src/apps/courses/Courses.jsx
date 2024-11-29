@@ -33,6 +33,7 @@ export default function Courses() {
     const formattedTitle = courseTitle.toLowerCase().replace(/ /g, "-");
     navigate(`/courses/${formattedTitle}`);
   };
+
   // const courses = useMemo(
   //   () => [
   //     {
@@ -163,6 +164,8 @@ export default function Courses() {
     []
   );
 
+  // for large screen
+
   const toggleCategory = (category) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
@@ -171,6 +174,7 @@ export default function Courses() {
     );
   };
 
+  // for phone view
   const handleCategorySelect = (value) => {
     setSelectedCategory(value);
     setSelectedCourse("");
@@ -186,6 +190,8 @@ export default function Courses() {
       const matchesSearch = course.title
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
+      console.log("inside filter", course);
+      console.log("inside filter search", matchesSearch);
       const matchesCategory =
         selectedCategories.length === 0 ||
         selectedCategories.includes(course.category);
@@ -243,6 +249,7 @@ export default function Courses() {
                   </Badge>
                 ))}
               </div>
+
               {/* Small screen filter */}
               <div className="md:hidden flex flex-col sm:flex-row gap-4">
                 <Select onValueChange={handleCategorySelect}>
@@ -289,13 +296,13 @@ export default function Courses() {
                 <h3 className="text-lg font-bold mt-2">{course.title}</h3>
                 <p className="text-gray-500">{course.category}</p>
                 {/* <Link to={`/courses/${course.title}`}> */}
-                  <Button
-                    className="mt-4 w-full"
-                    onClick={() => handleViewDetails(course.title)}
-                  >
-                    View Details
-                  </Button>
-                {/* </Link> */} 
+                <Button
+                  className="mt-4 w-full"
+                  onClick={() => handleViewDetails(course.title)}
+                >
+                  View Details
+                </Button>
+                {/* </Link> */}
               </Card>
             ))}
           </div>
