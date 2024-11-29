@@ -8,12 +8,13 @@ import {
     HelpCircle,
   } from "lucide-react";
   import React from "react";
-  
+  import img from "../../../assets/courses/btech-mech.webp";
+
   export const BTECH_IN_MECH_ENGG = {
-    id: 3,
+    
     title: "B.Tech Mechanical Engineering",
     category: "B.Tech / B.tech Lateral Entry",
-    image: "https://example.com/mechanical-engineering-banner.jpg",
+    image: img,
     badges: [
       { icon: Clock, text: "4 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },

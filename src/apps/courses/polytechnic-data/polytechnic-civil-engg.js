@@ -8,12 +8,12 @@ import {
     HelpCircle,
 } from "lucide-react";
 import React from "react";
-
+import img from "../../../assets/courses/poly-civil.webp";
 export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
-    id: 4,
+    
     title: "Polytechnic (Diploma) in Civil Engineering",
-    category: "Polytechnic / Polytechnic Lateral Entry",
-    image: "https://example.com/polytechnic-civil-banner.jpg",
+    category: "Polytechnic / Polytechnic Lateral Entry", 
+    image: img,
     badges: [
         { icon: Clock, text: "3 Years" },
         { icon: GraduationCap, text: "Diploma" },

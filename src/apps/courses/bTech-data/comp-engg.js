@@ -8,13 +8,12 @@ import {
     HelpCircle,
   } from "lucide-react";
   import React from "react";
-  
+  import img from "../../../assets/courses/btech-comp.webp";
   export const BTECH_IN_COMP_ENGG = {
-    id: 1,
+    
     title: "B.Tech Computer Science Engineering",
     category: "B.Tech / B.tech Lateral Entry",
-    image:
-      "https://www.accurate.in/engg/article/img/banner/btech-program-in-greater-noida-03-05-22.webp",
+    image: img,
     badges: [
       { icon: Clock, text: "4 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },

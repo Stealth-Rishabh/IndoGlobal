@@ -10,9 +10,9 @@ import {
 import React from "react";
 
 export const BSC_MEDICAL_LABORATORY_SCIENCES = {
-  id: 10,
+  
   title: "B.Sc. (Medical Laboratory Sciences)",
-  category: "Bachelor's Degree / 3-Year Program",
+  category: "Paramedical Courses",
   image: "https://example.com/bsc-medical-laboratory-sciences-banner.jpg",
   badges: [
     { icon: Clock, text: "3 Years" },

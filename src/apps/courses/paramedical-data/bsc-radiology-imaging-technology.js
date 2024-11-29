@@ -10,9 +10,9 @@ import {
 import React from "react";
 
 export const BSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
-  id: 11,
+  
   title: "B.Sc. Radiology and Imaging Technology",
-  category: "Bachelor's Degree / 4-Year Program",
+  category: "Paramedical Courses",
   image: "https://example.com/bsc-radiology-imaging-technology-banner.jpg",
   badges: [
     { icon: Clock, text: "4 Years" },

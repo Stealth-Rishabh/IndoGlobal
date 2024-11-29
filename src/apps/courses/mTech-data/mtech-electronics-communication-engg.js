@@ -10,7 +10,7 @@ import {
   import React from "react";
   
   export const MTECH_IN_ELECTRONICS_COMMUNICATION_ENGINEERING = {
-    id: 2,
+    
     title: "M.Tech Electronics and Communication Engineering",
     category: "M.Tech",
     image:

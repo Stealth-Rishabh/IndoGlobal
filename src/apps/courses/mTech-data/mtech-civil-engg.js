@@ -8,12 +8,13 @@ import {
     HelpCircle,
 } from "lucide-react";
 import React from "react";
+import img from "../../../assets/courses/mtech-civil.webp";
 
 export const MTECH_IN_CIVIL_ENGINEERING = {
-    id: 5,
+
     title: "M.Tech in Civil Engineering",
-    category: "Postgraduate / 2-Year Program",
-    image: "https://example.com/mtech-civil-banner.jpg",
+    category: "M.Tech",
+    image: img,
     badges: [
         { icon: Clock, text: "2 Years" },
         { icon: GraduationCap, text: "Master's Degree" },

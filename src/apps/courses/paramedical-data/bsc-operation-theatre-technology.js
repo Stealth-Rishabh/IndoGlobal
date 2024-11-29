@@ -10,9 +10,9 @@ import {
 import React from "react";
 
 export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
-  id: 12,
+  
   title: "B.Sc. Operation Theatre Technology",
-  category: "Bachelor's Degree / 4-Year Program",
+  category: "Paramedical Courses",
   image: "https://example.com/bsc-operation-theatre-technology-banner.jpg",
   badges: [
     { icon: Clock, text: "4 Years" },

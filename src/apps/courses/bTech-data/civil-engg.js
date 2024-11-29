@@ -8,12 +8,12 @@ import {
     HelpCircle,
   } from "lucide-react";
   import React from "react";
-  
+  import img from "../../../assets/courses/btech-civil.webp";
   export const BTECH_IN_CIVIL_ENGG = {
-    id: 2,
+    
     title: "B.Tech Civil Engineering",
     category: "B.Tech / B.tech Lateral Entry",
-    image: "https://example.com/civil-engineering-banner.jpg",
+    image: img,
     badges: [
       { icon: Clock, text: "4 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },

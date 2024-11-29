@@ -8,12 +8,13 @@ import {
     HelpCircle,
 } from "lucide-react";
 import React from "react";
+import img from "../../../assets/courses/btech-elec.webp";
 
 export const BTECH_IN_ELECTRONICS_COMMUNICATION_ENGG = {
-    id: 2,
+    
     title: "B.Tech Electronics & Communication Engineering",
     category: "B.Tech / B.tech Lateral Entry",
-    image: "https://example.com/electronics-communication-banner.jpg",
+    image: img,
     badges: [
         { icon: Clock, text: "4 Years" },
         { icon: GraduationCap, text: "Bachelor's Degree" },

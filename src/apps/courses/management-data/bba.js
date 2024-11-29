@@ -11,9 +11,9 @@ import {
   import React from "react";
   
   export const BBA = {
-    id: 5,
+    
     title: "Bachelor of Business Administration (BBA)",
-    category: "BBA / Management",
+    category: "Management and Technology",
     image:
       "https://example.com/path/to/image.jpg", // Replace with actual image URL
     badges: [

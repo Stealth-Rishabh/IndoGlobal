@@ -10,9 +10,9 @@ import {
 import React from "react";
 
 export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
-    id: 6,
+    
     title: "M.Tech in Computer Science & Engineering",
-    category: "Postgraduate / 2-Year Program",
+    category: "M.Tech",
     image: "https://example.com/mtech-computer-science-banner.jpg",
     badges: [
         { icon: Clock, text: "2 Years" },

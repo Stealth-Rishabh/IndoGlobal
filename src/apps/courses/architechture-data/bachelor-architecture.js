@@ -10,9 +10,9 @@ import {
   import React from "react";
   
   export const BACHELOR_OF_ARCHITECTURE = {
-    id: 3,
+    
     title: "Bachelor of Architecture (B.Arch)",
-    category: "Bachelor of Architecture",
+    category: "Architecture",
     image:
       "https://example.com/path/to/image.jpg", // Replace with actual image URL
     badges: [
