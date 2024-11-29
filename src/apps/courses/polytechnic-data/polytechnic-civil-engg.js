@@ -92,8 +92,44 @@ export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
                     ]
                 },
                 {
+                    type: "heading",
+                    data: "Program Outcomes"
+                },
+                {
+                    type: "list",
+                    data: [
+                        "Capable of handling construction site work as a supervisor",
+                        "Eligible to work as a Junior Engineer in Govt./Pvt. Organizations",
+                        "Ability to set up own civil engineering unit",
+                        "Apply knowledge and technical expertise in building, analyzing, testing, and maintaining industry work",
+                        "Understanding of industry standards and code of practices"
+                    ]
+                },
+                {
                     type: "paragraph",
                     data: "The course equips students with sound knowledge in civil engineering and improves supervisory and administrative skills."
+                }
+            ]
+        },
+        {
+            label: "eligibility",
+            icon: React.createElement(GraduationCap, { className: "w-4 h-4" }),
+            content: [
+                {
+                    type: "heading",
+                    data: "Admission Requirements"
+                },
+                {
+                    type: "paragraph",
+                    data: "10th standard pass with Mathematics, Science, and English as compulsory subjects. Valid JET examination score card required."
+                },
+                {
+                    type: "heading",
+                    data: "Fee Structure"
+                },
+                {
+                    type: "paragraph",
+                    data: "As per Punjab State Board of Technical Education and Industrial Training (PSBTE&IT) norms."
                 }
             ]
         },
@@ -143,48 +179,8 @@ export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
                 }
             ]
         },
-        {
-            label: "eligibility",
-            icon: React.createElement(GraduationCap, { className: "w-4 h-4" }),
-            content: [
-                {
-                    type: "heading",
-                    data: "Admission Requirements"
-                },
-                {
-                    type: "paragraph",
-                    data: "10th standard pass with Mathematics, Science, and English as compulsory subjects. Valid JET examination score card required."
-                },
-                {
-                    type: "heading",
-                    data: "Fee Structure"
-                },
-                {
-                    type: "paragraph",
-                    data: "As per Punjab State Board of Technical Education and Industrial Training (PSBTE&IT) norms."
-                }
-            ]
-        },
-        {
-            label: "program-outcomes",
-            icon: React.createElement(List, { className: "w-4 h-4" }),
-            content: [
-                {
-                    type: "heading",
-                    data: "Program Outcomes"
-                },
-                {
-                    type: "list",
-                    data: [
-                        "Capable of handling construction site work as a supervisor",
-                        "Eligible to work as a Junior Engineer in Govt./Pvt. Organizations",
-                        "Ability to set up own civil engineering unit",
-                        "Apply knowledge and technical expertise in building, analyzing, testing, and maintaining industry work",
-                        "Understanding of industry standards and code of practices"
-                    ]
-                }
-            ]
-        },
+        
+        
         {
             label: "faqs",
             icon: React.createElement(HelpCircle, { className: "w-4 h-4" }),

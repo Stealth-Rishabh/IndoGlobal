@@ -29,23 +29,21 @@ import {
         content: [
           {
             type: "paragraph",
-            data:
-              "For undergraduates, Indo Global Colleges - the best Architecture College in Chandigarh offers a 5-year professional program leading to the Bachelor of Architecture degree. It is considered as one of the best colleges for architecture in India. The program comprises 10 semesters and focuses on subjects ranging from engineering, technology, and arts to the professional practice of architecture. The B.Arch program aims at attaining a high level of excellence in architectural design supported by lateral inputs from other subjects.",
+            data: "The Bachelor of Architecture (B.Arch) at Indo Global Colleges is a 5-year professional program comprising 10 semesters. The curriculum integrates engineering, technology, and arts with professional architectural practice, aiming for excellence in architectural design through comprehensive learning.",
           },
           {
-            type: "paragraph",
-            data:
-              "Do you have a passion and interest in designing structures and want to design something to leave a mark in the world? Then, a career in architecture will be perfect for you. To pursue an architecture course in your graduation, you need to find the best architecture colleges in India from among which you can choose the one that suits your interest. The Bachelor of Architecture programme will help you hone your skills and expertise in the field, which you can further use to build a successful career ahead.",
+            type: "heading",
+            data: "Key Features",
           },
           {
-            type: "paragraph",
-            data:
-              "Doing the B.Arch course at Indo Global Colleges, ranked among the top Architecture Colleges in Punjab and North India, students learn to communicate ideas through drawings and models, working fluidly and seamlessly between all modes of digital and analog representations. All students spend their first 3 years following the core curriculum designed to lay a strong foundation for architectural education. During the final four semesters in one of the best B.Arch colleges in India, students are encouraged to work across disciplines focusing on an intellectually speculative and rigorous course of study.",
-          },
-          {
-            type: "paragraph",
-            data:
-              "Being the reputed Chandigarh architecture college, Indo Global Colleges facilitate students with opportunities to work in the field to gain practical knowledge. Students are also exposed to a wide range of subjects and elective courses to equip them with the skills and knowledge required to deal with the regional, economic, cultural, and technological diversity of India. Therefore, it is highly recommended that you consider applying to the best colleges for architecture.",
+            type: "list",
+            data: [
+              "AICTE-approved curriculum with focus on practical learning",
+              "State-of-the-art digital and analog design facilities",
+              "Industry exposure through practical training and internships",
+              "Core curriculum for first 3 years followed by specialized study",
+              "Integration of regional, economic, and cultural aspects in design"
+            ],
           },
           {
             type: "heading",
@@ -54,17 +52,12 @@ import {
           {
             type: "list",
             data: [
-              "To stimulate sensitivity and unveil creative talents.",
-              "To reinforce intellectual capabilities and develop proficiency in technical and professional skills that allow pursuing alternative careers within the broad spectrum of architecture.",
-              "To provide excellent career opportunities to students to try out the role they will play as responsible members of society.",
-              "Attaining the highest level of excellence in architectural design with sound knowledge in construction.",
-              "Encouraging students to design their individual design approaches through the analysis of theories, history of ideas, and cultural agendas.",
+              "To stimulate sensitivity and unveil creative talents",
+              "To develop proficiency in technical and professional skills",
+              "To provide excellent career opportunities in architecture",
+              "To attain excellence in architectural design and construction",
+              "To encourage individual design approaches and cultural understanding"
             ],
-          },
-          {
-            type: "paragraph",
-            data:
-              "The best architecture colleges in Punjab are always accredited, which is very important. College accreditation ensures that certifications are recognized for their true value. Studying in an accredited college is crucial for your educational journey and future career goals. Therefore, before enrolling in any architecture college, make sure to verify its accreditation status.",
           },
           {
             type: "heading",
@@ -75,46 +68,71 @@ import {
             data: "First Year",
           },
           {
-            type: "paragraph",
-            data:
-              "The first-year curriculum includes studios for architectural design, drawing and communication, building construction and materials, and practical courses for the model workshop. The theoretical courses include theory of structures, history of art, building construction, history of human settlements, and climatology and environmental studies.",
+            type: "list",
+            data: [
+              "Architectural design studios and model workshops",
+              "Drawing and communication techniques",
+              "Building construction and materials",
+              "Theory of structures and history of art",
+              "Climatology and environmental studies"
+            ],
           },
           {
             type: "sub-heading",
             data: "Second Year",
           },
           {
-            type: "paragraph",
-            data:
-              "The second-year curriculum continues with the same subjects as the first year. The theoretical courses covered are building services, history of architecture, and theory of structures.",
+            type: "list",
+            data: [
+              "Advanced architectural design studios",
+              "Building services and systems",
+              "History of architecture",
+              "Advanced theory of structures",
+              "Construction technology and methods"
+            ],
           },
           {
             type: "sub-heading",
             data: "Third Year",
           },
           {
-            type: "paragraph",
-            data:
-              "In the third year of the B.Arch course, advanced computer applications are added to the curriculum along with studios for architectural design, building construction, and materials. The theoretical courses include history and theory of architecture, building services, and theory of structure, along with quantities, specification, estimation, and contract management.",
+            type: "list",
+            data: [
+              "Advanced computer applications in design",
+              "Building construction and materials",
+              "History and theory of architecture",
+              "Quantities and specification management",
+              "Advanced structural systems"
+            ],
           },
           {
             type: "sub-heading",
             data: "Fourth Year",
           },
           {
-            type: "paragraph",
-            data:
-              "The fourth-year curriculum includes research work. The design studio involves urban design or group housing. The course curriculum includes contract management, professional practice, town planning, and theory of structures.",
+            type: "list",
+            data: [
+              "Urban design and group housing",
+              "Research methodology",
+              "Contract management",
+              "Professional practice",
+              "Town planning and development"
+            ],
           },
           {
             type: "sub-heading",
             data: "Fifth Year",
           },
           {
-            type: "paragraph",
-            data:
-              "The fifth and final year comprises practical training during which students undertake apprenticeships with registered architects in organizations that provide services related to designing and construction. The work includes assistance in designing, preparation of construction drawings and documentation, visits to construction sites, and attending meetings with clients.",
-          },
+            type: "list",
+            data: [
+              "Professional training and apprenticeship",
+              "Construction documentation and drawings",
+              "Site supervision and management",
+              "Client interaction and presentations",
+              "Final year thesis project"
+            ],
+          }
         ],
       },
       {
@@ -147,7 +165,7 @@ import {
         icon: React.createElement(List, { className: "w-4 h-4" }),
         content: [
           {
-            label: "Program Structure",
+            label: "Subjects",
             type: "list",
             data: [
               {

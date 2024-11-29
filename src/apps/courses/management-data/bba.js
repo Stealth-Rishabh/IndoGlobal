@@ -118,7 +118,7 @@ import {
         icon: React.createElement(List, { className: "w-4 h-4" }),
         content: [
           {
-            label: "Program Structure",
+            label: "Subjects",
             type: "list",
             data: [
               {

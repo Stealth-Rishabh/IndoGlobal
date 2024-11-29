@@ -138,16 +138,18 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
                 },
                 {
                     type: "heading",
-                    data: "Program Benefits"
+                    data: "Career Opportunities"
                 },
                 {
                     type: "list",
                     data: [
-                        "Develops advanced administrative and supervisory skills",
-                        "Offers immense career opportunities",
-                        "Prepares for roles in construction, maintenance, and research",
-                        "Enables career paths in academia and industry",
-                        "Provides exposure to cutting-edge technologies"
+                        "Construction Site Supervisor",
+                        "Project Manager",
+                        "Research Scientist",
+                        "Academic Faculty",
+                        "Government Infrastructure Planner",
+                        "Consulting Engineer",
+                        "Urban Development Specialist"
                     ]
                 }
             ]
@@ -157,7 +159,7 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
             icon: React.createElement(List, { className: "w-4 h-4" }),
             content: [
                 {
-                    label: "Semester-wise Subjects",
+                    label: "Subjects",
                     type: "list",
                     data: [
                         {
@@ -213,28 +215,6 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
                 {
                     type: "paragraph",
                     data: "Regular B.E/B.Tech with at least 50% marks (45% for reserved category) and a valid GATE Score. In case of insufficient GATE candidates, admission will be based on inter-se-merit in qualifying examination."
-                }
-            ]
-        },
-        {
-            label: "career-opportunities",
-            icon: React.createElement(List, { className: "w-4 h-4" }),
-            content: [
-                {
-                    type: "heading",
-                    data: "Career Paths"
-                },
-                {
-                    type: "list",
-                    data: [
-                        "Construction Site Supervisor",
-                        "Project Manager",
-                        "Research Scientist",
-                        "Academic Faculty",
-                        "Government Infrastructure Planner",
-                        "Consulting Engineer",
-                        "Urban Development Specialist"
-                    ]
                 }
             ]
         },
