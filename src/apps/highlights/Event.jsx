@@ -8,10 +8,7 @@ import Newsletter from "../../components/Newsletter";
 import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
- 
-} from "../../components/ui/card";
+import { Card } from "../../components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Pagination,
@@ -23,140 +20,42 @@ import {
   PaginationEllipsis,
 } from "@/components/ui/pagination";
 import { Search } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { eventsData } from "./eventData";
+
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Event" }];
+
+const formatDate = (dateString) => {
+  return new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
 
 const Event = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
-  const eventsPerPage = 6;
-  const events = useMemo(
-    () => [
-      {
-        id: 1,
-        title: "Cultural Fest",
-        date: "2023-10-15",
-        tags: ["Culture", "Festivals"],
-        image:
-          "https://plus.unsplash.com/premium_photo-1683121128953-9a7f08b82198?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 2,
-        title: "Tech Conference",
-        date: "2023-11-20",
-        tags: ["Technology", "Conference"],
-        image:
-          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 3,
-        title: "Art Exhibition",
-        date: "2023-12-01",
-        tags: ["Art", "Exhibition"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 4,
-        title: "Science Fair",
-        date: "2023-10-30",
-        tags: ["Science", "Education"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 5,
-        title: "Music Festival",
-        date: "2023-11-05",
-        tags: ["Music", "Festival"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 6,
-        title: "Career Fair",
-        date: "2023-11-15",
-        tags: ["Career", "Networking"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 7,
-        title: "Sports Day",
-        date: "2023-10-25",
-        tags: ["Sports", "Competition"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 8,
-        title: "Literature Festival",
-        date: "2023-12-10",
-        tags: ["Literature", "Festival"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 9,
-        title: "Health Awareness Camp",
-        date: "2023-11-12",
-        tags: ["Health", "Awareness"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 10,
-        title: "Film Screening",
-        date: "2023-11-25",
-        tags: ["Film", "Screening"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 11,
-        title: "Dance Workshop",
-        date: "2023-12-05",
-        tags: ["Dance", "Workshop"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 12,
-        title: "Coding Bootcamp",
-        date: "2023-11-18",
-        tags: ["Technology", "Education"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 13,
-        title: "Environmental Awareness Day",
-        date: "2023-10-28",
-        tags: ["Environment", "Awareness"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 14,
-        title: "Photography Contest",
-        date: "2023-12-15",
-        tags: ["Photography", "Contest"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 15,
-        title: "Charity Run",
-        date: "2023-11-30",
-        tags: ["Charity", "Sports"],
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      // ... more events
-    ],
-    []
-  );
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const eventsPerPage = 12;
 
+  const events = useMemo(() => eventsData, []);
+  console.log(events);
   // Extract unique tags from all events
   const allTags = useMemo(() => {
     const tagSet = new Set();
@@ -242,6 +141,11 @@ const Event = () => {
     [currentPage, totalPages]
   );
 
+  const handleImageClick = (event) => {
+    setSelectedEvent(event);
+    setIsDialogOpen(true);
+  };
+
   return (
     <section className="relative min-h-screen">
       <ImgAndBreadcrumb
@@ -292,17 +196,17 @@ const Event = () => {
             </div>
           </div>
 
-          <div className="events grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+          <div className="events grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
             {currentEvents.map((event) => (
               <Card key={event.id} className="p-4 hover:shadow-lg shadow">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-48 object-cover rounded"
+                  className="w-full h-auto aspect-square object-cover rounded"
                 />
-                <h3 className="text-lg font-bold mt-2">{event.title}</h3>
-                <p className="text-gray-500">{event.date}</p>
-                <div className="flex flex-wrap gap-2 mt-2">
+                <h3 className="text-sm font-bold my-2">{event.title}</h3>
+                <p className="text-gray-500 text-xs">{event.date}</p>
+                <div className="flex flex-wrap gap-2 mt-1">
                   {event.tags.map((tag) => (
                     <Badge
                       key={tag}
@@ -314,7 +218,12 @@ const Event = () => {
                     </Badge>
                   ))}
                 </div>
-                <Button className="mt-4 w-full">View Details</Button>
+                <Button
+                  className="mt-4 w-full"
+                  onClick={() => handleImageClick(event)}
+                >
+                  View Details
+                </Button>
               </Card>
             ))}
           </div>
@@ -382,6 +291,62 @@ const Event = () => {
           )}
         </div>
       </Container>
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-lg max-w-[93%] rounded-lg">
+          {selectedEvent && (
+            <>
+              <DialogHeader className="px-1">
+                <DialogTitle>{selectedEvent.title}</DialogTitle>
+                {/* <DialogDescription>
+                  {selectedEvent.description}
+                </DialogDescription> */}
+              </DialogHeader>
+              <div className="mt-2 space-y-3">
+                {selectedEvent.gallery.length > 0 ? (
+                  <Carousel>
+                    <CarouselContent className="relative ml-0">
+                      {selectedEvent.gallery.map((image) => (
+                        <CarouselItem key={image.id} className="w-full px-1">
+                          <img
+                            src={image}
+                            alt={image}
+                            className="object-cover w-full  rounded-md h-96 sm:h-[70vh]"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious
+                      className="absolute -translate-y-1/2  top-1/2 left-4"
+                      iconStyle="w-1/2 sm:w-3/4"
+                    />
+                    <CarouselNext
+                      className="absolute -translate-y-1/2  top-1/2 right-4"
+                      iconStyle="w-1/2 sm:w-3/4"
+                    />
+                  </Carousel>
+                ) : (
+                  <img
+                    src={selectedEvent.image}
+                    alt={`Event ${selectedEvent.id}`}
+                    className="object-cover w-full rounded-md h-96"
+                  />
+                )}
+                <p className="text-muted-foreground px-1">
+                  {selectedEvent.description}
+                </p>
+                <div className="flex justify-between px-1">
+                  <p className="text-xs sm:text-sm ">
+                    {/* <strong>Date:</strong> {formatDate(selectedEvent.date)} */}
+                  </p>
+                  <p className="text-xs sm:text-sm">
+                    {/* <strong>Category:</strong> {selectedEvent.category} */}
+                  </p>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <Stats />
       <Newsletter />

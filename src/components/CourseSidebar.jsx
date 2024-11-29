@@ -17,18 +17,18 @@ export default function CourseSidebar() {
     {
       name: "B.Tech / Lateral Entry",
       courses: [
-        { href: "/courses/mechanical-engineering", label: "Mechanical Engg." },
-        { href: "/courses/computer-science", label: "Computer Science Engg." },
-        { href: "/courses/electronics-communication", label: "Electronics and Communication Engg." },
-        { href: "/courses/civil-engineering", label: "Civil Engg." },
+        { href: "/courses/b.tech-mechanical-engineering", label: "Mechanical Engg." },
+        { href: "/courses/b.tech-computer-science-engineering", label: "Computer Science Engg." },
+        { href: "/courses/b.tech-electronics-&-communication-engineering", label: "Electronics and Communication Engg." },
+        { href: "/courses/b.tech-civil-engineering", label: "Civil Engg." },
       ],
     },
     {
       name: "M.Tech",
       courses: [
-        { href: "/courses/mtech-civil", label: "Civil Engg." },
-        { href: "/courses/mtech-computer-science", label: "Computer Science Engg." },
-        { href: "/courses/mtech-electronics-communication", label: "Electronics and Communication" },
+        { href: "/courses/m.tech-in-civil-engineering", label: "Civil Engg." },
+        { href: "/courses/m.tech-in-computer-science-&-engineering", label: "Computer Science Engg." },
+        { href: "/courses/m.tech-electronics-and-communication-engineering", label: "Electronics and Communication" },
       ],
     },
     {

@@ -66,8 +66,8 @@ const Spotlights = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [dateFilter, setDateFilter] = useState("all");
   const [focus, setFocus] = useState(null);
-  const [selectedEvent, setSelectedEvent] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   const events = useMemo(
     () => [
