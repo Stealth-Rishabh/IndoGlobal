@@ -21,6 +21,7 @@ import { ChevronRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import { Link } from "react-router-dom";
 
 const HeroSlider = () => {
   const [api, setApi] = useState(null);
@@ -205,9 +206,11 @@ const HeroSlider = () => {
                   className="sm:hidden block text-2xl font-bold md:text-3xl text-white  md:font-bold text-left max-w-[20rem] md:max-w-3xl"
                   words={img.highlights}
                 />
-                <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
-                  Explore Courses
+                <Link to="/courses">
+                    <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
+                    Explore Courses
                 </ShinyButton>
+                </Link>
               </div>
             </CarouselItem>
           ))}

@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef,useMemo } from "react";
 // import Container from "../../../components/wrappers/Container";
 import Autoplay from "embla-carousel-autoplay";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,13 +9,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import { eventsData } from "../highlights/eventData";
 import ButtonSq from "../../components/ButtonSq";
 import Container from "../../components/wrappers/Container";
 import img from "../../assets/EventImg.svg";
 import img2 from "../../assets/EventImg2.svg";
 import { Calendar } from "lucide-react";
 import Heading from "../../components/Heading";
+import { Link } from "react-router-dom";
 // import BlurFade from "@/components/ui/blur-fade";
 const Events = () => {
   const [api, setApi] = useState(null);
@@ -35,53 +36,53 @@ const Events = () => {
     });
   }, [api]);
 
-  const eventDataArray = [
-    {
-      title: "DENGUE AWARENESS CAMPAIGN",
-      date: "15th May 2023",
-      image: img,
-      registerLabel: "Know Now",
-    },
-    {
-      title:
-        "Productivity Session on Ground Breaking Ideas and Inventive Methodologies",
-      date: "20th June 2023",
-      image: img2,
-      registerLabel: "Know Now",
-    },
-    {
-      title: "FITNESS AWARENESS CAMPAIGN",
-      date: "10th July 2023",
-      image: img,
-      registerLabel: "Know more",
-    },
-    {
-      title: "NUTRITION AWARENESS CAMPAIGN",
-      date: "25th August 2023",
-      image: img,
-      registerLabel: "Know Now",
-    },
-    {
-      title: "WELLNESS AWARENESS CAMPAIGN",
-      date: "1st September 2023",
-      image: img,
-      registerLabel: "Know Now",
-    },
-  ];
-
+  // const eventDataArray = [
+  //   {
+  //     title: "DENGUE AWARENESS CAMPAIGN",
+  //     date: "15th May 2023",
+  //     image: img,
+  //     registerLabel: "Know Now",
+  //   },
+  //   {
+  //     title:
+  //       "Productivity Session on Ground Breaking Ideas and Inventive Methodologies",
+  //     date: "20th June 2023",
+  //     image: img2,
+  //     registerLabel: "Know Now",
+  //   },
+  //   {
+  //     title: "FITNESS AWARENESS CAMPAIGN",
+  //     date: "10th July 2023",
+  //     image: img,
+  //     registerLabel: "Know more",
+  //   },
+  //   {
+  //     title: "NUTRITION AWARENESS CAMPAIGN",
+  //     date: "25th August 2023",
+  //     image: img,
+  //     registerLabel: "Know Now",
+  //   },
+  //   {
+  //     title: "WELLNESS AWARENESS CAMPAIGN",
+  //     date: "1st September 2023",
+  //     image: img,
+  //     registerLabel: "Know Now",
+  //   },
+  // ];
+  const eventDataArray = useMemo(() => eventsData.slice(0, 5), []);
   return (
-    <Container className="pt-0 lg:pt-0 pb-20">
-      <div className="grid items-center justify-center sm:grid-cols-6 pb-8 sm:pb-28">
-        <div className="h-2 bg-primary-color hidden sm:block"></div>
+    <Container className="pt-0 pb-20 lg:pt-0">
+      <div className="grid justify-center items-center pb-8 sm:grid-cols-6 sm:pb-28">
+        <div className="hidden h-2 bg-primary-color sm:block"></div>
         <Heading
           title="Explore Educational Events"
           titleClassName="lg:font-extrabold font-bold text-secondary-color"
-          className="w-full sm:col-span-4 pb-0 text-center sm:pb-0 lg:pb-0"
+          className="pb-0 w-full text-center sm:col-span-4 sm:pb-0 lg:pb-0"
         />
-        <div className="h-2 bg-primary-color hidden sm:block"></div>
+        <div className="hidden h-2 bg-primary-color sm:block"></div>
       </div>
 
-      <div className="hidden md:grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
+      <div className="hidden grid-cols-1 gap-3 md:grid sm:grid-cols-2 md:grid-cols-4">
         {eventDataArray.map((eventData, index) => (
           <EventCard
             key={index}
@@ -97,7 +98,7 @@ const Events = () => {
         plugins={[plugin.current]}
         setApi={setApi}
         onMouseEnter={plugin.current.stop}
-        className="w-full grid grid-cols-1 gap-3 md:hidden"
+        className="grid grid-cols-1 gap-3 w-full md:hidden"
       >
         <CarouselContent>
           {eventDataArray.map((eventData, index) => (
@@ -105,7 +106,7 @@ const Events = () => {
               <EventCard
                 key={index}
                 eventData={eventData}
-                className="h-96 "
+                className="h-96"
                 imgClassname="h-3/5 sm:h-1/2"
                 contentClassname="h-2/5 sm:h-1/2"
               />
@@ -121,7 +122,7 @@ const Events = () => {
           className="absolute sm:left-[110px] left-[55%] top-[118%] sm:top-[110%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-10 rounded-none opacity-100 active:bg-red-700"
         />
       </Carousel>
-      <div className="sm:hidden flex justify-center mt-4 space-x-2">
+      <div className="flex justify-center mt-4 space-x-2 sm:hidden">
         {Array.from({ length: count }).map((_, index) => (
           <button
             key={index}
@@ -145,24 +146,31 @@ const EventCard = ({
   return (
     <div className={`shadow-lg ${className}`}>
       <div className={`overflow-hidden ${imgClassname}`}>
-        <img src={img} alt="Event Img" className="object-cover w-full h-full hover:scale-125 transition-all duration-300" />
+        <img
+          src={img}
+          alt="Event Img"
+          className="object-cover w-full h-full transition-all duration-300 hover:scale-125"
+        />
       </div>
 
       <div
-        className={`p-5  bg-red-600  grid text-white space-y-2 sm:space-y-0 content-between ${contentClassname}`}
+        className={`grid content-between p-5 space-y-2 text-white bg-red-600 sm:space-y-0 ${contentClassname}`}
       >
-        <h1 className="text-sm sm:text-xl font-bold flex items-center tracking-wide text-white">
+        <h1 className="flex items-center text-sm font-bold tracking-wide text-white sm:text-xl">
           {title.toUpperCase()}
         </h1>
-        <div className="flex items-center text-xs sm:text-sm font-medium">
+        <div className="flex items-center text-xs font-medium sm:text-sm">
           <Calendar size={20} className="mr-2 text-white" /> {date}
         </div>
-        <ButtonSq
-          className="w-fit bg-secondary-color  hover:bg-blue-700 text-xs sm:text-base"
-          label={registerLabel}
-          iconStyle="text-primary-color"
-          iconDiv="bg-white"
-        />
+        <Link to="/spotlights">
+          <ButtonSq
+            className="text-xs w-fit bg-secondary-color hover:bg-blue-700 sm:text-base"
+            // label={registerLabel}
+            label="Know More"
+            iconStyle="text-primary-color"
+            iconDiv="bg-white"
+          />
+        </Link>
       </div>
     </div>
   );

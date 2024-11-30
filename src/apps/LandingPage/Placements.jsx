@@ -39,36 +39,36 @@ const Placements = () => {
     {
       bgColor: "bg-gray-900",
       name: "Gurpreet Randhawa",
-      company: "Cerner",
-      salary: "₹40 Lakh",
+      company: "Cerner Healthcare",
+      salary: "₹40 LPA",
       location: "Bengaluru",
       imageUrl: img1,
       logoUrl: logo,
     },
     {
       bgColor: "bg-blue-900",
-      name: "Rohit Sharma",
-      company: "Google",
-      salary: "₹50 Lakh",
-      location: "Hyderabad",
+      name: "Abhishek Kaushal",
+      company: "Amazon India",
+      salary: "₹30 LPA",
+      location: "Bengaluru",
       imageUrl: img1,
       logoUrl: logo,
     },
     {
       bgColor: "bg-gray-900",
-      name: "Anita Desai",
-      company: "Microsoft",
-      salary: "₹45 Lakh",
-      location: "Delhi",
+      name: "Raj Kumar",
+      company: "Trantor Software Pvt Ltd",
+      salary: "₹20 LPA",
+      location: "Chandigarh",
       imageUrl: img1,
       logoUrl: logo,
     },
     {
       bgColor: "bg-blue-900",
-      name: "Rahul Verma",
-      company: "Amazon",
-      salary: "₹60 Lakh",
-      location: "Mumbai",
+      name: "Abhishek Jha",
+      company: "Cerebry",
+      salary: "₹18 LPA",
+      location: "Chandigarh",
       imageUrl: img1,
       logoUrl: logo,
     },
@@ -121,7 +121,7 @@ const Placements = () => {
     <Container className="sm:px-0 sm:pb-0">
       <Heading
         title="Our Top Placements"
-        subtitle="We are proud to announce that our students have got placed in top companies with highest salary package of 60 Lacs."
+        subtitle="We are proud to announce that our students have got placed in top companies."
         subtitleClassName="text-gray-500"
         titleClassName="text-secondary-color mb-6 md:text-6xl text-4xl font-bold"
       />
