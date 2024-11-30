@@ -36,7 +36,7 @@ import {
 } from "@/components/ui/carousel";
 import { eventsData } from "./eventData";
 
-const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Event" }];
+const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Spotlights" }];
 
 const formatDate = (dateString) => {
   return new Date(dateString).toLocaleDateString("en-US", {
@@ -46,7 +46,7 @@ const formatDate = (dateString) => {
   });
 };
 
-const Event = () => {
+const SpotlightAndEvents = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
@@ -149,7 +149,7 @@ const Event = () => {
   return (
     <section className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Events"
+        title="Spotlights"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
@@ -160,11 +160,11 @@ const Event = () => {
             title="Experience the Vibrance of Campus Life"
             subtitle="Stay updated with the latest events, workshops, and seminars happening at our college. From cultural fests to academic conferences, we've got it all."
             titleClassName="text-secondary-color text-left lg:text-5xl text-center"
-            subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal text-center"
+            subtitleClassName="hidden text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal text-center sm:block"
             className="lg:pb-10"
           />
 
-          <div className="search-section mb-24 space-y-8" id="top">
+          <div className="search-section mb-10 sm:mb-24 space-y-8" id="top">
             <div className="relative w-full max-w-6xl mx-auto">
               <Input
                 id="search"
@@ -179,7 +179,7 @@ const Event = () => {
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             </div>
-            <div className="tags-filter justify-center flex flex-wrap sm:gap-4 gap-2 max-w-6xl mx-auto">
+            <div className="hidden tags-filter justify-center sm:flex flex-wrap sm:gap-4 gap-2 max-w-6xl mx-auto">
               {allTags.length === 0 && (
                 <p className="text-gray-500">No tags found</p>
               )}
@@ -199,7 +199,7 @@ const Event = () => {
             </div>
           </div>
 
-          <div className="events grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+          <div className="events grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-6 mb-14">
             {currentEvents.map((event) => (
               <Card key={event.id} className="p-4 hover:shadow-lg shadow">
                 <img
@@ -295,7 +295,7 @@ const Event = () => {
         </div>
       </Container>
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-lg max-w-[93%] rounded-lg">
+        <DialogContent className="sm:max-w-fit max-w-[93%] rounded-lg">
           {selectedEvent && (
             <>
               <DialogHeader className="px-1">
@@ -313,7 +313,7 @@ const Event = () => {
                           <img
                             src={image}
                             alt={image}
-                            className="object-cover w-full  rounded-md h-96 sm:h-[70vh]"
+                            className="object-contain w-full  rounded-md h-96 sm:h-[70vh]"
                           />
                         </CarouselItem>
                       ))}
@@ -340,6 +340,7 @@ const Event = () => {
                 <div className="flex justify-between px-1">
                   <p className="text-xs sm:text-sm ">
                     {/* <strong>Date:</strong> {formatDate(selectedEvent.date)} */}
+                    <strong>Date:</strong> {selectedEvent.date}
                   </p>
                   <p className="text-xs sm:text-sm">
                     {/* <strong>Category:</strong> {selectedEvent.category} */}
@@ -357,4 +358,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default SpotlightAndEvents;

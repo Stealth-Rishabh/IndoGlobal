@@ -22,7 +22,7 @@ import VisionAndMission from "./apps/aboutPage/VisionAndMission";
 import Leadership from "./apps/aboutPage/Leadership";
 import EminentFaculty from "./apps/aboutPage/EminentFaculty";
 import Admission from "./apps/admissions/Admission";
-import Event from "./apps/highlights/Event";
+// import Event from "./apps/highlights/Event";
 import Gallery from "./apps/highlights/Gallery";
 import CampusRecruitments from "./apps/placements/CampusRecruitments";
 import IndustrySpeaks from "./apps/placements/IndustrySpeaks";
@@ -44,6 +44,7 @@ import BlogDetails from "./apps/blogs/BlogDetails";
 import Careers from "./apps/careers/Careers";
 import Spotlights from "./apps/highlights/Spotlights";
 import OnlineLearningResources from "./apps/footer/OnlineLearningResources";
+import SpotlightAndEvents from "./apps/highlights/SpotlightAndEvents";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -85,8 +86,8 @@ function App() {
         <Route path="/admissions" element={<Admission />} />
 
         {/* highlights page */}
-        <Route path="/events" element={<Event />} />
-        <Route path="/spotlights" element={<Spotlights/>} />
+        <Route path="/spotlights" element={<SpotlightAndEvents/>} />
+        {/* <Route path="/spotlights" element={<Spotlights/>} /> */}
         <Route path="/gallery" element={<Gallery />} />
 
         {/* placements page */}

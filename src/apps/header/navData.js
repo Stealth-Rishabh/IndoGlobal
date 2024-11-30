@@ -14,11 +14,11 @@ export const navlinks = [
   { name: "Courses", path: "/courses" },
   { name: "Admissions", path: "/admissions" },
   {
-    name: "Highlights",
-    path: "/events",
+    name: "Campus Life",
+    path: "/spotlights",
     dropdown: [
       { name: "Spotlights", path: "/spotlights" },
-      { name: "Events", path: "/events" },
+      // { name: "Events", path: "/events" },
       { name: "Gallery", path: "/gallery" },
     ],
   },
