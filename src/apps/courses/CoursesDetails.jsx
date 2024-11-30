@@ -32,12 +32,12 @@ const CoursesDetails = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/courses", label: "Courses" },
-    { label: "B.Tech" },
+    { label: courseData.title },
   ];
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Why Indo Global"
+        title="Courses"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
