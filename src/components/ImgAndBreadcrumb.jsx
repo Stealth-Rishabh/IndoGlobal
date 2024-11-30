@@ -74,8 +74,8 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
             // Mobile view: show first, ellipsis, and last two
             <>
               {breadcrumbItems.length > 0 && (
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
+                <BreadcrumbItem className="text-white mobile-breadcrumb-item">
+                  <BreadcrumbLink asChild className="text-white">
                     <Link to={breadcrumbItems[0].href}
                      className=" font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100 ">
                       {breadcrumbItems[0].label}
@@ -104,7 +104,7 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
                             <Link
                               key={index}
                               to={item.href ? item.href : "#"}
-                              className="py-1 text-sm"
+                              className="py-1 text-sm text-white"
                             >
                               {item.label}
                             </Link>
@@ -120,18 +120,18 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
                   </BreadcrumbItem>
                 </>
               )}
-              {breadcrumbItems.slice(-2).map((item, index) => (
-                <BreadcrumbItem key={index}>
+              {breadcrumbItems.slice(1).map((item, index) => (
+                <BreadcrumbItem key={index} className="text-white">
                   <BreadcrumbSeparator />
                   {item.href ? (
                     <BreadcrumbLink
                       asChild
-                      className="truncate max-w-20 md:max-w-none"
+                      className="truncate max-w-20 md:max-w-none text-white"
                     >
                       <Link to={item.href}>{item.label}</Link>
                     </BreadcrumbLink>
                   ) : (
-                    <BreadcrumbPage className="truncate max-w-20 md:max-w-none">
+                    <BreadcrumbPage className="truncate max-w-20 md:max-w-none text-white">
                       {item.label}
                     </BreadcrumbPage>
                   )}

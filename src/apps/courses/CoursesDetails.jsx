@@ -46,12 +46,12 @@ const CoursesDetails = () => {
         <div className="self-start md:sticky md:top-5">
           <CourseSidebar />
         </div>
-        <div className="col-span-1 pt-12 md:col-span-3">
+        <div className="col-span-1 sm:pt-12 md:col-span-3">
           <CourseDetailsPage {...courseData} />
         </div>
       </Container>
-      <Stats />
-      <Newsletter />
+      {/* <Stats /> */}
+      {/* <Newsletter /> */}
     </div>
   );
 };

@@ -313,7 +313,7 @@ const SpotlightAndEvents = () => {
                           <img
                             src={image}
                             alt={image}
-                            className="object-contain w-full  rounded-md h-96 sm:h-[70vh]"
+                            className="object-contain w-full  rounded-md h-fit sm:h-[70vh]"
                           />
                         </CarouselItem>
                       ))}

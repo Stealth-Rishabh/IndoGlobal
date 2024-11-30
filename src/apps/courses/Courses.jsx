@@ -236,8 +236,8 @@ export default function Courses() {
         </div>
       </Container>
 
-      <Stats />
-      <Newsletter />
+      {/* <Stats /> */}
+      {/* <Newsletter /> */}
     </section>
   );
 }
