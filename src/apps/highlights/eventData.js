@@ -1,3 +1,17 @@
+import img1 from "../../assets/spotlights/cowad.webp";
+import img2 from "../../assets/spotlights/pdhm.webp";
+import img3 from "../../assets/spotlights/isagdf.webp";
+import img4 from "../../assets/spotlights/hvos.webp";
+import img5 from "../../assets/spotlights/oolaigc.webp";
+import img6 from "../../assets/spotlights/apd.webp";
+import img7 from "../../assets/spotlights/hvfos.webp";
+import img8 from "../../assets/spotlights/gdgoc.webp";
+import img9 from "../../assets/spotlights/tdc.webp";
+import img10 from "../../assets/spotlights/thpks.webp";
+import img11 from "../../assets/spotlights/ch.webp";
+import img12 from "../../assets/spotlights/ph.webp";
+
+
 export const eventsData = [
   {
     id: 1,
@@ -6,8 +20,8 @@ export const eventsData = [
     title: "Celebration of World Anesthesia Day",
     tags: ["Health", "Medical"],
     description: "Celebration of World Anesthesia Day",
-    image: "",
-    gallery: []
+    image: img1,
+    gallery: [img1],
   },
   {
     id: 2,
@@ -16,8 +30,8 @@ export const eventsData = [
     title: "Placement Drive - Hoping Minds",
     tags: ["Career", "Placement"],
     description: "Placement Drive - Hoping Minds",
-    image: "",
-    gallery: []
+    image: img2,
+    gallery: [img2],
   },
   {
     id: 3,
@@ -26,8 +40,8 @@ export const eventsData = [
     title: "IGC students attended Google Development Fest",
     tags: ["Technology", "Development"],
     description: "IGC students attended Google Development Fest",
-    image: "",
-    gallery: []
+    image: img3,
+    gallery: [img3],
   },
   {
     id: 4,
@@ -36,8 +50,8 @@ export const eventsData = [
     title: "Hospital visit - OTT students on 26th September 2024",
     tags: ["Healthcare", "Education"],
     description: "Hospital visit - OTT students on 26th September 2024",
-    image: "",
-    gallery: []
+    image: img4,
+    gallery: [img4],
   },
   {
     id: 5,
@@ -46,8 +60,8 @@ export const eventsData = [
     title: "Operational Odyssey Launches at Indo Global Colleges",
     tags: ["Innovation", "Campus"],
     description: "Operational Odyssey Launches at Indo Global Colleges",
-    image: "",
-    gallery: []
+    image: img5,
+    gallery: [img5],
   },
   {
     id: 6,
@@ -56,8 +70,8 @@ export const eventsData = [
     title: "AspireFox Placement Drive - 17th Sep 2024",
     tags: ["Career", "Placement"],
     description: "AspireFox Placement Drive - 17th Sep 2024",
-    image: "",
-    gallery: []
+    image: img6,
+    gallery: [img6],
   },
   {
     id: 7,
@@ -66,8 +80,8 @@ export const eventsData = [
     title: "Hospital Visit for OTT students",
     tags: ["Healthcare", "Education"],
     description: "Hospital Visit for OTT students",
-    image: "",
-    gallery: []
+    image: img7,
+    gallery: [img7],
   },
   {
     id: 8,
@@ -76,8 +90,8 @@ export const eventsData = [
     title: "Google Developer Groups on Campus",
     tags: ["Technology", "Development"],
     description: "Google Developer Groups on Campus",
-    image: "",
-    gallery: []
+    image: img8,
+    gallery: [img8],
   },
   {
     id: 9,
@@ -86,8 +100,8 @@ export const eventsData = [
     title: "Teacher's Day Celebration 2024",
     tags: ["Celebration", "Education"],
     description: "Celebrating Teacher's Day with special events and honors",
-    image: "",
-    gallery: []
+    image: img9,
+    gallery: [img9],
   },
   {
     id: 10,
@@ -96,8 +110,8 @@ export const eventsData = [
     title: "Talent Hunt Program Knack Seek - 2024",
     tags: ["Talent", "Recruitment"],
     description: "A program to identify and nurture talented students",
-    image: "",
-    gallery: []
+    image: img10,
+    gallery: [img10],
   },
   {
     id: 11,
@@ -106,8 +120,8 @@ export const eventsData = [
     title: "Youth Skills Day",
     tags: ["Youth", "Skills"],
     description: "Youth Skills Day event focused on enhancing student skills",
-    image: "",
-    gallery: []
+    image: img11,
+    gallery: [img11],
   },
   {
     id: 12,
@@ -116,8 +130,8 @@ export const eventsData = [
     title: "T20 World Cup Trophy",
     tags: ["Sports", "Celebration"],
     description: "Celebrating the T20 World Cup with a trophy ceremony",
-    image: "",
-    gallery: []
+    image: img12,
+    gallery: [img12],
   },
   {
     id: 13,
@@ -127,7 +141,7 @@ export const eventsData = [
     tags: ["Healthcare", "Appreciation"],
     description: "Honoring doctors on National Doctor's Day",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 14,
@@ -137,7 +151,7 @@ export const eventsData = [
     tags: ["Education", "Professional Development"],
     description: "Workshops and seminars to empower educators",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 15,
@@ -145,9 +159,10 @@ export const eventsData = [
     category: "education",
     title: "Faculty Development Program",
     tags: ["Education", "Training"],
-    description: "Enhancing faculty skills through targeted development programs",
+    description:
+      "Enhancing faculty skills through targeted development programs",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 16,
@@ -157,7 +172,7 @@ export const eventsData = [
     tags: ["Health", "Wellness"],
     description: "Celebrating International Yoga Day with various activities",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 17,
@@ -167,7 +182,7 @@ export const eventsData = [
     tags: ["Cultural", "Religious"],
     description: "Celebrating EID AL-ADHA with community events",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 18,
@@ -177,7 +192,7 @@ export const eventsData = [
     tags: ["Architecture", "Technology"],
     description: "Introducing essential tools for architecture students",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 19,
@@ -187,7 +202,7 @@ export const eventsData = [
     tags: ["Environment", "Sustainability"],
     description: "Activities and awareness programs for World Environment Day",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 20,
@@ -195,9 +210,10 @@ export const eventsData = [
     category: "education",
     title: "Campus Highlights",
     tags: ["Achievement", "Campus Life"],
-    description: "Showcasing the latest highlights and achievements of the campus",
+    description:
+      "Showcasing the latest highlights and achievements of the campus",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 21,
@@ -205,9 +221,10 @@ export const eventsData = [
     category: "education",
     title: "Placement Highlights",
     tags: ["Career", "Success"],
-    description: "Highlights from recent placement drives and student successes",
+    description:
+      "Highlights from recent placement drives and student successes",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 22,
@@ -217,7 +234,7 @@ export const eventsData = [
     tags: ["Career", "Guidance"],
     description: "Launch of the new Center for Guidance and Career Development",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 23,
@@ -225,9 +242,10 @@ export const eventsData = [
     category: "education",
     title: "Expert Session on National Technology Day",
     tags: ["Technology", "Innovation"],
-    description: "An expert-led session discussing advancements on National Technology Day",
+    description:
+      "An expert-led session discussing advancements on National Technology Day",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 24,
@@ -237,7 +255,7 @@ export const eventsData = [
     tags: ["Celebration", "Family"],
     description: "Celebrating Mother's Day with special events and honors",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 25,
@@ -245,9 +263,10 @@ export const eventsData = [
     category: "education",
     title: "Coding Ninjas",
     tags: ["Technology", "Coding"],
-    description: "Workshop on advanced coding techniques hosted by Coding Ninjas",
+    description:
+      "Workshop on advanced coding techniques hosted by Coding Ninjas",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 26,
@@ -257,7 +276,7 @@ export const eventsData = [
     tags: ["Achievement", "Recognition"],
     description: "Recognizing the achievements of IGCE & IGCMT students",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 27,
@@ -267,7 +286,7 @@ export const eventsData = [
     tags: ["Environment", "Sustainability"],
     description: "An expert-led session on promoting eco-consciousness",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 28,
@@ -277,7 +296,7 @@ export const eventsData = [
     tags: ["Environment", "Sustainability"],
     description: "Interactive session focusing on eco-conscious practices",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 29,
@@ -287,7 +306,7 @@ export const eventsData = [
     tags: ["Sports", "Entertainment"],
     description: "Celebrating the excitement of IPL with various events",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 30,
@@ -297,7 +316,7 @@ export const eventsData = [
     tags: ["Career", "Placement"],
     description: "Conducting a major placement drive for graduating students",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 31,
@@ -307,7 +326,7 @@ export const eventsData = [
     tags: ["Achievement", "Education"],
     description: "Showcasing excellence in education at Indo Global Colleges",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 32,
@@ -315,9 +334,10 @@ export const eventsData = [
     category: "education",
     title: "Prestigious IGC MBA Program!",
     tags: ["Education", "MBA"],
-    description: "Launching the prestigious IGC MBA Program for aspiring leaders",
+    description:
+      "Launching the prestigious IGC MBA Program for aspiring leaders",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 33,
@@ -327,7 +347,7 @@ export const eventsData = [
     tags: ["Community", "Healthcare"],
     description: "Organizing a blood donation camp to support the community",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 34,
@@ -337,7 +357,7 @@ export const eventsData = [
     tags: ["Technology", "Competition"],
     description: "Announcing the winners of the CODE CRAZE competition",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 35,
@@ -345,9 +365,10 @@ export const eventsData = [
     category: "education",
     title: "Industrial Visit to RAC Plant at VERKA Chandigarh",
     tags: ["Industrial", "Learning"],
-    description: "Educational industrial visit to the RAC Plant at VERKA Chandigarh",
+    description:
+      "Educational industrial visit to the RAC Plant at VERKA Chandigarh",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 36,
@@ -355,9 +376,10 @@ export const eventsData = [
     category: "education",
     title: "International Economy and Promote Maritime Trade",
     tags: ["Economy", "Global Trade"],
-    description: "Seminar on international economy and maritime trade promotion",
+    description:
+      "Seminar on international economy and maritime trade promotion",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 37,
@@ -367,7 +389,7 @@ export const eventsData = [
     tags: ["Technology", "Coding"],
     description: "Launching the IGC Coding Club for aspiring programmers",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 38,
@@ -375,9 +397,10 @@ export const eventsData = [
     category: "education",
     title: "Hospital/Lab Visit",
     tags: ["Healthcare", "Practical Learning"],
-    description: "Educational visit to local hospitals and labs for practical exposure",
+    description:
+      "Educational visit to local hospitals and labs for practical exposure",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 39,
@@ -387,7 +410,7 @@ export const eventsData = [
     tags: ["Management", "Leadership"],
     description: "Conference for aspiring managers to enhance their skills",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 40,
@@ -395,9 +418,10 @@ export const eventsData = [
     category: "education",
     title: "Techno Vista",
     tags: ["Technology", "Innovation"],
-    description: "Exhibition showcasing the latest in technology and innovation",
+    description:
+      "Exhibition showcasing the latest in technology and innovation",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 41,
@@ -407,7 +431,7 @@ export const eventsData = [
     tags: ["Management", "Leadership"],
     description: "Follow-up session for The Euphoric Managers program",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 42,
@@ -417,7 +441,7 @@ export const eventsData = [
     tags: ["Achievement", "Graduation"],
     description: "Ceremony celebrating the 17th convocation of graduates",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 43,
@@ -427,7 +451,7 @@ export const eventsData = [
     tags: ["Graduation", "Achievement"],
     description: "Formal convocation ceremony for graduating students",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 44,
@@ -437,7 +461,7 @@ export const eventsData = [
     tags: ["Creativity", "Sustainability"],
     description: "Creative workshop on recycling and repurposing materials",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 45,
@@ -447,7 +471,7 @@ export const eventsData = [
     tags: ["Technology", "Coding"],
     description: "Monthly meetup for members of the IGC Coding Club",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 46,
@@ -455,9 +479,10 @@ export const eventsData = [
     category: "education",
     title: "The National Science Day",
     tags: ["Science", "Innovation"],
-    description: "Celebrating National Science Day with various scientific activities",
+    description:
+      "Celebrating National Science Day with various scientific activities",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 47,
@@ -467,7 +492,7 @@ export const eventsData = [
     tags: ["Communication", "Learning"],
     description: "Group discussions organized by the ACE committee",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 48,
@@ -477,7 +502,7 @@ export const eventsData = [
     tags: ["Science", "Education"],
     description: "Annual celebrations and events for National Science Day",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 49,
@@ -487,7 +512,7 @@ export const eventsData = [
     tags: ["Science", "Learning"],
     description: "Another session celebrating National Science Day",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 50,
@@ -497,7 +522,7 @@ export const eventsData = [
     tags: ["Sports", "Competition"],
     description: "Annual sports meets highlighting various athletic events",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 51,
@@ -505,9 +530,10 @@ export const eventsData = [
     category: "education",
     title: "Investor Awareness Program",
     tags: ["Finance", "Education"],
-    description: "Program designed to enhance investor awareness among students",
+    description:
+      "Program designed to enhance investor awareness among students",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 52,
@@ -517,7 +543,7 @@ export const eventsData = [
     tags: ["Technology", "Linux"],
     description: "Seminar on future trends and developments in Red Hat Linux",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 53,
@@ -527,7 +553,7 @@ export const eventsData = [
     tags: ["Learning", "Industry"],
     description: "Organizing industrial visits to enhance practical knowledge",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 54,
@@ -537,7 +563,7 @@ export const eventsData = [
     tags: ["Career", "Guidance"],
     description: "Exploring various career opportunities available to students",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 55,
@@ -545,9 +571,10 @@ export const eventsData = [
     category: "education",
     title: "Expert Session on Inspiring Mind, Shaping Careers",
     tags: ["Career", "Inspiration"],
-    description: "Expert-led session on inspiring minds and shaping future careers",
+    description:
+      "Expert-led session on inspiring minds and shaping future careers",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 56,
@@ -555,9 +582,10 @@ export const eventsData = [
     category: "education",
     title: "Industrial Visit",
     tags: ["Learning", "Industry"],
-    description: "Detailed industrial visit to understand real-world applications",
+    description:
+      "Detailed industrial visit to understand real-world applications",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 57,
@@ -565,9 +593,10 @@ export const eventsData = [
     category: "education",
     title: "Glimpses of Expert Session on Blockchain Technologies",
     tags: ["Technology", "Innovation"],
-    description: "Highlights from the expert session on blockchain technologies",
+    description:
+      "Highlights from the expert session on blockchain technologies",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 58,
@@ -577,7 +606,7 @@ export const eventsData = [
     tags: ["Career", "Inspiration"],
     description: "Session focused on inspiring students to shape their careers",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 59,
@@ -587,7 +616,7 @@ export const eventsData = [
     tags: ["Technology", "Innovation"],
     description: "Workshop on the latest trends in blockchain technologies",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 60,
@@ -597,7 +626,7 @@ export const eventsData = [
     tags: ["Achievement", "Infrastructure"],
     description: "Awarding the best infrastructure in educational institutions",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 61,
@@ -607,7 +636,7 @@ export const eventsData = [
     tags: ["Communication", "Community"],
     description: "Interactive session series: Hamari Baat Aapke Saath",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 62,
@@ -617,7 +646,7 @@ export const eventsData = [
     tags: ["Inspiration", "Learning"],
     description: "Keynote speech by industry leaders on current trends",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 63,
@@ -625,9 +654,10 @@ export const eventsData = [
     category: "education",
     title: "Hamari Baat Aapke Saath Series 2",
     tags: ["Communication", "Community"],
-    description: "Continuation of the Hamari Baat Aapke Saath interactive sessions",
+    description:
+      "Continuation of the Hamari Baat Aapke Saath interactive sessions",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 64,
@@ -637,7 +667,7 @@ export const eventsData = [
     tags: ["Cultural", "Community"],
     description: "Cultural fest celebrating Navmatada traditions and values",
     image: "",
-    gallery: []
+    gallery: [],
   },
   {
     id: 65,
@@ -645,8 +675,9 @@ export const eventsData = [
     category: "education",
     title: "Indian Society of Radiographers and Technologists",
     tags: ["Healthcare", "Professional"],
-    description: "Collaboration event with the Indian Society of Radiographers and Technologists",
+    description:
+      "Collaboration event with the Indian Society of Radiographers and Technologists",
     image: "",
-    gallery: []
-  }
+    gallery: [],
+  },
 ];

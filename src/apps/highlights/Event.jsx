@@ -80,7 +80,7 @@ const Event = () => {
         event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         event.tags.some((tag) =>
           tag.toLowerCase().includes(searchTerm.toLowerCase())
-        );
+        ) || event.date.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesTags =
         selectedTags.length === 0 ||
@@ -169,7 +169,7 @@ const Event = () => {
               <Input
                 id="search"
                 type="text"
-                placeholder="Search events by title or tags..."
+                placeholder="Search events by title, tags or date..."
                 value={searchTerm}
                 onChange={(e) => {
                   setSearchTerm(e.target.value);
@@ -180,6 +180,9 @@ const Event = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             </div>
             <div className="tags-filter justify-center flex flex-wrap sm:gap-4 gap-2 max-w-6xl mx-auto">
+              {allTags.length === 0 && (
+                <p className="text-gray-500">No tags found</p>
+              )}
               {allTags.map((tag) => (
                 <Badge
                   key={tag}
