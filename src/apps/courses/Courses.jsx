@@ -127,7 +127,7 @@ export default function Courses() {
             title="Explore Our Academic Programs"
             subtitle="Discover a wide range of courses designed to prepare you for success in your chosen field. From engineering to management, we offer diverse educational pathways."
             titleClassName="text-secondary-color text-left lg:text-5xl text-center"
-            subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal text-center"
+            subtitleClassName="hidden md:block text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal text-center"
             className="lg:pb-10"
           />
 

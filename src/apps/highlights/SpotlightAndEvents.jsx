@@ -205,7 +205,7 @@ const SpotlightAndEvents = () => {
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-auto sm:aspect-square aspect-auto object-cover rounded"
+                  className="w-full h-auto aspect-square object-cover rounded"
                 />
                 <h3 className="text-sm font-bold my-2">{event.title}</h3>
                 <p className="text-gray-500 text-xs">{event.date}</p>

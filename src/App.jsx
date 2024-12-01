@@ -45,6 +45,7 @@ import Careers from "./apps/careers/Careers";
 import Spotlights from "./apps/highlights/Spotlights";
 import OnlineLearningResources from "./apps/footer/OnlineLearningResources";
 import SpotlightAndEvents from "./apps/highlights/SpotlightAndEvents";
+import ScrollToTopWithBorder from "./components/ScrollToTopWithBorder";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -56,8 +57,9 @@ function App() {
     return null;
   };
   return (
-    <Router>
+    <Router className="relative">
          <ScrollToTop />
+         <ScrollToTopWithBorder />
       <Header />
       <Routes>
         {/* home page */}
