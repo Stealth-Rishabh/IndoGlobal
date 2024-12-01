@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "../../assets/stats-bg.svg";
+import bg from "../../assets/stats-bg.webp";
 import Heading from "../../components/Heading";
 import WordPullUp from "../../components/ui/word-pull-up";
 import NumberTicker from "../../components/ui/number-ticker";

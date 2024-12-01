@@ -206,11 +206,14 @@ const HeroSlider = () => {
                   className="sm:hidden block text-2xl font-bold md:text-3xl text-white  md:font-bold text-left max-w-[20rem] md:max-w-3xl"
                   words={img.highlights}
                 />
-                <Link to="/courses">
+
+                <div>
+                  <Link to="/courses" className="mt-5">
                     <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
-                    Explore Courses
-                </ShinyButton>
-                </Link>
+                      Explore Courses
+                    </ShinyButton>
+                  </Link>
+                </div>
               </div>
             </CarouselItem>
           ))}
