@@ -10,6 +10,26 @@ import img9 from "../../assets/spotlights/tdc.webp";
 import img10 from "../../assets/spotlights/thpks.webp";
 import img11 from "../../assets/spotlights/ch.webp";
 import img12 from "../../assets/spotlights/ph.webp";
+import img13 from "../../assets/spotlights/ndd.webp"; // National Doctor's Day
+import img14 from "../../assets/spotlights/ee.webp";  // Empowering Educators
+import img15 from "../../assets/spotlights/fdp.webp"; // Faculty Development Program
+import img16 from "../../assets/spotlights/iyd.webp"; // International Yoga Day
+import img17 from "../../assets/spotlights/eaa.webp"; // EID AL-ADHA
+import img18 from "../../assets/spotlights/teassk.webp"; // Tools Every Architect Student
+import img19 from "../../assets/spotlights/wed.webp"; // World Environment Day
+import img20 from "../../assets/spotlights/ch.webp";  // Campus Highlights
+import img21 from "../../assets/spotlights/ph.webp";  // Placement Highlights
+import img22 from "../../assets/spotlights/cfgacd.webp"; // Center For Guidance and Career Development
+import img23 from "../../assets/spotlights/esontd.webp"; // Expert Session on National Technology Day
+import img24 from "../../assets/spotlights/md.webp";  // Mother's Day
+import img25 from "../../assets/spotlights/cn.webp";  // Coding Ninjas
+import img26 from "../../assets/spotlights/iia.webp";  // IGCE & IGCMT Achievers
+import img27 from "../../assets/spotlights/esoec.webp"; // Expert Session on Eco-Consciousness
+import img28 from "../../assets/spotlights/esoec.webp"; // Session on Eco-Consciousness
+import img29 from "../../assets/spotlights/ifgtn.webp"; // IPL Fever Grips the Nation
+import img30 from "../../assets/spotlights/cpd.webp";  // Campus Placement Drive
+
+
 
 
 export const eventsData = [
