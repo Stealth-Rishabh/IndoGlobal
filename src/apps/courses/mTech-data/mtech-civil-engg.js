@@ -29,7 +29,7 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
             content: [
                 {
                     type: "paragraph",
-                    data: "M.Tech in Civil Engineering is a 2-year postgraduate professional degree program focusing on advanced design, supervision, and construction activities for public works including dams, buildings, roads, bridges, airports, and sewage systems."
+                    data: "M.Tech in Civil Engineering is a 2-year postgraduate professional degree program focusing on advanced design, supervision, and construction activities for public works, including dams, buildings, roads, bridges, airports, and sewage systems."
                 },
                 {
                     type: "heading",
@@ -70,7 +70,7 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
                 },
                 {
                     type: "paragraph",
-                    data: "Deals with building materials and structural engineering. Conducts comprehensive testing including cement testing, brick testing, concrete compressive strength, flexure strength of concrete beams, concrete mix design, steel tests, and timber tests."
+                    data: "Deals with building materials and structural engineering. Conducts comprehensive testing, including cement testing, brick testing, concrete compressive strength, flexure strength of concrete beams, concrete mix design, steel tests, and timber tests."
                 },
                 {
                     type: "sub-heading",
@@ -78,7 +78,7 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
                 },
                 {
                     type: "paragraph",
-                    data: "Equipped with various instruments for structural analysis of different materials including steel beams, cantilevers, and trusses."
+                    data: "Equipped with various instruments for structural analysis of different materials, including steel beams, cantilevers, and trusses."
                 },
                 {
                     type: "sub-heading",
@@ -117,11 +117,11 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
                 },
                 {
                     type: "sub-heading",
-                    data: "Computer Aided Design Lab"
+                    data: "Computer-Aided Design Lab"
                 },
                 {
                     type: "paragraph",
-                    data: "Equipped with latest software and computers for structural solutions and design, including AutoCAD, STAAD PRO, Windows XP, MS Office, Visual Studio, and audio-visual aids for technical and non-technical problem-solving."
+                    data: "Equipped with the latest software and computers for structural solutions and design, including AutoCAD, STAAD PRO, Windows XP, MS Office, Visual Studio, and audio-visual aids for technical and non-technical problem-solving."
                 },
                 {
                     type: "sub-heading",

@@ -29,7 +29,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
             content: [
                 {
                     type: "paragraph",
-                    data: "M.Tech Computer Science and Engineering at Indo Global College imparts advanced knowledge in various areas of computer science, with a focus on Artificial Intelligence (AI) and distributed computing environments."
+                    data: "M.Tech Computer Science and Engineering at Indo Global College imparts advanced knowledge in various areas of computer science, with a focus on artificial intelligence (AI) and distributed computing environments."
                 },
                 {
                     type: "heading",
@@ -40,7 +40,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
                     data: [
                         "Advanced courses in Networking, Computer Architecture, Databases, and Algorithms",
                         "Focus on Artificial Intelligence and distributed computing",
-                        "Research and development oriented curriculum",
+                        "Research and development-oriented curriculum",
                         "Practical exposure through industry case studies",
                         "Opportunities for specialized electives"
                     ]
@@ -68,7 +68,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
                 },
                 {
                     type: "paragraph",
-                    data: "Upgraded with 30 Pentium 4 machines, equipped with Windows 2003 Programming, Cyrix Server, network equipment including D-Link Switch, Radio Modem, Hubs, and Patch Panel. Provides hands-on experience in Networking using Windows 2003 Environment with Linux and Novell Netware operating systems."
+                    data: "Upgraded with 30 Pentium 4 machines, equipped with Windows 2003 Programming, Cyrix Server, and network equipment including D-Link Switch, Radio Modem, Hubs, and Patch Panel. Provides hands-on experience in networking using Windows 2003 environments with Linux and Novell Netware operating systems"
                 },
                 {
                     type: "sub-heading",
@@ -76,7 +76,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
                 },
                 {
                     type: "paragraph",
-                    data: "30 Pentium 4 based multimedia PCs with Acer Altos Server. Provides working experience in Windows and Linux environments, with licensed Adobe Photoshop on all machines."
+                    data: "30 Pentium 4-based multimedia PCs with Acer Altos Server. Provides working experience in Windows and Linux environments, with licensed Adobe Photoshop on all machines."
                 },
                 {
                     type: "sub-heading",
@@ -84,7 +84,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
                 },
                 {
                     type: "paragraph",
-                    data: "Equipped with 10 trainer kits of 8085, 8086 & Z-80, including Oscilloscopes, Frequency Counters, Function Generators, Pulse Generators, Dual Output Power Supplies, Logic Design Trainer Kits, and IC Testers."
+                    data: "Equipped with 10 trainer kits of 8085, 8086 & Z-80, including oscilloscopes, frequency counters, function generators, pulse generators, dual output power supplies, logic design trainer kits, and IC testers."
                 },
                 {
                     type: "sub-heading",
@@ -92,7 +92,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
                 },
                 {
                     type: "paragraph",
-                    data: "Equipped with MATLAB and related software, including Neural Network and Fuzzy Logic toolboxes."
+                    data: "Equipped with MATLAB and related software, including neural network and fuzzy logic toolboxes."
                 },
                 {
                     type: "sub-heading",
