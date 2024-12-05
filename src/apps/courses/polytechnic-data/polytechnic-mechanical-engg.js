@@ -29,7 +29,7 @@ export const POLYTECHNIC_IN_MECHANICAL_ENGINEERING = {
             content: [
                 {
                     type: "paragraph",
-                    data: "Polytechnic (Diploma) in Mechanical Engineering provides broad-based and diverse engineering learning in areas like thermodynamics, solid and fluid mechanics, combustion, instrumentation and control, material science, product and system design and manufacturing."
+                    data: "Polytechnic (Diploma) in Mechanical Engineering provides broad-based and diverse engineering learning in areas like thermodynamics, solid and fluid mechanics, combustion, instrumentation and control, material science, product and system design, and manufacturing."
                 },
                 {
                     type: "heading",
@@ -37,7 +37,7 @@ export const POLYTECHNIC_IN_MECHANICAL_ENGINEERING = {
                 },
                 {
                     type: "paragraph",
-                    data: "A three-year program designed to mould students for professional practice in rapidly advancing interdisciplinary technology, emphasizing applied design skills and innovative solutions."
+                    data: "A three-year program designed to mold students for professional practice in rapidly advancing interdisciplinary technology, emphasizing applied design skills and innovative solutions."
                 },
                 {
                     type: "heading",

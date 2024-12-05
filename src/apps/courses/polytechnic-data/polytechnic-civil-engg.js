@@ -69,7 +69,7 @@ export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
                         "Structure Analysis Lab",
                         "Transportation Lab",
                         "Environmental Lab",
-                        "Computer Aided Design Lab",
+                        "Computer-Aided Design Lab",
                         "Solid Mechanics Lab",
                         "Geo Technology Lab",
                         "Fluid Mechanics Lab"
@@ -99,15 +99,15 @@ export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
                     type: "list",
                     data: [
                         "Capable of handling construction site work as a supervisor",
-                        "Eligible to work as a Junior Engineer in Govt./Pvt. Organizations",
+                        "Eligible to work as a junior engineer in government/private organizations",
                         "Ability to set up own civil engineering unit",
                         "Apply knowledge and technical expertise in building, analyzing, testing, and maintaining industry work",
-                        "Understanding of industry standards and code of practices"
+                        "Understanding of industry standards and codes of practices"
                     ]
                 },
                 {
                     type: "paragraph",
-                    data: "The course equips students with sound knowledge in civil engineering and improves supervisory and administrative skills."
+                    data: "The course equips students with sound knowledge of civil engineering and improves supervisory and administrative skills."
                 }
             ]
         },
