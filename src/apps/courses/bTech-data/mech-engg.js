@@ -29,7 +29,7 @@ import {
         content: [
           {
             type: "paragraph",
-            data: "B.Tech Mechanical Engineering is a comprehensive 4-year undergraduate program that prepares students for a broad range of careers involving design, development, and implementation of mechanical devices and energy conversion systems.",
+            data: "B.Tech Mechanical Engineering is a comprehensive 4-year undergraduate program that prepares students for a broad range of careers involving the design, development, and implementation of mechanical devices and energy conversion systems.",
           },
           {
             type: "heading",
@@ -43,7 +43,7 @@ import {
               "Design and fabrication projects",
               "Experienced faculty from prestigious engineering societies",
               "Strong industry connections and placement support",
-              "Specialization areas including applied mechanics, energy engineering, automobile engineering, and robotics",
+              "Specialization areas include applied mechanics, energy engineering, automobile engineering, and robotics",
               "Emphasis on problem-solving and innovative thinking",
             ],
           },
@@ -54,7 +54,7 @@ import {
           {
             type: "list",
             data: [
-              "Develop in-depth knowledge in mechanical engineering specializations",
+              "Develop in-depth knowledge of mechanical engineering specializations",
               "Design and create innovative mechanical devices",
               "Apply scientific and technical skills to solve complex engineering challenges",
               "Understand energy conversion and mechanical systems",
@@ -89,7 +89,7 @@ import {
           },
           {
             type: "paragraph",
-            data: "Indo Global College is affiliated to Punjab Technical University and all B.Tech programs are approved by All India Council for Technical Education (AICTE).",
+            data: "Indo Global College is affiliated with Punjab Technical University, and all B.Tech programs are approved by the All India Council for Technical Education (AICTE).",
           },
         ],
       },

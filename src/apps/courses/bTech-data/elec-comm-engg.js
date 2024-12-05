@@ -60,7 +60,7 @@ export const BTECH_IN_ELECTRONICS_COMMUNICATION_ENGG = {
                 {
                     type: "list",
                     data: [
-                        "Provide strong foundation in mathematics, science, and engineering fundamentals",
+                        "Provide a strong foundation in mathematics, science, and engineering fundamentals",
                         "Develop analytical and innovative thinking skills",
                         "Impart theoretical and practical knowledge",
                         "Inculcate teamwork and leadership qualities",
@@ -114,7 +114,7 @@ export const BTECH_IN_ELECTRONICS_COMMUNICATION_ENGG = {
                     type: "list",
                     data: [
                         "Latest measurement and communication devices",
-                        "Function generators and super heterodyne receivers",
+                        "Function generators and superheterodyne receivers",
                         "CROs with audio oscillators and high-frequency generators",
                         "PCM Multiplexing and Demultiplexing kits",
                         "ASK, PSK, FSK, and Delta Modulation Kits"

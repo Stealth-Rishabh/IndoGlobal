@@ -28,7 +28,7 @@ import {
         content: [
           {
             type: "paragraph",
-            data: "B.Tech Civil Engineering is the most versatile engineering discipline, designed to develop creative and knowledgeable engineers with strong capabilities in innovation and management. The program focuses on construction, designing, and maintenance of physical and naturally built environments including roads, bridges, dams, canals, and buildings.",
+            data: "B.Tech Civil Engineering is the most versatile engineering discipline, designed to develop creative and knowledgeable engineers with strong capabilities in innovation and management. The program focuses on the construction, designing, and maintenance of physical and naturally built environments, including roads, bridges, dams, canals, and buildings.",
           },
           {
             type: "heading",
@@ -88,7 +88,7 @@ import {
           },
           {
             type: "paragraph",
-            data: "Indo Global College is affiliated to Punjab Technical University and all B.Tech programs are approved by All India Council for Technical Education (AICTE).",
+            data: "Indo Global College is affiliated with Punjab Technical University, and all B.Tech programs are approved by the All India Council for Technical Education (AICTE).",
           },
         ],
       },
