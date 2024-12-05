@@ -38,10 +38,10 @@ import {
           {
             type: "list",
             data: [
-              "AICTE-approved curriculum with focus on practical learning",
+              "AICTE-approved curriculum with a focus on practical learning",
               "State-of-the-art digital and analog design facilities",
               "Industry exposure through practical training and internships",
-              "Core curriculum for first 3 years followed by specialized study",
+              "Core curriculum for the first 3 years followed by specialized study",
               "Integration of regional, economic, and cultural aspects in design"
             ],
           },
@@ -113,7 +113,7 @@ import {
             type: "list",
             data: [
               "Urban design and group housing",
-              "Research methodology",
+              "Research Methodology",
               "Contract management",
               "Professional practice",
               "Town planning and development"
