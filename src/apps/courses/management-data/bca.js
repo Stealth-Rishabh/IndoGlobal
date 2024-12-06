@@ -35,7 +35,7 @@ import {
           {
             type: "paragraph",
             data:
-              "Through the BCA program at Indo Global Colleges, students gain a solid conceptual grounding in computer usage and its practical business applications. The program focuses on various areas of information technology and software development, allowing students to specialize in legacy application software, mobile applications, and system software. The BCA program emphasizes the design, development, and use of computer applications, incorporating operating systems, utilities, and programming languages. Graduates can prepare projects, presentations, design websites, and demonstrate skills in running software programs. The program places significant emphasis on hands-on training and the overall development of students' personalities, in addition to theoretical knowledge.",
+              "Through the BCA program at Indo Global Colleges, students gain a solid conceptual grounding in computer usage and its practical business applications. The program focuses on various areas of information technology and software development, allowing students to specialize in legacy application software, mobile applications, and system software. The BCA program emphasizes the design, development, and use of computer applications, incorporating operating systems, utilities, and programming languages. Graduates can prepare projects, presentations, and design websites, and demonstrate skills in running software programs. The program places significant emphasis on hands-on training and the overall development of students' personalities, in addition to theoretical knowledge.",
           },
           {
             type: "heading",

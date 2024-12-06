@@ -50,7 +50,7 @@ import {
           {
             type: "paragraph",
             data:
-              "During the 3-year BBA program, students undertake live projects related to HR, finance, laws, marketing, wealth management, decision-making, etc. These case studies help them grasp theoretical concepts of business administration. After 5 semesters, students join an industry setup for their final semester training based on their chosen specializations. This is a compulsory part of the curriculum designed to provide real-world industrial exposure, allowing students to apply theoretical concepts in real-life business situations.",
+              "During the 3-year BBA program, students undertake live projects related to HR, finance, laws, marketing, wealth management, decision-making, etc. These case studies help them grasp the theoretical concepts of business administration. After 5 semesters, students join an industry set up for their final semester training based on their chosen specializations. This is a compulsory part of the curriculum designed to provide real-world industrial exposure, allowing students to apply theoretical concepts in real-life business situations.",
           },
           {
             type: "heading",
@@ -72,18 +72,18 @@ import {
             type: "list",
             data: [
               "Gain a thorough understanding of the fundamentals of business management.",
-              "Acquire industry-oriented curriculum with various specializations and practical exposure to face challenges in the business world.",
+              "Acquire an industry-oriented curriculum with various specializations and practical exposure to face challenges in the business world.",
               "Develop a holistic outlook with personality development and value-based courses, ensuring students are groomed with strong leadership skills and social consciousness.",
             ],
           },
           {
             type: "heading",
-            data: "Career Prospectus after BBA Degree",
+            data: "Career Prospects after BBA Degree",
           },
           {
             type: "paragraph",
             data:
-              "After completing the BBA program, students can pursue numerous career opportunities in diverse areas such as insurance, financial sectors, marketing, government sectors, etc. It is crucial to earn the degree from a reputed college. The best BBA colleges in Punjab provide quality education that meets international standards. Before choosing a particular BBA college, conduct thorough research regarding the quality of education, teaching staff, infrastructure, and the college environment. Ensure that the college is approved by university norms and that the degree is globally recognized. Graduates with a BBA degree can start their careers as:",
+              "After completing the BBA program, students can pursue numerous career opportunities in diverse areas such as insurance, financial sectors, marketing, government sectors, etc. It is crucial to earn a degree from a reputed college. The best BBA colleges in Punjab provide a quality education that meets international standards. Before choosing a particular BBA college, conduct thorough research regarding the quality of education, teaching staff, infrastructure, and the college environment. Ensure that the college is approved by university norms and that the degree is globally recognized. Graduates with a BBA degree can start their careers as:",
           },
           {
             type: "list",

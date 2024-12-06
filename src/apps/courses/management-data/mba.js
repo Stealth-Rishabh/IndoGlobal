@@ -47,7 +47,7 @@ import {
             type: "list",
             data: [
               "Wide choice in specializations and the possibility of combining industry-wise and functional specializations in the second year",
-              "Primary focus on making students industry-ready",
+              "The primary focus is on making students industry-ready",
               "Acclaimed faculty, including highly trained and experienced leaders from the industry",
               "Cutting-edge, industry-ready curriculum benchmarked with the current realities of the industry",
               "Pedagogy to develop a high degree of analytical and conceptual skills, including extensive use of live case studies, seminars, projects, and guest international faculty interactions with practice-based simulations",
@@ -60,12 +60,12 @@ import {
           {
             type: "paragraph",
             data:
-              "Indo Global Colleges in Chandigarh is affiliated with Punjab Technical University (PTU) and all our MBA/Management programs are approved by the All India Council for Technical Education (AICTE). The curriculum of the MBA program at Indo Global Colleges enables students to evolve into professionally competent leaders of the future, ready to face the challenges of the industry. The Department of Management Studies at Indo Global Colleges has been offering MBA degrees to students since 2004.",
+              "Indo Global Colleges in Chandigarh is affiliated with Punjab Technical University (PTU), and all our MBA/Management programs are approved by the All India Council for Technical Education (AICTE). The curriculum of the MBA program at Indo Global Colleges enables students to evolve into professionally competent leaders of the future, ready to face the challenges of the industry. The Department of Management Studies at Indo Global Colleges has been offering MBA degrees to students since 2004.",
           },
           {
             type: "paragraph",
             data:
-              "We at IGEC provide students with the much-needed corporate experience to groom them as industry-ready professionals. Students gain firsthand experience by working in real-life business environments, allowing them to learn essential skills and gain the expertise required by prospective employers. Considered one of the best MBA colleges in Punjab, Indo Global Colleges have corporate tie-ups with industry leaders like IBM Center of Excellence, Campus Business Park, and have signed memorandums of understanding (MoUs) with leading automotive brand Ashok Leyland for skill development initiatives, and with “E-Drona” for project assignments and completion.",
+              "We at IGEC provide students with the much-needed corporate experience to groom them as industry-ready professionals. Students gain firsthand experience by working in real-life business environments, allowing them to learn essential skills and gain the expertise required by prospective employers. Considered one of the best MBA colleges in Punjab, Indo Global Colleges have corporate tie-ups with industry leaders like IBM Center of Excellence and Campus Business Park and have signed memorandums of understanding (MoUs) with leading automotive brand Ashok Leyland for skill development initiatives and with “E-Drona” for project assignments and completion.",
           },
         ],
       },
