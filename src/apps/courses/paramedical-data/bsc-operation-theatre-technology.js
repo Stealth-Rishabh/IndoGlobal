@@ -29,11 +29,11 @@ export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
       content: [
         {
           type: "paragraph",
-          data: "Indo Global College of Management and Technology offers a 4-year (8 semesters) B.Sc. in Anesthesia & Operation Theatre Technology, affiliated with IKG Punjab Technical University, Jalandhar & approved by the Government of Punjab.",
+          data: "Indo Global College of Management and Technology offers a 4-year (8 semesters) B.Sc. in Anesthesia & Operation Theatre Technology, affiliated with IKG Punjab Technical University, Jalandhar, and approved by the Government of Punjab.",
         },
         {
           type: "paragraph",
-          data: "IGCMT provides excellent infrastructure including well-qualified & experienced faculty, classrooms, laboratories, Wi-Fi campus, computer rooms, library, gym, sports centre, cafeteria, and separate hostel facilities for boys and girls to provide hands-on learning.",
+          data: "IGCMT provides excellent infrastructure, including well-qualified and experienced faculty, classrooms, laboratories, a Wi-Fi campus, computer rooms, library, gym, sports center, cafeteria, and separate hostel facilities for boys and girls, to facilitate hands-on learning.",
         },
         {
           type: "heading",
@@ -55,7 +55,7 @@ export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
             "Medical technology",
             "Operation theatre management",
             "Medical ethics",
-            "Post-operation care",
+            "Post-operative care",
           ],
         },
         {
@@ -94,7 +94,7 @@ export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
         },
         {
           type: "paragraph",
-          data: "Graduates can expect a salary range of Rs. 3.5 Lakhs to Rs. 10 Lakhs per annum.",
+          data: "Graduates can expect a salary range of Rs. 3.5 lakhs to Rs. 10 lakhs per annum.",
         },
         {
           type: "heading",
@@ -102,7 +102,7 @@ export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
         },
         {
           type: "paragraph",
-          data: "IGCMT has various tie-ups with Government and Private Hospitals, Laboratories, and Health Centres to provide internship and training opportunities to students.",
+          data: "IGCMT has tie-ups with various hospitals, laboratories, and health centers to provide internship and training opportunities to students.",
         },
       ],
     },

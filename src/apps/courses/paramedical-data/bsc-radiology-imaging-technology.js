@@ -29,11 +29,11 @@ export const BSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
       content: [
         {
           type: "paragraph",
-          data: "Indo Global College of Management and Technology offers a 4-year (8 semesters) B.Sc. in Radiology and Imaging Technology, affiliated with IKG Punjab Technical University, Jalandhar & approved by the Government of Punjab.",
+          data: "Indo Global College of Management and Technology offers a 4-year (8 semesters) B.Sc. in Radiology and Imaging Technology, affiliated with IKG Punjab Technical University, Jalandhar, and approved by the Government of Punjab.",
         },
         {
           type: "paragraph",
-          data: "IGCMT provides excellent infrastructure including well-qualified & experienced faculty, classrooms, laboratories, Wi-Fi campus, computer rooms, library, gym, sports centre, cafeteria, and separate hostel facilities for boys and girls to provide hands-on learning.",
+          data: "IGCMT provides excellent infrastructure, including well-qualified and experienced faculty, classrooms, laboratories, a Wi-Fi campus, computer rooms, library, gym, sports center, cafeteria, and separate hostel facilities for boys and girls, to facilitate hands-on learning.",
         },
         {
           type: "heading",
@@ -67,7 +67,7 @@ export const BSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
           type: "list",
           data: [
             "Hands-on learning in Radio diagnosis and Imaging",
-            "Perform whole body X-ray techniques",
+            "Perform whole-body X-ray techniques",
             "Conduct interventional procedures",
             "Master various scanning procedures of CT and MRI",
             "Develop practical skills in medical imaging technologies",
@@ -96,7 +96,7 @@ export const BSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
         },
         {
           type: "paragraph",
-          data: "Graduates can expect a salary range of Rs. 4 Lakhs to Rs. 8 Lakhs per annum.",
+          data: "Graduates can expect a salary range of Rs. 4 lakhs to Rs. 8 lakhs per annum.",
         },
         {
           type: "heading",

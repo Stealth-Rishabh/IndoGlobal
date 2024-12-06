@@ -29,11 +29,11 @@ export const BSC_MEDICAL_LABORATORY_SCIENCES = {
       content: [
         {
           type: "paragraph",
-          data: "Indo Global College of Management and Technology offers a 3-year (6 semesters) course on Bachelor of Science (B.Sc.) in Medical Laboratory Science, affiliated with IKG Punjab Technical University Jalandhar & approved by Govt of Punjab.",
+          data: "Indo Global College of Management and Technology offers a 3-year (6 semesters) course on Bachelor of Science (B.Sc.) in Medical Laboratory Science, affiliated with IKG Punjab Technical University Jalandhar & approved by Govt. of Punjab.",
         },
         {
           type: "paragraph",
-          data: "Medical Laboratory Sciences (MLS) is a branch of medical science in performing clinical laboratory investigations which is the first step of diagnosis of any diseases followed with treatment and prevention. Medical Laboratory Sciences (MLS) play an important role in the medical field.",
+          data: "Medical Laboratory Sciences (MLS) is a branch of medical science in performing clinical laboratory investigations, which is the first step of diagnosis of any disease followed by treatment and prevention. Medical Laboratory Sciences (MLS) play an important role in the medical field.",
         },
         {
           type: "heading",
@@ -46,7 +46,7 @@ export const BSC_MEDICAL_LABORATORY_SCIENCES = {
             "Comprehensive coverage of critical medical laboratory sciences",
             "Hands-on training in advanced diagnostic techniques",
             "Focus on practical skills and laboratory management",
-            "Exposure to latest medical technologies and research methodologies",
+            "Exposure to the latest medical technologies and research methodologies",
             "Industry-oriented curriculum",
             "Strong placement support",
           ],
@@ -107,7 +107,7 @@ export const BSC_MEDICAL_LABORATORY_SCIENCES = {
         },
         {
           type: "paragraph",
-          data: "Indo Global College is affiliated with IKG Punjab Technical University and the program is approved by the Government of Punjab.",
+          data: "Indo Global College is affiliated with IKG Punjab Technical University, and the program is approved by the Government of Punjab.",
         },
       ],
     },
