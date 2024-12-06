@@ -3,7 +3,7 @@ import {
   Route,
   Routes,
   useLocation,
-  useParams
+  useParams,
 } from "react-router-dom";
 
 import { useEffect } from "react";
@@ -46,20 +46,21 @@ import Spotlights from "./apps/highlights/Spotlights";
 import OnlineLearningResources from "./apps/footer/OnlineLearningResources";
 import SpotlightAndEvents from "./apps/highlights/SpotlightAndEvents";
 import ScrollToTopWithBorder from "./components/ScrollToTopWithBorder";
+import Entrepreneurship from "./apps/whyIndoGlobal/Entrepreneurship";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
-  
+
     useEffect(() => {
       window.scrollTo(0, 0);
     }, [pathname]);
-  
+
     return null;
   };
   return (
     <Router className="relative">
-         <ScrollToTop />
-         <ScrollToTopWithBorder />
+      <ScrollToTop />
+      <ScrollToTopWithBorder />
       <Header />
       <Routes>
         {/* home page */}
@@ -82,13 +83,12 @@ function App() {
           element={<CoursesDetails />}
         /> */}
         <Route path="/courses/:courseTitle" element={<CoursesDetails />} />
-        
 
         {/* admissions page */}
         <Route path="/admissions" element={<Admission />} />
 
         {/* highlights page */}
-        <Route path="/spotlights" element={<SpotlightAndEvents/>} />
+        <Route path="/spotlights" element={<SpotlightAndEvents />} />
         {/* <Route path="/spotlights" element={<Spotlights/>} /> */}
         <Route path="/gallery" element={<Gallery />} />
 
@@ -116,6 +116,10 @@ function App() {
         <Route
           path="/why-indo-global/industry-oriented-curriculum"
           element={<IndustryOrientedCurriculum />}
+        />
+        <Route
+          path="/why-indo-global/entrepreneurship"
+          element={<Entrepreneurship/>}
         />
         <Route path="/why-indo-global/sports-arena" element={<SportsArena />} />
         <Route
@@ -149,7 +153,7 @@ function App() {
               <Helmet>
                 <title>Career</title>
               </Helmet>
-              <Careers/>
+              <Careers />
             </>
           }
         />
@@ -167,8 +171,10 @@ function App() {
           }
         />
 
-
-        <Route path="/online-learning-resources" element={<OnlineLearningResources />} />   
+        <Route
+          path="/online-learning-resources"
+          element={<OnlineLearningResources />}
+        />
       </Routes>
       <Footer />
     </Router>
