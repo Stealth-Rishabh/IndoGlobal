@@ -14,7 +14,7 @@ import Heading from "../../components/Heading";
 import { programData } from "./programData";
 import ButtonSq from "../../components/ButtonSq";
 import { useInView } from "react-intersection-observer";
-
+import { Link } from "react-router-dom";
 export default function Programs() {
   // Set default active tab to "undergraduate"
   const [activePrograms, setActivePrograms] = useState(
@@ -146,16 +146,36 @@ export default function Programs() {
                         </>
                       )}
                       <div className="flex justify-between gap-1 mt-8 sm:gap-5 sm:justify-start">
-                        <ButtonSq
-                          className="text-xs text-white bg-red-500 sm:text-base hover:bg-red-600 w-fit"
-                          iconDiv="bg-red-800"
-                          label="Apply Now"
-                        />
-                        <ButtonSq
-                          className="text-xs text-gray-800 bg-white sm:text-base hover:bg-slate-100 w-fit"
-                          iconDiv="bg-gray-400"
-                          label="Know More"
-                        />
+                        <Link
+                          to={
+                            activePrograms[category.id] !== null
+                              ? category.programs[activePrograms[category.id]]
+                                  .path
+                              : category.defaultCard.path
+                          }
+                        >
+                          <ButtonSq
+                            className="text-xs text-white bg-red-500 sm:text-base hover:bg-red-600 w-fit"
+                            iconDiv="bg-red-800"
+                            label="Apply Now"
+                          />
+                        </Link>
+                        {activePrograms[category.id] !== null && (
+                          <Link
+                            to={
+                              category.programs[activePrograms[category.id]]
+                                .path
+                            }
+                            onClick={console.log(category.programs[activePrograms[category.id]].path)}
+                          >
+                            <ButtonSq
+                              className="text-xs text-gray-800 bg-white sm:text-base hover:bg-slate-100 w-fit"
+                              iconDiv="bg-gray-400"
+                              label="Know More"
+                              onClick={console.log(category.programs[activePrograms[category.id]].path)}
+                            />
+                          </Link>
+                        )}
                       </div>
                     </CardContent>
                   </Card>
