@@ -12,6 +12,7 @@ import {
 import ButtonSq from "../../components/ButtonSq";
 import img from "../../assets/sliderImg.png";
 import bg from "../../assets/slider-bg.png";
+import { Link } from "react-router-dom";
 
 const RankSlider = () => {
   const [api, setApi] = useState(null);
@@ -56,12 +57,15 @@ const RankSlider = () => {
                         <h2 className=" text-2xl  sm:text-4xl font-semibold tracking-tight scroll-m-20 first:mt-0">
                           Rankings, Accereditations <br /> &amp; Tie-up.
                         </h2>
+                        <Link to='/about/accreditation'> 
+
                         <ButtonSq
                           label="Know more..."
                           iconDiv="bg-primary-color sm:h-14 flex item-center justify-center"
                           className="text-white text-xs md:text-lg sm:h-14 bg-secondary-color hover:bg-secondary-color/90 w-fit"
                           iconStyle="h sm:mt-3"
                         />
+                        </Link>
                       </div>
                       <div className="flex sm:flex-row flex-col-reverse gap-4 sm:gap-0 mt- sm:mt-0 item-start sm:justify-between ">
                         <div className="grid content-end justify-end grid-cols-3 gap-3 pb-10">
