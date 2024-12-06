@@ -1,6 +1,5 @@
 
-import { FacebookIcon, Twitter, Instagram, Youtube, Rss, MapPin, Mail, Phone, Linkedin } from "lucide-react"
-import { Link } from "react-router-dom"
+import { FacebookIcon, Instagram, Youtube, MapPin, Mail, Phone, Linkedin } from "lucide-react"
 
 export default function BannerNav() {
   return (
@@ -9,35 +8,35 @@ export default function BannerNav() {
         <div className="hidden md:flex items-center space-x-4">
           <span>Follow us</span>
           <div className="flex space-x-2">
-          <Link to="#" className="text-red-600 hover:text-red-700">
+          <a href="https://www.instagram.com/indoglobalcolleges/" target="_blank" className="text-red-600 hover:text-red-700">
               <Instagram size={16} />
-            </Link>
-            <Link to="#" className="text-red-600 hover:text-red-700">
+            </a>
+            <a href="https://www.facebook.com/IndoGlobalOfficial" target="_blank" className="text-red-600 hover:text-red-700">
               <FacebookIcon size={16} />
-            </Link>
-            <Link to="#" className="text-red-600 hover:text-red-700">
+            </a>
+            {/* <a href="#" className="text-red-600 hover:text-red-700">
               <Linkedin size={16} />
-            </Link>
+            </a> */}
             
-            <Link to="#" className="text-red-600 hover:text-red-700">
+            <a href="https://www.youtube.com/channel/UCvSPn6SHqEnB_knlejlzV7A" target="_blank" className="text-red-600 hover:text-red-700">
               <Youtube size={16} />
-            </Link>
+            </a>
             
           </div>
         </div>
         <div className="flex justify-end sm:items-center space-x-4">
-          <div className="hidden md:flex items-center">
+          <a href="https://maps.app.goo.gl/NL7WpXRs7wDYNTEu5" target="_blank" className="flex items-center">
             <MapPin size={16} className="text-red-600 mr-1" />
             <span>Abhipur, New Chandigarh</span>
-          </div>
-          <div className="flex items-center">
+          </a>
+          <a href="mailto:contact@igef.net" className="flex items-center">
             <Mail size={16} className="text-red-600 mr-1" />
             <span>contact@igef.net</span>
-          </div>
-          <div className="flex items-center">
+          </a>
+          <a href="tel:+91-7307211222" className="flex items-center">
             <Phone size={16} className="text-red-600 mr-1" />
             <span>+91-7307211222</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>

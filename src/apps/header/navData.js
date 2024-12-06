@@ -27,7 +27,7 @@ export const navlinks = [
     path: "/why-indo-global",
     dropdown: [
       { name: "Industry Oriented Curriculum", path: "/why-indo-global/industry-oriented-curriculum" },
-      { name: "Entrepreneurship", path: "/why-indo-global/entrepreneurship" },
+      // { name: "Entrepreneurship", path: "/why-indo-global/entrepreneurship" },
       { name: "Sports Arena", path: "/why-indo-global/sports-arena" },
       { name: "Infrastructure", path: "/why-indo-global/infrastructure" },
       { name: "Great Transportation", path: "/why-indo-global/great-transportation" },

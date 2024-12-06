@@ -87,11 +87,11 @@ export default function Footer() {
   ];
 
   const socialIcons = [
-    { name: "Linkedin", icon: Linkedin },
-    { name: "Facebook", icon: Facebook },
+    // { name: "Linkedin", icon: Linkedin },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/indoglobalcolleges/" },
+    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/IndoGlobalOfficial" },
     // { name: "Twitter", icon: Twitter },
-    { name: "Instagram", icon: Instagram },
-    { name: "YouTube", icon: Youtube },
+    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/channel/UCvSPn6SHqEnB_knlejlzV7A" },
   ];
 
   const handleItemClick = (item) => {
@@ -119,7 +119,8 @@ export default function Footer() {
               {socialIcons.map((platform) => (
                 <a
                   key={platform.name}
-                  href="#"
+                  href={platform.href}
+                  target="_blank"
                   className="bg-red-600 text-white p-2 rounded-full hover:bg-red-700 transition-colors"
                   aria-label={platform.name}
                 >
