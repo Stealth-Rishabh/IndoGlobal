@@ -10,7 +10,7 @@ export default function ButtonSq({
   ...props
 }) {
   return (
-    <Link to={to}>
+    <Link to={to || '#'}>
     <Button
       className={` rounded-none px-6 py-3 text-lg cursor-pointer font-semibold ${className}`}
       {...props}

@@ -57,15 +57,15 @@ const RankSlider = () => {
                         <h2 className=" text-2xl  sm:text-4xl font-semibold tracking-tight scroll-m-20 first:mt-0">
                           Rankings, Accereditations <br /> &amp; Tie-up.
                         </h2>
-                        <Link to='/about/accreditation'> 
-
-                        <ButtonSq
-                          label="Know more..."
-                          iconDiv="bg-primary-color sm:h-14 flex item-center justify-center"
-                          className="text-white text-xs md:text-lg sm:h-14 bg-secondary-color hover:bg-secondary-color/90 w-fit"
-                          iconStyle="h sm:mt-3"
-                        />
-                        </Link>
+                        {/* <Link to="/about/accreditation"> */}
+                          <ButtonSq
+                            label="Know more..."
+                            iconDiv="bg-primary-color sm:h-14 flex item-center justify-center"
+                            className="text-white text-xs md:text-lg sm:h-14 bg-secondary-color hover:bg-secondary-color/90 w-fit"
+                            iconStyle="h sm:mt-3"
+                            to="/about/accreditation"
+                          />
+                        {/* </Link> */}
                       </div>
                       <div className="flex sm:flex-row flex-col-reverse gap-4 sm:gap-0 mt- sm:mt-0 item-start sm:justify-between ">
                         <div className="grid content-end justify-end grid-cols-3 gap-3 pb-10">
@@ -111,27 +111,25 @@ const RankSlider = () => {
             ))}
           </CarouselContent>
           <CarouselPrevious
-           
             iconStyle="text-white h-4 lg:h-8"
             className="absolute sm:left-[0px] left-[20%] top-[96.5%] sm:top-[106%] bg-gray-300 hover:bg-red-600 h-8 sm:h-10  w-20 active:bg-red-700 sm:w-24 rounded-none opacity-100"
           />
           <CarouselNext
-            
             iconStyle="text-white h-4 lg:h-8"
             className="absolute sm:left-[110px] left-[55%] top-[96.5%] sm:top-[106%] bg-slate-300 hover:bg-red-600 w-20 sm:w-24 h-8 sm:h-10  rounded-none opacity-100 active:bg-red-700"
           />
         </Carousel>
         <div className="sm:hidden flex justify-center mt-4 space-x-2">
-        {Array.from({ length: count }).map((_, index) => (
-          <button
-            key={index}
-            className={`w-4 h-[2px] rounded-sm ${
-              index === current ? "bg-destructive/70" : "bg-gray-300"
-            }`}
-            onClick={() => api?.scrollTo(index)}
-          />
-        ))}
-      </div>
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              key={index}
+              className={`w-4 h-[2px] rounded-sm ${
+                index === current ? "bg-destructive/70" : "bg-gray-300"
+              }`}
+              onClick={() => api?.scrollTo(index)}
+            />
+          ))}
+        </div>
       </Container>
     </div>
   );
