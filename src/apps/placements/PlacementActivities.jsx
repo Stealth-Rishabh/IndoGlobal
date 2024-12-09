@@ -92,7 +92,7 @@ const sidebarLinks = [
 const PlacementActivities = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/placement-activities", label: "Placements" },
+    { href: "/placements/placement-activities", label: "Placements" },
     { label: "Placement Activities " },
   ];
 

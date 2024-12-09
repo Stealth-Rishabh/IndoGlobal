@@ -91,7 +91,7 @@ const imageItems = [
 const CampusRecruitments = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/campus-recruitments", label: "Placements" },
+    { href: "/placements/campus-recruitments", label: "Placements" },
     { label: "Campus Recruitments" },
   ];
 

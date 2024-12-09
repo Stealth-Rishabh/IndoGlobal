@@ -83,7 +83,7 @@ const sidebarLinks = [
 const OurRecruiters = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/our-recruiters", label: "Placements" },
+    { href: "/placements/our-recruiters", label: "Placements" },
     { label: "Our Recruiters" },
   ];
   return (

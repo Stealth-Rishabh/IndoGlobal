@@ -24,7 +24,7 @@ const sidebarLinks = [
 const IndustryTieUps = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/industry-tie-ups ", label: "Placements" },
+    { href: "/placements/industry-tie-ups ", label: "Placements" },
     { label: "Industry Tie-ups " },
   ];
   return (

@@ -24,7 +24,7 @@ const sidebarLinks = [
 const IndustrySpeaks = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/industry-speaks", label: "Placements" },
+    { href: "/placements/industry-speaks", label: "Placements" },
     { label: "Industry Speaks" },
   ];
   return (
@@ -120,7 +120,7 @@ const Testimonials = () => {
         <div className="mt-12">
           <ul className="grid items-center  justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((item, idx) => (
-              <li key={idx} className="bg-white h-96 flex flex-col justify-between  rounded-xl border shadow-md">
+              <li key={idx} className="bg-white h-auto flex flex-col justify-between  rounded-xl border shadow-md">
                 <div className="p-4">
                   <svg
                     className="w-9 h-9 text-gray-300"
@@ -141,10 +141,10 @@ const Testimonials = () => {
                     </p>
                   </blockquote>
                   <div className="grid  items-center gap-2 p-4 mt- bg-indigo-50">
-                    <img
+                    {/* <img
                       src={item.avatar}
                       className="w-16 h-16 rounded-full border-2 border-indigo-500"
-                    />
+                    /> */}
                     <div>
                       <span className="block text-gray-800 font-semibold">
                         {item.name}
