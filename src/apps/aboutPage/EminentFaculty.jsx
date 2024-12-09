@@ -11,7 +11,7 @@ import AboutSidebar from "../../components/AboutSidebar";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about/eminent-faculty", label: "About" },
   { label: "Eminent Faculty" },
 ];
 const sidebarLinks = [

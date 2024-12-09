@@ -12,7 +12,7 @@ import AboutSidebar from "../../components/AboutSidebar";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about/location", label: "About" },
   { label: "Campus Location" },
 ];
 

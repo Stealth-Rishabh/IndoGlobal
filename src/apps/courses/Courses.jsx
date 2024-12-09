@@ -29,9 +29,8 @@ export default function Courses() {
 
   const navigate = useNavigate();
 
-  const handleViewDetails = (courseTitle) => {
-    const formattedTitle = courseTitle.toLowerCase().replace(/ /g, "-");
-    navigate(`/courses/${formattedTitle}`);
+  const handleViewDetails = (coursePath) => {
+    navigate(`/courses/${coursePath}`);
   };
 
   const courses = useMemo(() => COURSE_DETAILS, []);
@@ -220,7 +219,7 @@ export default function Courses() {
                 <p className="text-gray-500">{course.category}</p>
                 <Button
                   className="mt-4 w-full"
-                  onClick={() => handleViewDetails(course.title)}
+                  onClick={() => handleViewDetails(course.path)}
                 >
                   View Details
                 </Button>

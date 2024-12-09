@@ -49,7 +49,7 @@ const sidebarLinks = [
 const AccreditationAndTieups = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
+    { href: "/about/accreditation", label: "About" },
     { label: "Accreditation & Tie-ups" },
   ];
   return (

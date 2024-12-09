@@ -20,10 +20,9 @@ import { COURSE_DETAILS } from "./course-details";
 import { Star, CheckSquare } from "lucide-react";
 import { useParams } from "react-router-dom";
 const CoursesDetails = () => {
-  const { courseTitle } = useParams();
-  const formattedTitle = courseTitle.replace(/-/g, " ");
+  const { coursePath } = useParams();
   const courseData = COURSE_DETAILS.find(
-    (course) => course.title.toLowerCase() === formattedTitle
+    (course) => course.path === coursePath
   );
 
   if (!courseData) {

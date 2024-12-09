@@ -5,7 +5,7 @@ import img from "../../assets/breadcrumb.png";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 // import { Link } from "react-router-dom";
-import { MapPin, Phone, Globe, Mail, Building } from "lucide-react";
+// import { MapPin, Phone, Globe, Mail, Building } from "lucide-react";
 import AboutSidebar from "../../components/AboutSidebar";
 // import Leaf from "../../assets/leaf.png";
 import {
@@ -61,7 +61,7 @@ const institutionalData = [
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about/vision-mission", label: "About" },
   { label: "Vision & Mission" },
 ];
 

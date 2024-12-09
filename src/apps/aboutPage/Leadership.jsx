@@ -11,7 +11,7 @@ import AboutSidebar from "../../components/AboutSidebar";
 import chairmanImage from "../../assets/about/chairman.jpg";
 const breadcrumbItems = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about/leadership", label: "About" },
   { label: "Leadership" },
 ];
 

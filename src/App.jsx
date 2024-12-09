@@ -42,7 +42,7 @@ import CoursesDetails from "./apps/courses/CoursesDetails";
 import Blogs from "./apps/blogs/Blogs";
 import BlogDetails from "./apps/blogs/BlogDetails";
 import Careers from "./apps/careers/Careers";
-import Spotlights from "./apps/highlights/Spotlights";
+// import Spotlights from "./apps/highlights/Spotlights";
 import OnlineLearningResources from "./apps/footer/OnlineLearningResources";
 import SpotlightAndEvents from "./apps/highlights/SpotlightAndEvents";
 import ScrollToTopWithBorder from "./components/ScrollToTopWithBorder";
@@ -83,7 +83,7 @@ function App() {
           path="/courses/b.tech-in-mechanical-engineering"
           element={<CoursesDetails />}
         /> */}
-        <Route path="/courses/:courseTitle" element={<CoursesDetails />} />
+        <Route path="/courses/:coursePath" element={<CoursesDetails />} />
 
         {/* admissions page */}
         <Route path="/admissions" element={<Admission />} />
