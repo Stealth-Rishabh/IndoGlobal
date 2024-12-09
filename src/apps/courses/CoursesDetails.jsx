@@ -173,7 +173,9 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         <TabsContent value="overview">
           <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="px-0 text-3xl text-secondary-color">Course Overview</CardTitle>
+              <CardTitle className="px-0 text-3xl text-secondary-color">
+                Course Overview
+              </CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               {overview.map((item, index) => {
@@ -189,16 +191,24 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                         {item.data}
                       </h3>
                     )}
-                    {item.type === "paragraph" && <p className="text-gray-700 text-sm sm:text-base">{item.data}</p>}
+                    {item.type === "paragraph" && (
+                      <p className="text-gray-700 text-sm sm:text-base">
+                        {item.data}
+                      </p>
+                    )}
                     {item.type === "list" && (
                       <ul className=" space- list-disc grid grid-cols-1 sm:grid-cols-2 justify-items-start gap-4 items-start mb-4">
                         {item.data.map((item, index) => (
                           <li
                             key={index}
-                            className="flex items-start list-none justify-start text-gray-600 text-sm sm:text-base"
+                            className="flex flex-row items-start list-none justify-start text-gray-600 text-sm sm:text-base"
                           >
-                            <CheckSquare className="w-6 mt-1 h-6 sm:w-4 sm:h-4 mr-2 " />
-                            {item}
+                            <span className="flex items-center w-6 mt-1 h-6 sm:w-4 sm:h-4 mr-2 ">
+                              <CheckSquare className="w-6 h-6" />
+                            </span>
+                            <div className="text-gray-600 text-sm sm:text-base">
+                              {item}
+                            </div>
                           </li>
                         ))}
                       </ul>
@@ -214,18 +224,26 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         <TabsContent value="curriculum">
           <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl text-secondary-color">Course Curriculum</CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">
+                Course Curriculum
+              </CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               <Accordion type="single" collapsible className="w-full">
                 {subjects.map((subject, index) => (
                   <AccordionItem key={subject} value={`subject${index + 1}`}>
-                    <AccordionTrigger className="text-gray-600 text-lg">{subject.year || subject.semester}</AccordionTrigger>
+                    <AccordionTrigger className="text-gray-600 text-lg">
+                      {subject.year || subject.semester}
+                    </AccordionTrigger>
                     <AccordionContent>
                       <ul className="pl-5 space-y-1 list-disc">
-                        {(subject.data || subject.subjects || []).map((syllabus, i) => (
-                          <li key={i} className="text-gray-500 list-decimal">{syllabus}</li>
-                        ))}
+                        {(subject.data || subject.subjects || []).map(
+                          (syllabus, i) => (
+                            <li key={i} className="text-gray-500 list-decimal">
+                              {syllabus}
+                            </li>
+                          )
+                        )}
                       </ul>
                     </AccordionContent>
                   </AccordionItem>
@@ -238,7 +256,9 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         <TabsContent value="eligibility">
           <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl text-secondary-color">Eligibility Criteria</CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">
+                Eligibility Criteria
+              </CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               {eligibility.map((item, index) => {
@@ -249,7 +269,11 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                         {item.data}
                       </h2>
                     )}
-                    {item.type === "paragraph" && <p className="text-gray-600 text-sm sm:text-base">{item.data}</p>}
+                    {item.type === "paragraph" && (
+                      <p className="text-gray-600 text-sm sm:text-base">
+                        {item.data}
+                      </p>
+                    )}
                   </div>
                 );
               })}
@@ -261,13 +285,15 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         <TabsContent value="faqs">
           <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl text-secondary-color">FAQs</CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">
+                FAQs
+              </CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               <Accordion type="single" collapsible>
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`faq-${index}`}>
-                    <AccordionTrigger >
+                    <AccordionTrigger>
                       {faq.data?.question || "FAQ"}
                     </AccordionTrigger>
                     <AccordionContent>
@@ -283,7 +309,9 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         <TabsContent value="reviews">
           <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
-              <CardTitle className="text-3xl text-secondary-color">Student Reviews</CardTitle>
+              <CardTitle className="text-3xl text-secondary-color">
+                Student Reviews
+              </CardTitle>
             </CardHeader>
             <CardContent className="px-0 sm:px-6">
               <div className="space-y-4">

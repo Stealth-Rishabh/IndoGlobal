@@ -17,47 +17,47 @@ export default function CourseSidebar() {
     {
       name: "B.Tech / Lateral Entry",
       courses: [
-        { href: "/courses/b.tech-mechanical-engineering", label: "Mechanical Engg." },
-        { href: "/courses/b.tech-computer-science-engineering", label: "Computer Science Engg." },
-        { href: "/courses/b.tech-electronics-&-communication-engineering", label: "Electronics and Communication Engg." },
-        { href: "/courses/b.tech-civil-engineering", label: "Civil Engg." },
+        { href: "/courses/btech-mechanical-engineering", label: "Mechanical Engg." },
+        { href: "/courses/btech-computer-science-engineering", label: "Computer Science Engg." },
+        { href: "/courses/btech-electronics-communication-engineering", label: "Electronics and Communication Engg." },
+        { href: "/courses/btech-civil-engineering", label: "Civil Engg." },
       ],
     },
     {
       name: "M.Tech",
       courses: [
-        { href: "/courses/m.tech-in-civil-engineering", label: "Civil Engg." },
-        { href: "/courses/m.tech-in-computer-science-&-engineering", label: "Computer Science Engg." },
-        { href: "/courses/m.tech-electronics-and-communication-engineering", label: "Electronics and Communication" },
+        { href: "/courses/mtech-civil-engineering", label: "Civil Engg." },
+        { href: "/courses/mtech-computer-science-engineering", label: "Computer Science Engg." },
+        { href: "/courses/mtech-electronics-communication-engineering", label: "Electronics and Communication" },
       ],
     },
     {
       name: "Polytechnic / Lateral Entry",
       courses: [
-        { href: "/courses/polytechnic-mechanical", label: "Mechanical Engg." },
-        { href: "/courses/polytechnic-civil", label: "Civil Engg." },
+        { href: "/courses/polytechnic-mechanical-engineering", label: "Mechanical Engg." },
+        { href: "/courses/polytechnic-civil-engineering", label: "Civil Engg." },
       ],
     },
     {
       name: "Management and Tech.",
       courses: [
-        { href: "/courses/mba", label: "Master Of Business Administration (MBA)" },
-        { href: "/courses/bba", label: "Bachelor Of Business Administration (BBA)" },
-        { href: "/courses/bca", label: "Bachelor of Computer Application (BCA)" },
+        { href: "/courses/master-of-business-administration", label: "Master Of Business Administration (MBA)" },
+        { href: "/courses/bachelor-of-business-administration", label: "Bachelor Of Business Administration (BBA)" },
+        { href: "/courses/bachelor-of-computer-applications", label: "Bachelor of Computer Application (BCA)" },
       ],
     },
     {
       name: "Architecture",
       courses: [
-        { href: "/courses/architecture", label: "Bachelor of Architecture" },
+        { href: "/courses/bachelors-of-architecture", label: "Bachelor of Architecture" },
       ],
     },
     {
       name: "Paramedical Courses",
       courses: [
-        { href: "/courses/medical-lab-sciences", label: "B.Sc. Medical Laboratory Sciences (MLS)" },
-        { href: "/courses/radiology-imaging", label: "B.Sc Radiology & Imaging Technology" },
-        { href: "/courses/operation-theatre-tech", label: "B.Sc Operation Theatre Technology" },
+        { href: "/courses/bsc-in-medical-laboratory-science", label: "B.Sc. Medical Laboratory Sciences (MLS)" },
+        { href: "/courses/bsc-radiology-and-imaging-technology", label: "B.Sc Radiology & Imaging Technology" },
+        { href: "/courses/bsc-in-operation-theatre", label: "B.Sc Operation Theatre Technology" },
       ],
     },
   ]

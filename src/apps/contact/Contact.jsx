@@ -43,7 +43,7 @@ const Contact = () => {
       data: "location",
       icon: Map,
       title: "Location",
-      details: ["Abhipur, New Chandigarh", "Mohali, Punjab-1"],
+      details: ["Abhipur, New Chandigarh", "Mohali, Punjab-140109"],
     },
   ];
 
