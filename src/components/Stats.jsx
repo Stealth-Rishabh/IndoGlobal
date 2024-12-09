@@ -1,4 +1,5 @@
 import { Users, Calendar, GraduationCap, BookOpen, School } from 'lucide-react';
+import NumberTicker from '../components/ui/number-ticker';
 
 const Stats = () => {
   const stats = [
@@ -26,7 +27,11 @@ const Stats = () => {
             {stats.map((item, idx) => (
               <li key={idx} className="text-center px-12 md:px-16">
                 <div className="text-5xl text-white font-bold flex items-center justify-center">
-                  <item.icon className="w-10 h-10 text-white mr-4" /> {item.data}
+                  <item.icon className="w-10 h-10 text-white mr-4" /> <NumberTicker value={item.data} className='text-5xl text-white font-bold mr-2'/>  {idx != 0 && (
+                  <span className="-ml-3 text-4xl font-bold text-white font sm:text-6xl">
+                    +
+                  </span>
+                )}
                 </div>
                 <p className="mt-3 font-medium">{item.title}</p>
               </li>
