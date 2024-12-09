@@ -10,20 +10,24 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { data } from "autoprefixer";
 
 const Contact = () => {
   const supportData = [
     {
+      data: 'tel',
       icon: PhoneCall,
       title: "Call Now",
       details: ["+91-7307211222", "+91-987654321"],
     },
     {
+      data: 'email',
       icon: Mail,
       title: "Email Address",
       details: ["contact@igef.net", "igef@example.com"],
     },
     {
+      data: 'location',
       icon: Map,
       title: "Location",
       details: ["Abhipur, New Chandigarh", "Mohali, Punjab-1"],
@@ -41,7 +45,7 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-5">
-              {supportData.map(({ icon: Icon, title, details }, index) => (
+              {supportData.map(({ data, icon: Icon, title, details }, index) => (
                 <div
                   key={index}
                   className="grid grid-cols-3 gap-5 p-6  shadow-sm hover:shadow-md transition-all duration-300 bg-secondary-color cursor-pointer justify-center items-center rounded-lg"
@@ -54,10 +58,20 @@ const Contact = () => {
                     <span className="text-lg sm:text-2xl text-white font-semibold">
                       {title}
                     </span>
-                    {details.map((detail, i) => (
-                      <span key={i} className="text-xs sm:text-base text-white/80">
+                    {data === 'tel' && details.map((detail, i) => (
+                      <a key={i} href={`tel:${detail}`} className="text-xs sm:text-base text-white/80">
                         {detail}
-                      </span>
+                      </a>
+                    ))}
+                    {data === 'email' && details.map((detail, i) => (
+                      <a key={i} href={`mailto:${detail}`} className="text-xs sm:text-base text-white/80">
+                        {detail}
+                      </a>
+                    ))}
+                    {data === 'location' && details.map((detail, i) => (
+                      <a key={i} href='https://maps.app.goo.gl/NL7WpXRs7wDYNTEu5' target="_blank" className="text-xs sm:text-base text-white/80">
+                        {detail}
+                      </a>
                     ))}
                   </div>
                 </div>
