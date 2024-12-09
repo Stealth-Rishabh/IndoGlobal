@@ -130,7 +130,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
             icon: React.createElement(List, { className: "w-4 h-4" }),
             content: [
                 {
-                    label: "Semester-wise Subjects",
+                    label: "Subjects",
                     type: "list",
                     data: [
                         {

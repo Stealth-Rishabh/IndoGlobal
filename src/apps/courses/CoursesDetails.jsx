@@ -19,6 +19,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { COURSE_DETAILS } from "./course-details";
 import { Star, CheckSquare } from "lucide-react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 const CoursesDetails = () => {
   const { coursePath } = useParams();
   const courseData = COURSE_DETAILS.find(
@@ -26,32 +28,46 @@ const CoursesDetails = () => {
   );
 
   if (!courseData) {
-    return <div>Course not found</div>;
+    return (
+      <>
+        <Helmet>
+          <title>Course Not Found | Indo Global Colleges</title>
+        </Helmet>
+        <div>Course not found</div>
+      </>
+    );
   }
+
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/courses", label: "Courses" },
     { label: courseData.title },
   ];
+
   return (
-    <div className="relative min-h-screen">
-      <ImgAndBreadcrumb
-        title="Courses"
-        imageSrc={img}
-        imageAlt="Description of the image"
-        breadcrumbItems={breadcrumbItems}
-      />
-      <Container className="container grid grid-cols-1 gap-14 md:grid-cols-4">
-        <div className="self-start md:sticky md:top-5">
-          <CourseSidebar />
-        </div>
-        <div className="col-span-1 sm:pt-12 md:col-span-3">
-          <CourseDetailsPage {...courseData} />
-        </div>
-      </Container>
-      {/* <Stats /> */}
-      {/* <Newsletter /> */}
-    </div>
+    <>
+      <Helmet>
+        <title>{courseData.title} | Indo Global Colleges</title>
+      </Helmet>
+      <div className="relative min-h-screen">
+        <ImgAndBreadcrumb
+          title="Courses"
+          imageSrc={img}
+          imageAlt="Description of the image"
+          breadcrumbItems={breadcrumbItems}
+        />
+        <Container className="container grid grid-cols-1 gap-14 md:grid-cols-4">
+          <div className="self-start md:sticky md:top-5">
+            <CourseSidebar />
+          </div>
+          <div className="col-span-1 sm:pt-12 md:col-span-3">
+            <CourseDetailsPage {...courseData} />
+          </div>
+        </Container>
+        {/* <Stats /> */}
+        {/* <Newsletter /> */}
+      </div>
+    </>
   );
 };
 
@@ -173,13 +189,13 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                         {item.data}
                       </h3>
                     )}
-                    {item.type === "paragraph" && <p className="text-gray-700 ">{item.data}</p>}
+                    {item.type === "paragraph" && <p className="text-gray-700 text-sm sm:text-base">{item.data}</p>}
                     {item.type === "list" && (
                       <ul className=" space- list-disc grid grid-cols-1 sm:grid-cols-2 justify-items-start gap-4 items-start mb-4">
                         {item.data.map((item, index) => (
                           <li
                             key={index}
-                            className="flex items-start list-none justify-start text-gray-600"
+                            className="flex items-start list-none justify-start text-gray-600 text-sm sm:text-base"
                           >
                             <CheckSquare className="w-6 mt-1 h-6 sm:w-4 sm:h-4 mr-2 " />
                             {item}
@@ -204,10 +220,10 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
               <Accordion type="single" collapsible className="w-full">
                 {subjects.map((subject, index) => (
                   <AccordionItem key={subject} value={`subject${index + 1}`}>
-                    <AccordionTrigger className="text-gray-600 text-lg">{subject.year}</AccordionTrigger>
+                    <AccordionTrigger className="text-gray-600 text-lg">{subject.year || subject.semester}</AccordionTrigger>
                     <AccordionContent>
                       <ul className="pl-5 space-y-1 list-disc">
-                        {(subject.data || []).map((syllabus, i) => (
+                        {(subject.data || subject.subjects || []).map((syllabus, i) => (
                           <li key={i} className="text-gray-500 list-decimal">{syllabus}</li>
                         ))}
                       </ul>
@@ -233,7 +249,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                         {item.data}
                       </h2>
                     )}
-                    {item.type === "paragraph" && <p className="text-gray-600">{item.data}</p>}
+                    {item.type === "paragraph" && <p className="text-gray-600 text-sm sm:text-base">{item.data}</p>}
                   </div>
                 );
               })}
