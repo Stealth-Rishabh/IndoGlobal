@@ -101,7 +101,7 @@ const sidebarLinks = [
 const IndustryOrientedCurriculum = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/industry-oriented-curriculum", label: "Why Indo Global" },
+    { href: "/why-indo-global/industry-oriented-curriculum", label: "Why Indo Global" },
     { label: "Industry Oriented Curriculum" },
   ];
   return (

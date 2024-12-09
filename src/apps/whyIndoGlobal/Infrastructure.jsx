@@ -29,7 +29,7 @@ const sidebarLinks = [
 const Infrastructure = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/infrastructure", label: "Why Indo Global" },
+    { href: "/why-indo-global/infrastructure", label: "Why Indo Global" },
     { label: "Infrastructure" },
   ];
   return (

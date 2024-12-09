@@ -28,7 +28,7 @@ const sidebarLinks = [
 const SportsArena = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/sports-arena", label: "Why Indo Global" },
+    { href: "/why-indo-global/sports-arena", label: "Why Indo Global" },
     { label: "Sports Arena" },
   ];
   return (

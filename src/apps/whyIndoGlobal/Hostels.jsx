@@ -28,8 +28,8 @@ const sidebarLinks = [
 const Hostels = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/entrepreneurship", label: "Why Indo Global" },
-    { label: "Entrepreneurship" },
+    { href: "/why-indo-global/hostel", label: "Why Indo Global" },
+    { label: "Hostel" },
   ];
   return (
     <div className="relative min-h-screen">

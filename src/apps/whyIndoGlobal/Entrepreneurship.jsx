@@ -26,7 +26,7 @@ const sidebarLinks = [
 const Entrepreneurship = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/entrepreneurship", label: "Why Indo Global" },
+    { href: "/why-indo-global/entrepreneurship", label: "Why Indo Global" },
     { label: "Entrepreneurship" },
   ];
   return (
