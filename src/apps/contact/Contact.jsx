@@ -31,7 +31,7 @@ const Contact = () => {
       data: "tel",
       icon: PhoneCall,
       title: "Call Now",
-      details: ["+91-7307211222", "+91-987654321"],
+      details: ["+91-7307211222", "0160-5036000"],
     },
     {
       data: "email",
