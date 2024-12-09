@@ -11,7 +11,7 @@ import React from "react";
 import img from "../../../assets/courses/poly-mech.webp";
 
 export const POLYTECHNIC_IN_MECHANICAL_ENGINEERING = {
-    
+    path: "polytechnic-mechanical-engineering",
     title: "Polytechnic (Diploma) in Mechanical Engineering",
     category: "Polytechnic / Polytechnic Lateral Entry",
     image: img,

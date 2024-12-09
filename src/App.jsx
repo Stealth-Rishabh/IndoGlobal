@@ -58,7 +58,8 @@ function App() {
     return null;
   };
   return (
-    <Router className="relative">
+    // <Router className="relative" basename="/IndoGlobal">
+    <Router className="relative" >
       <ScrollToTop />
       <ScrollToTopWithBorder />
       <Header />

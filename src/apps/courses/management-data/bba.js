@@ -12,7 +12,7 @@ import {
   import img from "../../../assets/courses/bba.webp";
 
   export const BBA = {
-    
+    path: "bachelor-of-business-administration",
     title: "Bachelor of Business Administration (BBA)",
     category: "Management and Technology",
     image: img,

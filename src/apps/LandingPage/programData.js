@@ -10,35 +10,35 @@ export const programData = [
           description: "Our B.Tech program offers specializations in Computer Science, Electronics, Mechanical, and Civil Engineering. Students engage in cutting-edge research and hands-on projects.",
           duration: "4 years",
           eligibility: "10+2 with PCM, minimum 60% aggregate",
-          path : '/courses/b.tech-computer-science-engineering'
+          path : '/courses/btech-computer-science-engineering'
         },
         {
           name: "B.Arch Bachelor of Architecture",
           description: "The B.Arch program focuses on architectural design, urban planning, and sustainable development. Students work on real-world projects and internships.",
           duration: "5 years",
           eligibility: "10+2 with PCM, minimum 50% aggregate, valid NATA score",
-          path : '/courses/bachelor-of-architecture-(b.arch)'
+          path : '/courses/bachelors-of-architecture'
         },
         {
           name: "BBA Bachelor of Business Administration",
           description: "Our BBA program prepares future business leaders with a comprehensive curriculum covering management, finance, marketing, and entrepreneurship.",
           duration: "3 years",
           eligibility: "10+2 in any stream, minimum 50% aggregate",
-          path : '/courses/bachelor-of-business-administration-(bba)'
+          path : '/courses/bachelor-of-business-administration'
         },
         {
-          name: "BCA Bachelor of Computer Application",
+          name: "BCA Bachelor of Computer Applications",
           description: "The BCA program offers in-depth knowledge of computer applications, programming languages, and software development methodologies.",
           duration: "3 years",
           eligibility: "10+2 with Mathematics, minimum 50% aggregate",
-          path : '/courses/bachelor-of-computer-applications-(bca)'
+          path : '/courses/bachelor-of-computer-applications'
         },
         {
           name: "B.Sc (Medical Laboratory Sciences)",
           description: "This program trains students in various aspects of medical laboratory techniques, preparing them for careers in healthcare and research.",
           duration: "3 years",
           eligibility: "10+2 with PCB, minimum 50% aggregate",
-          path : '/courses/b.sc.-(medical-laboratory-sciences)'
+          path : '/courses/bsc-in-medical-laboratory-science'
         }
       ],
       defaultCard: {
@@ -56,14 +56,14 @@ export const programData = [
           description: "Our M.Tech programs offer advanced specializations in various engineering disciplines, focusing on research and innovation.",
           duration: "2 years",
           eligibility: "B.Tech or equivalent, minimum 60% aggregate, valid GATE score",
-          path : '/courses/m.tech-(cse,ece,me,civil)'
+          path : '/courses/mtech-computer-science-engineering'
         },
         {
           name: "MBA Master of Business Administration",
           description: "The MBA program develops future business leaders with a focus on global business practices, leadership, and strategic management.",
           duration: "2 years",
           eligibility: "Bachelor's degree in any discipline, minimum 50% aggregate, valid CAT/MAT score",
-          path : '/courses/mba-master-of-business-administration'
+          path : '/courses/master-of-business-administration'
         },
         {
           name: "MCA Master of Computer Applications",
@@ -95,14 +95,14 @@ export const programData = [
           description: "This program provides practical skills in civil engineering, covering areas such as construction, surveying, and structural design.",
           duration: "3 years",
           eligibility: "10th pass with minimum 35% aggregate",
-          path : '/courses/diploma-in-civil-engineering'
+          path : '/courses/polytechnic-civil-engineering'
         },
         {
           name: "Diploma in Mechanical Engineering",
           description: "Students learn about mechanical systems, manufacturing processes, and CAD/CAM technologies in this hands-on program.",
           duration: "3 years",
           eligibility: "10th pass with minimum 35% aggregate",
-          path : '/courses/diploma-in-mechanical-engineering'
+          path : '/courses/polytechnic-mechanical-engineering'
         },
         // {
         //   name: "Diploma in Electrical Engineering",

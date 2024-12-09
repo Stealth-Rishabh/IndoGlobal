@@ -10,7 +10,7 @@ import {
 import React from "react";
 import img from "../../../assets/courses/poly-civil.webp";
 export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
-    
+    path: "polytechnic-civil-engineering",
     title: "Polytechnic (Diploma) in Civil Engineering",
     category: "Polytechnic / Polytechnic Lateral Entry", 
     image: img,

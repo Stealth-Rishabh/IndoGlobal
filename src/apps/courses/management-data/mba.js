@@ -13,7 +13,7 @@ import {
 
   
   export const MBA = {
-
+    path: "master-of-business-administration",
     title: "Master of Business Administration (MBA)",
     category: "Management and Technology",
     image: img,

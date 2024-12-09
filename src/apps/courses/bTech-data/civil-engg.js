@@ -10,7 +10,7 @@ import {
   import React from "react";
   import img from "../../../assets/courses/btech-civil.webp";
   export const BTECH_IN_CIVIL_ENGG = {
-    
+    path: "btech-civil-engineering",
     title: "B.Tech Civil Engineering",
     category: "B.Tech / B.tech Lateral Entry",
     image: img,

@@ -11,8 +11,8 @@ import React from "react";
 import img from "../../../assets/courses/bsc-operation.webp";
 
 export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
-  
-  title: "B.Sc. Operation Theatre Technology",
+  path: "bsc-in-operation-theatre",
+  title: "B.Sc Operation Theatre Technology",
   category: "Paramedical Courses",
   image: img,
   badges: [

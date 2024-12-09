@@ -11,7 +11,7 @@ import {
   import img from "../../../assets/courses/bca.webp";
 
   export const BCA = {
-    
+    path: "bachelor-of-computer-applications",
     title: "Bachelor of Computer Applications (BCA)",
     category: "Management and Technology",
     image: img,

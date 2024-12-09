@@ -11,8 +11,8 @@ import React from "react";
 import img from "../../../assets/courses/mtech-comp.webp";
 
 export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
-    
-    title: "M.Tech in Computer Science & Engineering",
+    path: "mtech-computer-science-engineering",
+    title: "M.Tech Computer Science Engineering",
     category: "M.Tech",
     image: img,
     badges: [

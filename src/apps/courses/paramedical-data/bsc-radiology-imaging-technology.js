@@ -11,8 +11,8 @@ import React from "react";
 import img from "../../../assets/courses/bsc-radio.webp";
 
 export const BSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
-  
-  title: "B.Sc. Radiology and Imaging Technology",
+  path: "bsc-radiology-and-imaging-technology",
+  title: "B.Sc Radiology & Imaging Technology",
   category: "Paramedical Courses",
   image: img,
   badges: [

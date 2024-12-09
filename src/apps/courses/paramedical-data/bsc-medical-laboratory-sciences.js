@@ -11,8 +11,8 @@ import React from "react";
 import img from "../../../assets/courses/bsc-medical.webp";
 
 export const BSC_MEDICAL_LABORATORY_SCIENCES = {
-  
-  title: "B.Sc. (Medical Laboratory Sciences)",
+  path: "bsc-in-medical-laboratory-science",
+  title: "B.Sc Medical Laboratory Sciences",
   category: "Paramedical Courses",
   image: img,
   badges: [

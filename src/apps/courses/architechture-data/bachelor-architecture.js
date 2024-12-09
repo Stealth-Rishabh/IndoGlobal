@@ -11,7 +11,7 @@ import {
   import img from "../../../assets/courses/barch.webp";
 
   export const BACHELOR_OF_ARCHITECTURE = {
-    
+    path: "bachelors-of-architecture",
     title: "Bachelor of Architecture (B.Arch)",
     category: "Architecture",
     image: img,

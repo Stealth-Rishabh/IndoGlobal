@@ -10,7 +10,8 @@ import {
 import React from "react";
 import img from "../../../assets/courses/mtech-elec.webp";
 export const MTECH_IN_ELECTRONICS_COMMUNICATION_ENGINEERING = {
-  title: "M.Tech Electronics and Communication Engineering",
+  path: "mtech-electronics-communication-engineering",
+  title: "M.Tech Electronics & Communication Engineering",
   category: "M.Tech",
   image: img,
   badges: [

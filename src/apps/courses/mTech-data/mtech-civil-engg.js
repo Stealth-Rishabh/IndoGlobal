@@ -11,8 +11,8 @@ import React from "react";
 import img from "../../../assets/courses/mtech-civil.webp";
 
 export const MTECH_IN_CIVIL_ENGINEERING = {
-
-    title: "M.Tech in Civil Engineering",
+    path: "mtech-civil-engineering",
+    title: "M.Tech Civil Engineering",
     category: "M.Tech",
     image: img,
     badges: [

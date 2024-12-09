@@ -11,7 +11,7 @@ import {
   import img from "../../../assets/courses/btech-mech.webp";
 
   export const BTECH_IN_MECH_ENGG = {
-    
+    path: "btech-mechanical-engineering",
     title: "B.Tech Mechanical Engineering",
     category: "B.Tech / B.tech Lateral Entry",
     image: img,

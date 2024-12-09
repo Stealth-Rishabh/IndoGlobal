@@ -57,9 +57,9 @@ export default function Programs() {
           <Tabs
             value={selectedTab}
             onValueChange={setSelectedTab}
-            className="relative w-full z-50"
+            className="relative z-50 w-full"
           >
-            <TabsList className="grid w-full h-8 grid-cols-3 p-0 bg-white rounded-none sm:h-16">
+            <TabsList className="grid grid-cols-3 p-0 w-full h-8 bg-white rounded-none sm:h-16">
               {programData.map((category) => (
                 <TabsTrigger
                   key={category.id}
@@ -96,9 +96,9 @@ export default function Programs() {
                           }}
                         >
                           {activePrograms[category.id] === index ? (
-                            <SendHorizontal className="w-5 h-5 mr-2" />
+                            <SendHorizontal className="mr-2 w-5 h-5" />
                           ) : (
-                            <ChevronRight className="w-5 h-5 mr-2" />
+                            <ChevronRight className="mr-2 w-5 h-5" />
                           )}
                           {program.name}
                         </motion.li>
@@ -111,7 +111,7 @@ export default function Programs() {
                     initial={{ opacity: 0, x: 100 }} // Start offscreen to the right
                     animate={inView ? { opacity: 1, x: 0 } : {}} // Translate into view
                     transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                    className="bg-gray-900 text-white md:absolute md:w-[70%] md:-right-64 md:top-8 rounded-none  md:py-10 md:px-14 -z-10"
+                    className="bg-gray-900 text-white md:absolute md:w-[70%] md:-right-64 md:top-8 rounded-none  md:py-10 md:px-14  sm:-z-10 z-auto"
                   >
                     <CardHeader>
                       <CardTitle className="text-3xl font-bold sm:text-3xl lg:text-5xl">
@@ -145,7 +145,7 @@ export default function Programs() {
                           </p>
                         </>
                       )}
-                      <div className="flex relative z-100 justify-between gap-1 mt-8 sm:gap-5 sm:justify-start">
+                      <div className="flex relative gap-1 justify-between mt-8 z-100 sm:gap-5 sm:justify-start">
                         <Link
                           to={
                             activePrograms[category.id] !== null
@@ -160,19 +160,18 @@ export default function Programs() {
                             label="Apply Now"
                           />
                         </Link>
-                    
-                          
-                            <ButtonSq
-                              className="text-xs text-gray-800 bg-white sm:text-base hover:bg-slate-100 w-fit"
-                              iconDiv="bg-gray-400"
-                              label="Know More"
-                              to={ activePrograms[category.id] !== null
-                                ? category.programs[activePrograms[category.id]]
-                                    .path
-                                : category.defaultCard.path}  
-                              
-                            />
-                
+
+                        <ButtonSq
+                          className="text-xs text-gray-800 bg-white sm:text-base hover:bg-slate-100 w-fit"
+                          iconDiv="bg-gray-400"
+                          label="Know More"
+                          to={
+                            activePrograms[category.id] !== null
+                              ? category.programs[activePrograms[category.id]]
+                                  .path
+                              : category.defaultCard.path
+                          }
+                        />
                       </div>
                     </CardContent>
                   </Card>
