@@ -6,8 +6,8 @@ import img from "../../assets/breadcrumb.png";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
-
 import { sportsData } from "./data";
+
 const sidebarLinks = [
   {
     href: "/why-indo-global/industry-oriented-curriculum",
@@ -74,7 +74,7 @@ const Gallery = ({ imageItems }) => {
         <div
           key={index}
           href="#"
-          className={`group relative flex ${item.height} items-end overflow-hidden rounded-lg bg-gray-100 shadow hover:shadow-lg ${item.mdHeight}`}
+          className={`group relative flex ${item.height} items-end border border-gray-300 overflow-hidden rounded-lg bg-gray-100 shadow hover:shadow-lg ${item.mdHeight}`}
         >
           <img
             src={item.src}
