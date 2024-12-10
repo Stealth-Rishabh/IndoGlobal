@@ -8,6 +8,7 @@ import Newsletter from "../../components/Newsletter";
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Table,
   TableBody,
@@ -228,9 +229,11 @@ const renderTable = (courses) => (
             {course.type}
           </TableCell>
           <TableCell className="text-center">
-            <Button variant="outline" size="sm">
-              Apply Now
+            <Link to="/contact-us">
+              <Button variant="outline" size="sm">
+                Apply Now
             </Button>
+            </Link>
           </TableCell>
         </TableRow>
       ))}

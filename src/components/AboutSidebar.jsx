@@ -54,9 +54,11 @@ const AboutSidebar = ({ sidebarLinks }) => {
             </Link>
           ))}
         </nav>
-        <Button className="w-full px-4 py-2 mb-6 font-bold text-white rounded bg-primary-color hover:bg-red-600">
-          Apply Online
-        </Button>
+        <Link to="/contact-us">
+          <Button className="w-full px-4 py-2 mb-6 font-bold text-white rounded bg-primary-color hover:bg-red-600">
+            Apply Online
+          </Button>
+        </Link>
         <div className="relative flex-grow overflow-hidden rounded-md  h-56">
           <img
             src={img}
@@ -65,11 +67,12 @@ const AboutSidebar = ({ sidebarLinks }) => {
           />
           <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white">
-            <p className="mb-3 text-xl font-semibold text-center">
-              Discover Our Partnerships
+            <p className="mb-3 text-xl font-semibold text-center max-w-40">
+              Build Your Career
             </p>
-            <Button
-              variant="outline"
+            <Link to="/contact-us">
+              <Button
+                variant="outline"
               className="text-white transition-colors bg-transparent border-white hover:bg-white hover:text-black"
             >
               <svg
@@ -86,8 +89,9 @@ const AboutSidebar = ({ sidebarLinks }) => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              Learn More
+              Get Started
             </Button>
+            </Link>
           </div>
         </div>
       </div>
