@@ -13,15 +13,16 @@ import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import img from "../../assets/breadcrumb.png";
-
+import { galleryData } from "./galleryData";
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Gallery" }];
 
 const categories = [
   { id: "all", label: "All" },
-  { id: "culture", label: "Culture & Arts" },
-  { id: "tech", label: "Technology" },
+  { id: "campus", label: "Campus" },
+  { id: "infrastructure", label: "Infrastructure" },
+  { id: "labs", label: "Labs" },
+  { id: "events", label: "Events" },
   { id: "sports", label: "Sports" },
-  { id: "education", label: "Education" },
 ];
 
 const dateFilters = [
@@ -54,100 +55,12 @@ const Gallery = () => {
   const [dateFilter, setDateFilter] = useState("all");
   const [focus, setFocus] = useState(null);
 
-  const events = useMemo(
-    () => [
-      {
-        id: 1,
-        date: "2024-12-15",
-        category: "culture",
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 2,
-        date: "2024-11-20",
-        category: "tech",
-        image:
-          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 3,
-        date: "2024-10-15",
-        category: "sports",
-        image:
-          "https://plus.unsplash.com/premium_photo-1683121128953-9a7f08b82198?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 4,
-        date: "2024-09-10",
-        category: "education",
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 5,
-        date: "2024-08-05",
-        category: "culture",
-        image:
-          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 6,
-        date: "2024-07-20",
-        category: "tech",
-        image:
-          "https://plus.unsplash.com/premium_photo-1683121128953-9a7f08b82198?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 7,
-        date: "2024-06-15",
-        category: "sports",
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 8,
-        date: "2024-05-10",
-        category: "education",
-        image:
-          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 9,
-        date: "2024-04-05",
-        category: "culture",
-        image:
-          "https://plus.unsplash.com/premium_photo-1683121128953-9a7f08b82198?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 10,
-        date: "2024-03-20",
-        category: "tech",
-        image:
-          "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 11,
-        date: "2024-02-15",
-        category: "sports",
-        image:
-          "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-      {
-        id: 12,
-        date: "2024-01-10",
-        category: "education",
-        image:
-          "https://plus.unsplash.com/premium_photo-1683121128953-9a7f08b82198?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      },
-    ],
-    []
-  );
+  const gallery = useMemo(() => galleryData, []);
 
   const filteredEvents = useMemo(() => {
     const today = new Date();
 
-    return events.filter((event) => {
+    return gallery.filter((event) => {
       const categoryMatch =
         selectedCategory === "all" || event.category === selectedCategory;
 
@@ -160,11 +73,11 @@ const Gallery = () => {
 
       return categoryMatch && dateMatch;
     });
-  }, [events, selectedCategory, dateFilter]);
+  }, [gallery, selectedCategory, dateFilter]);
 
   return (
     <section className="relative min-h-screen">
-        <ImgAndBreadcrumb
+      <ImgAndBreadcrumb
         title="Gallery"
         imageSrc={img}
         imageAlt="Description of the image"
@@ -213,7 +126,7 @@ const Gallery = () => {
 
         {/* Masonry Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
-          {filteredEvents.map((event,index) => (
+          {filteredEvents.map((event, index) => (
             <div
               key={event.id}
               className="break-inside-avoid rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white h-96"
@@ -221,7 +134,13 @@ const Gallery = () => {
               <img
                 src={event.image}
                 alt={event.title}
-                className={`w-full object-cover h-full hover:scale-125 transition-all duration-300 ${focus=== null ? '' : (focus===index? '' : 'grayscale brightness-50  duration-150')}`}
+                className={`w-full object-cover h-full hover:scale-125 transition-all duration-300 ${
+                  focus === null
+                    ? ""
+                    : focus === index
+                    ? ""
+                    : "grayscale brightness-50  duration-150"
+                }`}
                 onMouseEnter={() => setFocus(index)}
                 onMouseLeave={() => setFocus(null)}
               />

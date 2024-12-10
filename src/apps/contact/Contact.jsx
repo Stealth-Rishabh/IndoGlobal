@@ -51,11 +51,14 @@ const Contact = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Name validation (min 3 chars)
+    // Name validation (letters only, min 3 chars)
+    const nameRegex = /^[a-zA-Z\s]+$/;
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     } else if (formData.name.length < 3) {
       newErrors.name = "Name must be at least 3 characters";
+    } else if (!nameRegex.test(formData.name.trim())) {
+      newErrors.name = "Name can only contain letters";
     }
 
     // Email validation
@@ -225,16 +228,17 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-1 space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
                   {[
-                    { id: "name", label: "Name", placeholder: "Your name" },
+                    { id: "name", label: "Name", placeholder: "Your name", type: "text" },
                     { id: "email", label: "Email", placeholder: "Your email" },
-                    { id: "phone", label: "Phone", placeholder: "Your phone" },
+                    { id: "phone", label: "Phone", placeholder: "Your phone", type: "tel" },
                     { id: "course", label: "Course", placeholder: "Your course" },
-                  ].map(({ id, label, placeholder }) => (
+                  ].map(({ id, label, placeholder, type }) => (
                     <div key={id} className="flex flex-col space-y-2.5">
                       <Label className="text-lg sm:text-2xl text-secondary-color/80" htmlFor={id}>
                         {label}
                       </Label>
                       <Input
+                        type={type}
                         className={`py-6 border-secondary-color/30 focus:border-secondary-color ${
                           errors[id] ? 'border-red-500 focus:border-red-500' : ''
                         }`}
