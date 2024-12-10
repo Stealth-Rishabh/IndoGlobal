@@ -18,7 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { COURSE_DETAILS } from "./course-details";
 import { Star, CheckSquare } from "lucide-react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const CoursesDetails = () => {
@@ -149,7 +149,9 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
       />
 
       <div className="flex flex-wrap gap-4 mb-8">
-        <Button className="flex-grow sm:flex-grow-0">Apply Now</Button>
+        <Link to="/contact-us">
+          <Button className="flex-grow sm:flex-grow-0">Apply Now</Button>
+        </Link>
         <Button variant="outline" className="flex-grow sm:flex-grow-0">
           Download Brochure
         </Button>
