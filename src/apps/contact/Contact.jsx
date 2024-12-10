@@ -157,8 +157,8 @@ const Contact = () => {
     <div className="bg-slate-50">
       <Toaster />
       <Container>
-        <section className="grid grid-cols-1 gap-0 space-y-5 sm:space-y-0 sm:gap-5 md:grid-cols-3">
-          <Card className="bg-white shadow-sm ">
+        <section className="grid grid-cols-1 gap-0 sm:space-y-5 sm:space-y-0 sm:gap-5 md:grid-cols-3">
+          <Card className="bg-white shadow-sm sm:order-1 order-2 mt-6 sm:mt-0">
             <CardHeader>
               <CardTitle className="text-3xl font-bold sm:text-4xl sm:pb-5 text-secondary-color">
                 Need more help?
@@ -218,7 +218,7 @@ const Contact = () => {
           </Card>
 
           {/* Form section */}
-          <Card className="col-span-2 bg-white shadow-sm">
+          <Card className="col-span-2 bg-white shadow-sm sm:order-2 order-1">
             <CardHeader>
               <CardTitle className="text-3xl font-bold sm:text-4xl sm:pb-5 text-secondary-color">
                 Get in touch with us.

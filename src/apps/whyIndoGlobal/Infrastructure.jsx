@@ -47,7 +47,7 @@ const Infrastructure = () => {
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
             title="Campuse Infrastructure"
-            titleClassName="text-secondary-color text-left lg:text-5xl"
+            titleClassName="text-secondary-color text-left text-3xl sm:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Our college infrastructure is designed to provide students with an enriching academic and social environment. Featuring modern classrooms, high-tech labs, collaborative spaces, and recreational facilities, we support holistic development and inspire academic and personal growth."
             className=""
@@ -87,9 +87,9 @@ const InfrastructureItems = ({ data ,index}) => {
     <section className="light  bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
       <div className="container">
         <div className="grid grid-cols-12 items-center gap-4 mb-12">
-          <div className={`col-span-12 lg:col-span-6 ${index%2===0 ? 'order-1' : 'order-2'}`}>
+          <div className={`col-span-12 lg:col-span-6 ${index%2===0 ? ' sm:order-1' : 'sm:order-2'}`}>
             {/* <h6 className="font-medium opacity-70 mb-2">Hello Visitor,</h6> */}
-            <h1 className="text-3xl leading-none font-bold uppercase tracking-wider mb-2">
+            <h1 className="text-2xl sm:text-3xl leading-none font-bold uppercase tracking-wider mb-2">
               {title}
             </h1>
             <hr className="bg-blue-600 h-1 rounded-[3px] w-12 opacity-100 my-6" />
@@ -102,7 +102,7 @@ const InfrastructureItems = ({ data ,index}) => {
               ))}
             </ul>
           </div>
-          <div className={`col-span-12 lg:col-span-6 ${index%2===0 ? 'order-2' : 'order-1' }`}>
+          <div className={`col-span-12 lg:col-span-6 ${index%2===0 ? 'sm:order-2' : 'sm:order-1' }`}>
             <InfrastructureMarquee3D index={index} logos={logos}/>
           </div>
         </div>

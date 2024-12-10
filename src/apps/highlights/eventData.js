@@ -160,8 +160,8 @@ export const eventsData = [
     title: "National Doctor's Day",
     tags: ["Healthcare", "Appreciation"],
     description: "Honoring doctors on National Doctor's Day",
-    image: "",
-    gallery: [],
+    image: img13,
+    gallery: [img13],
   },
   {
     id: 14,
@@ -170,8 +170,8 @@ export const eventsData = [
     title: "Empowering Educators",
     tags: ["Education", "Professional Development"],
     description: "Workshops and seminars to empower educators",
-    image: "",
-    gallery: [],
+    image: img14,
+    gallery: [img14],
   },
   {
     id: 15,
@@ -181,8 +181,8 @@ export const eventsData = [
     tags: ["Education", "Training"],
     description:
       "Enhancing faculty skills through targeted development programs",
-    image: "",
-    gallery: [],
+    image: img15,
+    gallery: [img15],
   },
   {
     id: 16,
@@ -191,8 +191,8 @@ export const eventsData = [
     title: "International Yoga Day",
     tags: ["Health", "Wellness"],
     description: "Celebrating International Yoga Day with various activities",
-    image: "",
-    gallery: [],
+    image: img16,
+    gallery: [img16],
   },
   {
     id: 17,
@@ -201,8 +201,8 @@ export const eventsData = [
     title: "EID AL-ADHA",
     tags: ["Cultural", "Religious"],
     description: "Celebrating EID AL-ADHA with community events",
-    image: "",
-    gallery: [],
+    image: img17,
+    gallery: [img17],
   },
   {
     id: 18,
@@ -211,8 +211,8 @@ export const eventsData = [
     title: "Tools Every Architect Student Should Know",
     tags: ["Architecture", "Technology"],
     description: "Introducing essential tools for architecture students",
-    image: "",
-    gallery: [],
+    image: img18,
+    gallery: [img18],
   },
   {
     id: 19,
@@ -221,8 +221,8 @@ export const eventsData = [
     title: "World Environment Day",
     tags: ["Environment", "Sustainability"],
     description: "Activities and awareness programs for World Environment Day",
-    image: "",
-    gallery: [],
+    image: img19,
+    gallery: [img19],
   },
   {
     id: 20,
@@ -232,8 +232,8 @@ export const eventsData = [
     tags: ["Achievement", "Campus Life"],
     description:
       "Showcasing the latest highlights and achievements of the campus",
-    image: "",
-    gallery: [],
+    image: img20,
+    gallery: [img20],
   },
   {
     id: 21,
@@ -243,8 +243,8 @@ export const eventsData = [
     tags: ["Career", "Success"],
     description:
       "Highlights from recent placement drives and student successes",
-    image: "",
-    gallery: [],
+    image: img21,
+    gallery: [img21],
   },
   {
     id: 22,
@@ -253,8 +253,8 @@ export const eventsData = [
     title: "Center For Guidance and Career Development",
     tags: ["Career", "Guidance"],
     description: "Launch of the new Center for Guidance and Career Development",
-    image: "",
-    gallery: [],
+    image: img22,
+    gallery: [img22],
   },
   {
     id: 23,
@@ -264,8 +264,8 @@ export const eventsData = [
     tags: ["Technology", "Innovation"],
     description:
       "An expert-led session discussing advancements on National Technology Day",
-    image: "",
-    gallery: [],
+    image: img23,
+    gallery: [img23],
   },
   {
     id: 24,
@@ -274,8 +274,8 @@ export const eventsData = [
     title: "Mother's Day",
     tags: ["Celebration", "Family"],
     description: "Celebrating Mother's Day with special events and honors",
-    image: "",
-    gallery: [],
+    image: img24,
+    gallery: [img24],
   },
   {
     id: 25,
@@ -285,8 +285,8 @@ export const eventsData = [
     tags: ["Technology", "Coding"],
     description:
       "Workshop on advanced coding techniques hosted by Coding Ninjas",
-    image: "",
-    gallery: [],
+    image: img25,
+    gallery: [img25],
   },
   {
     id: 26,
@@ -295,8 +295,8 @@ export const eventsData = [
     title: "IGCE & IGCMT Achievers",
     tags: ["Achievement", "Recognition"],
     description: "Recognizing the achievements of IGCE & IGCMT students",
-    image: "",
-    gallery: [],
+    image: img26,
+    gallery: [img26],
   },
   {
     id: 27,
@@ -305,8 +305,8 @@ export const eventsData = [
     title: "Expert Session on Eco-Consciousness",
     tags: ["Environment", "Sustainability"],
     description: "An expert-led session on promoting eco-consciousness",
-    image: "",
-    gallery: [],
+    image: img27,
+    gallery: [img27],
   },
   {
     id: 28,
@@ -315,8 +315,8 @@ export const eventsData = [
     title: "Session on Eco-Consciousness",
     tags: ["Environment", "Sustainability"],
     description: "Interactive session focusing on eco-conscious practices",
-    image: "",
-    gallery: [],
+    image: img28,
+    gallery: [img28],
   },
   {
     id: 29,
@@ -325,8 +325,8 @@ export const eventsData = [
     title: "IPL Fever Grips the Nation",
     tags: ["Sports", "Entertainment"],
     description: "Celebrating the excitement of IPL with various events",
-    image: "",
-    gallery: [],
+    image: img29,
+    gallery: [img29],
   },
   {
     id: 30,
@@ -335,8 +335,8 @@ export const eventsData = [
     title: "Campus Placement Drive",
     tags: ["Career", "Placement"],
     description: "Conducting a major placement drive for graduating students",
-    image: "",
-    gallery: [],
+    image: img30,
+    gallery: [img30],
   },
   {
     id: 31,
