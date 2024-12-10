@@ -1,4 +1,12 @@
 import React, { useState, useMemo } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -54,6 +62,8 @@ const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [dateFilter, setDateFilter] = useState("all");
   const [focus, setFocus] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const gallery = useMemo(() => galleryData, []);
 
@@ -75,6 +85,23 @@ const Gallery = () => {
     });
   }, [gallery, selectedCategory, dateFilter]);
 
+  const handleImageClick = (index) => {
+    setCurrentImageIndex(index);
+    setShowModal(true);
+  };
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % filteredEvents.length);
+  };
+
+  const handlePrevious = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? filteredEvents.length - 1 : prev - 1
+    );
+  };
+
   return (
     <section className="relative min-h-screen">
       <ImgAndBreadcrumb
@@ -83,7 +110,7 @@ const Gallery = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="py-12 ">
+      <Container className="py-12">
         <Heading
           title="Explore Our Gallery"
           subtitle="Discover the highlights of our events and activities."
@@ -92,7 +119,7 @@ const Gallery = () => {
           className="pt-10"
         />
 
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
+        <div className="flex flex-col gap-4 justify-between items-center mb-8 sm:flex-row">
           {/* Category Filters */}
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
@@ -125,11 +152,12 @@ const Gallery = () => {
         </div>
 
         {/* Masonry Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {filteredEvents.map((event, index) => (
             <div
               key={event.id}
-              className="break-inside-avoid rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow bg-white h-96"
+              className="overflow-hidden h-96 bg-white rounded-lg shadow-lg transition-shadow cursor-pointer break-inside-avoid hover:shadow-xl"
+              onClick={() => handleImageClick(index)}
             >
               <img
                 src={event.image}
@@ -148,8 +176,43 @@ const Gallery = () => {
           ))}
         </div>
 
+        <Dialog open={showModal} onOpenChange={setShowModal}>
+          <DialogContent className="p-0 h-screen max-w-screen bg-black/50">
+            <DialogHeader className="absolute top-2 right-2 z-50">
+              <button
+                onClick={() => setShowModal(false)}
+                className="p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
+              >
+                <X size={24} />
+              </button>
+            </DialogHeader>
+
+            <div className="flex relative justify-center items-center w-full h-full">
+              <button
+                onClick={handlePrevious}
+                className="absolute left-4 top-1/2 p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              <img
+                src={filteredEvents[currentImageIndex].image}
+                alt={filteredEvents[currentImageIndex].title}
+                className="sm:h-[80vh] w-full sm:w-auto h-auto object-contain sm:rounded-lg"
+              />
+
+              <button
+                onClick={handleNext}
+                className="absolute right-4 top-1/2 p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </DialogContent>
+        </Dialog>
+
         {filteredEvents.length === 0 && (
-          <div className="text-center text-gray-500 py-12">
+          <div className="py-12 text-center text-gray-500">
             No events found for the selected filters.
           </div>
         )}

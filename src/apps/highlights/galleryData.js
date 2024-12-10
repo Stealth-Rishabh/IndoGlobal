@@ -1,42 +1,92 @@
-import aerialView from "../../assets/gallery/campus/Aerial View.webp"
-import igceAerialView from "../../assets/gallery/campus/IGCE Aerial view.webp"
-import igcmtAerialView from "../../assets/gallery/campus/IGCE IGCMT Aerial View.webp"
-import entranceGate from "../../assets/gallery/campus/Entrance Gate.webp"
-import entrance1 from "../../assets/gallery/campus/Entrance1.webp"
-import entrance1_11zon from "../../assets/gallery/campus/Entrance1_11zon.webp"
-import fountainEntrance from "../../assets/gallery/campus/Fountain Entrance.webp"
-import panorama from "../../assets/gallery/campus/panaroma 1200x370 pixel.webp"
-import boysHostel from "../../assets/gallery/campus/boys hostel.webp"
-import girlsHostel from "../../assets/gallery/campus/Girls Hostel.webp"
-import cafeteria from "../../assets/gallery/campus/Cafeteria.webp"
-import classroom from "../../assets/gallery/campus/IGCE Classroom.webp"
-import activityCentre1 from "../../assets/gallery/campus/Student Activity Centre.webp"
-import activityCentre2 from "../../assets/gallery/campus/Student Activity Centre2.webp"
-import archLab from "../../assets/gallery/campus/Arch Lab.webp"
-import archStudio from "../../assets/gallery/campus/Arch Studio.webp"
-import computerLab2 from "../../assets/gallery/campus/Computer Lab 2.webp"
-import computerLab4 from "../../assets/gallery/campus/Computer Lab 4.webp"
-import fmLab from "../../assets/gallery/campus/FM Lab.webp"
-import fossLab from "../../assets/gallery/campus/FOSS LAB.webp"
-import ibmLab from "../../assets/gallery/campus/IBM LAB2.webp"
-import mechLab from "../../assets/gallery/campus/Mech Lab.webp"
-import mechWorkshop from "../../assets/gallery/campus/Mech Workshop.webp"
-import somLab from "../../assets/gallery/campus/SOM.webp"
-import tomLab from "../../assets/gallery/campus/TOM Lab.webp"
-import pic1 from "../../assets/gallery/campus/Pic1.webp"
-import pic2 from "../../assets/gallery/campus/pic2.webp"
-import pic3 from "../../assets/gallery/campus/pic3.webp"
-import pic4 from "../../assets/gallery/campus/pic4.webp"
-import pic5 from "../../assets/gallery/campus/pic5.webp"
-import allStudents from "../../assets/gallery/campus/pic6 all students.webp"
-import img20220509112747 from "../../assets/gallery/campus/IMG20220509112747.webp"
-import img20220509114236 from "../../assets/gallery/campus/IMG20220509114236.webp"
-import img20220509115308 from "../../assets/gallery/campus/IMG20220509115308.webp"
-import img20220509120330 from "../../assets/gallery/campus/IMG20220509120330.webp"
-import img20220509120404 from "../../assets/gallery/campus/IMG20220509120404.webp"
-import img20220518110809 from "../../assets/gallery/campus/IMG20220518110809.webp"
+// ============= CAMPUS CATEGORY =============
+// Main campus views, entrances, and aerial shots
+import aerialView from "../../assets/gallery/campus/Aerial View.webp";
+import igceAerialView from "../../assets/gallery/campus/IGCE Aerial view.webp";
+import igcmtAerialView from "../../assets/gallery/campus/IGCE IGCMT Aerial View.webp";
+import entranceGate from "../../assets/gallery/campus/Entrance Gate.webp";
+import entrance1 from "../../assets/gallery/campus/Entrance1.webp";
+import entrance1_11zon from "../../assets/gallery/campus/Entrance1_11zon.webp";
+import fountainEntrance from "../../assets/gallery/campus/Fountain Entrance.webp";
+import panorama from "../../assets/gallery/campus/panaroma 1200x370 pixel.webp";
+
+// ============= INFRASTRUCTURE CATEGORY =============
+// Buildings, facilities, and common areas
+import boysHostel from "../../assets/gallery/campus/boys hostel.webp";
+import girlsHostel from "../../assets/gallery/campus/Girls Hostel.webp";
+import cafeteria from "../../assets/gallery/campus/Cafeteria.webp";
+import classroom from "../../assets/gallery/campus/IGCE Classroom.webp";
+import activityCentre1 from "../../assets/gallery/campus/Student Activity Centre.webp";
+import activityCentre2 from "../../assets/gallery/campus/Student Activity Centre2.webp";
+
+// ============= LABS CATEGORY =============
+// Academic and technical laboratories
+import archLab from "../../assets/gallery/campus/Arch Lab.webp";
+import archStudio from "../../assets/gallery/campus/Arch Studio.webp";
+import computerLab2 from "../../assets/gallery/campus/Computer Lab 2.webp";
+import computerLab4 from "../../assets/gallery/campus/Computer Lab 4.webp";
+import fmLab from "../../assets/gallery/campus/FM Lab.webp";
+import fossLab from "../../assets/gallery/campus/FOSS LAB.webp";
+import ibmLab from "../../assets/gallery/campus/IBM LAB2.webp";
+import mechLab from "../../assets/gallery/campus/Mech Lab.webp";
+import mechWorkshop from "../../assets/gallery/campus/Mech Workshop.webp";
+import somLab from "../../assets/gallery/campus/SOM.webp";
+import tomLab from "../../assets/gallery/campus/TOM Lab.webp";
+
+// ============= EVENTS CATEGORY =============
+// Cultural events, functions, and gatherings
+import pic1 from "../../assets/gallery/campus/Pic1.webp";
+import pic2 from "../../assets/gallery/campus/pic2.webp";
+import pic3 from "../../assets/gallery/campus/pic3.webp";
+import pic4 from "../../assets/gallery/campus/pic4.webp";
+import pic5 from "../../assets/gallery/campus/pic5.webp";
+import allStudents from "../../assets/gallery/campus/pic6 all students.webp";
+
+// ============= ADDITIONAL CAMPUS IMAGES =============
+// Miscellaneous campus photos
+import img20220509112747 from "../../assets/gallery/campus/IMG20220509112747.webp";
+import img20220509114236 from "../../assets/gallery/campus/IMG20220509114236.webp";
+import img20220509115308 from "../../assets/gallery/campus/IMG20220509115308.webp";
+import img20220509120330 from "../../assets/gallery/campus/IMG20220509120330.webp";
+import img20220509120404 from "../../assets/gallery/campus/IMG20220509120404.webp";
+import img20220518110809 from "../../assets/gallery/campus/IMG20220518110809.webp";
 
 export const galleryData = [
+  {
+    id: 26,
+    date: "2024-12-15",
+    category: "events",
+    image: pic1,
+  },
+  {
+    id: 27,
+    date: "2024-12-15",
+    category: "events",
+    image: pic2,
+  },
+  {
+    id: 28,
+    date: "2024-12-15",
+    category: "events",
+    image: pic3,
+  },
+  {
+    id: 29,
+    date: "2024-12-15",
+    category: "events",
+    image: pic4,
+  },
+  {
+    id: 30,
+    date: "2024-12-15",
+    category: "events",
+    image: pic5,
+  },
+  {
+    id: 31,
+    date: "2024-12-15",
+    category: "events",
+    image: allStudents,
+  },
   {
     id: 1,
     date: "2024-12-15",
@@ -187,42 +237,7 @@ export const galleryData = [
     category: "labs",
     image: tomLab,
   },
-  {
-    id: 26,
-    date: "2024-12-15",
-    category: "events",
-    image: pic1,
-  },
-  {
-    id: 27,
-    date: "2024-12-15",
-    category: "events",
-    image: pic2,
-  },
-  {
-    id: 28,
-    date: "2024-12-15",
-    category: "events",
-    image: pic3,
-  },
-  {
-    id: 29,
-    date: "2024-12-15",
-    category: "events",
-    image: pic4,
-  },
-  {
-    id: 30,
-    date: "2024-12-15",
-    category: "events",
-    image: pic5,
-  },
-  {
-    id: 31,
-    date: "2024-12-15",
-    category: "events",
-    image: allStudents,
-  },
+
   {
     id: 32,
     date: "2024-12-15",
