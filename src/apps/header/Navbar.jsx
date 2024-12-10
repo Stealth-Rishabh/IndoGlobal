@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/IndoGlobalLogo.svg";
+import logo from "../../assets/logo.png";
 import logo2 from "../../assets/nav-logo-2.svg";
 import Drawer from "./Drawer";
 import {
@@ -22,7 +22,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Indo Global Group of Colleges"
-            className="h-12 object-contain"
+            className="h-12 sm:h-16 object-contain "
           />
           <img src={logo2} alt="22 Years" className="h-12 object-contain" />
         </div>

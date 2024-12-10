@@ -7,7 +7,7 @@ import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
 import PropTypes from "prop-types";
 import { Home, Users, BedDouble } from "lucide-react"; // Relevant Lucide icons for the new content
-
+import hostelImg from "../../assets/whyIndoGlobal/hostels.webp";
 const sidebarLinks = [
   {
     href: "/why-indo-global/industry-oriented-curriculum",
@@ -128,12 +128,11 @@ const HostelFeatures = () => {
             </div>
           </div>
           <div className="col-span-12 lg:col-span-6">
-            <div className="h-full relative rounded-lg shadow-xl ">
+            <div className="h-full relative rounded-lg  ">
               <div
-                className="bg-center bg-no-repeat bg-cover min-h-[350px] w-full lg:float-right lg:h-full shadow-xl"
+                className="bg-center bg-no-repeat bg-contain min-h-[350px] w-full lg:float-right lg:h-full "
                 style={{
-                  backgroundImage:
-                    "url(https://cdn.easyfrontend.com/pictures/featured/featured_10.png)",
+                  backgroundImage: `url(${hostelImg})`,
                 }}
               ></div>
               {/* <div className="relative mx-12 -mt-12 rounded-xl overflow-hidden shadow-xl z-20 lg:absolute lg:top-12 lg:bottom-12 lg:left-[65%] lg:right-12 lg:m-0 lg:mt-10">
