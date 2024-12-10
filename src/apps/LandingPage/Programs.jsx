@@ -158,6 +158,7 @@ export default function Programs() {
                             className="text-xs text-white bg-red-500 sm:text-base hover:bg-red-600 w-fit"
                             iconDiv="bg-red-800"
                             label="Apply Now"
+                            to="/contact-us"
                           />
                         </Link>
 

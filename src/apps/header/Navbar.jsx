@@ -8,7 +8,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
-
+import { Link } from "react-router-dom";
 import {navlinks} from './navData';
 
 export default function Navbar() {
@@ -19,11 +19,13 @@ export default function Navbar() {
     <div className="bg-red-600 px-4 py-4">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-10">
-          <img
-            src={logo}
-            alt="Indo Global Group of Colleges"
-            className="h-12 sm:h-16 object-contain "
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Indo Global Group of Colleges"
+              className="h-12 sm:h-16 object-contain "
+            />
+          </Link>
           <img src={logo2} alt="22 Years" className="h-12 object-contain" />
         </div>
         <nav>
