@@ -2,9 +2,7 @@ import React, { useState, useMemo } from "react";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
-  DialogTitle,
 } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -92,15 +90,30 @@ const Gallery = () => {
 
   const handleNext = (e) => {
     e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev + 1) % filteredEvents.length);
+    // Ensure currentImageIndex doesn't go out of bounds
+    setCurrentImageIndex((prev) => 
+      filteredEvents.length > 0 
+        ? (prev + 1) % filteredEvents.length 
+        : 0
+    );
   };
 
   const handlePrevious = (e) => {
     e.stopPropagation();
-    setCurrentImageIndex((prev) =>
-      prev === 0 ? filteredEvents.length - 1 : prev - 1
+    // Ensure currentImageIndex doesn't go out of bounds
+    setCurrentImageIndex((prev) => 
+      filteredEvents.length > 0 
+        ? (prev === 0 ? filteredEvents.length - 1 : prev - 1)
+        : 0
     );
   };
+
+  // Reset currentImageIndex when filteredEvents changes
+  React.useEffect(() => {
+    if (filteredEvents.length > 0 && currentImageIndex >= filteredEvents.length) {
+      setCurrentImageIndex(0);
+    }
+  }, [filteredEvents, currentImageIndex]);
 
   return (
     <section className="relative min-h-screen">
@@ -176,40 +189,42 @@ const Gallery = () => {
           ))}
         </div>
 
-        <Dialog open={showModal} onOpenChange={setShowModal}>
-          <DialogContent className="p-0 h-screen max-w-screen bg-black/50">
-            <DialogHeader className="absolute top-2 right-2 z-50">
-              <button
-                onClick={() => setShowModal(false)}
-                className="p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
-              >
-                <X size={24} />
-              </button>
-            </DialogHeader>
+        {filteredEvents.length > 0 && (
+          <Dialog open={showModal} onOpenChange={setShowModal}>
+            <DialogContent className="p-0 h-screen max-w-screen bg-black/50">
+              <DialogHeader className="absolute top-2 right-2 z-50">
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-white/70 hover:text-black"
+                >
+                  <X size={24} />
+                </button>
+              </DialogHeader>
 
-            <div className="flex relative justify-center items-center w-full h-full">
-              <button
-                onClick={handlePrevious}
-                className="absolute left-4 top-1/2 p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
-              >
-                <ChevronLeft size={24} />
-              </button>
+              <div className="flex relative justify-center items-center w-full h-full">
+                <button
+                  onClick={handlePrevious}
+                  className="absolute left-4 top-1/2 p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-white/70 hover:text-black"
+                >
+                  <ChevronLeft size={24} />
+                </button>
 
-              <img
-                src={filteredEvents[currentImageIndex].image}
-                alt={filteredEvents[currentImageIndex].title}
-                className="sm:h-[80vh] w-full sm:w-auto h-auto object-contain sm:rounded-lg"
-              />
+                <img
+                  src={filteredEvents[currentImageIndex].image}
+                  alt={filteredEvents[currentImageIndex].title}
+                  className="sm:h-[80vh] w-full sm:w-auto h-auto object-contain sm:rounded-lg"
+                />
 
-              <button
-                onClick={handleNext}
-                className="absolute right-4 top-1/2 p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-black/70"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
-          </DialogContent>
-        </Dialog>
+                <button
+                  onClick={handleNext}
+                  className="absolute right-4 top-1/2 p-2 text-white rounded-full transition-colors bg-black/50 hover:bg-white/70 hover:text-black"
+                >
+                  <ChevronRight size={24} />
+                </button>
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
 
         {filteredEvents.length === 0 && (
           <div className="py-12 text-center text-gray-500">
