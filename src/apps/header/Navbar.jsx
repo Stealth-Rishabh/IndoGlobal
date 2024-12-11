@@ -10,10 +10,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 import {navlinks} from './navData';
+import React, { useState } from 'react';
 
 export default function Navbar() {
   const location = useLocation();
-  
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
     <div className="bg-red-600 px-4 py-4">
@@ -30,10 +31,13 @@ export default function Navbar() {
         </div>
         <nav>
           <ul className="hidden lg:flex space-x-4">
-            {navlinks.map((link) => (
-              <li key={link.name}>
+            {navlinks.map((link, index) => (
+              <li key={link.name}
+                  onMouseEnter={() => setOpenDropdown(index)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+              >
                 {link.dropdown ? (
-                  <DropdownMenu>
+                  <DropdownMenu open={openDropdown === index}>
                     <DropdownMenuTrigger asChild>
                       <button
                         className={
