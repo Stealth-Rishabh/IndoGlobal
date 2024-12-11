@@ -162,15 +162,16 @@ const EventCard = ({
         <div className="flex items-center text-xs font-medium sm:text-sm">
           <Calendar size={20} className="mr-2 text-white" /> {date}
         </div>
-        <Link to="/spotlights">
+       
           <ButtonSq
             className="text-xs w-fit bg-secondary-color hover:bg-blue-700 sm:text-base"
             // label={registerLabel}
             label="Know More"
             iconStyle="text-primary-color"
             iconDiv="bg-white"
+            to='/spotlights'
           />
-        </Link>
+        
       </div>
     </div>
   );
