@@ -12,6 +12,7 @@ import Heading from "../../components/Heading";
 import Container from "../../components/wrappers/Container";
 import PlacementCard from "./PlacementCard";
 import img1 from "../../assets/placement-img.svg";
+import img2 from "../../assets/girl.png";
 import logo from "../../assets/placement-logo.svg";
 import PlacementStats from "./PlacementStats";
 import { motion } from 'framer-motion';
@@ -42,7 +43,7 @@ const Placements = () => {
       company: "Cerner Healthcare",
       salary: "₹40 LPA",
       location: "Bengaluru",
-      imageUrl: img1,
+      imageUrl: img2,
       logoUrl: logo,
     },
     {
@@ -52,7 +53,7 @@ const Placements = () => {
       salary: "₹30 LPA",
       location: "Bengaluru",
       imageUrl: img1,
-      logoUrl: logo,
+      logoUrl: "https://static.vecteezy.com/system/resources/previews/014/018/563/large_2x/amazon-logo-on-transparent-background-free-vector.jpg",
     },
     {
       bgColor: "bg-gray-900",
@@ -61,7 +62,7 @@ const Placements = () => {
       salary: "₹20 LPA",
       location: "Chandigarh",
       imageUrl: img1,
-      logoUrl: logo,
+      logoUrl: "https://images.crunchbase.com/image/upload/c_pad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/v1476704217/krjwodgdds04cokejmgr.png",
     },
     {
       bgColor: "bg-blue-900",
@@ -70,7 +71,7 @@ const Placements = () => {
       salary: "₹18 LPA",
       location: "Chandigarh",
       imageUrl: img1,
-      logoUrl: logo,
+      logoUrl: "https://admin.competition.cerebry.co/static/images/svg/logo.svg",
     },
   ];
 
