@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -20,6 +20,7 @@ import Newsletter from "../../components/Newsletter";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import img from "../../assets/breadcrumb.png";
 import { galleryData } from "./galleryData";
+
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Gallery" }];
 
 const categories = [
@@ -37,25 +38,6 @@ const dateFilters = [
   { id: "upcoming", label: "Upcoming Events" },
 ];
 
-// Simple date formatting function
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-};
-
-// Simple date comparison functions
-const isDateBefore = (dateString, compareDate) => {
-  return new Date(dateString) < compareDate;
-};
-
-const isDateAfter = (dateString, compareDate) => {
-  return new Date(dateString) > compareDate;
-};
-
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [dateFilter, setDateFilter] = useState("all");
@@ -63,7 +45,7 @@ const Gallery = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const gallery = useMemo(() => galleryData, []);
+  const gallery = useMemo(() => galleryData || [], []);
 
   const filteredEvents = useMemo(() => {
     const today = new Date();
@@ -74,9 +56,9 @@ const Gallery = () => {
 
       let dateMatch = true;
       if (dateFilter === "past") {
-        dateMatch = isDateBefore(event.date, today);
+        dateMatch = new Date(event.date) < today;
       } else if (dateFilter === "upcoming") {
-        dateMatch = isDateAfter(event.date, today);
+        dateMatch = new Date(event.date) > today;
       }
 
       return categoryMatch && dateMatch;
@@ -84,33 +66,32 @@ const Gallery = () => {
   }, [gallery, selectedCategory, dateFilter]);
 
   const handleImageClick = (index) => {
-    setCurrentImageIndex(index);
-    setShowModal(true);
+    if (filteredEvents.length > 0) {
+      setCurrentImageIndex(index);
+      setShowModal(true);
+    }
   };
 
-  const handleNext = (e) => {
-    e.stopPropagation();
-    // Ensure currentImageIndex doesn't go out of bounds
-    setCurrentImageIndex((prev) => 
-      filteredEvents.length > 0 
-        ? (prev + 1) % filteredEvents.length 
-        : 0
-    );
+  const handleNext = () => {
+    if (filteredEvents.length > 0) {
+      setCurrentImageIndex((prev) => (prev + 1) % filteredEvents.length);
+    }
   };
 
-  const handlePrevious = (e) => {
-    e.stopPropagation();
-    // Ensure currentImageIndex doesn't go out of bounds
-    setCurrentImageIndex((prev) => 
-      filteredEvents.length > 0 
-        ? (prev === 0 ? filteredEvents.length - 1 : prev - 1)
-        : 0
-    );
+  const handlePrevious = () => {
+    if (filteredEvents.length > 0) {
+      setCurrentImageIndex((prev) => 
+        prev === 0 ? filteredEvents.length - 1 : prev - 1
+      );
+    }
   };
 
-  // Reset currentImageIndex when filteredEvents changes
-  React.useEffect(() => {
-    if (filteredEvents.length > 0 && currentImageIndex >= filteredEvents.length) {
+  // Reset modal state when filtered events change
+  useEffect(() => {
+    if (filteredEvents.length === 0) {
+      setShowModal(false);
+      setCurrentImageIndex(0);
+    } else if (currentImageIndex >= filteredEvents.length) {
       setCurrentImageIndex(0);
     }
   }, [filteredEvents, currentImageIndex]);
@@ -189,7 +170,8 @@ const Gallery = () => {
           ))}
         </div>
 
-        {filteredEvents.length > 0 && (
+        {/* Modal for Image Viewing */}
+        {showModal && filteredEvents.length > 0 && filteredEvents[currentImageIndex] && (
           <Dialog open={showModal} onOpenChange={setShowModal}>
             <DialogContent className="p-0 h-screen max-w-screen bg-black/50">
               <DialogHeader className="absolute top-2 right-2 z-50">
@@ -209,11 +191,13 @@ const Gallery = () => {
                   <ChevronLeft size={24} />
                 </button>
 
-                <img
-                  src={filteredEvents[currentImageIndex].image}
-                  alt={filteredEvents[currentImageIndex].title}
-                  className="sm:h-[80vh] w-full sm:w-auto h-auto object-contain sm:rounded-lg"
-                />
+                {filteredEvents[currentImageIndex]?.image && (
+                  <img
+                    src={filteredEvents[currentImageIndex].image}
+                    alt={filteredEvents[currentImageIndex].title || "Gallery Image"}
+                    className="sm:h-[80vh] w-full sm:w-auto h-auto object-contain sm:rounded-lg"
+                  />
+                )}
 
                 <button
                   onClick={handleNext}

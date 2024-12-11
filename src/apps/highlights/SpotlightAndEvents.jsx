@@ -296,57 +296,82 @@ const SpotlightAndEvents = () => {
           )}
         </div>
       </Container>
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-fit max-w-[93%] rounded-lg">
+      <Dialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen}
+        modal={true}
+      >
+        <DialogContent 
+          className="w-[95%] max-w-[600px] rounded-lg overflow-y-auto max-h-[90vh]"
+        >
           {selectedEvent && (
             <>
               <DialogHeader className="px-1">
-                <DialogTitle>{selectedEvent.title}</DialogTitle>
-                {/* <DialogDescription>
-                  {selectedEvent.description}
-                </DialogDescription> */}
+                <DialogTitle className="text-xl font-bold">
+                  {selectedEvent.title}
+                </DialogTitle>
               </DialogHeader>
               <div className="mt-2 space-y-3">
-                {selectedEvent.gallery.length > 0 ? (
-                  <Carousel>
-                    <CarouselContent className="relative ml-0">
-                      {selectedEvent.gallery.map((image) => (
-                        <CarouselItem key={image.id} className="w-full px-1">
-                          <img
-                            src={image}
-                            alt={image}
-                            className="object-contain w-full  rounded-md h-fit sm:h-[70vh]"
-                          />
+                {selectedEvent.gallery && selectedEvent.gallery.length > 0 ? (
+                  <Carousel 
+                    className="w-full"
+                    opts={{
+                      align: "start",
+                      loop: true,
+                    }}
+                  >
+                    <CarouselContent className="flex">
+                      {selectedEvent.gallery.map((image, index) => (
+                        <CarouselItem 
+                          key={index} 
+                          className="basis-full flex justify-center items-center"
+                        >
+                          <div className="w-full max-h-[60vh] flex justify-center">
+                            <img
+                              src={image}
+                              alt={`Gallery image ${index + 1}`}
+                              className="max-w-full max-h-full object-contain rounded-md"
+                              style={{ 
+                                maxWidth: '100%', 
+                                maxHeight: '60vh', 
+                                objectFit: 'contain' 
+                              }}
+                            />
+                          </div>
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious
-                      className="absolute -translate-y-1/2  top-1/2 left-4"
-                      iconStyle="w-1/2 sm:w-3/4"
+                    <CarouselPrevious 
+                      className="absolute left-2 top-1/2 -translate-y-1/2 z-10"
                     />
-                    <CarouselNext
-                      className="absolute -translate-y-1/2  top-1/2 right-4"
-                      iconStyle="w-1/2 sm:w-3/4"
+                    <CarouselNext 
+                      className="absolute right-2 top-1/2 -translate-y-1/2 z-10"
                     />
                   </Carousel>
                 ) : (
-                  <img
-                    src={selectedEvent.image}
-                    alt={`Event ${selectedEvent.id}`}
-                    className="object-cover w-full rounded-md h-96"
-                  />
+                  <div className="w-full max-h-[60vh] flex justify-center">
+                    <img
+                      src={selectedEvent.image}
+                      alt={`Event ${selectedEvent.id}`}
+                      className="max-w-full max-h-full object-contain rounded-md"
+                      style={{ 
+                        maxWidth: '100%', 
+                        maxHeight: '60vh', 
+                        objectFit: 'contain' 
+                      }}
+                    />
+                  </div>
                 )}
-                <p className="text-muted-foreground px-1">
-                  {selectedEvent.description}
-                </p>
-                <div className="flex justify-between px-1">
-                  <p className="text-xs sm:text-sm ">
-                    {/* <strong>Date:</strong> {formatDate(selectedEvent.date)} */}
-                    <strong>Date:</strong> {selectedEvent.date}
+                
+                <div className="px-1 space-y-2">
+                  <p className="text-muted-foreground">
+                    {selectedEvent.description}
                   </p>
-                  <p className="text-xs sm:text-sm">
-                    {/* <strong>Category:</strong> {selectedEvent.category} */}
-                  </p>
+                  <div className="flex justify-between text-sm">
+                    <p>
+                      <strong>Date:</strong> {selectedEvent.date}
+                    </p>
+                  </div>
                 </div>
               </div>
             </>
