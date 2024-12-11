@@ -14,49 +14,53 @@ import MandatoryDisclosure from "../../assets/pdfs/Mandatory-Discl-IGCE.pdf";
 export default function Footer() {
   const footerSections = [
     {
-      label: "About Us",
-      items: [
-        { name: "Overview", path: "/" },
-        { name: "Milestones", path: "/" },
-        { name: "Accomplishments", path: "/" },
-        { name: "Leadership Team", path: "/" },
-        { name: "Academic Advisory Board", path: "/" },
-        { name: "Governing Body", path: "/" },
-      ],
-    },
-    {
-      label: "Admissions",
-      items: [
-        { name: "Overview", path: "/admissions" },
-        { name: "Eligibility", path: "/" },
-        { name: "Program Fee", path: "/" },
-        { name: "Admissions Process", path: "/" },
-        { name: "Merit Scholarships", path: "/" },
-        { name: "Financial Aid & Loans", path: "/" },
-      ],
-    },
-    {
       label: "Quick Links",
       items: [
-        { name: "Contact Us", path: "/contact-us" },
-        { name: "Pay Fee Online", path: "/" },
-        { name: "Enquire Now", path: "/" },
-        { name: "Refund Policy", path: "/" },
-        { name: "Online Learning Resources", path: "/online-learning-resources" },
+        { name: "Admissions", path: "/admissions" },
+        { name: "Courses", path: "/courses" },
+        { name: "Events & Spotights", path: "/spotlights" },
+        {
+          name: "Online Learning Resources",
+          path: "/online-learning-resources",
+        },
+        {name: "Placements", path: "/placements/campus-recruitments" },
         { name: "Blogs", path: "/blogs" },
+        { name: "Contact Us", path: "/contact-us" },
       ],
     },
     {
-      label: "Resources",
+      label: "About Us",
       items: [
-        { name: "News", path: "/" },
-        { name: "Events", path: "/spotlights" },
-        { name: "Research", path: "/" },
-        { name: "Download Brochures", path: "/" },
-        { name: "Testimonials", path: "/" },
-        { name: "Sitemap", path: "/" },
+        { name: "Accreditation", path: "/about/accreditation" },
+        { name: "Location", path: "/about/location" },
+        { name: "Vision & Mission", path: "/about/vision-mission" },
+        { name: "Leadership Team", path: "/about/leadership" },
+        { name: "Eminent Faculty", path: "/about/eminent-faculty" },
       ],
     },
+    // {
+    //   label: "Admissions",
+    //   items: [
+    //     { name: "Overview", path: "/admissions" },
+    //     { name: "Eligibility", path: "/" },
+    //     { name: "Program Fee", path: "/" },
+    //     { name: "Admissions Process", path: "/" },
+    //     { name: "Merit Scholarships", path: "/" },
+    //     { name: "Financial Aid & Loans", path: "/" },
+    //   ],
+    // },
+
+    // {
+    //   label: "Resources",
+    //   items: [
+    //     { name: "News", path: "/" },
+    //     { name: "Events", path: "/spotlights" },
+    //     { name: "Research", path: "/" },
+    //     { name: "Download Brochures", path: "/" },
+    //     { name: "Testimonials", path: "/" },
+    //     { name: "Sitemap", path: "/" },
+    //   ],
+    // },
     {
       label: "Student Services",
       items: [
@@ -71,8 +75,8 @@ export default function Footer() {
     {
       label: "More Info",
       items: [
-        { 
-          name: "Mandatory Disclosure", 
+        {
+          name: "Mandatory Disclosure",
           path: MandatoryDisclosure,
           isDownload: true,
           // icon: Download
@@ -88,18 +92,30 @@ export default function Footer() {
 
   const socialIcons = [
     // { name: "Linkedin", icon: Linkedin },
-    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/indoglobalcolleges/" },
-    { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/IndoGlobalOfficial" },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      href: "https://www.instagram.com/indoglobalcolleges/",
+    },
+    {
+      name: "Facebook",
+      icon: Facebook,
+      href: "https://www.facebook.com/IndoGlobalOfficial",
+    },
     // { name: "Twitter", icon: Twitter },
-    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/channel/UCvSPn6SHqEnB_knlejlzV7A" },
+    {
+      name: "YouTube",
+      icon: Youtube,
+      href: "https://www.youtube.com/channel/UCvSPn6SHqEnB_knlejlzV7A",
+    },
   ];
 
   const handleItemClick = (item) => {
     if (item.isDownload) {
       // Trigger download
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = item.path;
-      link.download = 'Mandatory_Disclosure.pdf'; // Name for the downloaded file
+      link.download = "Mandatory_Disclosure.pdf"; // Name for the downloaded file
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -110,7 +126,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white pt-10 text-lg">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-5">
         {/* First section with social icons and address */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 mb-8">
           <div>
             <h2 className=" sm:text-3xl font-bold text-red-600 mb-4">
               Explore. Discover. Connect.
