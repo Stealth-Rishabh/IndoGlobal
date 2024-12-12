@@ -7,14 +7,95 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuPortal,
+  DropdownMenuSubContent,
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
-import {navlinks} from './navData';
-import React, { useState } from 'react';
+import { navlinks } from "./navData";
+import React, { useState, useRef } from "react";
 
 export default function Navbar() {
   const location = useLocation();
   const [openDropdown, setOpenDropdown] = useState(null);
+  const timeoutRef = useRef(null);
+
+  const handleMouseEnter = (index) => {
+    clearTimeout(timeoutRef.current);
+    setOpenDropdown(index);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 200);
+  };
+
+  const renderSubDropdown = (subdropdown) => {
+    return subdropdown.map((subItem) => (
+      <DropdownMenuSub key={subItem.name}>
+        <DropdownMenuSubTrigger className="px-4 py-2">
+          {subItem.name}
+        </DropdownMenuSubTrigger>
+        <DropdownMenuPortal>
+          <DropdownMenuSubContent
+            onMouseEnter={() => clearTimeout(timeoutRef.current)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {subItem.courses
+              ? subItem.courses.map((course) => (
+                  <DropdownMenuItem key={course.name} asChild>
+                    <NavLink
+                      to={course.path}
+                      className={({ isActive }) =>
+                        `w-full px-4 py-2 ${
+                          isActive ? "text-red-600" : "hover:text-red-600"
+                        }`
+                      }
+                    >
+                      {course.name}
+                    </NavLink>
+                  </DropdownMenuItem>
+                ))
+              : null}
+          </DropdownMenuSubContent>
+        </DropdownMenuPortal>
+      </DropdownMenuSub>
+    ));
+  };
+
+  const renderDropdownContent = (link) => {
+    return (
+      <DropdownMenuContent
+        align="start"
+        className="mt-2"
+        onMouseEnter={() => clearTimeout(timeoutRef.current)}
+        onMouseLeave={handleMouseLeave}
+      >
+        {link.dropdown?.map((item) => {
+          if (item.subdropdown) {
+            return renderSubDropdown(item.subdropdown);
+          }
+
+          return (
+            <DropdownMenuItem key={item.name} asChild>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  `w-full px-4 py-2 ${
+                    isActive ? "text-red-600" : "hover:text-red-600"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            </DropdownMenuItem>
+          );
+        })}
+      </DropdownMenuContent>
+    );
+  };
 
   return (
     <div className="bg-red-600 px-4 py-4">
@@ -32,9 +113,11 @@ export default function Navbar() {
         <nav>
           <ul className="hidden lg:flex space-x-4">
             {navlinks.map((link, index) => (
-              <li key={link.name}
-                  onMouseEnter={() => setOpenDropdown(index)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+              <li
+                key={link.name}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
               >
                 {link.dropdown ? (
                   <DropdownMenu open={openDropdown === index}>
@@ -51,26 +134,7 @@ export default function Navbar() {
                         {link.name}
                       </button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="start">
-                      {link.dropdown.map((dropdownLink) => (
-                        <DropdownMenuItem
-                          key={dropdownLink.name}
-                          asChild
-                          className="pr-6"
-                        >
-                          <NavLink
-                            to={dropdownLink.path}
-                            className={({ isActive }) =>
-                              isActive
-                                ? "w-full px-2 py-1.5 text-red-600"
-                                : "w-full px-2 py-1.5 hover:text-red-600"
-                            }
-                          >
-                            {dropdownLink.name}
-                          </NavLink>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
+                    {renderDropdownContent(link)}
                   </DropdownMenu>
                 ) : (
                   <NavLink
