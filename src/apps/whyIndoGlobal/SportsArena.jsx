@@ -2,7 +2,7 @@
 import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
-import img from "../../assets/breadcrumb.png";
+import img from "../../assets/aboutUsBanner.webp";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
@@ -34,7 +34,7 @@ const SportsArena = () => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Why Indo Global"
+        title="Sports Arena"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
