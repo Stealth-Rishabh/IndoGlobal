@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Book,
   Users,
@@ -18,7 +17,7 @@ import Container from "../../components/wrappers/Container";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
-import img from "../../assets/breadcrumb.png";
+import img from "../../assets/placementsBanner.webp";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -99,7 +98,7 @@ const PlacementActivities = () => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Placements"
+        title="Placement Activities"
         imageSrc={img}
         imageAlt="Placement Activities"
         breadcrumbItems={breadcrumbItems}

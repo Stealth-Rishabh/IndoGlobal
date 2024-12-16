@@ -1,38 +1,11 @@
 import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
-import img from "../../assets/breadcrumb.png";
+import img from "../../assets/placementsBanner.webp";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
 
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
-// import { Badge } from "@/components/ui/badge";
-import {
-  ChevronDown,
-  ChevronUp,
-  Search,
-  Book,
-  Database,
-  Cpu,
-  Cloud,
-  Cog,
-  Zap,
-  Briefcase,
-  Globe,
-  Brain,
-  Heart,
-} from "lucide-react";
-// import InfiniteCarousel from "../../components/ui/InfiniteCarousel";
 import IconMarquee from "./IconMarquee";
 // import ashoklayland from "../../assets/about/tieUps/ashoklayland.png";
 import cisco from "../../assets/about/tieUps/cisco.png";
@@ -89,7 +62,7 @@ const OurRecruiters = () => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Placements"
+        title="Our Recruiters"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}

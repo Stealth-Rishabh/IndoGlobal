@@ -2,8 +2,7 @@ import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
 // import Header from "../header/Header";
-import img from "../../assets/breadcrumb.png";
-import IconMarquee from "../aboutPage/IconMarquee";
+import img from "../../assets/placementsBanner.webp";
 // import { useEffect, useState } from "react";
 // import { Button } from "@/components/ui/button";
 import Stats from "../../components/Stats";
@@ -30,7 +29,7 @@ const IndustrySpeaks = () => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Placements"
+        title="Industry Speaks"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}

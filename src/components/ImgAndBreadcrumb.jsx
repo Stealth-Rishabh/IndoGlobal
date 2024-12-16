@@ -39,7 +39,7 @@ const ImgAndBreadcrumb = ({ imageSrc, imageAlt, breadcrumbItems, title }) => {
       />
       <WordPullUp
         words={title}
-        className="sm:text-6xl text-white font-extrabold absolute top-10 sm:top-[45%] tracking-wide text-center leading-tight"
+        className="sm:text-6xl text-white font-extrabold absolute top-12 sm:top-[45%] tracking-wide text-center leading-tight"
       />
       <Breadcrumb className="relative z-10 -mb-8 transition-all duration-300 ease-in-out hover:drop-shadow-2xl drop-shadow-xl hover:scale-105">
         <BreadcrumbList className="px-8 py-4 bg-red-500 rounded-full">

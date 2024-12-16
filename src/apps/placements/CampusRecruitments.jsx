@@ -3,7 +3,7 @@ import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
 // import Header from "../header/Header";
-import img from "../../assets/breadcrumb.png";
+import img from "../../assets/placementsBanner.webp";
 // import { useEffect, useState } from "react";
 // import { Button } from "@/components/ui/button";
 import Stats from "../../components/Stats";
@@ -98,7 +98,7 @@ const CampusRecruitments = () => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="Placements"
+        title="Campus Recruitments"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
