@@ -62,7 +62,7 @@ const Drawer = () => {
                             <ul className="space-y-1">
                                 {navlinks.map((item, index) => (
                                     <li key={index}>
-                                        {item.dropdown ? (
+                                        {item.dropdown && item.name !== "Courses" ? (
                                             <CollapsibleNavItem item={item} />
                                         ) : (
                                             <SheetClose asChild>
@@ -86,3 +86,5 @@ const Drawer = () => {
 };
 
 export default Drawer;
+
+
