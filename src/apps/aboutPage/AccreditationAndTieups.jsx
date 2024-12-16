@@ -2,7 +2,7 @@ import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
 // import Header from "../header/Header";
-import img from "../../assets/breadcrumb.png";
+import img from "../../assets/aboutUsBanner.webp";
 import IconMarquee from "./IconMarquee";
 // import { useEffect, useState } from "react";
 // import { Button } from "@/components/ui/button";
@@ -55,7 +55,7 @@ const AccreditationAndTieups = () => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="About Us"
+        title="Accreditation & Tie-ups"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
@@ -64,7 +64,7 @@ const AccreditationAndTieups = () => {
         <div className="md:sticky md:top-5 self-start">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
-        <div className="col-span-1 md:col-span-3 pt-12">
+        <div className="col-span-1 md:col-span-3 sm:pt-12">
           <Heading
             title="Accreditation & Tie-ups"
             titleClassName="text-secondary-color text-left lg:text-5xl"

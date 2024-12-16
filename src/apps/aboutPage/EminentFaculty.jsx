@@ -2,7 +2,7 @@ import Container from "../../components/wrappers/Container";
 import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 // import Header from "../header/Header";
-import img from "../../assets/breadcrumb.png";
+import img from "../../assets/aboutUsBanner.webp";
 // import { Button } from "@/components/ui/button";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
@@ -26,7 +26,7 @@ const EminentFaculty = () => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
-        title="About Us"
+        title="Eminent Faculty"
         imageSrc={img}
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
