@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useState } from 'react';
 
 // import Container from "../../components/wrappers/Container"
 import AboutIndoGlobal from "./AboutIndoGolbal";
@@ -12,6 +13,7 @@ import Programs from "./Programs";
 import RankSlider from "./RankSlider";
 import Stats from "./Stats";
 import { Testimonials } from "./testimonials/Testimonial";
+import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 
 const sectionVariants = {
   hidden: { scale: 0.8, opacity: 0 }, // Starting state (small and transparent)
@@ -26,6 +28,7 @@ const sectionVariants = {
 };
 
 const Landing = () => {
+  const [showWidget, setShowWidget] = useState(false);
   const [heroRef, heroInView] = useInView({
     threshold: 0.2,
     triggerOnce: true,
@@ -66,7 +69,22 @@ const Landing = () => {
   });
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden relative">
+      <button 
+        onClick={() => setShowWidget(!showWidget)}
+        className="fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90"
+      >
+        Quick Enquiry
+        
+
+      </button>
+
+      {showWidget && (
+        <NoPaperFormsWidget 
+          className="fixed top-0 right-0 translate-y-1/2 z-[9999]"
+        />
+      )}
+
       <motion.div
         ref={heroRef}
         variants={sectionVariants}

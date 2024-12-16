@@ -94,3 +94,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #414141;
 }
+
+
+.widget_container {
+  padding: 23px !important;
+  background-color: #043957;
+  color: #fff;
+}

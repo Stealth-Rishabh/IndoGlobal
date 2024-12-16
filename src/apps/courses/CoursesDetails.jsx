@@ -2,7 +2,7 @@
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
 import img from "../../assets/coursesBanner.webp";
-
+import { useState } from "react";
 import CourseSidebar from "../../components/CourseSidebar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -19,8 +19,9 @@ import { COURSE_DETAILS } from "./course-details";
 import { Star, CheckSquare } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 const CoursesDetails = () => {
+  const [showWidget, setShowWidget] = useState(false);
   const { coursePath } = useParams();
   const courseData = COURSE_DETAILS.find(
     (course) => course.path === coursePath
@@ -48,6 +49,17 @@ const CoursesDetails = () => {
       <Helmet>
         <title>{courseData.title} | Indo Global Colleges</title>
       </Helmet>
+      <button 
+        onClick={() => setShowWidget(!showWidget)}
+        className="fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90"
+      >
+        Quick Enquiry
+      </button>
+      {showWidget && (
+        <NoPaperFormsWidget 
+          className="fixed top-0 right-0 translate-y-1/2 z-[9999]"
+        />
+      )}
       <div className="relative min-h-screen">
         <ImgAndBreadcrumb
           title={courseData.group}

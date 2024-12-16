@@ -17,6 +17,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 const collegeCourses = {
   postgraduate: [
     {
@@ -139,9 +140,22 @@ const TABS = [
 
 const Admission = () => {
   const [activeTab, setActiveTab] = useState(TABS[0].value);
-
+  const [showWidget, setShowWidget] = useState(false);
   return (
     <section className="relative min-h-screen">
+       <button 
+        onClick={() => setShowWidget(!showWidget)}
+        className="fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90"
+      >
+        Quick Enquiry
+        
+
+      </button>
+      {showWidget && (
+        <NoPaperFormsWidget 
+          className="fixed top-0 right-0 translate-y-1/2 z-[9999]"
+        />
+      )}
       <ImgAndBreadcrumb
         title="Admissions"
         imageSrc={img}
