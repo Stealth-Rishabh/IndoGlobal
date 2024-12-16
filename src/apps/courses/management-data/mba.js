@@ -16,6 +16,7 @@ import {
     path: "master-of-business-administration",
     title: "Master of Business Administration (MBA)",
     category: "Management and Technology",
+    group: "MBA Course",
     image: img,
     badges: [
       { icon: Clock, text: "2 Years" },

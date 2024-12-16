@@ -14,6 +14,7 @@ export const BTECH_IN_ELECTRONICS_COMMUNICATION_ENGG = {
     path: "btech-electronics-communication-engineering",
     title: "B.Tech Electronics & Communication Engineering",
     category: "B.Tech / B.tech Lateral Entry",
+    group: "B.Tech Course",
     image: img,
     badges: [
         { icon: Clock, text: "4 Years" },

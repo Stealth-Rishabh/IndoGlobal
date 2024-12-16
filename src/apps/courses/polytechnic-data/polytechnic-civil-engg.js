@@ -13,6 +13,7 @@ export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
     path: "polytechnic-civil-engineering",
     title: "Polytechnic (Diploma) in Civil Engineering",
     category: "Polytechnic / Polytechnic Lateral Entry", 
+    group: "Polytechnic Course",
     image: img,
     badges: [
         { icon: Clock, text: "3 Years" },

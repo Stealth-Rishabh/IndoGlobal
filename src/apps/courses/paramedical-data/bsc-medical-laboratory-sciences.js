@@ -14,6 +14,7 @@ export const BSC_MEDICAL_LABORATORY_SCIENCES = {
   path: "bsc-in-medical-laboratory-science",
   title: "B.Sc Medical Laboratory Sciences",
   category: "Paramedical Courses",
+  group: "Paramedical Course",
   image: img,
   badges: [
     { icon: Clock, text: "3 Years" },

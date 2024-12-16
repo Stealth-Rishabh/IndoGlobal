@@ -14,6 +14,7 @@ export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
   path: "bsc-in-operation-theatre",
   title: "B.Sc Operation Theatre Technology",
   category: "Paramedical Courses",
+  group: "Paramedical Course",
   image: img,
   badges: [
     { icon: Clock, text: "4 Years" },

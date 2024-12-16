@@ -14,6 +14,7 @@ export const POLYTECHNIC_IN_MECHANICAL_ENGINEERING = {
     path: "polytechnic-mechanical-engineering",
     title: "Polytechnic (Diploma) in Mechanical Engineering",
     category: "Polytechnic / Polytechnic Lateral Entry",
+    group: "Polytechnic Course",
     image: img,
     badges: [
         { icon: Clock, text: "3 Years" },

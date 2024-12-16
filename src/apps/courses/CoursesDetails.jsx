@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
-import img from "../../assets/breadcrumb.png";
-import Stats from "../../components/Stats";
-import Newsletter from "../../components/Newsletter";
+import img from "../../assets/coursesBanner.webp";
+
 import CourseSidebar from "../../components/CourseSidebar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -51,7 +50,7 @@ const CoursesDetails = () => {
       </Helmet>
       <div className="relative min-h-screen">
         <ImgAndBreadcrumb
-          title="Courses"
+          title={courseData.group}
           imageSrc={img}
           imageAlt="Description of the image"
           breadcrumbItems={breadcrumbItems}

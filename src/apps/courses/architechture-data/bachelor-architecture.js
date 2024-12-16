@@ -9,11 +9,12 @@ import {
   } from "lucide-react";
   import React from "react";
   import img from "../../../assets/courses/barch.webp";
-
+  
   export const BACHELOR_OF_ARCHITECTURE = {
     path: "bachelors-of-architecture",
     title: "Bachelor of Architecture (B.Arch)",
     category: "Architecture",
+    group: "B.Arch Course",
     image: img,
     badges: [
       { icon: Clock, text: "5 Years" },

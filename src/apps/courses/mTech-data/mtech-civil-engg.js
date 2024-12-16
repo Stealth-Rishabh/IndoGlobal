@@ -14,6 +14,7 @@ export const MTECH_IN_CIVIL_ENGINEERING = {
     path: "mtech-civil-engineering",
     title: "M.Tech Civil Engineering",
     category: "M.Tech",
+    group: "M.Tech Course",
     image: img,
     badges: [
         { icon: Clock, text: "2 Years" },

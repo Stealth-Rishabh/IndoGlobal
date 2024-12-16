@@ -14,6 +14,7 @@ import {
     path: "btech-mechanical-engineering",
     title: "B.Tech Mechanical Engineering",
     category: "B.Tech / B.tech Lateral Entry",
+    group: "B.Tech Course",
     image: img,
     badges: [
       { icon: Clock, text: "4 Years" },

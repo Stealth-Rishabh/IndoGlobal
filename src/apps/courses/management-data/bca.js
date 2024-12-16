@@ -14,6 +14,7 @@ import {
     path: "bachelor-of-computer-applications",
     title: "Bachelor of Computer Applications (BCA)",
     category: "Management and Technology",
+    group: "BCA Course",
     image: img,
     badges: [
       { icon: Clock, text: "3 Years" },

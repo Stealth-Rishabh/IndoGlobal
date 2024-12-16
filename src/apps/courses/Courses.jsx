@@ -1,11 +1,9 @@
 import { useState, useMemo } from "react";
 import { Search } from "lucide-react";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
-import img from "../../assets/breadcrumb.png";
+import img from "../../assets/coursesBanner.webp";
 import Container from "../../components/wrappers/Container";
 import Heading from "../../components/Heading";
-import Stats from "../../components/Stats";
-import Newsletter from "../../components/Newsletter";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "../../components/ui/card";

@@ -14,6 +14,7 @@ export const BSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
   path: "bsc-radiology-and-imaging-technology",
   title: "B.Sc Radiology & Imaging Technology",
   category: "Paramedical Courses",
+  group: "Paramedical Course",
   image: img,
   badges: [
     { icon: Clock, text: "4 Years" },

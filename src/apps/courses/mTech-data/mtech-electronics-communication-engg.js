@@ -13,6 +13,7 @@ export const MTECH_IN_ELECTRONICS_COMMUNICATION_ENGINEERING = {
   path: "mtech-electronics-communication-engineering",
   title: "M.Tech Electronics & Communication Engineering",
   category: "M.Tech",
+  group: "M.Tech Course",
   image: img,
   badges: [
     { icon: Clock, text: "2 Years" },

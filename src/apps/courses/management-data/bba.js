@@ -15,6 +15,7 @@ import {
     path: "bachelor-of-business-administration",
     title: "Bachelor of Business Administration (BBA)",
     category: "Management and Technology",
+    group: "BBA Course",
     image: img,
     badges: [
       { icon: Clock, text: "3 Years" },

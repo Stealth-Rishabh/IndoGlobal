@@ -14,6 +14,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
     path: "mtech-computer-science-engineering",
     title: "M.Tech Computer Science Engineering",
     category: "M.Tech",
+    group: "M.Tech Course",
     image: img,
     badges: [
         { icon: Clock, text: "2 Years" },

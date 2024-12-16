@@ -13,6 +13,7 @@ export const BTECH_IN_COMP_ENGG = {
   path: "btech-computer-science-engineering",
   title: "B.Tech Computer Science Engineering",
   category: "B.Tech / B.tech Lateral Entry",
+  group: "B.Tech Course",
   image: img,
   badges: [
     { icon: Clock, text: "4 Years" },
