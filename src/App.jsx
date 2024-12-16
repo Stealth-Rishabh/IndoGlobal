@@ -29,7 +29,7 @@ import IndustrySpeaks from "./apps/placements/IndustrySpeaks";
 import IndustryTieUps from "./apps/placements/IndustryTieUps";
 import PlacementActivities from "./apps/placements/PlacementActivities";
 import OurRecruiters from "./apps/placements/OurRecruiters";
-import WhyIndoGlobal from "./apps/whyIndoGlobal/WhyIndoGlobal";
+// import WhyIndoGlobal from "./apps/whyIndoGlobal/WhyIndoGlobal";
 import IndustryOrientedCurriculum from "./apps/whyIndoGlobal/IndustryOrientedCurriculum";
 import SportsArena from "./apps/whyIndoGlobal/SportsArena";
 import Infrastructure from "./apps/whyIndoGlobal/Infrastructure";
@@ -210,7 +210,7 @@ function App() {
             <Helmet>
               <title>Why Indo Global | Indo Global Colleges</title>
             </Helmet>
-            <WhyIndoGlobal />
+          
           </>
         } />
         <Route path="/why-indo-global/industry-oriented-curriculum" element={
