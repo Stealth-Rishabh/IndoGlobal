@@ -2,7 +2,7 @@ import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
 // import Header from "../header/Header";
-import img from "../../assets/placementsBanner.webp";
+import img from "../../assets/BannerPlacements.webp";
 // import { useEffect, useState } from "react";
 // import { Button } from "@/components/ui/button";
 import Stats from "../../components/Stats";
@@ -46,7 +46,7 @@ const IndustrySpeaks = () => {
             subtitle="Gain valuable insights from industry experts on developing intellectual, practical, and social skills, with a focus on leadership, socially responsible behavior, and lifelong learning."
           />
           <Testimonials />
-          <FacultyAbout/>
+          <FacultyAbout />
         </div>
       </Container>
       <Stats />
@@ -66,7 +66,7 @@ const Testimonials = () => {
       quote:
         "A well-organized job fair with great management. The quality of students from this college was impressive. Looking forward to similar events in the future.",
     },
-    
+
     {
       avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
       name: "Mr. S. Swapnil",
@@ -102,7 +102,6 @@ const Testimonials = () => {
       quote:
         "Great interaction with students and a very organized setup. The team showed excellent attention to detail. Well done.",
     },
-    
   ];
 
   return (
@@ -119,7 +118,10 @@ const Testimonials = () => {
         <div className="mt-12">
           <ul className="grid items-center  justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((item, idx) => (
-              <li key={idx} className="bg-white h-auto flex flex-col justify-between  rounded-xl border shadow-md">
+              <li
+                key={idx}
+                className="bg-white h-auto flex flex-col justify-between  rounded-xl border shadow-md"
+              >
                 <div className="p-4">
                   <svg
                     className="w-9 h-9 text-gray-300"
@@ -170,7 +172,6 @@ const Testimonials = () => {
   );
 };
 
-
 const FacultyAbout = () => {
   return (
     <section className="ezy__about11 pt-20 sm:px-8 light  bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
@@ -184,15 +185,19 @@ const FacultyAbout = () => {
                 <span className="inline-flex w-3 h-3 rounded-full bg-secondary-color ml-2"></span>
               </h1>
               <p className="text-xl leading-normal opacity-75 mt-4 mb-6">
-              Be part of an institution renowned for extensive industry interaction wherein IGC students have interacted with the leading Global Gurus. 
+                Be part of an institution renowned for extensive industry
+                interaction wherein IGC students have interacted with the
+                leading Global Gurus.
               </p>
               <p className="opacity-50 text-sm ">
-              Industry leaders, top professionals, entrepreneurs, policy makers and global gurus also share their wisdom, insight and experiences thereby facilitating practical learning for you.
+                Industry leaders, top professionals, entrepreneurs, policy
+                makers and global gurus also share their wisdom, insight and
+                experiences thereby facilitating practical learning for you.
               </p>
             </div>
           </div>
           <div className="col-span-12 lg:col-span-6">
-            <IndustryMarquee/>
+            <IndustryMarquee />
           </div>
         </div>
       </div>

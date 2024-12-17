@@ -1,7 +1,7 @@
 import Heading from "../../components/Heading";
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import Container from "../../components/wrappers/Container";
-import img from "../../assets/placementsBanner.webp";
+import img from "../../assets/BannerPlacements.webp";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
@@ -79,7 +79,7 @@ const OurRecruiters = () => {
             subtitle="Top companies across various industries now choose Indo Global Colleges as a preferred destination for on-campus recruitment. This success is driven by the dedicated efforts of the Placement Centre's team, who equip students with the skills and guidance needed to secure ideal placements and excel in their careers."
             className="lg:pb-10"
           />
-          <IconMarquee icons={icons}/>
+          <IconMarquee icons={icons} />
         </div>
       </Container>
       <Stats />

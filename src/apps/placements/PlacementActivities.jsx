@@ -17,7 +17,7 @@ import Container from "../../components/wrappers/Container";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
-import img from "../../assets/placementsBanner.webp";
+import img from "../../assets/BannerPlacements.webp";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
