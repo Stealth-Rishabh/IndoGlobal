@@ -112,13 +112,8 @@ export default function Footer() {
 
   const handleItemClick = (item) => {
     if (item.isDownload) {
-      // Trigger download
-      const link = document.createElement("a");
-      link.href = item.path;
-      link.download = "Mandatory_Disclosure.pdf"; // Name for the downloaded file
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Open in new tab instead of downloading
+      window.open(item.path, '_blank');
     }
   };
 
