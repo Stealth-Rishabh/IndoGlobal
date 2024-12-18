@@ -18,12 +18,15 @@ import {
   HeartIcon,
 } from "lucide-react";
 
+import outcome from "../../assets/whyIndoGlobal/IndustryOrientedCurriculum/IndustryOrientedCurriculum (3).webp";
+import technology from "../../assets/whyIndoGlobal/IndustryOrientedCurriculum/IndustryOrientedCurriculum (1).webp";
+import valueBased from "../../assets/whyIndoGlobal/IndustryOrientedCurriculum/IndustryOrientedCurriculum (2).webp";
+
 const data = [
   {
     section: "Outcome-Based Education",
     icon: <BarChart className="w-10 h-10 text-blue-600" />,
-    imgUrl:
-      "https://img.freepik.com/free-photo/portrait-cheerful-girl-dress-eyeglasses_171337-1955.jpg?t=st=1731484567~exp=1731488167~hmac=496f62cc5c55daed3252870bfca7c0d0b908d1cc619e216695c232f8e20f8d78&w=1060",
+    imgUrl: outcome,
     points: [
       {
         text: "Implement a student-centered model that evaluates knowledge, skills, and attitudes through measurable outcomes.",
@@ -42,8 +45,7 @@ const data = [
   {
     section: "Technology",
     icon: <Settings className="w-10 h-10 text-blue-600" />,
-    imgUrl:
-      "https://img.freepik.com/free-photo/group-young-people-casual-clothes-working-modern-office_146671-16433.jpg?t=st=1731484688~exp=1731488288~hmac=594e7d3bef97b32941a296d2ce409c5c41e505b792963846848922465a410794&w=1060",
+    imgUrl: technology,
     points: [
       {
         text: "Cultivate innovation and creativity, encouraging students to think beyond conventional solutions.",
@@ -62,8 +64,7 @@ const data = [
   {
     section: "Value-Based Education",
     icon: <HeartIcon className="w-10 h-10 text-blue-600" />,
-    imgUrl:
-      "https://img.freepik.com/free-photo/school-scene-with-queer-teens_23-2150379423.jpg?t=st=1731484867~exp=1731488467~hmac=e1f0d552f89b79ab936879c152f18cb75127ccfbf5df71d50c5b3ac95c3032fb&w=1060",
+    imgUrl: valueBased,
     points: [
       {
         text: "Instill values such as discipline, teamwork, and integrity as foundational pillars of personal growth.",
@@ -101,7 +102,10 @@ const sidebarLinks = [
 const IndustryOrientedCurriculum = () => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
-    { href: "/why-indo-global/industry-oriented-curriculum", label: "Why Indo Global" },
+    {
+      href: "/why-indo-global/industry-oriented-curriculum",
+      label: "Why Indo Global",
+    },
     { label: "Industry Oriented Curriculum" },
   ];
   return (
@@ -155,12 +159,13 @@ const IndustryOrientedCurriculumSection = ({ data, order }) => {
                   order % 2 === 0 ? "order-1" : "order-2"
                 }`}
               >
-                <div
-                  className="bg-center shadow-md hover:drop-shadow-xl hover:-translate-y-2 transition-all duration-300 bg-no-repeat bg-cover rounded-xl min-h-[150px] h-full "
-                  style={{
-                    backgroundImage: `url(${data.imgUrl})`,
-                  }}
-                ></div>
+                <div className="bg-center shadow-md hover:drop-shadow-xl hover:-translate-y-2 transition-all duration-300 bg-no-repeat bg-cover rounded-xl min-h-[150px] h-full overflow-hidden">
+                  <img
+                    src={data.imgUrl}
+                    alt="Outcome"
+                    className="w-full h-full object-cover "
+                  />
+                </div>
               </div>
               <div
                 className={`col-span-12 md:col-span-6 pb-6 md:py-2 relative ${

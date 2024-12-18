@@ -1,7 +1,10 @@
 import basketball from "../../assets/sports-arena/basketball.webp";
 import football from "../../assets/sports-arena/football.webp";
 import kabaddi from "../../assets/sports-arena/kabaddi.webp";
-
+import sportsArena1 from "../../assets/sports-arena/sportsArena (1).webp";
+import sportsArena2 from "../../assets/sports-arena/sportsArena (2).webp";
+import sportsArena3 from "../../assets/sports-arena/sportsArena (3).webp";
+import sportsArena4 from "../../assets/sports-arena/sportsArena (4).webp";
 
 export const sportsData = [
   {
@@ -81,28 +84,28 @@ export const sportsData = [
       "IGC celebrates student achievements across academics, sports, and community initiatives. Our students strive for excellence, bringing home awards and honors that showcase their hard work and dedication. Through a commitment to personal growth, IGC students set high standards and achieve remarkable milestones that inspire others.",
     items: [
       {
-        src: "https://img.freepik.com/free-photo/medium-shot-graduate-student_23-2148950577.jpg?t=st=1733826698~exp=1733830298~hmac=6a46132f412f49955a6a1ee62f5a139a1eac7e2699b9a25d9cb8ded1789e6214&w=1060",
+        src: sportsArena3,
         alt: "Photo by Minh Pham",
         label: "Academic Excellence",
         height: "h-48",
         mdHeight: "md:col-span-2 md:h-80",
       },
       {
-        src: "https://img.freepik.com/free-vector/hand-drawn-national-sports-day-illustration_23-2148998190.jpg?t=st=1733826811~exp=1733830411~hmac=e85d801c9d177a961e234f03513b5cf74f2a02622202d69d93bcb674c4e19cd2&w=740",
+        src: sportsArena2,
         alt: "Photo by Magicle",
         label: "Sports Championships",
         height: "h-48",
         mdHeight: "md:h-80",
       },
       {
-        src: "https://img.freepik.com/free-photo/young-activists-taking-action_23-2149502783.jpg?t=st=1733826945~exp=1733830545~hmac=c2cb8c4243907d12955f9e19fa712022b061c99032c9b8c036ac4ab4e3c8c36b&w=1060",
+        src: sportsArena1,
         alt: "Photo by Martin Sanchez",
         label: "Community Impact",
         height: "h-48",
         mdHeight: "md:h-80",
       },
       {
-        src: "https://img.freepik.com/free-photo/classmates-having-lunch-together-group-study_23-2149211133.jpg?t=st=1733827039~exp=1733830639~hmac=479d90800e48abcaabc5420d273c79cbfe12c311df6c78c644064f38b9374fb8&w=1060",
+        src: sportsArena4,
         alt: "Photo by Lorenzo Herrera",
         label: "Research and Development",
         height: "h-48",
@@ -185,7 +188,6 @@ export const infrastructureData = [
         name: "Google",
         img: "https://img.freepik.com/free-photo/female-fitness-instructor-teaching-online-class-from-home-using-camera-tripod_23-2149320139.jpg?t=st=1731570301~exp=1731573901~hmac=97332b1d7a5b06328d895ddcc6e593bd2d6e4408879ca2af8fa28150a82c4d14&w=360",
       },
-      
     ],
   },
 
@@ -217,7 +219,6 @@ export const infrastructureData = [
         name: "Google",
         img: "https://img.freepik.com/free-photo/beautiful-optical-fiber-detail_23-2149182512.jpg?t=st=1731570433~exp=1731574033~hmac=a7153762795a4b15f9486973081df248d5eaaf6718590181464f8ad90246c8f3&w=360",
       },
-   
     ],
   },
 
@@ -348,4 +349,3 @@ export const infrastructureData = [
     ],
   },
 ];
-
