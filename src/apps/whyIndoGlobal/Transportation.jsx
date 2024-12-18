@@ -7,6 +7,9 @@ import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
 import { cn } from "@/lib/utils";
+import transportation1 from "../../assets/whyIndoGlobal/Transportation/Transportation (2).webp";
+import transportation2 from "../../assets/whyIndoGlobal/Transportation/Transportation (1).webp";
+
 const sidebarLinks = [
   {
     href: "/why-indo-global/industry-oriented-curriculum",
@@ -51,7 +54,7 @@ const Transportation = () => {
             className=""
           />
           <div>
-            <TransportationItem/>
+            <TransportationItem />
           </div>
         </div>
       </Container>
@@ -63,82 +66,85 @@ const Transportation = () => {
 
 export default Transportation;
 
-
-
-
 const features = [
-    {
-      img: "https://img.freepik.com/free-photo/medium-shot-women-walking-with-coffee_23-2149142296.jpg?t=st=1731579824~exp=1731583424~hmac=48e2d96278ff14fdce9eb954547cdabdbaa87804cba2afda3b9ffa01f298941d&w=1060",
-      keyword: "Commute",
-      title: "Easy Commute",
-      description:
-        "Our fleet of buses ensures hassle-free transportation from Chandigarh, Panchkula, Mohali, Morinda, Ropar, Zirakpur, Derabassi, and other nearby towns, making your commute comfortable and convenient.",
-    },
-    {
-      img: "https://img.freepik.com/free-photo/urban-bus-stop-public-transport-dubai-city_93675-131309.jpg?t=st=1731579899~exp=1731583499~hmac=18ccee4ee67b0e6f4402976737d605c152c19b98bf74fdf2be0958e4178e124d&w=1060",
-      keyword: "Space",
-      title: "Ample Parking Facility",
-      description:
-        "Our campus offers ample parking space for both day scholars and resident students, ensuring that your vehicle is safe and easily accessible.",
-    },
-    {
-      img: "https://img.freepik.com/free-photo/member-log-membership-username-password-concept_53876-120842.jpg?t=st=1731580089~exp=1731583689~hmac=93077b6011d8d73090d75f996d84be7f6ce0b9df6c6ea892d5c462b4a9ff19de&w=996",
-      keyword: "Students",
-      title: "Parking Registration",
-      description:
-        "Students wishing to use the parking facility must register their vehicles (2-wheelers and/or 4-wheelers) by filling out the registration form and paying the necessary fee before bringing them onto the campus.",
-    },
-  ];
-  
+  {
+    img: transportation1,
+    keyword: "Commute",
+    title: "Easy Commute",
+    description:
+      "Our fleet of buses ensures hassle-free transportation from Chandigarh, Panchkula, Mohali, Morinda, Ropar, Zirakpur, Derabassi, and other nearby towns, making your commute comfortable and convenient.",
+  },
+  {
+    img: transportation2,
+    keyword: "Space",
+    title: "Ample Parking Facility",
+    description:
+      "Our campus offers ample parking space for both day scholars and resident students, ensuring that your vehicle is safe and easily accessible.",
+  },
+  {
+    img: "https://img.freepik.com/free-photo/member-log-membership-username-password-concept_53876-120842.jpg?t=st=1731580089~exp=1731583689~hmac=93077b6011d8d73090d75f996d84be7f6ce0b9df6c6ea892d5c462b4a9ff19de&w=996",
+    keyword: "Students",
+    title: "Parking Registration",
+    description:
+      "Students wishing to use the parking facility must register their vehicles (2-wheelers and/or 4-wheelers) by filling out the registration form and paying the necessary fee before bringing them onto the campus.",
+  },
+];
 
 const FeatureItem = ({ feature, index }) => (
-	<div className="grid grid-cols-12 mx-0 mb-6 md:mb-0">
-		<div
-			className={cn("col-span-12 md:col-span-6 relative z-20 p-0 overflow-hidden", {
-				"md:order-2": index % 2,
-			})}
-		>
-			<div
-				className={cn(
-					"bg-center bg-no-repeat bg-cover h-full min-h-[350px] w-full md:w-full -z-10 overflow-hidden grayscale hover:grayscale-0 hover:scale-125 transition-all duration-300",
-					{
-						"float-right": !(index % 2),
-					}
-				)}
-				style={{
-					backgroundImage: `url(${feature.img})`,
-				}}
-			/>
-		</div>
-		<div className="col-span-12 md:col-span-6 relative z-20 p-0">
-			<div className={cn("p-6 hover:translate-y-5 duration-300 ", { "md:ml-4": !(index % 2) })}>
-				<div className="mb-6">
-					<span className="block text-[45px] leading-none">
-						{feature.keyword}
-					</span>
-					<span className="text-base uppercase block mt-3 ml-1">
-						{feature.title}
-					</span>
-				</div>
-				<p className="mb-6 lg:mb-12 leading-loose text-justify">{feature.description}</p>
-				
-			</div>
-		</div>
-	</div>
+  <div className="grid grid-cols-12 mx-0 mb-6 md:mb-0">
+    <div
+      className={cn(
+        "col-span-12 md:col-span-6 relative z-20 p-0 overflow-hidden",
+        {
+          "md:order-2": index % 2,
+        }
+      )}
+    >
+      <div
+        className={cn(
+          "relative h-full min-h-[350px] w-full md:w-full -z-10 overflow-hidden grayscale hover:grayscale-0 hover:scale-125 transition-all duration-300",
+          {
+            "float-right": !(index % 2),
+          }
+        )}
+      >
+        <img
+          src={feature.img}
+          alt="Feature"
+          className="absolute inset-0 object-cover w-full h-full"
+        />
+      </div>
+    </div>
+    <div className="col-span-12 md:col-span-6 relative z-20 p-0">
+      <div
+        className={cn("p-6 hover:translate-y-5 duration-300 ", {
+          "md:ml-4": !(index % 2),
+        })}
+      >
+        <div className="mb-6">
+          <span className="block text-[45px] leading-none">
+            {feature.keyword}
+          </span>
+          <span className="text-base uppercase block mt-3 ml-1">
+            {feature.title}
+          </span>
+        </div>
+        <p className="mb-6 lg:mb-12 leading-loose text-justify">
+          {feature.description}
+        </p>
+      </div>
+    </div>
+  </div>
 );
 
-
-
 const TransportationItem = () => {
-	return (
-		<section className=" bg-white dark:bg-[#0e1012] text-zinc-900 dark:text-white relative overflow-hidden z-10">
-			<div className="container mx-auto">
-				
-
-				{features.map((feature, i) => (
-					<FeatureItem feature={feature} index={i + 1} key={i} />
-				))}
-			</div>
-		</section>
-	);
+  return (
+    <section className=" bg-white dark:bg-[#0e1012] text-zinc-900 dark:text-white relative overflow-hidden z-10">
+      <div className="container mx-auto">
+        {features.map((feature, i) => (
+          <FeatureItem feature={feature} index={i + 1} key={i} />
+        ))}
+      </div>
+    </section>
+  );
 };
