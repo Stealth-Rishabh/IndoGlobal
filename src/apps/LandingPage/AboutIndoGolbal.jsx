@@ -1,4 +1,4 @@
-import img from '../../assets/about-collage.png';
+import img from '../../assets/AboutUs.webp';
 import WordPullUp from '../../components/ui/word-pull-up';
 import Container from '../../components/wrappers/Container';
 import { motion } from 'framer-motion';
