@@ -9,6 +9,9 @@ import Newsletter from "../../components/Newsletter";
 // import { Link } from "react-router-dom";
 import { MapPin, Phone, Globe, Mail, Building } from "lucide-react";
 import AboutSidebar from "../../components/AboutSidebar";
+import location1 from "../../assets/about/CampusLocation/CampusLocationImage1.webp";
+import location2 from "../../assets/about/CampusLocation/CampusLocationImage2.webp";
+import location3 from "../../assets/about/CampusLocation/CampusLocationImage3.webp";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
@@ -44,8 +47,7 @@ const locations = [
       { icon: <Globe className="w-5 h-5" />, text: "www.igef.net" },
       { icon: <Mail className="w-5 h-5" />, text: "contact@igef.net" },
     ],
-    image:
-      "https://img.freepik.com/free-photo/architecture-independence-palace-ho-chi-minh-city_181624-21243.jpg",
+    image: location1,
   },
   {
     title: "Correspondence Address",
@@ -62,8 +64,7 @@ const locations = [
       { icon: <Globe className="w-5 h-5" />, text: "www.igef.net" },
       { icon: <Mail className="w-5 h-5" />, text: "contact@igef.net" },
     ],
-    image:
-      "https://img.freepik.com/free-photo/office-buildings-trees_1127-396.jpg",
+    image: location2,
   },
   {
     title: "Nepal Address",
@@ -77,8 +78,7 @@ const locations = [
       { icon: <Globe className="w-5 h-5" />, text: "www.igef.net" },
       { icon: <Mail className="w-5 h-5" />, text: "indoglobal07@gmail.com" },
     ],
-    image:
-      "https://img.freepik.com/free-photo/beautiful-streets-switzerland_8353-9666.jpg",
+    image: location3,
   },
 ];
 
