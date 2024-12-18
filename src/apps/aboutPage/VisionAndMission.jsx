@@ -18,11 +18,13 @@ import {
   Binary,
   UserCheck,
 } from "lucide-react";
-import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 
+import vision from "../../assets/about/Vision&Mission/Vision&Mission (3).webp";
+import philosophy from "../../assets/about/Vision&Mission/Vision&Mission (1).webp";
 const institutionalData = [
   {
     section: "Vision and Mission",
+    image: vision,
     icon: <Lightbulb className="w-10 h-10 text-blue-600" />,
     points: [
       {
@@ -41,6 +43,7 @@ const institutionalData = [
   },
   {
     section: "Philosophy",
+    image: philosophy,
     icon: <Users className="w-10 h-10 text-blue-600" />,
     points: [
       {
@@ -103,7 +106,6 @@ const VisionAndMission = () => {
       </Container>
       <Stats />
       <Newsletter />
-    
     </div>
   );
 };
@@ -122,13 +124,11 @@ const VisionAndMissionSection = ({ data, order }) => {
                   order === 0 ? "order-1" : "order-2"
                 }`}
               >
-                <div
-                  className="bg-center drop-shadow-sm hover:drop-shadow-xl hover:-translate-y-2 transition-all duration-300 bg-no-repeat bg-cover rounded-xl min-h-[150px] h-full "
-                  style={{
-                    backgroundImage:
-                      "url(https://cdn.easyfrontend.com/pictures/featured/featured_7.png)",
-                  }}
-                ></div>
+                <img
+                  src={data.image}
+                  alt="Vision"
+                  className="w-full h-full object-cover rounded-xl drop-shadow-sm hover:drop-shadow-xl hover:-translate-y-2 scale-200 transition-all duration-300"
+                />
               </div>
               <div
                 className={`col-span-12 md:col-span-6 pb-6 md:py-2 relative ${
