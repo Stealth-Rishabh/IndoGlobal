@@ -7,6 +7,11 @@ import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
 import { cn } from "@/lib/utils";
+import studentSecurity1 from "../../assets/whyIndoGlobal/StudentsSecurity/StudentsSecurity (1).jpg";
+import studentSecurity2 from "../../assets/whyIndoGlobal/StudentsSecurity/StudentsSecurity (2).webp";
+import studentSecurity3 from "../../assets/whyIndoGlobal/StudentsSecurity/StudentsSecurity (3).webp";
+import studentSecurity4 from "../../assets/whyIndoGlobal/StudentsSecurity/StudentsSecurity (4).webp";
+
 const sidebarLinks = [
   {
     href: "/why-indo-global/industry-oriented-curriculum",
@@ -66,21 +71,21 @@ export default StudentSecurity;
 
 const features = [
   {
-    img: "https://img.freepik.com/free-photo/portrait-male-security-guard-with-radio-station-camera-screens_23-2150368714.jpg?t=st=1731582170~exp=1731585770~hmac=9f35b2d4c71417003036f9585ad32a5a0f0151f499f1e75ef468710e61dd35cc&w=1060",
+    img: studentSecurity1,
     keyword: "Security",
     title: "Secure Campus",
     description:
       "We are dedicated to protecting your safety and providing a welcoming, secure environment. Our security team works around the clock to ensure the well-being of students, faculty, staff, and visitors. Our trained security personnel, often ex-servicemen, uphold both daily security measures and broader safety initiatives.",
   },
   {
-    img: "https://img.freepik.com/free-photo/students-studying-sunny-day_23-2147850716.jpg?t=st=1731582303~exp=1731585903~hmac=0e34fe47de10d06c7f800429757a0a07d6d8f9171bad7baf08a2c7df4ef9422a&w=1060",
+    img: studentSecurity4,
     keyword: "Convenience",
     title: "On-Campus Amenities",
     description:
       "Experience convenience at every corner. Our campus hosts essential amenities including food courts, stationary shops, and medical facilities, allowing students to access what they need without leaving the grounds. All amenities are designed with your comfort and needs in mind.",
   },
   {
-    img: "https://img.freepik.com/free-photo/medium-shot-smiley-father-kid-home_23-2149610748.jpg?t=st=1731582382~exp=1731585982~hmac=8590ef4c60e7ded1f879404837c05ed083eb5549621b861327eef826fa720b9e&w=1060",
+    img: studentSecurity3,
     keyword: "Support",
     title: "Student Counseling",
     description:
@@ -94,7 +99,7 @@ const features = [
       "The on-campus health center offers a range of medical services to keep students and staff healthy. From regular check-ups to emergency care, our health professionals are here to support your physical well-being, ensuring a safe and healthy campus experience.",
   },
   {
-    img: "https://img.freepik.com/free-photo/college-students-cramming-outdoor_23-2149649382.jpg?t=st=1731582481~exp=1731586081~hmac=82f88ab7ce7343392c9f36f8d9c3a462c2033a83ed5287535aabd4910772abc1&w=1060",
+    img: studentSecurity2,
     keyword: "Engagement",
     title: "Vibrant Student Life",
     description:
@@ -122,7 +127,13 @@ const FeatureItem = ({ feature, index }) => (
         style={{
           backgroundImage: `url(${feature.img})`,
         }}
-      />
+      >
+        <img
+          src={feature.img}
+          alt="Feature"
+          className="absolute inset-0 object-cover w-full h-full"
+        />
+      </div>
     </div>
     <div className="col-span-12 md:col-span-6 relative z-20 p-0">
       <div
