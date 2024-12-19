@@ -6,6 +6,28 @@ import sportsArena2 from "../../assets/sports-arena/SportsArena (2).webp";
 import sportsArena3 from "../../assets/sports-arena/SportsArena (3).webp";
 import sportsArena4 from "../../assets/sports-arena/SportsArena (4).webp";
 
+import Lab1 from "../../assets/whyIndoGlobal/CampusInfrastructure/Labs&Workshops/Labs&Workshops1.webp";
+import Lab2 from "../../assets/whyIndoGlobal/CampusInfrastructure/Labs&Workshops/Labs&Workshops2.webp";
+import Lab3 from "../../assets/whyIndoGlobal/CampusInfrastructure/Labs&Workshops/Labs&Workshops3.webp";
+
+import Studio1 from "../../assets/whyIndoGlobal/CampusInfrastructure/Studios/Studios1.webp";
+import Studio2 from "../../assets/whyIndoGlobal/CampusInfrastructure/Studios/Studios2.webp";
+import Studio3 from "../../assets/whyIndoGlobal/CampusInfrastructure/Studios/Studios3.webp";
+
+import Library1 from "../../assets/whyIndoGlobal/CampusInfrastructure/Library/Library1.webp";
+import Library2 from "../../assets/whyIndoGlobal/CampusInfrastructure/Library/Library2.webp";
+import Library3 from "../../assets/whyIndoGlobal/CampusInfrastructure/Library/Library3.webp";
+
+import Canteen1 from "../../assets/whyIndoGlobal/CampusInfrastructure/Canteen/Canteen1.webp";
+import Canteen2 from "../../assets/whyIndoGlobal/CampusInfrastructure/Canteen/Canteen2.webp";
+import Canteen3 from "../../assets/whyIndoGlobal/CampusInfrastructure/Canteen/Canteen3.webp";
+
+import StudentActivityCentre1 from "../../assets/whyIndoGlobal/CampusInfrastructure/StudentActivity.webp";
+import StudentActivityCentre2 from "../../assets/whyIndoGlobal/CampusInfrastructure/StudentActivity2.webp";
+import StudentActivityCentre3 from "../../assets/whyIndoGlobal/CampusInfrastructure/StudentActivity3.webp";
+
+import Internet from "../../assets/whyIndoGlobal/CampusInfrastructure/Internet/Internet.webp";
+
 export const sportsData = [
   {
     title: "Sports Club",
@@ -139,19 +161,15 @@ export const infrastructureData = [
     logos: [
       {
         name: "Microsoft",
-        img: "https://img.freepik.com/free-photo/female-african-american-speaker-giving-presentation-hall-university-workshop_155003-3574.jpg?t=st=1731569939~exp=1731573539~hmac=3f5c43fdb263946264578367c238f42d8c7be1c35c4a5fe4b38acc64254f0e58&w=360",
+        img: Lab1,
       },
       {
         name: "Apple",
-        img: "https://img.freepik.com/free-photo/new-test-concentrated-skilled-researchers-wearing-uniform-doing-test-creating-vaccine_1157-48124.jpg?t=st=1731569248~exp=1731572848~hmac=574a3babf54e1cb52cfa134b4012c5efb043f044c0ffbf1686d9bd21c784f5b2&w=360",
+        img: Lab2,
       },
       {
         name: "Google",
-        img: "https://img.freepik.com/free-photo/female-muslim-speaker-giving-presentation-hall-university-workshop_155003-3557.jpg?t=st=1731569899~exp=1731573499~hmac=035302a69d7a92dbc8a7073f3b626bb99a6f2e540dc031c27307ab2923a3d275&w=360",
-      },
-      {
-        name: "Facebook",
-        img: "https://img.freepik.com/free-photo/selective-focus-medical-transparent-equipment-standing-table_482257-16126.jpg?t=st=1731569309~exp=1731572909~hmac=bf73763201ab403811a5febd7b53d1ba846d9208cc068541f4a630e54bee4e8e&w=360",
+        img: Lab3,
       },
     ],
   },
@@ -178,15 +196,15 @@ export const infrastructureData = [
     logos: [
       {
         name: "Microsoft",
-        img: "https://img.freepik.com/free-photo/man-with-microphone-headphones-running-podcast-studio_23-2149434325.jpg?t=st=1731570224~exp=1731573824~hmac=6ef616f549b1cb98d3258bb18b93f384ed75c3f72b09067d273bf59ac4f1a2ea&w=360",
+        img: Studio1,
       },
       {
         name: "Apple",
-        img: "https://img.freepik.com/free-photo/high-angle-friends-taking-selfie_23-2148602760.jpg?t=st=1731570260~exp=1731573860~hmac=32c16e5e8572bbdb80394587bd6fb2005686db7c37c409563acef44571b43958&w=360",
+        img: Studio2,
       },
       {
         name: "Google",
-        img: "https://img.freepik.com/free-photo/female-fitness-instructor-teaching-online-class-from-home-using-camera-tripod_23-2149320139.jpg?t=st=1731570301~exp=1731573901~hmac=97332b1d7a5b06328d895ddcc6e593bd2d6e4408879ca2af8fa28150a82c4d14&w=360",
+        img: Studio3,
       },
     ],
   },
@@ -209,7 +227,7 @@ export const infrastructureData = [
     logos: [
       {
         name: "Microsoft",
-        img: "https://img.freepik.com/free-photo/young-woman-shopping-through-electronic-app_1163-3210.jpg?t=st=1731570361~exp=1731573961~hmac=ae43d6fc8982aca7260c5e543eab559150b752c5a3bb77499698d3706da96f83&w=360",
+        img: Internet,
       },
       {
         name: "Apple",
@@ -239,15 +257,15 @@ export const infrastructureData = [
     logos: [
       {
         name: "Microsoft",
-        img: "https://img.freepik.com/free-photo/teenagers-reading-near-friend-choosing-book_23-2147864013.jpg?t=st=1731573700~exp=1731577300~hmac=30a419127675ccecb8b3ddf4f866355eb6ca6530d654aa465102a445895074c9&w=360",
+        img: Library1,
       },
       {
         name: "Apple",
-        img: "https://img.freepik.com/free-photo/guy-sitting-floor-library_23-2147679281.jpg?t=st=1731573717~exp=1731577317~hmac=dd6e948a7f15c1dc76a6a8baa71cbedf10f46b8a0cc3d9713da07e4006f8b387&w=360",
+        img: Library2,
       },
       {
         name: "Google",
-        img: "https://img.freepik.com/free-photo/female-looking-book-library_329181-19501.jpg?t=st=1731573745~exp=1731577345~hmac=a1cfdd024b1433a24549db72f76ca5de464386ee62e80903af686d967478609d&w=360",
+        img: Library3,
       },
     ],
   },
@@ -266,19 +284,15 @@ export const infrastructureData = [
     logos: [
       {
         name: "Microsoft",
-        img: "https://img.freepik.com/free-photo/female-african-american-speaker-giving-presentation-hall-university-workshop_155003-3574.jpg?t=st=1731569939~exp=1731573539~hmac=3f5c43fdb263946264578367c238f42d8c7be1c35c4a5fe4b38acc64254f0e58&w=360",
+        img: Canteen1,
       },
       {
         name: "Apple",
-        img: "https://img.freepik.com/free-photo/new-test-concentrated-skilled-researchers-wearing-uniform-doing-test-creating-vaccine_1157-48124.jpg?t=st=1731569248~exp=1731572848~hmac=574a3babf54e1cb52cfa134b4012c5efb043f044c0ffbf1686d9bd21c784f5b2&w=360",
+        img: Canteen2,
       },
       {
         name: "Google",
-        img: "https://img.freepik.com/free-photo/female-muslim-speaker-giving-presentation-hall-university-workshop_155003-3557.jpg?t=st=1731569899~exp=1731573499~hmac=035302a69d7a92dbc8a7073f3b626bb99a6f2e540dc031c27307ab2923a3d275&w=360",
-      },
-      {
-        name: "Facebook",
-        img: "https://img.freepik.com/free-photo/selective-focus-medical-transparent-equipment-standing-table_482257-16126.jpg?t=st=1731569309~exp=1731572909~hmac=bf73763201ab403811a5febd7b53d1ba846d9208cc068541f4a630e54bee4e8e&w=360",
+        img: Canteen3,
       },
     ],
   },
@@ -299,19 +313,15 @@ export const infrastructureData = [
     logos: [
       {
         name: "Microsoft",
-        img: "https://img.freepik.com/free-photo/female-african-american-speaker-giving-presentation-hall-university-workshop_155003-3574.jpg?t=st=1731569939~exp=1731573539~hmac=3f5c43fdb263946264578367c238f42d8c7be1c35c4a5fe4b38acc64254f0e58&w=360",
+        img: StudentActivityCentre1,
       },
       {
         name: "Apple",
-        img: "https://img.freepik.com/free-photo/new-test-concentrated-skilled-researchers-wearing-uniform-doing-test-creating-vaccine_1157-48124.jpg?t=st=1731569248~exp=1731572848~hmac=574a3babf54e1cb52cfa134b4012c5efb043f044c0ffbf1686d9bd21c784f5b2&w=360",
+        img: StudentActivityCentre2,
       },
       {
         name: "Google",
-        img: "https://img.freepik.com/free-photo/female-muslim-speaker-giving-presentation-hall-university-workshop_155003-3557.jpg?t=st=1731569899~exp=1731573499~hmac=035302a69d7a92dbc8a7073f3b626bb99a6f2e540dc031c27307ab2923a3d275&w=360",
-      },
-      {
-        name: "Facebook",
-        img: "https://img.freepik.com/free-photo/selective-focus-medical-transparent-equipment-standing-table_482257-16126.jpg?t=st=1731569309~exp=1731572909~hmac=bf73763201ab403811a5febd7b53d1ba846d9208cc068541f4a630e54bee4e8e&w=360",
+        img: StudentActivityCentre3,
       },
     ],
   },
