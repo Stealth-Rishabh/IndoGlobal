@@ -1,5 +1,6 @@
 import ImgAndBreadcrumb from "../../components/ImgAndBreadcrumb";
 import img from "../../assets/admissionsBanner.webp";
+import shaping from "../../assets/Admissions.webp";
 import Container from "../../components/wrappers/Container";
 import Heading from "../../components/Heading";
 import AboutSidebar from "../../components/AboutSidebar";
@@ -267,7 +268,7 @@ const AdmissionAbout = () => {
             <div className="flex-grow rounded overflow-hidden h-48 relative">
               {/* <div className="inset-0 absolute bg-gradient-to-t from-black/60 to-transparent "></div> */}
                 <img
-                  src="https://images.unsplash.com/photo-1620458738323-4148c6093433?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src={shaping}
               alt="Admission"
                 className="object-cover hover:scale-125 w-full transition-all duration-300 h-full"
               />
