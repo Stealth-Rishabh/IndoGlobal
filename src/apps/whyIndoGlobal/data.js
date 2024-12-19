@@ -1,10 +1,10 @@
 import basketball from "../../assets/sports-arena/basketball.webp";
 import football from "../../assets/sports-arena/football.webp";
 import kabaddi from "../../assets/sports-arena/kabaddi.webp";
-import sportsArena1 from "../../assets/sports-arena/sportsArena (1).webp";
-import sportsArena2 from "../../assets/sports-arena/sportsArena (2).webp";
-import sportsArena3 from "../../assets/sports-arena/sportsArena (3).webp";
-import sportsArena4 from "../../assets/sports-arena/sportsArena (4).webp";
+import sportsArena1 from "../../assets/sports-arena/SportsArena (1).webp";
+import sportsArena2 from "../../assets/sports-arena/SportsArena (2).webp";
+import sportsArena3 from "../../assets/sports-arena/SportsArena (3).webp";
+import sportsArena4 from "../../assets/sports-arena/SportsArena (4).webp";
 
 export const sportsData = [
   {
