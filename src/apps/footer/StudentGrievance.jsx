@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 function StudentGrievance() {
   const [formData, setFormData] = useState({
@@ -14,7 +19,25 @@ function StudentGrievance() {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
 
-  const courses = ['Computer Science', 'Electronics', 'Mechanical', 'Civil', 'Chemical'];
+  const courses = [
+    'M.TECH CIVIL ENGINEERING',
+    'M.TECH COMPUTER SCIENCE ENGINEERING', 
+    'M.TECH ELECTRONICS AND COMMUNICATION',
+    'B.TECH MECHANICAL ENGINEERING',
+    'B.TECH COMPUTER SCIENCE ENGINEERING',
+    'B.TECH ELECTRONICS AND COMMUNICATION ENGINEERING',
+    'B.TECH CIVIL ENGINEERING',
+    'POLYTECHNIC MECHANICAL ENGINEERING',
+    'POLYTECHNIC CIVIL ENGINEERING',
+    'MASTER OF BUSINESS ADMINISTRATION(MBA)',
+    'BACHELOR OF BUSINESS ADMINISTRATION (BBA)',
+    'BACHELOR OF COMPUTER APPLICATIONS (BCA)',
+    'BACHELOR OF COMMERCE (BCOM)',
+    'BACHELOR OF ARCHITECTURE',
+    'B.SC. MEDICAL LABORATORY SCIENCES (MLS)',
+    'B.SC RADIOLOGY & IMAGING TECHNOLOGY',
+    'B.SC OPERATION THEATRE TECHNOLOGY'
+  ];
   const semesters = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'];
 
   const handleChange = (e) => {
@@ -64,111 +87,117 @@ function StudentGrievance() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Select Course</label>
-            <select
+            <Label htmlFor="course" className="block text-sm font-medium text-gray-700 mb-1">Select Course</Label>
+            <Select
               name="course"
               value={formData.course}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-black"
+              onValueChange={(value) => setFormData({ ...formData, course: value })}
             >
-              <option value="">Select Course</option>
-              {courses.map((course) => (
-                <option key={course} value={course}>
-                  {course}
-                </option>
-              ))}
-            </select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select Course" />
+              </SelectTrigger>
+              <SelectContent>
+                {courses.map((course) => (
+                  <SelectItem key={course} value={course}>
+                    {course}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             {errors.course && <p className="mt-1 text-xs text-red-600">{errors.course}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Select Semester</label>
-            <select
+            <Label htmlFor="semester" className="block text-sm font-medium text-gray-700 mb-1">Select Semester</Label>
+            <Select
               name="semester"
               value={formData.semester}
-              onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-black"
+              onValueChange={(value) => setFormData({ ...formData, semester: value })}
             >
-              <option value="">Select Semester</option>
-              {semesters.map((semester) => (
-                <option key={semester} value={semester}>
-                  {semester}
-                </option>
-              ))}
-            </select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="Select Semester" />
+              </SelectTrigger>
+              <SelectContent>
+                {semesters.map((semester) => (
+                  <SelectItem key={semester} value={semester}>
+                    {semester}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             {errors.semester && <p className="mt-1 text-xs text-red-600">{errors.semester}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Roll Number</label>
-            <input
+            <Label htmlFor="rollNo" className="block text-sm font-medium text-gray-700 mb-1">Roll Number</Label>
+            <Input
               type="text"
               name="rollNo"
               value={formData.rollNo}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-black"
+              className="w-full"
               placeholder="Enter Roll Number"
             />
             {errors.rollNo && <p className="mt-1 text-xs text-red-600">{errors.rollNo}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-            <input
+            <Label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</Label>
+            <Input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-black"
+              className="w-full"
               placeholder="Enter Name"
             />
             {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <input
+            <Label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</Label>
+            <Input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-black"
+              className="w-full"
               placeholder="Enter Email"
             />
             {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
-            <input
+            <Label htmlFor="mobile" className="block text-sm font-medium text-gray-700 mb-1">Mobile Number</Label>
+            <Input
               type="tel"
               name="mobile"
               value={formData.mobile}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-black"
+              className="w-full"
               placeholder="Enter Mobile Number"
             />
             {errors.mobile && <p className="mt-1 text-xs text-red-600">{errors.mobile}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Your Grievance</label>
-            <textarea
+            <Label htmlFor="grievance" className="block text-sm font-medium text-gray-700 mb-1">Your Grievance</Label>
+            <Textarea
               name="grievance"
               value={formData.grievance}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-black h-32"
+              className="w-full h-32"
               placeholder="Enter Your Grievances"
             />
             {errors.grievance && <p className="mt-1 text-xs text-red-600">{errors.grievance}</p>}
           </div>
 
-          <button
+          <Button
             type="submit"
             className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-colors duration-200"
           >
             Submit
-          </button>
+          </Button>
         </form>
       </div>
     </div>
