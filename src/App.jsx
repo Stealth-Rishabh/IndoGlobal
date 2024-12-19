@@ -47,6 +47,7 @@ import OnlineLearningResources from "./apps/footer/OnlineLearningResources";
 import SpotlightAndEvents from "./apps/highlights/SpotlightAndEvents";
 import ScrollToTopWithBorder from "./components/ScrollToTopWithBorder";
 import Entrepreneurship from "./apps/whyIndoGlobal/Entrepreneurship";
+import StudentGrievance from "./apps/footer/StudentGrievance";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -328,6 +329,15 @@ function App() {
               <title>Online Learning Resources | Indo Global Colleges</title>
             </Helmet>
             <OnlineLearningResources />
+          </>
+        } />
+
+        <Route path="/online-grievance" element={
+          <>
+            <Helmet>
+              <title>Student Grievance | Indo Global Colleges</title>
+            </Helmet>
+            <StudentGrievance />
           </>
         } />
       </Routes>

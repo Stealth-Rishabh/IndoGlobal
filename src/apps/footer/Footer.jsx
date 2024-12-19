@@ -11,6 +11,7 @@ import {
   // Download,
 } from "lucide-react";
 import MandatoryDisclosure from "../../assets/pdfs/Mandatory-Discl-IGCE.pdf";
+import GrievanceRedressal from "../../assets/pdfs/Grievance Committee_IGEF.pdf";
 export default function Footer() {
   const footerSections = [
     {
@@ -23,7 +24,7 @@ export default function Footer() {
           name: "Online Learning Resources",
           path: "/online-learning-resources",
         },
-        {name: "Placements", path: "/placements/campus-recruitments" },
+        { name: "Placements", path: "/placements/campus-recruitments" },
         { name: "Blogs", path: "/blogs" },
         { name: "Contact Us", path: "/contact-us" },
       ],
@@ -64,9 +65,14 @@ export default function Footer() {
     {
       label: "Student Services",
       items: [
-        { name: "Fee Structure", path: "/" },
-        { name: "Scholarship", path: "/" },
-        { name: "Grievance Redressal", path: "/" },
+        { name: "Admission Procedure", path: "/admissions" },
+        { name: "Fee Structure", path: "/admissions" },
+        // { name: "Scholarship", path: "/" },
+        {
+          name: "Grievance Redressal",
+          path: GrievanceRedressal,
+          isDownload: true,
+        },
         { name: "Online Grievance Mechanism", path: "/online-grievance" },
         // { name: "Student Feedback System", path: "/feedback" },
         { name: "Alumni Login", path: "/" },
@@ -85,7 +91,6 @@ export default function Footer() {
         { name: "Jobs @Indo Global", path: "/careers" },
         { name: "View Virtual Tour", path: "/" },
         { name: "Contact Directory", path: "/contact-us" },
-        { name: "Admission Procedure", path: "/" },
       ],
     },
   ];
@@ -113,7 +118,7 @@ export default function Footer() {
   const handleItemClick = (item) => {
     if (item.isDownload) {
       // Open in new tab instead of downloading
-      window.open(item.path, '_blank');
+      window.open(item.path, "_blank");
     }
   };
 
