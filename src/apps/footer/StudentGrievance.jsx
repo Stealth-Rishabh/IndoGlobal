@@ -79,7 +79,7 @@ function StudentGrievance() {
   };
 
   return (
-    <div className="min-h-screen p-6 flex bg-slate-100 items-center justify-center">
+    <div className="min-h-screen sm:py-20 p-6 flex bg-slate-100 items-center justify-center">
       <div className="w-full max-w-3xl bg-white rounded-lg shadow-xl p-8">
         <h1 className="text-2xl font-bold text-center mb-8 text-black">Student Grievance</h1>
 

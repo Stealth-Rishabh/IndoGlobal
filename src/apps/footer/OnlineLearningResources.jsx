@@ -15,6 +15,7 @@ import {
   Microscope,
   Video,
   Globe,
+  Link,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { resourcesData } from "./data";
@@ -36,14 +37,15 @@ export default function OnlineLearningResources() {
                 {resource.description}
               </CardDescription>
             </div>
+            
             <Button
               variant="outline"
               size="sm"
-              className="mt-2 w-full text-sm rounded  sm:ml-4 sm:w-auto sm:text-base"
+              className="mt-2 w-full text-sm rounded hover:animate-bounce sm:ml-4 sm:w-auto sm:text-base"
               onClick={() => window.open(resource.link, "_blank")}
             >
-              <Download className="mr-2 w-4 h-4" />
-              Download
+              <Link className="mr-2 w-4 h-4" />
+              Click Here
             </Button>
           </CardHeader>
         </Card>

@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function AlumniLogin() {
@@ -65,8 +65,8 @@ export default function AlumniLogin() {
   };
 
   return (
-    <div className="sm:min-h-screen py-5 sm:py-20 flex items-center justify-center sm:p-4">
-      <Card className="w-full max-w-2xl rounded-none border-none shadow-none">
+    <div className="flex justify-center items-center py-5 bg-slate-50 sm:py-20 sm:p-4">
+      <Card className="w-full sm:max-w-sm rounded-none border-none shadow-none sm:border sm:border-gray-800 sm:shadow sm:rounded-xl sm:drop-shadow-sm">
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
           <p className="text-sm text-muted-foreground">
@@ -91,11 +91,14 @@ export default function AlumniLogin() {
               )}
             </div>
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
+              <div className="flex justify-between items-center">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
                 </label>
-                <Button variant="link" className="p-0 h-auto text-sm font-normal">
+                <Button
+                  variant="link"
+                  className="p-0 h-auto text-sm font-normal"
+                >
                   Forgot your password?
                 </Button>
               </div>
@@ -110,13 +113,13 @@ export default function AlumniLogin() {
                   type="button"
                   variant="ghost"
                   size="sm"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 p-0"
+                  className="absolute right-2 top-1/2 p-0 w-8 h-8 -translate-y-1/2"
                   onClick={togglePasswordVisibility}
                 >
                   {showPassword ? (
-                    <EyeOff className="h-4 w-4" />
+                    <EyeOff className="w-4 h-4" />
                   ) : (
-                    <Eye className="h-4 w-4" />
+                    <Eye className="w-4 h-4" />
                   )}
                   <span className="sr-only">
                     {showPassword ? "Hide password" : "Show password"}
@@ -133,10 +136,13 @@ export default function AlumniLogin() {
             <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? "Logging in..." : "Login"}
             </Button>
-            <div className="text-center text-sm">
+            <div className="text-sm text-center">
               Don't have an account?{" "}
               <Link to="/alumni-signup">
-                <Button variant="link" className="p-0 h-auto text-sm font-normal">
+                <Button
+                  variant="link"
+                  className="p-0 h-auto text-sm font-normal"
+                >
                   Sign up
                 </Button>
               </Link>
@@ -147,4 +153,3 @@ export default function AlumniLogin() {
     </div>
   );
 }
-

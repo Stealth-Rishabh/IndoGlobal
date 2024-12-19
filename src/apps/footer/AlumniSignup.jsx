@@ -85,7 +85,7 @@ export default function AlumniSignup() {
   };
 
   return (
-    <div className="min-h-screen sm:py-20 flex items-center justify-center sm:p-4">
+    <div className="min-h-screen sm:py-20 flex items-center justify-center sm:p-4 bg-slate-50">
       <Card className="w-full max-w-2xl">
         <CardHeader>
           <CardTitle className="text-2xl">Sign Up</CardTitle>
