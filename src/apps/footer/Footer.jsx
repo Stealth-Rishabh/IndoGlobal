@@ -75,7 +75,7 @@ export default function Footer() {
         },
         { name: "Online Grievance Mechanism", path: "/online-grievance" },
         // { name: "Student Feedback System", path: "/feedback" },
-        { name: "Alumni Login", path: "/" },
+        { name: "Alumni Login", path: "/alumni-login" },
       ],
     },
     {
