@@ -11,6 +11,11 @@ import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
 import PlacementProcess from "./PlacementProcess";
 import { Users, Laptop, Lightbulb, Network } from "lucide-react";
+import CampusRecruitments1 from "../../assets/placements/CampusRecruitments/CampusRecruitments (1).webp";
+import CampusRecruitments2 from "../../assets/placements/CampusRecruitments/CampusRecruitments (2).webp";
+import CampusRecruitments3 from "../../assets/placements/CampusRecruitments/CampusRecruitments (3).webp";
+import CampusRecruitments4 from "../../assets/placements/CampusRecruitments/CampusRecruitments (4).webp";
+
 
 const features = [
   {
@@ -60,28 +65,28 @@ const sidebarLinks = [
 
 const imageItems = [
   {
-    src: "https://img.freepik.com/free-photo/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working_146671-13569.jpg?t=st=1730971040~exp=1730974640~hmac=59c67a5b90ca22a480b52b4419fd55bec7acff2349d373d3a50f5ca9101fb919&w=1060",
+    src: CampusRecruitments4,
     alt: "Photo by Minh Pham",
     label: "Campus Placements",
     height: "h-48",
     mdHeight: "md:h-80",
   },
   {
-    src: "https://images.unsplash.com/photo-1620458738323-4148c6093433?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: CampusRecruitments1,
     alt: "Photo by Magicle",
     label: "Dream Companies",
     height: "h-48",
     mdHeight: "md:col-span-2 md:h-80",
   },
   {
-    src: "https://img.freepik.com/free-photo/architecture-independence-palace-ho-chi-minh-city_181624-21243.jpg",
+    src: CampusRecruitments2,
     alt: "Photo by Martin Sanchez",
     label: "Dream Careers",
     height: "h-48",
     mdHeight: "md:col-span-2 md:h-80",
   },
   {
-    src: "https://img.freepik.com/free-photo/businessman-summer-city_1157-16332.jpg?t=st=1730966345~exp=1730969945~hmac=c43701a202238cdddca96feb396e8a50d30d219e5719d199a51ad2bed7f9e0ce&w=1060",
+    src: CampusRecruitments3,
     alt: "Photo by Lorenzo Herrera",
     label: "Dream Jobs",
     height: "h-48",
