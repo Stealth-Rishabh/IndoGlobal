@@ -69,7 +69,7 @@ export default SportsArena;
 const Gallery = ({ imageItems }) => {
   const { title, description, items } = imageItems;
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8">
       {items.map((item, index) => (
         <div
           key={index}
@@ -83,14 +83,13 @@ const Gallery = ({ imageItems }) => {
             className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
           />
 
-
           <div className="w-full relative pl-4 py-3 inline-block text-sm text-white md:pl-5 md:text-lg translate-y-14 group-hover:translate-y-0 group-hover:transition-all duration-300">
             {item.label}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent bg-opacity-50 -z-10 text-white text-opacity-100 bg-black blur-sm"></div>
           </div>
         </div>
       ))}
-      <div className="col-span-3 mt- pl-1">
+      <div className="col-span-1 sm:col-span-2 md:col-span-3 mt- pl-1">
         <h1 className="text-3xl md:text-4xl leading-none font-bold mb-3 text-secondary-color/90">
           {title}
         </h1>

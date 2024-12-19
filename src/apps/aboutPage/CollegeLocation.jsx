@@ -132,7 +132,7 @@ const LocationItem = ({ location, index }) => {
       <div
         className={`col-span-12 md:col-span-5 ${
           index % 2 === 0
-            ? "order-1 md:order-2 md:col-start-6"
+            ? "order-2 md:order-2 md:col-start-6"
             : "order-2 md:order-1 md:col-start-1"
         }`}
       >
