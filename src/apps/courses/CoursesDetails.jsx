@@ -20,6 +20,8 @@ import { Star, CheckSquare } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
+import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
+
 const CoursesDetails = () => {
   const [showWidget, setShowWidget] = useState(false);
   const { coursePath } = useParams();
@@ -163,9 +165,11 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         <Link to="/contact-us">
           <Button className="flex-grow sm:flex-grow-0">Apply Now</Button>
         </Link>
-        <Button variant="outline" className="flex-grow sm:flex-grow-0">
-          Download Brochure
-        </Button>
+        <a href={Brochure} target="_blank">
+          <Button variant="outline" className="flex-grow sm:flex-grow-0">
+            Download Brochure
+          </Button>
+        </a>
       </div>
 
       <Tabs defaultValue="overview" className="mb-8">

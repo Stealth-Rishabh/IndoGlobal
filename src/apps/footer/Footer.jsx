@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import {
   Linkedin,
   Facebook,
@@ -10,10 +11,15 @@ import {
   Globe,
   // Download,
 } from "lucide-react";
+import {Badge} from "@/components/ui/badge";
+import { Download } from "lucide-react";
+
 import MandatoryDisclosure from "../../assets/pdfs/Mandatory-Discl-IGCE.pdf";
 import GrievanceRedressal from "../../assets/pdfs/Grievance Committee_IGEF.pdf";
 import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
 export default function Footer() {
+
+  const [badge, setBadge] = useState(false);
   const footerSections = [
     {
       label: "Quick Links",
@@ -28,7 +34,7 @@ export default function Footer() {
         { name: "Placements", path: "/placements/campus-recruitments" },
         { name: "Blogs", path: "/blogs" },
         { name: "Contact Us", path: "/contact-us" },
-        { name: "Download Brochure", path: Brochure, isDownload: true },
+        { name: "Download Brochure", path: Brochure, isDownload: true, isBadge: badge },
       ],
     },
     {
@@ -182,10 +188,11 @@ export default function Footer() {
                     {item.isDownload ? (
                       <button
                         onClick={() => handleItemClick(item)}
-                        className="flex items-center hover:text-red-600 transition-colors"
+                        className="flex relative items-center hover:text-red-600 group transition-colors "
                       >
                         {item.name}
-                        {/* <Download size={16} className="ml-2" /> */}
+                        <Download size={16} className="ml-2 group-hover:animate-bounce"  />
+                        <Badge className="absolute -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">PDF</Badge>
                       </button>
                     ) : (
                       <Link
