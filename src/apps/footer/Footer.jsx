@@ -134,7 +134,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white pt-10 text-lg">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-5">
         {/* First section with social icons and address */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 sm:gap-8 mb-8">
           <div>
             <h2 className=" sm:text-3xl font-bold text-red-600 mb-4">
               Explore. Discover. Connect.
@@ -188,11 +188,11 @@ export default function Footer() {
                     {item.isDownload ? (
                       <button
                         onClick={() => handleItemClick(item)}
-                        className="flex relative items-center hover:text-red-600 group transition-colors "
+                        className="flex relative items-center justify-start  hover:text-red-600 group transition-colors "
                       >
                         {item.name}
                         <Download size={16} className="ml-2 group-hover:animate-bounce"  />
-                        <Badge className="absolute -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">PDF</Badge>
+                        <Badge className="absolute hidden sm:block -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">PDF</Badge>
                       </button>
                     ) : (
                       <Link

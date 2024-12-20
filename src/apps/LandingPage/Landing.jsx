@@ -70,7 +70,7 @@ const Landing = () => {
 
   return (
     <div className="overflow-x-hidden relative">
-      <button
+      {/* <button
         onClick={() => setShowWidget(!showWidget)}
         className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
           showWidget ? "hidden" : ""
@@ -87,7 +87,7 @@ const Landing = () => {
 
       {showWidget && (
         <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
-      )}
+      )} */}
 
       <motion.div
         ref={heroRef}
