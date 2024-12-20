@@ -8,8 +8,8 @@ import {
     HelpCircle,
   } from "lucide-react";
   import React from "react";
-  // import img from "../../../assets/courses/btech-mech.webp";
-  import img from "../../../assets/courses/btech-mech.png";
+  import img from "../../../assets/courses/btech-mech.webp";
+  // import img from "../../../assets/courses/btech-mech.png";
 
   export const BTECH_IN_MECH_ENGG = {
     path: "btech-mechanical-engineering",
