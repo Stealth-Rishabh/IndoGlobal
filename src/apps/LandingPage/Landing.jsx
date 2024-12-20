@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useState } from 'react';
+import { useState } from "react";
 
 // import Container from "../../components/wrappers/Container"
 import AboutIndoGlobal from "./AboutIndoGolbal";
@@ -14,7 +14,7 @@ import RankSlider from "./RankSlider";
 import Stats from "./Stats";
 import { Testimonials } from "./testimonials/Testimonial";
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
-
+import { X } from "lucide-react";
 const sectionVariants = {
   hidden: { scale: 0.8, opacity: 0 }, // Starting state (small and transparent)
   visible: {
@@ -70,19 +70,23 @@ const Landing = () => {
 
   return (
     <div className="overflow-x-hidden relative">
-      <button 
+      <button
         onClick={() => setShowWidget(!showWidget)}
-        className="fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90"
+        className={`fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
+          showWidget ? "hidden" : ""
+        }`}
       >
         Quick Enquiry
-        
-
       </button>
+      <X
+        onClick={() => setShowWidget(false)}
+        className={`fixed cursor-pointer top-[31%] right-8 translate-y-1/2 z-[9998] bg-white text-secondary-color w-7 h-7  p-1 rounded-sm  shadow-lg hover:bg-white/90 -rotate-90 ${
+          showWidget ? "" : "hidden"
+        }`}
+      />
 
       {showWidget && (
-        <NoPaperFormsWidget 
-          className="fixed top-0 right-0 translate-y-1/2 z-[9999]"
-        />
+        <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
       )}
 
       <motion.div

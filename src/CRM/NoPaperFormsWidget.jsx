@@ -36,8 +36,8 @@ const NoPaperFormsWidget = ({ className }) => {
     <div
       className={className}
       style={{
-        height: "410px",
-        width: "20%",
+        // height: "410px",
+        // width: "70%",
         overflow: "hidden",
         borderRadius: "10px",
         margin: "1rem",
