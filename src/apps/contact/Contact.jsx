@@ -218,7 +218,7 @@ const Contact = () => {
           </Card>
 
           {/* Form section */}
-          <Card className="col-span-2 bg-white shadow-sm sm:order-2 order-1">
+          <Card className="col-span-2 !mt-0 bg-white shadow-sm sm:order-2 order-1">
             <CardHeader>
               <CardTitle className="text-3xl font-bold sm:text-4xl sm:pb-5 text-secondary-color">
                 Get in touch with us.
