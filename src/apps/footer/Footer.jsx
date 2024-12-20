@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import MandatoryDisclosure from "../../assets/pdfs/Mandatory-Discl-IGCE.pdf";
 import GrievanceRedressal from "../../assets/pdfs/Grievance Committee_IGEF.pdf";
+import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
 export default function Footer() {
   const footerSections = [
     {
@@ -27,6 +28,7 @@ export default function Footer() {
         { name: "Placements", path: "/placements/campus-recruitments" },
         { name: "Blogs", path: "/blogs" },
         { name: "Contact Us", path: "/contact-us" },
+        { name: "Download Brochure", path: Brochure, isDownload: true },
       ],
     },
     {
@@ -150,18 +152,22 @@ export default function Footer() {
               Campus Address{" "}
             </h3>
             <p className="text-sm">INDO GLOBAL EDUCATION CITY</p>
-            <p className="text-sm">
+            <a href="https://maps.app.goo.gl/NL7WpXRs7wDYNTEu5" target="_blank" className="text-sm">
               ABHIPUR-New Chandigarh-140109, District Mohali (Punjab)
-            </p>
-            <p className="flex items-center text-sm">
+            </a>
+            <a href="tel:0160-5036000" className="flex items-center text-sm">
               <Phone size={18} className="mr-2" /> 0160-5036000
-            </p>
-            <p className="flex items-center text-sm">
+            </a>
+            <a
+              href="https://www.igef.net"
+              target="_blank"
+              className="flex items-center text-sm"
+            >
               <Globe size={18} className="mr-2" /> www.igef.net
-            </p>
-            <p className="flex items-center text-sm">
+            </a>
+            <a href="mailto:contact@igef.net" className="flex items-center text-sm">
               <Mail size={18} className="mr-2" /> contact@igef.net
-            </p>
+            </a>
           </div>
 
           {/* Footer sections with links */}

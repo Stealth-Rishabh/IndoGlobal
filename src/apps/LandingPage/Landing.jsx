@@ -72,7 +72,7 @@ const Landing = () => {
     <div className="overflow-x-hidden relative">
       <button
         onClick={() => setShowWidget(!showWidget)}
-        className={`fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
+        className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
           showWidget ? "hidden" : ""
         }`}
       >
@@ -80,7 +80,7 @@ const Landing = () => {
       </button>
       <X
         onClick={() => setShowWidget(false)}
-        className={`fixed cursor-pointer top-[31%] right-8 translate-y-1/2 z-[9998] bg-white text-secondary-color w-7 h-7  p-1 rounded-sm  shadow-lg hover:bg-white/90 -rotate-90 ${
+        className={`fixed cursor-pointer top-[25%] sm:top-[31%] right-8 translate-y-1/2 z-[9998] bg-white text-secondary-color w-7 h-7  p-1 rounded-sm  shadow-lg hover:bg-white/90 -rotate-90 ${
           showWidget ? "" : "hidden"
         }`}
       />

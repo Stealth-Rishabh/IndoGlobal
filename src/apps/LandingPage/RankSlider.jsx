@@ -40,7 +40,7 @@ const RankSlider = () => {
         className="absolute object-cover w-full h-full -z-10 "
       />
       <Container className="relative lg:mb">
-        <Carousel
+        {/* <Carousel
           plugins={[plugin.current]}
           setApi={setApi}
           onMouseEnter={plugin.current.stop}
@@ -49,7 +49,7 @@ const RankSlider = () => {
         >
           <CarouselContent className="">
             {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={index}> */}
                 <div className="p-1">
                   <Card className="bg-transparent border-none rounded-none shadow-none">
                     <CardContent className="p-0  h-[550px] sm:h-[500px] border-none shadow-none grid ">
@@ -107,7 +107,7 @@ const RankSlider = () => {
                     </CardContent>
                   </Card>
                 </div>
-              </CarouselItem>
+              {/* </CarouselItem>
             ))}
           </CarouselContent>
           <CarouselPrevious
@@ -129,7 +129,7 @@ const RankSlider = () => {
               onClick={() => api?.scrollTo(index)}
             />
           ))}
-        </div>
+        </div> */}
       </Container>
     </div>
   );
