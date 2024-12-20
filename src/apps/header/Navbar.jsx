@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 import { navlinks } from "./navData";
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 
 export default function Navbar() {
   const location = useLocation();
@@ -99,7 +99,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-red-600 px-4 py-4">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1330px] 2xl:max-w-[1536px] mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-10">
           <Link to="/">
             <img
