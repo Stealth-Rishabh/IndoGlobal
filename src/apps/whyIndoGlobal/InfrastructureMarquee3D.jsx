@@ -8,7 +8,7 @@ export function InfrastructureMarquee3D({logos,index}) {
     <div className="relative flex h-full w-full sm:w-96 mx-auto flex-col items-center justify-center gap-4 overflow-hidden rounded-lg bg-background px-20 ">
       <div className="flex flex-row gap-4 [perspective:300px]">
         <Marquee
-          className="h-96 justify-center overflow-hidden [--duration:15s] [--gap:1rem] drop-shadow-lg"
+          className="h-96 justify-center overflow-hidden [--duration:8s] [--gap:1rem] drop-shadow-lg"
           vertical
           style={{
             transform:

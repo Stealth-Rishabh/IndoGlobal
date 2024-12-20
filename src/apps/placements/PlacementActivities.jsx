@@ -132,7 +132,7 @@ const PlacementActivities = () => {
 export default PlacementActivities;
 
 const TrainingPrograms = () => (
-  <section className="rounded-lg bg-gray-50">
+  <section className="">
     <h2 className="text-4xl font-bold mb-8">Training Programs</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {trainingActivities.map((activity, index) => (

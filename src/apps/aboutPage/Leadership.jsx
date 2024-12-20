@@ -46,8 +46,10 @@ const CollegeLocation = () => {
           />
 
           <section className="ezy__about2 light pt-10 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
-            <div className="container px-4">
+            <div className="container ">
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
                 <div>
                   <h2 className="lg:text-end text-4xl md:text-6xl leading-tight md:leading-normal tracking-wide font-light lg:pl-6 mb-0">
                     Late Sukhdev Kumar Singla
@@ -56,15 +58,18 @@ const CollegeLocation = () => {
                     </span>
                   </h2>
                 </div>
+
                 <div className="lg:px-4 my-6 lg:my-0">
-                  <div
-                    className="min-h-[450px] md:h-full bg-center bg-cover rounded-lg"
-                    style={{
-                      backgroundImage: `url(${chairmanImage})`,
-                    }}
-                  ></div>
+                  <div className="sm:min-h-[450px md:h-full bg-center bg-cover rounded-lg">
+                    <img
+                      src={chairmanImage}
+                      alt="Chairman"
+                      className="h-full w-full object-cover r rounded-lg"
+                    />
+                  </div>
                 </div>
-                <div className="col-span-2">
+
+                <div className="sm:col-span-2">
                   <p className="text-2xl leading-relaxed mb-4 text-primary-color font-semibold">
                     Dear Education Aspirants,
                   </p>

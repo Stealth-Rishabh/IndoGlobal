@@ -16,7 +16,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { COURSE_DETAILS } from "./course-details";
-import { Star, CheckSquare } from "lucide-react";
+import { Star, CheckSquare, X } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
@@ -47,20 +47,27 @@ const CoursesDetails = () => {
   ];
 
   return (
-    <>
+    <section className="relative">
       <Helmet>
         <title>{courseData.title} | Indo Global Colleges</title>
       </Helmet>
-      <button 
+      <button
         onClick={() => setShowWidget(!showWidget)}
-        className="fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90"
+        className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
+          showWidget ? "hidden" : ""
+        }`}
       >
         Quick Enquiry
       </button>
+      <X
+        onClick={() => setShowWidget(false)}
+        className={`fixed cursor-pointer top-[25%] sm:top-[31%] right-8 translate-y-1/2 z-[9998] bg-white text-secondary-color w-7 h-7  p-1 rounded-sm  shadow-lg hover:bg-white/90 -rotate-90 ${
+          showWidget ? "" : "hidden"
+        }`}
+      />
+
       {showWidget && (
-        <NoPaperFormsWidget 
-          className="fixed top-0 right-0 translate-y-1/2 z-[9999]"
-        />
+        <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
       )}
       <div className="relative min-h-screen">
         <ImgAndBreadcrumb
@@ -80,7 +87,7 @@ const CoursesDetails = () => {
         {/* <Stats /> */}
         {/* <Newsletter /> */}
       </div>
-    </>
+    </section>
   );
 };
 

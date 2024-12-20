@@ -311,7 +311,7 @@ const getIcon = (name) => {
                       </>
                     )}
                   </Button>
-                  <Badge variant="secondary">Learn More</Badge>
+                  {/* <Badge variant="secondary">Learn More</Badge> */}
                 </CardFooter>
               </Card>
             </motion.div>

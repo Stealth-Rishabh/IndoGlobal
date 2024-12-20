@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { X } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -134,8 +135,8 @@ const collegeCourses = {
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Admissions" }];
 
 const TABS = [
-  { value: "postgraduate", label: "Postgraduate" },
   { value: "undergraduate", label: "Undergraduate" },
+  { value: "postgraduate", label: "Postgraduate" },
   { value: "polytechnic", label: "Polytechnic" },
 ];
 
@@ -144,18 +145,23 @@ const Admission = () => {
   const [showWidget, setShowWidget] = useState(false);
   return (
     <section className="relative min-h-screen">
-       <button 
+       <button
         onClick={() => setShowWidget(!showWidget)}
-        className="fixed top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90"
+        className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
+          showWidget ? "hidden" : ""
+        }`}
       >
         Quick Enquiry
-        
-
       </button>
+      <X
+        onClick={() => setShowWidget(false)}
+        className={`fixed cursor-pointer top-[25%] sm:top-[31%] right-8 translate-y-1/2 z-[9998] bg-white text-secondary-color w-7 h-7  p-1 rounded-sm  shadow-lg hover:bg-white/90 -rotate-90 ${
+          showWidget ? "" : "hidden"
+        }`}
+      />
+
       {showWidget && (
-        <NoPaperFormsWidget 
-          className="fixed top-0 right-0 translate-y-1/2 z-[9999]"
-        />
+        <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
       )}
       <ImgAndBreadcrumb
         title="Admissions"
@@ -163,7 +169,7 @@ const Admission = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid gap-14 relative">
+      <Container className="container relative grid gap-14">
         <div className="col-span-1 pt-12">
           <Heading
             title="Start Your Journey Here"
@@ -193,7 +199,7 @@ const Admission = () => {
                     value={tab.value}
                     className="mt-6"
                   >
-                    <h2 className="text-xl font-semibold mb-2 text-gray-500 pl-2 py-4">
+                    <h2 className="py-4 pl-2 mb-2 text-xl font-semibold text-gray-500">
                       {tab.label} Courses
                     </h2>
                     {renderTable(collegeCourses[tab.value])}
@@ -228,19 +234,19 @@ const renderTable = (courses) => (
     <TableBody>
       {courses.map((course, index) => (
         <TableRow key={index}>
-          <TableCell className="text-xs sm:text-base text-gray-600">
+          <TableCell className="text-xs text-gray-600 sm:text-base">
             {index + 1}
           </TableCell>
-          <TableCell className="text-xs sm:text-base text-gray-600">
+          <TableCell className="text-xs text-gray-600 sm:text-base">
             {course.name}
           </TableCell>
-          <TableCell className="text-xs sm:text-base text-gray-600">
+          <TableCell className="text-xs text-gray-600 sm:text-base">
             {course.duration}
           </TableCell>
-          <TableCell className="text-xs sm:text-base text-gray-600">
+          <TableCell className="text-xs text-gray-600 sm:text-base">
             {course.eligibility}
           </TableCell>
-          <TableCell className="text-xs sm:text-base text-gray-600">
+          <TableCell className="text-xs text-gray-600 sm:text-base">
             {course.type}
           </TableCell>
           <TableCell className="text-center">
@@ -260,36 +266,36 @@ const AdmissionAbout = () => {
   return (
     <section className="ezy__about1 light py-12 md:py-24 px-6 md:px-0 bg-blue-950 dark:bg-[#0b1727] text-zinc-900 dark:text-white">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row gap-6 justify-center max-w-7xl mx-auto">
-          <div className="md:w-1/2 flex flex-col gap-6">
-            <h2 className="md:text-end text-4xl md:text-6xl  text-white leading-tight md:leading-tight font-light">
+        <div className="flex flex-col justify-center gap-6 mx-auto md:flex-row max-w-7xl">
+          <div className="flex flex-col gap-6 md:w-1/2">
+            <h2 className="text-4xl font-light leading-tight text-white md:text-end md:text-6xl md:leading-tight">
               Shaping Future Leaders Since 1996
             </h2>
-            <div className="flex-grow rounded overflow-hidden h-48 relative">
-              {/* <div className="inset-0 absolute bg-gradient-to-t from-black/60 to-transparent "></div> */}
+            <div className="relative flex-grow h-48 overflow-hidden rounded">
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent "></div> */}
                 <img
                   src={shaping}
               alt="Admission"
-                className="object-cover hover:scale-125 w-full transition-all duration-300 h-full"
+                className="object-cover w-full h-full transition-all duration-300 hover:scale-125"
               />
             </div>
           </div>
-          <div className="md:w-1/2 mt-5 lg:pr-">
-            <p className="text-base tracking-widest opacity-80 mb-0 text-white">
+          <div className="mt-5 md:w-1/2 lg:pr-">
+            <p className="mb-0 text-base tracking-widest text-white opacity-80">
               Welcome to Indo Global Group of Colleges, where academic
               excellence meets industry relevance. Our institution has been at
               the forefront of technical and professional education, offering
               prestigious B.Tech, B.Arch, and MBA programs designed to prepare
               you for leadership roles across diverse sectors.
             </p>
-            <p className="text-base tracking-widest opacity-80 mt-12 text-white">
+            <p className="mt-12 text-base tracking-widest text-white opacity-80">
               Our cutting-edge curriculum, combined with state-of-the-art
               facilities and experienced faculty, ensures that you receive
               education that&apos;s both comprehensive and future-ready. We focus
               on practical learning, innovation, and personal growth to help you
               achieve your career aspirations.
             </p>
-            <p className="text-base tracking-widest opacity-80 mt-12 mb-0 text-white">
+            <p className="mt-12 mb-0 text-base tracking-widest text-white opacity-80">
               Join our vibrant community of learners and become part of a legacy
               that has produced countless industry leaders. At Indo Global, we
               don't just offer education – we provide a transformative
