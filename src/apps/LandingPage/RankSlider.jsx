@@ -55,7 +55,7 @@ const RankSlider = () => {
                     <CardContent className="p-0  h-[550px] sm:h-[500px] border-none shadow-none grid ">
                       <div className="flex md:flex-row flex-col sm:justify-between w-full gap-5 sm:gap-0">
                         <h2 className=" text-2xl  sm:text-4xl font-semibold tracking-tight scroll-m-20 first:mt-0">
-                          Rankings, Accereditations <br /> &amp; Tie-up.
+                          Rankings, Accreditations <br /> &amp; Tie-ups.
                         </h2>
                         {/* <Link to="/about/accreditation"> */}
                           <ButtonSq

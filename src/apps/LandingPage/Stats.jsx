@@ -5,7 +5,7 @@ import NumberTicker from "../../components/ui/number-ticker";
 
 const Stats = () => {
   const stats = [
-    { data: "70", title: "Acres of Campus" },
+    { data: "30", title: "Acres of Campus" },
     { data: "22+", title: "Years of Excellence" },
     { data: "10000+", title: "Alumni" },
     { data: "20+", title: "Courses" },
@@ -26,7 +26,7 @@ const Stats = () => {
         />
         <Heading
           // title="INDO GLOBAL GROUPS OF COLLEGES"
-          subtitle="Spanning 70 acres, with 22+ years of academic excellence, over 10,000 alumni, and 20+ specialized courses, we continue to shape future professionals."
+          subtitle="Spanning 30+ acres, with 22+ years of academic excellence, over 10,000 alumni, and 20+ specialized courses, we continue to shape future professionals."
           titleClassName="text-4xl md:text-6xl font-bold text-white"
           subtitleClassName="text-gray-300 text-base md:text-lg"
         />
@@ -42,11 +42,11 @@ const Stats = () => {
                   value={item.data}
                   className="text-4xl font-bold text-white font sm:text-6xl"
                 />{" "}
-                {index != 0 && (
+             
                   <span className="-ml-3 text-4xl font-bold text-white font sm:text-6xl">
                     +
                   </span>
-                )}
+             
               </div>
               <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">
                 {item.title}

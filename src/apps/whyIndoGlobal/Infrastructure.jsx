@@ -46,7 +46,7 @@ const Infrastructure = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Campuse Infrastructure"
+            title="Campus Infrastructure"
             titleClassName="text-secondary-color text-left text-3xl sm:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Our college infrastructure is designed to provide students with an enriching academic and social environment. Featuring modern classrooms, high-tech labs, collaborative spaces, and recreational facilities, we support holistic development and inspire academic and personal growth."

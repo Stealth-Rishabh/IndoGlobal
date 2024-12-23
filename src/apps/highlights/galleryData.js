@@ -130,12 +130,6 @@ export const galleryData = [
     image: fountainEntrance,
   },
   {
-    id: 8,
-    date: "2024-12-15",
-    category: "campus",
-    image: panorama,
-  },
-  {
     id: 9,
     date: "2024-12-15",
     category: "infrastructure",

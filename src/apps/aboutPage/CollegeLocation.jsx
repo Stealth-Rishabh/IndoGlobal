@@ -66,20 +66,7 @@ const locations = [
     ],
     image: location2,
   },
-  {
-    title: "Nepal Address",
-    details: [
-      {
-        icon: <Building className="w-5 h-5" />,
-        text: "CRT Building, 3rd floor, Putalisadak",
-      },
-      { icon: <MapPin className="w-5 h-5" />, text: "Kathmandu, Nepal" },
-      { icon: <Phone className="w-5 h-5" />, text: "0977-01-4232264" },
-      { icon: <Globe className="w-5 h-5" />, text: "www.igef.net" },
-      { icon: <Mail className="w-5 h-5" />, text: "indoglobal07@gmail.com" },
-    ],
-    image: location3,
-  },
+  
 ];
 
 const CollegeLocation = () => {
@@ -130,20 +117,23 @@ const LocationItem = ({ location, index }) => {
   return (
     <>
       <div
-        className={`col-span-12 md:col-span-5 ${
+        className={`col-span-12 space-y-4 md:col-span-5 ${
           index % 2 === 0
             ? "order-2 md:order-2 md:col-start-6"
             : "order-2 md:order-1 md:col-start-1"
         }`}
       >
         <div
-          className={`flex flex-col justify-center ${
+          className={`flex flex-col space-y-4 justify-center ${
             index % 2 === 0 ? "lg:pl-14" : "lg:pr-14"
           }`}
         >
-          <h4 className="text-2xl font-bold mb-6 text-secondary-color">
+          <h4 className="text-2xl font-bold  text-secondary-color">
             {title}
           </h4>
+          {index === 2 && <h4 className="text-lg font-bold  text-gray-800">
+          Only for postal purpose*
+          </h4>}
           <ul className="space-y-2">
             {details.map((detail, index) => (
               <li key={index} className="flex items-center">

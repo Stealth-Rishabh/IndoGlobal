@@ -13,28 +13,28 @@ export const programData = [
           path : '/courses/btech-computer-science-engineering'
         },
         {
-          name: "B.Arch Bachelor of Architecture",
+          name: "B.Arch (Bachelor of Architecture)",
           description: "The B.Arch program focuses on architectural design, urban planning, and sustainable development. Students work on real-world projects and internships.",
           duration: "5 years",
           eligibility: "10+2 with PCM, minimum 50% aggregate, valid NATA score",
           path : '/courses/bachelors-of-architecture'
         },
         {
-          name: "BBA Bachelor of Business Administration",
+          name: "BBA (Bachelor of Business Administration)",
           description: "Our BBA program prepares future business leaders with a comprehensive curriculum covering management, finance, marketing, and entrepreneurship.",
           duration: "3 years",
           eligibility: "10+2 in any stream, minimum 50% aggregate",
           path : '/courses/bachelor-of-business-administration'
         },
         {
-          name: "BCA Bachelor of Computer Applications",
+          name: "BCA (Bachelor of Computer Applications)",
           description: "The BCA program offers in-depth knowledge of computer applications, programming languages, and software development methodologies.",
           duration: "3 years",
           eligibility: "10+2 with Mathematics, minimum 50% aggregate",
           path : '/courses/bachelor-of-computer-applications'
         },
         {
-          name: "B.Sc (Medical Laboratory Sciences)",
+          name: "B.Sc Paramedical",
           description: "This program trains students in various aspects of medical laboratory techniques, preparing them for careers in healthcare and research.",
           duration: "3 years",
           eligibility: "10+2 with PCB, minimum 50% aggregate",
@@ -59,14 +59,14 @@ export const programData = [
           path : '/courses/mtech-computer-science-engineering'
         },
         {
-          name: "MBA Master of Business Administration",
+          name: "MBA (Master of Business Administration)",
           description: "The MBA program develops future business leaders with a focus on global business practices, leadership, and strategic management.",
           duration: "2 years",
           eligibility: "Bachelor's degree in any discipline, minimum 50% aggregate, valid CAT/MAT score",
           path : '/courses/master-of-business-administration'
         },
         {
-          name: "MCA Master of Computer Applications",
+          name: "MCA (Master of Computer Applications)",
           description: "The MCA program provides advanced knowledge in software development, database management, and emerging technologies.",
           duration: "2 years",
           eligibility: "Bachelor's degree with Mathematics, minimum 50% aggregate",

@@ -71,7 +71,7 @@ function App() {
         <Route path="/" element={
           <>
             <Helmet>
-              <title>Indo Global Colleges</title>
+              <title>Indo Global Group of Colleges</title>
             </Helmet>
             <Landing />
           </>

@@ -53,7 +53,7 @@ const AiciteSpices = () => {
             title="AICTE's SPICES Program"
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
-            subtitle=" Scheme for Promoting Interests, Creativity and Ethics among Students."
+            subtitle=" Scheme for Promoting Interests, Creativity and Ethics among students."
             className="lg:pb-10"
           />
 

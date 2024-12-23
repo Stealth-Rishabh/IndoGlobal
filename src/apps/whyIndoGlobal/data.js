@@ -142,7 +142,7 @@ export const infrastructureData = [
   {
     title: "Labs & Workshops",
     description: `
-      Labs are a cornerstone of hands-on learning at IGC, with state-of-the-art facilities equipped to support specialized education across fields. Each lab features the latest configurations, software, and tools necessary for skill development. In addition, students benefit from 2-3 day workshops in areas like mural making and sculpture, taught by industry experts.
+      Labs are a cornerstone of hands-on learning at IGC, with state-of-the-art facilities equipped to support specialized education across fields. Each lab features the latest configurations, software, and tools necessary for skill development. In addition, students benefit from 2-3 days workshops in areas like mural making and sculpture, taught by industry experts.
     `,
     stories: [
       {
@@ -177,11 +177,11 @@ export const infrastructureData = [
   {
     title: "Studios",
     description: `
-      Our college boasts a range of modern studios fully equipped with top-notch drawing, drafting, and printing tools. These studios provide Architecture and Interior Design students with all the resources they need to bring their creative visions to life.
+      Our college boasts a range of modern studios fully equipped with top-notch drawing, drafting, and printing tools. These studios provide Architecture students with all the resources they need to bring their creative visions to life.
     `,
     stories: [
       {
-        text: "Modern studios designed for Architecture and Interior Design students.",
+        text: "Modern studios designed for Architecture students.",
       },
       {
         text: "Comprehensive tools for drawing, drafting, and printing available in every studio.",
@@ -212,7 +212,7 @@ export const infrastructureData = [
   {
     title: "Internet",
     description: `
-      Our institute provides robust, high-speed internet access for students and faculty, ensuring everyone can stay current with the latest in technological developments. With a high-bandwidth (9 Mbps) RF link and Wi-Fi coverage across the campus, connectivity is both reliable and fast.
+      Our institute provides robust, high-speed internet access for students and faculty, ensuring everyone can stay current with the latest technological developments. With a high-bandwidth (9 Mbps) RF link and Wi-Fi coverage across the campus, connectivity is both reliable and fast.
     `,
     stories: [
       {
@@ -329,7 +329,7 @@ export const infrastructureData = [
   {
     title: "Medical Facility",
     description: `
-      Our campus provides a medical facility with a resident doctor and nurse, along with a fully-equipped first aid and medical checkup room. Basic medications are readily available to support student health and well-being.
+      Our campus provides medical facility with a resident doctor and nurse, along with a fully-equipped first aid and medical checkup room. Basic medications are readily available to support student health and well-being.
     `,
     stories: [
       { text: "On-campus medical facility with a resident doctor and nurse." },
