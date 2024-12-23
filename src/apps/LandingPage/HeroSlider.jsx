@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, memo } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -23,11 +23,96 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { Link } from "react-router-dom";
 
+// Create separate optimized components for heavy animations
+const SlideContent = memo(({ img }) => {
+  return (
+    <div className="size-full sm:max-w-5xl items-center justify-center overflow-hidden sm:pt-8 absolute top-16 sm:top-[4%] left-[10%] sm:left-[8%] z-20 space-y-6">
+      <AnimatedGradientText className="mx-0 rounded-md">
+        🔔 <hr className="h-4 mx-2 w-" />{" "}
+        <span className="inline animate-gradient text-sm sm:text-xl bg-gradient-to-r from-[#fff] via-[#a80808] to-[#fff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent">
+          Enroll now
+        </span>
+        <ChevronRight className="ml-1 mt-1 size-3 sm:size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 text-white/70" />
+      </AnimatedGradientText>
+
+      <BoxReveal
+        boxColor={"#DC2626"}
+        duration={0.5}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <h2 className="text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-8xl sm:py-4 sm:tracking-wide drop-shadow-lg">
+          {img.tagline.split(" ").map((word, index) => (
+            <span
+              key={index}
+              className={index === 1 || index === 2 ? "text-[#DC2626]" : ""}
+            >
+              {word}
+              {index === 1 ? <br /> : " "}
+            </span>
+          ))}
+        </h2>
+      </BoxReveal>
+
+      <div className="hidden sm:block">
+        <WordPullUp
+          words={img.highlight}
+          className="text-xl font-semibold md:text-3xl text-slate-200 md:font-bold text-left max-w-[20rem] md:max-w-3xl"
+        />
+      </div>
+      <div className="sm:hidden block">
+        <WordRotate
+          className="text-2xl font-bold md:text-3xl text-white md:font-bold text-left max-w-[20rem] md:max-w-3xl"
+          words={img.highlights}
+        />
+      </div>
+
+      <div>
+        <Link to="/courses" className="mt-5">
+          <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
+            Explore Courses
+          </ShinyButton>
+        </Link>
+      </div>
+    </div>
+  );
+});
+SlideContent.displayName = "SlideContent";
+
+// Optimize image loading
+const SlideImage = memo(({ img }) => (
+  <>
+    <img
+      src={img.image}
+      alt={img.tagline}
+      className="object-cover w-screen h-[420px] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
+      loading="lazy"
+    />
+    <div className="absolute inset-0 z-20 bg-black opacity-50" />
+  </>
+));
+SlideImage.displayName = "SlideImage";
+
 const HeroSlider = () => {
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const plugin = useRef(Autoplay({ delay: 8000, stopOnInteraction: true }));
+  const plugin = useRef(
+    Autoplay({
+      delay: 8000,
+      stopOnInteraction: true,
+      rootNode: (emblaRoot) => emblaRoot.parentElement,
+    })
+  );
+
+  // Pre-load images
+  useEffect(() => {
+    imgSlider.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+  }, []);
 
   useEffect(() => {
     if (!api) {
@@ -150,6 +235,11 @@ const HeroSlider = () => {
         setApi={setApi}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.play}
+        options={{
+          skipSnaps: false,
+          inViewThreshold: 0.7,
+          dragFree: false,
+        }}
       >
         <CarouselContent>
           {imgSlider.map((img, index) => (
@@ -157,68 +247,14 @@ const HeroSlider = () => {
               key={index}
               className="w-full sm:h-full relative h-[420px] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]"
             >
-              <img
-                src={img.image}
-                alt={img.tagline}
-                className="object-cover w-screen  h-[420px] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)] sm:blur-sm blur-[2px]"
-              />
-              <div className="absolute inset-0 z-20 bg-black opacity-50" />
-              <div className="size-full sm:max-w-5xl items-center justify-center overflow-hidden sm:pt-8 absolute top-16 sm:top-[4%] left-[10%] sm:left-[8%] z-20 space-y-6">
-                <AnimatedGradientText className="mx-0 rounded-md">
-                  🔔 <hr className="h-4 mx-2 w-" />{" "}
-                  <span
-                    className={cn(
-                      `inline animate-gradient bg- text-sm sm:text-xl bg-gradient-to-r from-[#fff] via-[#a80808] to-[#fff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
-                    )}
-                  >
-                    Enroll now
-                  </span>
-                  <ChevronRight className="ml-1 mt-1 size-3 sm:size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 text-white/70" />
-                </AnimatedGradientText>
-                <BoxReveal boxColor={"#DC2626"} duration={0.5}>
-                  <p className="text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-8xl sm:py-4 sm:tracking-wide drop-shadow-lg">
-                    {img.tagline.split(" ").map((word, index) => {
-                      if (index === 1) {
-                        return (
-                          <span key={index}>
-                            <span style={{ color: "#DC2626" }}>{word}</span>{" "}
-                            <br />
-                          </span>
-                        );
-                      } else if (index === 2) {
-                        return (
-                          <span key={index}>
-                            <span style={{ color: "#DC2626" }}>{word}</span>{" "}
-                          </span>
-                        );
-                      } else {
-                        return <span key={index}>{word} </span>;
-                      }
-                    })}
-                  </p>
-                </BoxReveal>
-
-                <WordPullUp
-                  words={img.highlight}
-                  className="hidden sm:block text-xl font-semibold md:text-3xl text-slate-200  md:font-bold text-left max-w-[20rem] md:max-w-3xl"
-                />
-                <WordRotate
-                  className="sm:hidden block text-2xl font-bold md:text-3xl text-white  md:font-bold text-left max-w-[20rem] md:max-w-3xl"
-                  words={img.highlights}
-                />
-
-                <div>
-                  <Link to="/courses" className="mt-5">
-                    <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
-                      Explore Courses
-                    </ShinyButton>
-                  </Link>
-                </div>
-              </div>
+              <SlideImage img={img} />
+              <SlideContent img={img} />
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
+
+      {/* Navigation dots */}
       <div className="absolute justify-center hidden mt-4 space-x-2 -rotate-90 sm:flex -right-5 bottom-28">
         {Array.from({ length: count }).map((_, index) => (
           <button
@@ -234,4 +270,4 @@ const HeroSlider = () => {
   );
 };
 
-export default HeroSlider;
+export default memo(HeroSlider);
