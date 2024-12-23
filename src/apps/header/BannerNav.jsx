@@ -4,7 +4,7 @@ import { FacebookIcon, Instagram, Youtube, MapPin, Mail, Phone, Linkedin } from 
 export default function BannerNav() {
   return (
     <div className="bg-gray-100 py-2 px-4 text-sm hidden sm:block">
-      <div className="container mx-auto flex justify-end sm:justify-between sm:items-center">
+      <div className="sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] min-w-[1280px]:max-w-[1280px] 2xl:max-w-[1536px] mx-auto flex justify-end sm:justify-between sm:items-center">
         <div className="hidden md:flex items-center space-x-4">
           <span>Follow us</span>
           <div className="flex space-x-2">
