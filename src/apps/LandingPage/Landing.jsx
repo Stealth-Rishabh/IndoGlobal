@@ -30,7 +30,7 @@ const sectionVariants = {
 const Landing = () => {
   const [showWidget, setShowWidget] = useState(false);
   const [heroRef, heroInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.0,
     triggerOnce: true,
   });
   const [placementsRef, placementsInView] = useInView({
@@ -89,14 +89,14 @@ const Landing = () => {
         <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
       )}
 
-      <motion.div
+      {/* <motion.div
         ref={heroRef}
         variants={sectionVariants}
         initial="hidden"
         animate={heroInView ? "visible" : "hidden"}
-      >
+      > */}
         <Hero />
-      </motion.div>
+      {/* </motion.div> */}
 
       <motion.div
         ref={placementsRef}
