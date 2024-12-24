@@ -282,7 +282,7 @@ function App() {
         } />
 
         {/* Blogs page */}
-        <Route path="/blogs" element={
+        {/* <Route path="/blogs" element={
           <>
             <Helmet>
               <title>Blogs | Indo Global Colleges</title>
@@ -297,7 +297,7 @@ function App() {
             </Helmet>
             <BlogDetails />
           </>
-        } />
+        } /> */}
 
         {/* Career page  */}
         <Route

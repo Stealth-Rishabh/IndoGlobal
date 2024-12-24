@@ -119,7 +119,16 @@ export default function Navbar() {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                {link.dropdown ? (
+                {link.name === "Blogs" ? (
+                  <a 
+                    href="/blog" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="rounded px-3 py-2 text-white hover:bg-red-700 hover:text-red-200"
+                  >
+                    {link.name}
+                  </a>
+                ) : link.dropdown ? (
                   <DropdownMenu open={openDropdown === index}>
                     <DropdownMenuTrigger asChild>
                       <button
