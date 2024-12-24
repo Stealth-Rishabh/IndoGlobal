@@ -11,7 +11,7 @@ const Stats = () => {
 
   return (
     <section className="py-20 bg-gradient-to-l from-primary-color via-red-600 to-primary-color">
-      <div className="max-w-screen-xl mx-auto px-4 text-white md:px-8">
+      <div className="max-w- mx-auto px-4 text-white md:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <h3 className="text-white text-3xl font-bold sm:text-5xl">
             What our numbers say
