@@ -10,7 +10,7 @@ const Newsletter = () => {
                             Subscribe to our newsletter
                         </h3>
                         <p className="text-blue-100 leading-relaxed">
-                            Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.
+                            Stay informed about admissions, events and academic updates from Indo Global Colleges. Join our newsletter today.
                         </p>
                     </div>
                     <div className="mt-6">
@@ -29,7 +29,7 @@ const Newsletter = () => {
                             </button>
                         </form>
                         <p className="mt-3 max-w-lg text-[15px] text-blue-100 sm:mx-auto text-center ">
-                            No spam ever, we are care about the protection of your data.
+                            No spam ever, we care about the protection of your data.
                             Read our <a className="underline" href="javascript:void(0)"> Privacy Policy </a>
                         </p>
                     </div>
