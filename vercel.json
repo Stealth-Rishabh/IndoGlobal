@@ -1,16 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/blog/:path*",
-      "destination": "http://57.128.189.225/blog/:path*"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ],
-  "headers": [
+  "routes": [
     {
-      "source": "/blog/:path*",
-      "headers": [
-        { "key": "Host", "value": "https://www.igef.net" }
-      ]
+      "src": "/blog/(.*)",
+      "dest": "/blog/$1",
+      "methods": ["GET"]
     }
   ]
 }

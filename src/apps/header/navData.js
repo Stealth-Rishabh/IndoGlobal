@@ -163,6 +163,6 @@ export const navlinks = [
       { name: "Our Recruiters", path: "/placements/our-recruiters" },
     ],
   },
-  { name: "Blogs", path: "/blogs" },
+  // { name: "Blogs", path: "/blogs" },
   { name: "Contact Us", path: "/contact-us" },
 ];
