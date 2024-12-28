@@ -1,4 +1,8 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/blog/:path*",
+      "destination": "https://igef.net/blog/:path*"
+    }
+  ]
 }
-
