@@ -84,12 +84,16 @@ const Section = ({ children, inView, reference }) => (
 
 const Landing = () => {
   const [mounted, setMounted] = useState(false);
-  const [showWidget, setShowWidget] = useState(true);
+  const [showWidget, setShowWidget] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Initialize widget state after mount
-    setShowWidget(true);
+    // Initialize widget state after a delay
+    const timer = setTimeout(() => {
+      setShowWidget(true);
+    }, 5000); // Delay of 5 seconds
+
+    return () => clearTimeout(timer);
   }, []);
 
   const defaultInViewOptions = {
@@ -113,23 +117,26 @@ const Landing = () => {
 
   return (
     <div className="overflow-x-hidden relative">
-      
-      <button
-        onClick={() => setShowWidget(!showWidget)}
-        className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
-          showWidget ? "hidden" : ""
-        }`}
-      >
-        Quick Enquiry
-      </button>
-      <X
-        onClick={() => setShowWidget(false)}
-        className={`fixed cursor-pointer top-[25%] sm:top-[31%] right-8 translate-y-1/2 z-[9998] bg-white text-secondary-color w-7 h-7  p-1 rounded-sm  shadow-lg hover:bg-white/90 -rotate-90 ${
-          showWidget ? "" : "hidden"
-        }`}
-      />
+      {mounted && (
+        <>
+          <button
+            onClick={() => setShowWidget(!showWidget)}
+            className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
+              showWidget ? "hidden" : ""
+            }`}
+          >
+            Quick Enquiry
+          </button>
+          <X
+            onClick={() => setShowWidget(false)}
+            className={`fixed cursor-pointer top-[25%] sm:top-[31%] right-8 translate-y-1/2 z-[9998] bg-white text-secondary-color w-7 h-7  p-1 rounded-sm  shadow-lg hover:bg-white/90 -rotate-90 ${
+              showWidget ? "" : "hidden"
+            }`}
+          />
+        </>
+      )}
 
-      {showWidget && (
+      {mounted && showWidget && (
         <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
       )}
 
