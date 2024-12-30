@@ -1,75 +1,119 @@
 "use client";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useState } from "react";
+import { useState, lazy, Suspense, useEffect } from "react";
+import ErrorBoundary from "./ErrorBoundary"; // You'll need to create this
 
-// import Container from "../../components/wrappers/Container"
+// Regular imports
 import AboutIndoGlobal from "./AboutIndoGolbal";
 import Events from "./Events";
 import Hero from "./HeroSlider";
-import LatestBlogsAndEvents from "./LatestBlogsAndEvents";
 import Placements from "./Placements";
 import Programs from "./Programs";
 import RankSlider from "./RankSlider";
-import Stats from "./Stats";
-import { Testimonials } from "./testimonials/Testimonial";
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 import { X } from "lucide-react";
+
+// Lazy loaded components with error handling
+const Stats = lazy(() =>
+  import("./Stats").catch((err) => {
+    console.error("Error loading Stats:", err);
+    return { default: () => <div>Failed to load Stats</div> };
+  })
+);
+
+const Testimonials = lazy(() =>
+  import("./testimonials/Testimonial").catch((error) => {
+    console.error("Error loading Testimonials:", error);
+    return {
+      default: () => <div>Failed to load Testimonials</div>,
+    };
+  })
+);
+
+const LatestBlogsAndEvents = lazy(() =>
+  import("./LatestBlogsAndEvents").catch((err) => {
+    console.error("Error loading LatestBlogsAndEvents:", err);
+    return { default: () => <div>Failed to load Latest Content</div> };
+  })
+);
+
 const sectionVariants = {
-  hidden: { scale: 0.8, opacity: 0 }, // Starting state (small and transparent)
+  hidden: { opacity: 0 },
   visible: {
-    scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.3, // Animation duration
+      duration: 0.3,
       ease: "easeOut",
     },
   },
 };
 
+const LoadingFallback = () => (
+  <div className="min-h-[400px] w-full flex items-center justify-center bg-gray-50">
+    <div className="space-y-4 w-full max-w-3xl p-4">
+      <div className="h-8 bg-gray-200 rounded w-3/4 animate-pulse"></div>
+      <div className="space-y-2">
+        <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
+        <div className="h-4 bg-gray-200 rounded w-5/6 animate-pulse"></div>
+      </div>
+    </div>
+  </div>
+);
+
+const Section = ({ children, inView, reference }) => (
+  <motion.div
+    ref={reference}
+    variants={sectionVariants}
+    initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+    className="min-h-[400px]"
+  >
+    <ErrorBoundary
+      fallback={
+        <div className="p-4 text-red-500 bg-red-100 rounded">
+          Something went wrong loading this section. Please try refreshing the
+          page.
+        </div>
+      }
+    >
+      {children}
+    </ErrorBoundary>
+  </motion.div>
+);
+
 const Landing = () => {
+  const [mounted, setMounted] = useState(false);
   const [showWidget, setShowWidget] = useState(true);
-  const [heroRef, heroInView] = useInView({
-    threshold: 0.0,
-    triggerOnce: true,
-  });
-  const [placementsRef, placementsInView] = useInView({
-    threshold: 0.0,
-    triggerOnce: true,
-  });
-  const [statsRef, statsInView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-  const [rankSliderRef, rankSliderInView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
 
-  const [programsRef, programsInView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-  const [aboutRef, aboutInView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+  useEffect(() => {
+    setMounted(true);
+    // Initialize widget state after mount
+    setShowWidget(true);
+  }, []);
 
-  const [eventsRef, eventsInView] = useInView({
-    threshold: 0.2,
+  const defaultInViewOptions = {
+    threshold: 0.1,
     triggerOnce: true,
-  });
-  const [testimonialsRef, testimonialsInView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-  const [blogsRef, blogsInView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+  };
+
+  const [heroRef, heroInView] = useInView(defaultInViewOptions);
+  const [placementsRef, placementsInView] = useInView(defaultInViewOptions);
+  const [statsRef, statsInView] = useInView(defaultInViewOptions);
+  const [rankSliderRef, rankSliderInView] = useInView(defaultInViewOptions);
+  const [programsRef, programsInView] = useInView(defaultInViewOptions);
+  const [aboutRef, aboutInView] = useInView(defaultInViewOptions);
+  const [eventsRef, eventsInView] = useInView(defaultInViewOptions);
+  const [testimonialsRef, testimonialsInView] = useInView(defaultInViewOptions);
+  const [blogsRef, blogsInView] = useInView(defaultInViewOptions);
+
+  if (!mounted) {
+    return <LoadingFallback />;
+  }
 
   return (
     <div className="overflow-x-hidden relative">
+      
       <button
         onClick={() => setShowWidget(!showWidget)}
         className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
@@ -86,90 +130,50 @@ const Landing = () => {
       />
 
       {showWidget && (
-        
-        <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99] bg-[#033958] " />
+        <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
       )}
 
-      {/* <motion.div
-        ref={heroRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={heroInView ? "visible" : "hidden"}
-      > */}
+      <Section reference={heroRef} inView={heroInView}>
         <Hero />
-      {/* </motion.div> */}
+      </Section>
 
-      <motion.div
-        ref={placementsRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={placementsInView ? "visible" : "hidden"}
-      >
+      <Section reference={placementsRef} inView={placementsInView}>
         <Placements />
-      </motion.div>
+      </Section>
 
-      <motion.div
-        ref={statsRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={statsInView ? "visible" : "hidden"}
-      >
-        <Stats />
-      </motion.div>
+      <Suspense fallback={<LoadingFallback />}>
+        <Section reference={statsRef} inView={statsInView}>
+          <Stats />
+        </Section>
+      </Suspense>
 
-      <motion.div
-        ref={rankSliderRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={rankSliderInView ? "visible" : "hidden"}
-      >
+      <Section reference={rankSliderRef} inView={rankSliderInView}>
         <RankSlider />
-      </motion.div>
+      </Section>
 
-      <motion.div
-        ref={programsRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={programsInView ? "visible" : "hidden"}
-      >
+      <Section reference={programsRef} inView={programsInView}>
         <Programs />
-      </motion.div>
+      </Section>
 
-      <motion.div
-        ref={aboutRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={aboutInView ? "visible" : "hidden"}
-      >
+      <Section reference={aboutRef} inView={aboutInView}>
         <AboutIndoGlobal />
-      </motion.div>
+      </Section>
 
-      <motion.div
-        ref={eventsRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={eventsInView ? "visible" : "hidden"}
-      >
+      <Section reference={eventsRef} inView={eventsInView}>
         <Events />
-      </motion.div>
+      </Section>
 
-      <motion.div
-        ref={testimonialsRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={testimonialsInView ? "visible" : "hidden"}
-      >
-        <Testimonials />
-      </motion.div>
+      <Suspense fallback={<LoadingFallback />}>
+        <Section reference={testimonialsRef} inView={testimonialsInView}>
+          <Testimonials />
+        </Section>
+      </Suspense>
 
-      <motion.div
-        ref={blogsRef}
-        variants={sectionVariants}
-        initial="hidden"
-        animate={blogsInView ? "visible" : "hidden"}
-      >
-        <LatestBlogsAndEvents />
-      </motion.div>
+      <Suspense fallback={<LoadingFallback />}>
+        <Section reference={blogsRef} inView={blogsInView}>
+          <LatestBlogsAndEvents />
+        </Section>
+      </Suspense>
     </div>
   );
 };
