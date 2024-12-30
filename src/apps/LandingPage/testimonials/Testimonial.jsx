@@ -18,7 +18,7 @@ import img3 from "../../../assets/test3.png";
 import img4 from "../../../assets/test4.png";
 import Heading from "../../../components/Heading";
 
-export default function Testimonials() {
+export function Testimonials() {
   // Testimonials data array
   const testimonials = [
     {
