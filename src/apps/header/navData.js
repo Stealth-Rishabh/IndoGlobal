@@ -1,7 +1,7 @@
 export const navlinks = [
   { name: "Home", path: "/" },
   {
-    name: "About Us",
+    name: "About",
     path: "/about",
     dropdown: [
       { name: "Accreditation & Tie-ups", path: "/about/accreditation" },
@@ -163,6 +163,6 @@ export const navlinks = [
       { name: "Our Recruiters", path: "/placements/our-recruiters" },
     ],
   },
-  // { name: "Blogs", path: "/blogs" },
-  { name: "Contact Us", path: "/contact-us" },
+  { name: "Blogs", path: "/blog" },
+  { name: "Contact", path: "/contact-us" },
 ];
