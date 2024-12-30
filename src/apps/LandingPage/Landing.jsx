@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useState, useEffect } from "react";
+import { useState, useEffect,memo } from "react";
 
 // import Container from "../../components/wrappers/Container"
 import AboutIndoGlobal from "./AboutIndoGolbal";
@@ -179,4 +179,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default memo(Landing);
