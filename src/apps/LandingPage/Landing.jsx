@@ -21,14 +21,14 @@ const sectionVariants = {
     scale: 1,
     opacity: 1,
     transition: {
-      duration: 0.6, // Animation duration
+      duration: 0.3, // Animation duration
       ease: "easeOut",
     },
   },
 };
 
 const Landing = () => {
-  const [showWidget, setShowWidget] = useState(false);
+  const [showWidget, setShowWidget] = useState(true);
   const [heroRef, heroInView] = useInView({
     threshold: 0.0,
     triggerOnce: true,
@@ -86,7 +86,8 @@ const Landing = () => {
       />
 
       {showWidget && (
-        <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99]" />
+        
+        <NoPaperFormsWidget className="fixed top-0 right-0 translate-y-1/2 z-[99] bg-[#033958] " />
       )}
 
       {/* <motion.div

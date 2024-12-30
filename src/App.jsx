@@ -62,242 +62,300 @@ function App() {
   };
   return (
     // <Router className="relative" basename="/IndoGlobal">
-    <Router className="relative" >
+    <Router className="relative">
       <ScrollToTop />
       <ScrollToTopWithBorder />
       <Header />
       <Routes>
         {/* home page */}
-        <Route path="/" element={
-          <>
-            <Helmet>
-              <title>Indo Global Group of Colleges</title>
-            </Helmet>
-            <Landing />
-          </>
-        } />
+        <Route
+          path="/"
+          element={
+            <>
+              <Helmet>
+                <title>Indo Global Group of Colleges</title>
+              </Helmet>
+              <Landing />
+            </>
+          }
+        />
 
         {/* about page */}
-        <Route path="/about/accreditation" element={
-          <>
-            <Helmet>
-              <title>Accreditation & Tie-ups | Indo Global Colleges</title>
-            </Helmet>
-            <AccreditationAndTieups />
-          </>
-        } />
-        <Route path="/about/location" element={
-          <>
-            <Helmet>
-              <title>College Location | Indo Global Colleges</title>
-            </Helmet>
-            <CollegeLocation />
-          </>
-        } />
-        <Route path="/about/vision-mission" element={
-          <>
-            <Helmet>
-              <title>Vision & Mission | Indo Global Colleges</title>
-            </Helmet>
-            <VisionAndMission />
-          </>
-        } />
-        <Route path="/about/leadership" element={
-          <>
-            <Helmet>
-              <title>Leadership | Indo Global Colleges</title>
-            </Helmet>
-            <Leadership />
-          </>
-        } />
-        <Route path="/about/eminent-faculty" element={
-          <>
-            <Helmet>
-              <title>Eminent Faculty | Indo Global Colleges</title>
-            </Helmet>
-            <EminentFaculty />
-          </>
-        } />
+        <Route
+          path="/about/accreditation"
+          element={
+            <>
+              <Helmet>
+                <title>Accreditation & Tie-ups | Indo Global Colleges</title>
+              </Helmet>
+              <AccreditationAndTieups />
+            </>
+          }
+        />
+        <Route
+          path="/about/location"
+          element={
+            <>
+              <Helmet>
+                <title>College Location | Indo Global Colleges</title>
+              </Helmet>
+              <CollegeLocation />
+            </>
+          }
+        />
+        <Route
+          path="/about/vision-mission"
+          element={
+            <>
+              <Helmet>
+                <title>Vision & Mission | Indo Global Colleges</title>
+              </Helmet>
+              <VisionAndMission />
+            </>
+          }
+        />
+        <Route
+          path="/about/leadership"
+          element={
+            <>
+              <Helmet>
+                <title>Leadership | Indo Global Colleges</title>
+              </Helmet>
+              <Leadership />
+            </>
+          }
+        />
+        <Route
+          path="/about/eminent-faculty"
+          element={
+            <>
+              <Helmet>
+                <title>Eminent Faculty | Indo Global Colleges</title>
+              </Helmet>
+              <EminentFaculty />
+            </>
+          }
+        />
 
         {/* courses page */}
-        <Route path="/courses" element={
-          <>
-            <Helmet>
-              <title>Courses | Indo Global Colleges</title>
-            </Helmet>
-            <Courses />
-          </>
-        } />
-        <Route path="/courses/:coursePath" element={
-          <>
-            <Helmet>
-              <title>Course Details | Indo Global Colleges</title>
-            </Helmet>
-            <CoursesDetails />
-          </>
-        } />
+        <Route
+          path="/courses"
+          element={
+            <>
+              <Helmet>
+                <title>Courses | Indo Global Colleges</title>
+              </Helmet>
+              <Courses />
+            </>
+          }
+        />
+        <Route
+          path="/courses/:coursePath"
+          element={
+            <>
+              <Helmet>
+                <title>Course Details | Indo Global Colleges</title>
+              </Helmet>
+              <CoursesDetails />
+            </>
+          }
+        />
 
         {/* admissions page */}
-        <Route path="/admissions" element={
-          <>
-            <Helmet>
-              <title>Admissions | Indo Global Colleges</title>
-            </Helmet>
-            <Admission />
-          </>
-        } />
+        <Route
+          path="/admissions"
+          element={
+            <>
+              <Helmet>
+                <title>Admissions | Indo Global Colleges</title>
+              </Helmet>
+              <Admission />
+            </>
+          }
+        />
 
         {/* highlights page */}
-        <Route path="/spotlights" element={
-          <>
-            <Helmet>
-              <title>Spotlights & Events | Indo Global Colleges</title>
-            </Helmet>
-            <SpotlightAndEvents />
-          </>
-        } />
-        <Route path="/gallery" element={
-          <>
-            <Helmet>
-              <title>Gallery | Indo Global Colleges</title>
-            </Helmet>
-            <Gallery />
-          </>
-        } />
+        <Route
+          path="/spotlights"
+          element={
+            <>
+              <Helmet>
+                <title>Spotlights & Events | Indo Global Colleges</title>
+              </Helmet>
+              <SpotlightAndEvents />
+            </>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <>
+              <Helmet>
+                <title>Gallery | Indo Global Colleges</title>
+              </Helmet>
+              <Gallery />
+            </>
+          }
+        />
 
         {/* placements page */}
-        <Route path="/placements/campus-recruitments" element={
-          <>
-            <Helmet>
-              <title>Campus Recruitments | Indo Global Colleges</title>
-            </Helmet>
-            <CampusRecruitments />
-          </>
-        } />
-        <Route path="/placements/industry-speaks" element={
-          <>
-            <Helmet>
-              <title>Industry Speaks | Indo Global Colleges</title>
-            </Helmet>
-            <IndustrySpeaks />
-          </>
-        } />
-        <Route path="/placements/industry-tie-ups" element={
-          <>
-            <Helmet>
-              <title>Industry Tie-ups | Indo Global Colleges</title>
-            </Helmet>
-            <IndustryTieUps />
-          </>
-        } />
-        <Route path="/placements/placement-activities" element={
-          <>
-            <Helmet>
-              <title>Placement Activities | Indo Global Colleges</title>
-            </Helmet>
-            <PlacementActivities />
-          </>
-        } />
-        <Route path="/placements/our-recruiters" element={
-          <>
-            <Helmet>
-              <title>Our Recruiters | Indo Global Colleges</title>
-            </Helmet>
-            <OurRecruiters />
-          </>
-        } />
+        <Route
+          path="/placements/campus-recruitments"
+          element={
+            <>
+              <Helmet>
+                <title>Campus Recruitments | Indo Global Colleges</title>
+              </Helmet>
+              <CampusRecruitments />
+            </>
+          }
+        />
+        <Route
+          path="/placements/industry-speaks"
+          element={
+            <>
+              <Helmet>
+                <title>Industry Speaks | Indo Global Colleges</title>
+              </Helmet>
+              <IndustrySpeaks />
+            </>
+          }
+        />
+        <Route
+          path="/placements/industry-tie-ups"
+          element={
+            <>
+              <Helmet>
+                <title>Industry Tie-ups | Indo Global Colleges</title>
+              </Helmet>
+              <IndustryTieUps />
+            </>
+          }
+        />
+        <Route
+          path="/placements/placement-activities"
+          element={
+            <>
+              <Helmet>
+                <title>Placement Activities | Indo Global Colleges</title>
+              </Helmet>
+              <PlacementActivities />
+            </>
+          }
+        />
+        <Route
+          path="/placements/our-recruiters"
+          element={
+            <>
+              <Helmet>
+                <title>Our Recruiters | Indo Global Colleges</title>
+              </Helmet>
+              <OurRecruiters />
+            </>
+          }
+        />
 
         {/* why indo global page */}
-        <Route path="/why-indo-global" element={
-          <>
-            <Helmet>
-              <title>Why Indo Global | Indo Global Colleges</title>
-            </Helmet>
-          
-          </>
-        } />
-        <Route path="/why-indo-global/industry-oriented-curriculum" element={
-          <>
-            <Helmet>
-              <title>Industry Oriented Curriculum | Indo Global Colleges</title>
-            </Helmet>
-            <IndustryOrientedCurriculum />
-          </>
-        } />
-        <Route path="/why-indo-global/entrepreneurship" element={
-          <>
-            <Helmet>
-              <title>Entrepreneurship | Indo Global Colleges</title>
-            </Helmet>
-            <Entrepreneurship />
-          </>
-        } />
-        <Route path="/why-indo-global/sports-arena" element={
-          <>
-            <Helmet>
-              <title>Sports Arena | Indo Global Colleges</title>
-            </Helmet>
-            <SportsArena />
-          </>
-        } />
-        <Route path="/why-indo-global/infrastructure" element={
-          <>
-            <Helmet>
-              <title>Infrastructure | Indo Global Colleges</title>
-            </Helmet>
-            <Infrastructure />
-          </>
-        } />
-        <Route path="/why-indo-global/great-transportation" element={
-          <>
-            <Helmet>
-              <title>Transportation | Indo Global Colleges</title>
-            </Helmet>
-            <Transportation />
-          </>
-        } />
-        <Route path="/why-indo-global/students-security" element={
-          <>
-            <Helmet>
-              <title>Student Security | Indo Global Colleges</title>
-            </Helmet>
-            <StudentSecurity />
-          </>
-        } />
-        <Route path="/why-indo-global/aicte-spices" element={
-          <>
-            <Helmet>
-              <title>AICTE SPICES | Indo Global Colleges</title>
-            </Helmet>
-            <AiciteSpices />
-          </>
-        } />
-        <Route path="/why-indo-global/hostel" element={
-          <>
-            <Helmet>
-              <title>Hostels | Indo Global Colleges</title>
-            </Helmet>
-            <Hostels />
-          </>
-        } />
-
-        {/* Blogs page */}
-        {/* <Route path="/blogs" element={
-          <>
-            <Helmet>
-              <title>Blogs | Indo Global Colleges</title>
-            </Helmet>
-            <Blogs />
-          </>
-        } />
-        <Route path="/blogs/blog-details" element={
-          <>
-            <Helmet>
-              <title>Blog Details | Indo Global Colleges</title>
-            </Helmet>
-            <BlogDetails />
-          </>
-        } /> */}
+        <Route
+          path="/why-indo-global"
+          element={
+            <>
+              <Helmet>
+                <title>Why Indo Global | Indo Global Colleges</title>
+              </Helmet>
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/industry-oriented-curriculum"
+          element={
+            <>
+              <Helmet>
+                <title>
+                  Industry Oriented Curriculum | Indo Global Colleges
+                </title>
+              </Helmet>
+              <IndustryOrientedCurriculum />
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/entrepreneurship"
+          element={
+            <>
+              <Helmet>
+                <title>Entrepreneurship | Indo Global Colleges</title>
+              </Helmet>
+              <Entrepreneurship />
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/sports-arena"
+          element={
+            <>
+              <Helmet>
+                <title>Sports Arena | Indo Global Colleges</title>
+              </Helmet>
+              <SportsArena />
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/infrastructure"
+          element={
+            <>
+              <Helmet>
+                <title>Infrastructure | Indo Global Colleges</title>
+              </Helmet>
+              <Infrastructure />
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/great-transportation"
+          element={
+            <>
+              <Helmet>
+                <title>Transportation | Indo Global Colleges</title>
+              </Helmet>
+              <Transportation />
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/students-security"
+          element={
+            <>
+              <Helmet>
+                <title>Student Security | Indo Global Colleges</title>
+              </Helmet>
+              <StudentSecurity />
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/aicte-spices"
+          element={
+            <>
+              <Helmet>
+                <title>AICTE SPICES | Indo Global Colleges</title>
+              </Helmet>
+              <AiciteSpices />
+            </>
+          }
+        />
+        <Route
+          path="/why-indo-global/hostel"
+          element={
+            <>
+              <Helmet>
+                <title>Hostels | Indo Global Colleges</title>
+              </Helmet>
+              <Hostels />
+            </>
+          }
+        />
 
         {/* Career page  */}
         <Route
@@ -325,39 +383,51 @@ function App() {
           }
         />
 
-        <Route path="/online-learning-resources" element={
-          <>
-            <Helmet>
-              <title>Online Learning Resources | Indo Global Colleges</title>
-            </Helmet>
-            <OnlineLearningResources />
-          </>
-        } />
+        <Route
+          path="/online-learning-resources"
+          element={
+            <>
+              <Helmet>
+                <title>Online Learning Resources | Indo Global Colleges</title>
+              </Helmet>
+              <OnlineLearningResources />
+            </>
+          }
+        />
 
-        <Route path="/online-grievance" element={
-          <>
-            <Helmet>
-              <title>Student Grievance | Indo Global Colleges</title>
-            </Helmet>
-            <StudentGrievance />
-          </>
-        } />
-        <Route path="/alumni-login" element={
-          <>
-            <Helmet>
-              <title>Alumni Login | Indo Global Colleges</title>
-            </Helmet>
-            <AlumniLogin />
-          </>
-        } />
-        <Route path="/alumni-signup" element={
-          <>
-            <Helmet>
-              <title>Alumni Signup | Indo Global Colleges</title>
-            </Helmet>
-            <AlumniSignup />
-          </>
-        } />
+        <Route
+          path="/online-grievance"
+          element={
+            <>
+              <Helmet>
+                <title>Student Grievance | Indo Global Colleges</title>
+              </Helmet>
+              <StudentGrievance />
+            </>
+          }
+        />
+        <Route
+          path="/alumni-login"
+          element={
+            <>
+              <Helmet>
+                <title>Alumni Login | Indo Global Colleges</title>
+              </Helmet>
+              <AlumniLogin />
+            </>
+          }
+        />
+        <Route
+          path="/alumni-signup"
+          element={
+            <>
+              <Helmet>
+                <title>Alumni Signup | Indo Global Colleges</title>
+              </Helmet>
+              <AlumniSignup />
+            </>
+          }
+        />
       </Routes>
       <Footer />
     </Router>
@@ -365,3 +435,31 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+  {/* Blogs page */}
+        {/* <Route path="/blogs" element={
+          <>
+            <Helmet>
+              <title>Blogs | Indo Global Colleges</title>
+            </Helmet>
+            <Blogs />
+          </>
+        } />
+        <Route path="/blogs/blog-details" element={
+          <>
+            <Helmet>
+              <title>Blog Details | Indo Global Colleges</title>
+            </Helmet>
+            <BlogDetails />
+          </>
+        } /> */}
