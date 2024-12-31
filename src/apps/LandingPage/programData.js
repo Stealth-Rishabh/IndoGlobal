@@ -52,7 +52,7 @@ export const programData = [
       title: "Postgraduate",
       programs: [
         {
-          name: "M.Tech (CSE, ECE, ME, Civil)",
+          name: "M.Tech (CSE, ME, Civil)",
           description: "Our M.Tech programs offer advanced specializations in various engineering disciplines, focusing on research and innovation.",
           duration: "2 years",
           eligibility: "B.Tech or equivalent, minimum 60% aggregate, valid GATE score",
@@ -65,20 +65,20 @@ export const programData = [
           eligibility: "Bachelor's degree in any discipline, minimum 50% aggregate, valid CAT/MAT score",
           path : '/courses/master-of-business-administration'
         },
-        {
-          name: "MCA (Master of Computer Applications)",
-          description: "The MCA program provides advanced knowledge in software development, database management, and emerging technologies.",
-          duration: "2 years",
-          eligibility: "Bachelor's degree with Mathematics, minimum 50% aggregate",
-          path : '/courses/mca-master-of-computer-applications'
-        },
-        {
-          name: "M.Sc (Data Science)",
-          description: "This program focuses on advanced data analysis, machine learning, and big data technologies, preparing students for careers in data-driven industries.",
-          duration: "2 years",
-          eligibility: "Bachelor's degree in relevant discipline, minimum 55% aggregate",
-          path : '/courses/m.sc.-(data-science)'
-        }
+        // {
+        //   name: "MCA (Master of Computer Applications)",
+        //   description: "The MCA program provides advanced knowledge in software development, database management, and emerging technologies.",
+        //   duration: "2 years",
+        //   eligibility: "Bachelor's degree with Mathematics, minimum 50% aggregate",
+        //   path : '/courses/mca-master-of-computer-applications'
+        // },
+        // {
+        //   name: "M.Sc (Data Science)",
+        //   description: "This program focuses on advanced data analysis, machine learning, and big data technologies, preparing students for careers in data-driven industries.",
+        //   duration: "2 years",
+        //   eligibility: "Bachelor's degree in relevant discipline, minimum 55% aggregate",
+        //   path : '/courses/m.sc.-(data-science)'
+        // }
       ],
       defaultCard: {
         title: "Postgraduate Programs",
