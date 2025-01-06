@@ -77,7 +77,7 @@ const FacultyMember = () => {
     {
       avatar:
         "https://cdn.vectorstock.com/i/1000v/09/72/person-gray-photo-placeholder-woman-vector-25810972.jpg",
-      name: "Architect Sonia Mittal",
+      name: "Ar. Sonia Mittal",
       title: "Principal",
       desc: "Indo Global College of Architecture",
     },
