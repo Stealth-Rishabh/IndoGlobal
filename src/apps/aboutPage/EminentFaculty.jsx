@@ -63,7 +63,7 @@ const FacultyMember = () => {
       avatar:
         "https://cdn.vectorstock.com/i/1000v/09/72/person-gray-photo-placeholder-woman-vector-25810972.jpg",
       name: "Dr. Promila Kaushal",
-      title: "Principal",
+      title: "Director",
       desc: "Indo Global College of Engineering",
     },
 
@@ -77,22 +77,22 @@ const FacultyMember = () => {
     {
       avatar:
         "https://cdn.vectorstock.com/i/1000v/09/72/person-gray-photo-placeholder-woman-vector-25810972.jpg",
-      name: "Ar. Ruchi Lakhani",
+      name: "Architect Sonia Mittal",
       title: "Principal",
       desc: "Indo Global College of Architecture",
     },
-    {
-      avatar:
-        "https://th.bing.com/th/id/OIP.pA6t_4n5Y5TvS00-jLkhPwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
-      name: "Dr. Karamjeet",
-      title: "Principal",
-      desc: "Indo Global College of Education",
-    },
+    // {
+    //   avatar:
+    //     "https://th.bing.com/th/id/OIP.pA6t_4n5Y5TvS00-jLkhPwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
+    //   name: "Dr. Karamjeet",
+    //   title: "Principal",
+    //   desc: "Indo Global College of Education",
+    // },
     {
       avatar:
         "https://th.bing.com/th/id/OIP.pA6t_4n5Y5TvS00-jLkhPwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
       name: "Dr. Hardeep Singh Saini",
-      title: "Dean (Academics)",
+      title: "Principal",
       desc: "Indo Global College of Engineering",
     },
     {
