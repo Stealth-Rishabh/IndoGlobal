@@ -145,7 +145,7 @@ const Admission = () => {
   const [showWidget, setShowWidget] = useState(false);
   return (
     <section className="relative min-h-screen">
-       <button
+      <button
         onClick={() => setShowWidget(!showWidget)}
         className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
           showWidget ? "hidden" : ""
@@ -253,7 +253,7 @@ const renderTable = (courses) => (
             <Link to="/contact-us">
               <Button variant="outline" size="sm">
                 Apply Now
-            </Button>
+              </Button>
             </Link>
           </TableCell>
         </TableRow>
@@ -269,13 +269,13 @@ const AdmissionAbout = () => {
         <div className="flex flex-col justify-center gap-6 mx-auto md:flex-row max-w-7xl">
           <div className="flex flex-col gap-6 md:w-1/2">
             <h2 className="text-4xl font-light leading-tight text-white md:text-end md:text-6xl md:leading-tight">
-              Shaping Future Leaders Since 1996
+              Shaping Future Leaders Since 2003
             </h2>
             <div className="relative flex-grow h-48 overflow-hidden rounded">
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent "></div> */}
-                <img
-                  src={shaping}
-              alt="Admission"
+              <img
+                src={shaping}
+                alt="Admission"
                 className="object-cover w-full h-full transition-all duration-300 hover:scale-125"
               />
             </div>
@@ -291,9 +291,9 @@ const AdmissionAbout = () => {
             <p className="mt-12 text-base tracking-widest text-white opacity-80">
               Our cutting-edge curriculum, combined with state-of-the-art
               facilities and experienced faculty, ensures that you receive
-              education that&apos;s both comprehensive and future-ready. We focus
-              on practical learning, innovation, and personal growth to help you
-              achieve your career aspirations.
+              education that&apos;s both comprehensive and future-ready. We
+              focus on practical learning, innovation, and personal growth to
+              help you achieve your career aspirations.
             </p>
             <p className="mt-12 mb-0 text-base tracking-widest text-white opacity-80">
               Join our vibrant community of learners and become part of a legacy
