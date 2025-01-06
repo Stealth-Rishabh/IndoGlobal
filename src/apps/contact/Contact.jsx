@@ -37,7 +37,7 @@ const Contact = () => {
       data: "email",
       icon: Mail,
       title: "Email Address",
-      details: ["contact@igef.net", "igef@example.com"],
+      details: ["contact@igef.net"],
     },
     {
       data: "location",
