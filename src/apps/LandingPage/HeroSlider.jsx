@@ -24,6 +24,41 @@ import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { Link } from "react-router-dom";
 import Brochure from "../../assets/pdfs/IGEF Brochure.pdf";
 import { DownloadIcon } from "lucide-react";
+// Add lazy loading for PDF
+const BrochureButton = memo(({ isMobile }) => {
+  const [isPdfLoaded, setIsPdfLoaded] = useState(false);
+
+  const handleBrochureClick = (e) => {
+    if (!isPdfLoaded) {
+      e.preventDefault();
+      // Dynamically load the PDF only when needed
+      const link = document.createElement("link");
+      link.rel = "prefetch";
+      link.href = Brochure;
+      document.head.appendChild(link);
+      setIsPdfLoaded(true);
+      setTimeout(() => window.open(Brochure, "_blank"), 100);
+    }
+  };
+
+  return isMobile ? (
+    <div
+      onClick={handleBrochureClick}
+      className="sm:w-60 text-sm font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2 cursor-pointer"
+    >
+      <span>BROCHURE</span>
+      <DownloadIcon className="size-4 mt-1" />
+    </div>
+  ) : (
+    <InteractiveHoverButton
+      text="DOWNLOAD BROCHURE"
+      className="w-60 text-sm font-bold text-gray-500 sm:py-6 px-3 rounded-none"
+      onClick={handleBrochureClick}
+    />
+  );
+});
+BrochureButton.displayName = "BrochureButton";
+
 // Create separate optimized components for heavy animations
 const SlideContent = memo(({ img }) => {
   return (
@@ -75,21 +110,12 @@ const SlideContent = memo(({ img }) => {
             Explore Courses
           </ShinyButton>
         </Link>
-        <a href={Brochure} target="_blank" className="hidden sm:block">
-          <InteractiveHoverButton
-            text="DOWNLOAD BROCHURE"
-            className="w-60 text-sm font-bold text-gray-500 sm:py-6 px-3 rounded-none "
-          />
-        </a>
-        <a href={Brochure} target="_blank" className="block sm:hidden">
-          <div
-           
-            className="sm:w-60 text-sm font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2"
-          >
-            <span> BROCHURE</span>
-            <DownloadIcon className="size-4 mt-1" />
-          </div>
-        </a>
+        <div className="hidden sm:block">
+          <BrochureButton isMobile={false} />
+        </div>
+        <div className="block sm:hidden">
+          <BrochureButton isMobile={true} />
+        </div>
       </div>
     </div>
   );
