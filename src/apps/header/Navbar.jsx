@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import logo2 from "../../assets/nav-logo-2.svg";
+import logo2 from "../../assets/23-logo.png";
 import Drawer from "./Drawer";
 import {
   DropdownMenu,
@@ -99,16 +99,16 @@ export default function Navbar() {
 
   return (
     <div className="bg-red-600 px-4 py-4">
-      <div className="w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1330px] 2xl:max-w-[1536px] mx-auto flex items-center justify-between">
+      <div className="w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1330px] 2xl:max-w-[1536px] mx-auto flex items-center justify-between overflow-hidden sm:h-20">
         <div className="flex items-center space-x-10">
           <Link to="/">
             <img
               src={logo}
               alt="Indo Global Group of Colleges"
-              className="h-12 sm:h-16 object-contain "
+              className="h-16 sm:h-20 object-contain "
             />
           </Link>
-          <img src={logo2} alt="22 Years" className="h-12 object-contain" />
+          <img src={logo2} alt="23 Years" className="sm:h-24 h-20 object-contain" />
         </div>
         <nav>
           <ul className="hidden lg:flex space-x-4">

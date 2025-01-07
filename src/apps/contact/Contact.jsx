@@ -169,9 +169,9 @@ const Contact = () => {
                 ({ data, icon: Icon, title, details }, index) => (
                   <div
                     key={index}
-                    className="grid grid-cols-3 gap-5 p-6  shadow-sm hover:shadow-md transition-all duration-300 bg-secondary-color cursor-pointer justify-center items-center rounded-lg"
+                    className="grid grid-cols-3 gap-5 p-6  shadow-sm hover:shadow-md transition-all duration-300 bg-secondary-color cursor-pointer justify-center items-center group rounded-lg"
                   >
-                    <div className="group flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 p-4 sm:p-8 bg-primary-color  rounded-full transition-transform duration-500 hover:rotate-[360deg] overflow-hidden">
+                    <div className="group flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 p-4 sm:p-8 bg-primary-color  rounded-full transition-transform duration-500 hover:rotate-[360deg] overflow-hidden group-hover:rotate-[360deg]">
                       <Icon className="w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-125 text-white " />
                     </div>
 
