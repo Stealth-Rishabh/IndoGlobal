@@ -78,7 +78,7 @@ const SlideContent = memo(({ img }) => {
         <a href={Brochure} target="_blank" className="hidden sm:block">
           <InteractiveHoverButton
             text="DOWNLOAD BROCHURE"
-            className="w-60 text-sm font-bold text-gray-500 sm:py-6 px-3 rounded-none "
+            className="w-60 text-sm sm:text-base font-bold text-gray-500 sm:py-[21px] px-3 rounded-none "
           />
         </a>
         <a href={Brochure} target="_blank" className="block sm:hidden">
