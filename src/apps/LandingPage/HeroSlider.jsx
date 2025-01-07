@@ -18,11 +18,12 @@ import WordPullUp from "../../components/ui/word-pull-up";
 import ShinyButton from "../../components/ui/shiny-button";
 import WordRotate from "@/components/ui/word-rotate";
 import { ChevronRight } from "lucide-react";
-
+import InteractiveHoverButton from "@/components/ui/interactive-hover-button";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { Link } from "react-router-dom";
-
+import Brochure from "../../assets/pdfs/IGEF Brochure.pdf";
+import { DownloadIcon } from "lucide-react";
 // Create separate optimized components for heavy animations
 const SlideContent = memo(({ img }) => {
   return (
@@ -68,12 +69,27 @@ const SlideContent = memo(({ img }) => {
         />
       </div>
 
-      <div>
-        <Link to="/courses" className="mt-5">
+      <div className="flex flex-row gap-4 ">
+        <Link to="/courses" className="mt-">
           <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
             Explore Courses
           </ShinyButton>
         </Link>
+        <a href={Brochure} target="_blank" className="hidden sm:block">
+          <InteractiveHoverButton
+            text="DOWNLOAD BROCHURE"
+            className="w-60 text-sm font-bold text-gray-500 sm:py-6 px-3 rounded-none "
+          />
+        </a>
+        <a href={Brochure} target="_blank" className="block sm:hidden">
+          <div
+           
+            className="sm:w-60 text-sm font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2"
+          >
+            <span> BROCHURE</span>
+            <DownloadIcon className="size-4 mt-1" />
+          </div>
+        </a>
       </div>
     </div>
   );
