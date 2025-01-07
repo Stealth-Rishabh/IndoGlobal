@@ -5,14 +5,14 @@ const PlacementCard = ({bgColor, name, company, salary, location, imageUrl, logo
     <div className={`w-full max-w-md ${bgColor} text-white -pl-4 pr-5 py-4 sm:pt-8  shadow-lg overflow-hidden`}>
       <div className="flex items-start space-x-4">
         <div className="">
-          <img
+          {/* <img
             src={imageUrl}
             alt={name}
             
             className="rounded-lg h-96 w-full object-cover -mb-8 mix-blend-normal"
-          />
+          /> */}
         </div>
-        <div className="flex-grow space-y-3">
+        <div className="flex-grow space-y-3 grid justify-items-center">
           <img
             src={logoUrl}
             alt={company}
