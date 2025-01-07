@@ -22,7 +22,7 @@ import InteractiveHoverButton from "@/components/ui/interactive-hover-button";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { Link } from "react-router-dom";
-import Brochure from "../../assets/pdfs/IGEF Brochure.pdf";
+// import Brochure from "../../assets/pdfs/IGEF Brochure.pdf";
 import { DownloadIcon } from "lucide-react";
 // Create separate optimized components for heavy animations
 const SlideContent = memo(({ img }) => {
@@ -75,13 +75,13 @@ const SlideContent = memo(({ img }) => {
             Explore Courses
           </ShinyButton>
         </Link>
-        <a href={Brochure} target="_blank" className="hidden sm:block">
+        <a href="" target="_blank" className="hidden sm:block">
           <InteractiveHoverButton
             text="DOWNLOAD BROCHURE"
             className="w-60 text-sm font-bold text-gray-500 sm:py-6 px-3 rounded-none "
           />
         </a>
-        <a href={Brochure} target="_blank" className="block sm:hidden">
+        <a href="" target="_blank" className="block sm:hidden">
           <div
            
             className="sm:w-60 text-sm font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2"
