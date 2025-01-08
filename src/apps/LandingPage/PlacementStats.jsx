@@ -38,7 +38,7 @@ const PlacementStats = () => {
               icon={
                 <GraduationCap className="w-14 sm:w-20 h-14 sm:h-20 text-primary-color drop-shadow-md" />
               }
-              value="₹ 60 LPA"
+              value="₹ 40 LPA"
               description="Highest Placement"
             />{" "}
           </BlurFade>

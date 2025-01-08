@@ -131,8 +131,8 @@ const Placements = () => {
         {/* 1st Card */}
         <motion.div
           ref={cardRefs[0]}
-          initial={{ opacity: 0, x: -400 }} // Animate from left
-          animate={{ opacity: inView[0] ? 1 : 0, x: inView[0] ? 0 : -400 }} // Animate based on inView state
+          initial={{ opacity: 0, x: -300 }} // Animate from left
+          animate={{ opacity: inView[0] ? 1 : 0, x: inView[0] ? 0 : -300 }} // Animate based on inView state
           transition={{ duration: 0.9 }}
         >
           <PlacementCard
@@ -186,7 +186,7 @@ const Placements = () => {
         <motion.div
           ref={cardRefs[3]}
           initial={{ opacity: 0, x: 400 }} // Animate from right
-          animate={{ opacity: inView[3] ? 1 : 0, x: inView[3] ? 0 : 400 }} // Animate based on inView state
+          animate={{ opacity: inView[3] ? 1 : 0, x: inView[3] ? 0 : 300 }} // Animate based on inView state
           transition={{ duration: 0.9 }}
         >
           <PlacementCard
