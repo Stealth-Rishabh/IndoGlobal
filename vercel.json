@@ -2,14 +2,8 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/blog/:path*",
-      "destination": "https://57.128.189.225/blog/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "igef.net"
-        }
-      ]
+      "source": "/blog(.*)",
+      "destination": "https://igef.net/blog$1"
     },
     {
       "source": "/(.*)",

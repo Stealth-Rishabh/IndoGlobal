@@ -11,58 +11,76 @@ import {
 } from "@/components/ui/carousel";
 import { Star } from "lucide-react";
 import OrbitingCircles from "../../../components/ui/orbiting-circles";
-import img from "../../../assets/test0.png";
-import img1 from "../../../assets/test1.png";
-import img2 from "../../../assets/test2.png";
-import img3 from "../../../assets/test3.png";
-import img4 from "../../../assets/test4.png";
+import ugam from "../../../assets/testimonial/Ugam.webp";
+import harpreet from "../../../assets/testimonial/Harpreet.webp";
+import mohd from "../../../assets/testimonial/Mohd.webp";
+import abhay from "../../../assets/testimonial/Abhay.webp";
+import rohith from "../../../assets/testimonial/Rohith.webp";
 import Heading from "../../../components/Heading";
 
 export function Testimonials() {
   // Testimonials data array
   const testimonials = [
     {
+      id: 4,
+      image: rohith,
+      quote: "Being campus-selected in the 3rd year was a dream come true.",
+      name: "Rohith",
+      batch: "2019-2023",
+      position: "CSE Graduate",
+      message:
+        "It was wonderful studying at Indo Global College of Engineering. I feel proud to have graduated from here. Being campus-selected in the 3rd year itself is a dream for many students, but we achieved it with the unwavering support of our teachers and faculty. This institution not only gave us knowledge but also instilled confidence to excel in our careers. The memories and lessons learned here will always remain close to my heart. I am grateful for the lifelong friendships and connections I made during my time here.",
+    },
+    {
       id: 0,
-      image: img,
-      quote: "I can't thank enough for the incredible courses they offer.",
-      name: "Devon Lane",
-      position: "Scrum Master",
+      image: ugam,
+      quote:
+        "Indo Global College is the best in Chandigarh for education and faculty support.",
+      name: "Ugam Kumar Sharma",
+      batch: "2019-2023",
+      position: "Junior Executive Engineer, Central Powergrid Corporation",
+      message:
+        "I am Ugam Kumar Sharma from Bihar. I have completed my Bachelor of Technology degree in civil engineering with first class (89.10%) from Indo Global College of Engineering, Chandigarh. The faculty and HOD supported me immensely during my preparation, leading to my position as a Junior Executive Engineer at a Maharatna CPSU at Lakhisarai substation, Bihar. To my juniors, I say: study seriously, gain more knowledge, and make the best use of time. Always strive to be the best version of yourself. Best wishes for your bright future!",
     },
     {
       id: 1,
-      image: img1,
-      quote: "This course changed my life and career trajectory.",
-      name: "John Doe",
-      position: "Software Engineer",
+      image: harpreet,
+      quote: "The faculty’s dedication shaped my career and achievements.",
+      name: "Er. Harpreet Kaur",
+      batch: "2009-2013",
+      position: "Head Draftsman, Municipal Corporation, Jalandhar",
+      message:
+        "My journey at Indo Global Colleges was transformative. The faculty’s dedication, unwavering support, and hands-on learning shaped my career. The values and knowledge I gained at Indo Global Colleges are the foundation of my professional achievements. I’m thrilled to share that I’ve successfully cleared the Punjab Public Service Commission (PPSC) exam and am now the Head Draftsman at the Municipal Corporation, Jalandhar. This milestone wouldn’t have been possible without the exceptional education and support I received at IGCE.",
     },
     {
       id: 2,
-      image: img2,
-      quote: "Amazing content and great instructors!",
-      name: "Jane Smith",
-      position: "Project Manager",
+      image: mohd,
+      quote: "IGCE built my foundation for a successful career in engineering.",
+      name: "Mohd Arif Wani",
+      batch: "2018-2022",
+      position: "Planning Engineer, Yapı Merkezi, Riyadh",
+      message:
+        "As a certified PMI-PMP Planning Engineer, I specialize in project planning, cost control, and data analysis. Currently, I work at Yapı Merkezi in Riyadh, driving project efficiency since January 2024. My previous roles include Cost Control and Planning Engineer at SHAR Company in Neom and Project Planner at SANS International Construction Company in Yanbu. Indo Global College of Engineering laid the foundation for my skills and professional journey, equipping me with the knowledge to excel in strategic planning and project management.",
     },
     {
       id: 3,
-      image: img3,
-      quote: "I learned so much, and I’m applying it daily!",
-      name: "Alice Johnson",
-      position: "UX Designer",
+      image: abhay,
+      quote: "IGCE gave me the skills and confidence to excel in my career.",
+      name: "Abhay Prasad",
+      batch: "2016-2020",
+      position:
+        "Supervisor, Nalco Water (Ecolab Company), Tata Steel Jamshedpur",
+      message:
+        "As a Supervisor at Nalco Water, based at Tata Steel Jamshedpur since June 2022, I manage industrial water recirculation, chemical dosing, and hot water operations. I also focus on safety and cross-functional leadership as a Site Supervisor. My journey began as a Technical Support Executive at AEGIS, where I developed problem-solving and adaptability skills. Indo Global College of Engineering provided a strong academic foundation and diverse skills, empowering me to contribute to the success of my roles.",
     },
-    {
-      id: 4,
-      image: img4,
-      quote: "The best investment I've made in my education.",
-      name: "Bob Brown",
-      position: "Data Analyst",
-    },
+    
   ];
 
   // Set initial state for the central image
   const [centralImage, setCentralImage] = useState(testimonials[0].image);
   const [fade, setFade] = useState(false);
   const [api, setApi] = useState(null);
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -124,7 +142,7 @@ export function Testimonials() {
               fade ? "opacity-0" : "opacity-100"
             }`}
           >
-            <img src={centralImage} alt="Central" className="w-[220px]" />
+            <img src={centralImage} alt="Central" className="w-[160px]  h-[160px] object-cover rounded-full ring-8 ring-blue-50" />
           </span>
 
           {/* Orbiting Circles */}
@@ -138,14 +156,16 @@ export function Testimonials() {
               delay={index * 5} // Use index to stagger delays
               reverse={index % 2 === 1} // Reverse effect for alternate circles
             >
+              <div className="rounded-full overflow-hidden z-1000000 ring-4 ring-sky-100 relative">
               <img
                 src={testimonial.image}
                 alt={`Person ${index + 1}`}
-                className={`w-[100px] cursor-pointer transition-opacity duration-300 ${
+                className={`w-[100px] h-[100px] object-cover cursor-pointer transition-opacity duration-300 ${
                   fade ? "opacity-0" : "opacity-100"
                 }`}
                 onClick={() => handleOrbitingCircleClick(index)} // Update click handler
               />
+              </div>
             </OrbitingCircles>
           ))}
         </div>
@@ -156,7 +176,7 @@ export function Testimonials() {
               fade ? "opacity-0" : "opacity-100"
             }`}
           >
-            <img src={centralImage} alt="Central" className="w-[100px]" />
+            <img src={centralImage} alt="Central" className="w-[80px] h-[80px] object-cover rounded-full" />
           </span>
 
           {/* Orbiting Circles */}
@@ -164,20 +184,23 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <OrbitingCircles
               key={testimonial.id}
-              className="size-[50px] border-none"
+              className="size-[50px] border-none rounded-full"
               radius={index % 2 === 0 ? 90 : 140} // Adjust radius for alternate circles
               duration={20}
               delay={index * 5} // Use index to stagger delays
               // Reverse effect for alternate circles
             >
-              <img
+              <div className="rounded-full overflow-hidden z-1000000 relative">
+                <img
                 src={testimonial.image}
                 alt={`Person ${index + 1}`}
-                className={`w-[50px] cursor-pointer transition-opacity duration-300 ${
+                className={`w-[50px] h-[50px] object-cover cursor-pointer rounded-full transition-opacity duration-300 ${
                   fade ? "opacity-0" : "opacity-100"
                 }`}
                 onClick={() => handleOrbitingCircleClick(index)} // Update click handler
-              />
+              /> 
+              </div>
+             
             </OrbitingCircles>
           ))}
         </div>
@@ -200,7 +223,7 @@ export function Testimonials() {
                 <CarouselItem key={testimonial.id}>
                   <div className="p-1">
                     <Card className="bg-transparent border-none rounded-none shadow-none">
-                      <CardContent className="p-0 lg min-h-[250px] sm:h-[350px] border-none shadow-none grid">
+                      <CardContent className="p-0 lg min-h-[500px] sm:h-[400px] border-none shadow-none grid">
                         <div className="bg-white">
                           <div className="p-0 sm:space-y-8">
                             <div className="flex mb-4 justify-center sm:justify-start">
@@ -212,13 +235,14 @@ export function Testimonials() {
                               ))}
                               <Star className="w-6 h-6 text-gray-300" />
                             </div>
-                            <blockquote className="md:text-3xl text-center sm:text-left text-xl font-medium text-gray-700 mb-4 sm:leading-[3rem]">
-                              {testimonial.quote}
+                            <blockquote className="md:text-lg  text-center sm:text-left text-base sm:font-medium text-gray-700 mb-4 sm:leading-[3rem]">
+                              {testimonial.message}
                             </blockquote>
                             <div className="mt-6">
                               <p className="text-lg text-center sm:text-left font-semibold text-red-600 md:text-2xl">
-                                {testimonial.name}
+                                {testimonial.name} - {testimonial.batch}
                               </p>
+                             
                               <p className="text-sm text-center sm:text-left text-gray-600 md:text-xl">
                                 {testimonial.position}
                               </p>
