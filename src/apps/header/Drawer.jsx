@@ -61,20 +61,33 @@ const Drawer = () => {
                         <nav>
                             <ul className="space-y-1">
                                 {navlinks.map((item, index) => (
-                                    <li key={index}>
-                                        {item.dropdown && item.name !== "Courses" ? (
-                                            <CollapsibleNavItem item={item} />
-                                        ) : (
-                                            <SheetClose asChild>
-                                                <Link
-                                                    to={item.path}
-                                                    className="block py-2 px-4 w-fit font-semibold text-slate-200 tracking-wider hover:bg-white/10 rounded transition-colors"
-                                                >
-                                                    {item.name}
-                                                </Link>
-                                            </SheetClose>
-                                        )}
-                                    </li>
+                                    item.name === "Blogs" ? (
+                                        <li key={index}>
+                                            <a 
+                                                href="/blog" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="block py-2 px-4 w-fit font-semibold text-slate-200 tracking-wider hover:bg-white/10 rounded transition-colors"
+                                            >
+                                                {item.name}
+                                            </a>
+                                        </li>
+                                    ) : (
+                                        <li key={index}>
+                                            {item.dropdown && item.name !== "Courses" ? (
+                                                <CollapsibleNavItem item={item} />
+                                            ) : (
+                                                <SheetClose asChild>
+                                                    <Link
+                                                        to={item.path}
+                                                        className="block py-2 px-4 w-fit font-semibold text-slate-200 tracking-wider hover:bg-white/10 rounded transition-colors"
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                </SheetClose>
+                                            )}
+                                        </li>
+                                    )
                                 ))}
                             </ul>
                         </nav>

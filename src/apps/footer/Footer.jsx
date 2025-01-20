@@ -47,29 +47,6 @@ export default function Footer() {
         { name: "Eminent Faculty", path: "/about/eminent-faculty" },
       ],
     },
-    // {
-    //   label: "Admissions",
-    //   items: [
-    //     { name: "Overview", path: "/admissions" },
-    //     { name: "Eligibility", path: "/" },
-    //     { name: "Program Fee", path: "/" },
-    //     { name: "Admissions Process", path: "/" },
-    //     { name: "Merit Scholarships", path: "/" },
-    //     { name: "Financial Aid & Loans", path: "/" },
-    //   ],
-    // },
-
-    // {
-    //   label: "Resources",
-    //   items: [
-    //     { name: "News", path: "/" },
-    //     { name: "Events", path: "/spotlights" },
-    //     { name: "Research", path: "/" },
-    //     { name: "Download Brochures", path: "/" },
-    //     { name: "Testimonials", path: "/" },
-    //     { name: "Sitemap", path: "/" },
-    //   ],
-    // },
     {
       label: "Student Services",
       items: [
@@ -185,14 +162,20 @@ export default function Footer() {
               <ul className="space-y-2">
                 {section.items.map((item) => (
                   <li key={item.name} className="text-sm">
-                    {item.isDownload ? (
+                    {item.name === "Blogs" ? (
+                      <a href="/blog" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
+                        {item.name}
+                      </a>
+                    ) : item.isDownload ? (
                       <button
                         onClick={() => handleItemClick(item)}
-                        className="flex relative items-center justify-start  hover:text-red-600 group transition-colors "
+                        className="flex relative items-center justify-start hover:text-red-600 group transition-colors"
                       >
                         {item.name}
-                        <Download size={16} className="ml-2 group-hover:animate-bounce"  />
-                        <Badge className="absolute hidden sm:block -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">PDF</Badge>
+                        <Download size={16} className="ml-2 group-hover:animate-bounce" />
+                        <Badge className="absolute hidden sm:block -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">
+                          PDF
+                        </Badge>
                       </button>
                     ) : (
                       <Link
