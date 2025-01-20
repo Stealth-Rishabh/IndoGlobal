@@ -31,8 +31,8 @@ const EminentFaculty = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14 relative">
-        <div className="md:sticky md:top-5 self-start">
+      <Container className="container relative grid grid-cols-1 md:grid-cols-4 gap-14">
+        <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
@@ -111,19 +111,19 @@ const FacultyMember = () => {
           <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {team.map((item, idx) => (
               <li key={idx}>
-                <div className="w-full h-60 border-2 border-gray-100 shadow-md sm:h-52 md:h-64 overflow-hidden rounded-md relative">
+                <div className="relative w-full overflow-hidden border-2 border-gray-100 rounded-md shadow-md h-60 sm:h-52 md:h-64">
                   <img
                     src={item.avatar}
-                    className="w-full h-full object-cover object-center shadow-md  hover:scale-125 transition-all duration-300 "
+                    className="object-cover object-center w-full h-full transition-all duration-300 shadow-md hover:scale-125 "
                     alt=""
                   />
                 </div>
                 <div className="mt-4">
-                  <h4 className="text-lg text-gray-700 font-semibold">
+                  <h4 className="text-lg font-semibold text-gray-700">
                     {item.name}
                   </h4>
                   <p className="text-indigo-600">{item.title}</p>
-                  <p className="text-gray-600 mt-2">{item.desc}</p>
+                  <p className="mt-2 text-gray-600">{item.desc}</p>
                 </div>
               </li>
             ))}
@@ -138,20 +138,20 @@ const FacultyAbout = () => {
   return (
     <section className="ezy__about11 light  bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
       <div className="container ">
-        <div className="grid grid-cols-12 gap-5 justify-start items-start">
+        <div className="grid items-start justify-start grid-cols-12 gap-5">
           <div className="col-span-12 lg:col-span-6">
             <div className="text-left md:pr-20">
-              <p className="opacity-75 uppercase ">Indo Global Colleges</p>
-              <h1 className="text-4xl md:text-6xl leading-tight font-light uppercase tracking-wide">
+              <p className="uppercase opacity-75 ">Indo Global Colleges</p>
+              <h1 className="text-4xl font-light leading-tight tracking-wide uppercase md:text-6xl">
                 EMINENT <span className="font-bold">FACULTY</span>
-                <span className="inline-flex w-3 h-3 rounded-full bg-secondary-color ml-2"></span>
+                <span className="inline-flex w-3 h-3 ml-2 rounded-full bg-secondary-color"></span>
               </h1>
-              <p className="text-xl leading-normal opacity-75 mt-4 mb-6">
+              <p className="mt-4 mb-6 text-xl leading-normal opacity-75">
                 The backbone of any academic institution is its faculty. Indo
                 Global is proud to have an outstanding and dedicated
                 constellation of experienced faculty and academic staff.
               </p>
-              <p className="opacity-50 text-sm ">
+              <p className="text-sm opacity-50 ">
                 Their diverse backgrounds, wealth of knowledge and industry
                 experience translate into giving the students an impeccable edge
                 in terms of learning and employment.
@@ -160,7 +160,7 @@ const FacultyAbout = () => {
           </div>
           <div className="col-span-12 lg:col-span-6">
             <div className="">
-              <p className="opacity-75 mb-4">
+              <p className="mb-4 opacity-75">
                 <span className="text-[40px] text-secondary-color font-bold">
                   T
                 </span>
@@ -170,7 +170,7 @@ const FacultyAbout = () => {
                 communication, presentation skills and help building confidence,
                 converting them into lifelong learners.
               </p>
-              <p className="opacity-75 mb-4">
+              <p className="mb-4 opacity-75">
                 Indo Global Colleges boast of having some of the best, the most
                 talented and most dedicated faculty in the region. They come
                 from some of the finest Institutions and Industries.

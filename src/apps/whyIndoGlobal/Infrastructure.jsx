@@ -7,7 +7,7 @@ import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
 import { CheckSquare } from "lucide-react";
-import { infrastructureData} from "./data";
+import { infrastructureData } from "./data";
 import { InfrastructureMarquee3D } from "./InfrastructureMarquee3D";
 const sidebarLinks = [
   {
@@ -41,7 +41,7 @@ const Infrastructure = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
-        <div className="self-start md:sticky md:top-5">
+        <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
@@ -67,7 +67,7 @@ const Infrastructure = () => {
 
 export default Infrastructure;
 
-const StoryItem = ({ item, index,stories }) => {
+const StoryItem = ({ item, index, stories }) => {
   const { text } = item;
   return (
     <>
@@ -81,13 +81,17 @@ const StoryItem = ({ item, index,stories }) => {
   );
 };
 
-const InfrastructureItems = ({ data ,index}) => {
-  const { title, description, stories ,logos} = data;
+const InfrastructureItems = ({ data, index }) => {
+  const { title, description, stories, logos } = data;
   return (
     <section className="light  bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
       <div className="container">
         <div className="grid grid-cols-12 items-center gap-4 mb-12">
-          <div className={`col-span-12 lg:col-span-6 ${index%2===0 ? ' sm:order-1' : 'sm:order-2'}`}>
+          <div
+            className={`col-span-12 lg:col-span-6 ${
+              index % 2 === 0 ? " sm:order-1" : "sm:order-2"
+            }`}
+          >
             {/* <h6 className="font-medium opacity-70 mb-2">Hello Visitor,</h6> */}
             <h1 className="text-2xl sm:text-3xl leading-none font-bold uppercase tracking-wider mb-2">
               {title}
@@ -97,13 +101,22 @@ const InfrastructureItems = ({ data ,index}) => {
             <ul className="flex flex-col ezy__about9-features mt-5">
               {stories.map((item, i) => (
                 <li key={i}>
-                  <StoryItem item={item} index={i + 1} key={i}  stories={stories}/>
+                  <StoryItem
+                    item={item}
+                    index={i + 1}
+                    key={i}
+                    stories={stories}
+                  />
                 </li>
               ))}
             </ul>
           </div>
-          <div className={`col-span-12 lg:col-span-6 ${index%2===0 ? 'sm:order-2' : 'sm:order-1' }`}>
-            <InfrastructureMarquee3D index={index} logos={logos}/>
+          <div
+            className={`col-span-12 lg:col-span-6 ${
+              index % 2 === 0 ? "sm:order-2" : "sm:order-1"
+            }`}
+          >
+            <InfrastructureMarquee3D index={index} logos={logos} />
           </div>
         </div>
       </div>

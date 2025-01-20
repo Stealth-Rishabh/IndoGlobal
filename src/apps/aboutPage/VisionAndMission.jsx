@@ -85,8 +85,8 @@ const VisionAndMission = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14 relative">
-        <div className="md:sticky md:top-5 self-start">
+      <Container className="container relative grid grid-cols-1 md:grid-cols-4 gap-14">
+        <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
@@ -116,7 +116,7 @@ const VisionAndMissionSection = ({ data, order }) => {
   return (
     <section className="ezy__featured7 light relative bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white z-[1]">
       <div className="">
-        <div className="grid grid-cols-12 justify-center">
+        <div className="grid justify-center grid-cols-12">
           <div className="col-span-12 ">
             <div className="grid grid-cols-12">
               <div
@@ -127,7 +127,7 @@ const VisionAndMissionSection = ({ data, order }) => {
                 <img
                   src={data.image}
                   alt="Vision"
-                  className="w-full h-full object-cover rounded-xl drop-shadow-sm hover:drop-shadow-xl hover:-translate-y-2 scale-200 transition-all duration-300"
+                  className="object-cover w-full h-full transition-all duration-300 rounded-xl drop-shadow-sm hover:drop-shadow-xl hover:-translate-y-2 scale-200"
                 />
               </div>
               <div
@@ -140,11 +140,11 @@ const VisionAndMissionSection = ({ data, order }) => {
                     order === 0 ? "md:-left-[20%]" : "md:-right-[20%]"
                   } rounded-xl rotate-180 -z-[1]`}
                 ></div>
-                <div className="p-6 lg:p-14 mb-12">
+                <div className="p-6 mb-12 lg:p-14">
                   <div className="w-[74px] h-[74px] rounded-xl text-[32px] inline-flex items-center justify-center mb-6">
                     {data.icon}
                   </div>
-                  <h4 className="text-3xl font-bold mb-8 text-secondary-color/80">
+                  <h4 className="mb-8 text-3xl font-bold text-secondary-color/80">
                     {data.section}
                   </h4>
                   <div className="space-y-4">
@@ -154,7 +154,7 @@ const VisionAndMissionSection = ({ data, order }) => {
                         className="flex items-start justify-center gap-3 "
                       >
                         <span className="mt-1">{point.icon}</span>
-                        <p className="text-base  text-secondary-color/70">
+                        <p className="text-base text-secondary-color/70">
                           {point.text}
                         </p>
                       </div>

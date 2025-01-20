@@ -66,7 +66,6 @@ const locations = [
     ],
     image: location2,
   },
-  
 ];
 
 const CollegeLocation = () => {
@@ -79,7 +78,7 @@ const CollegeLocation = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14 ">
-        <div className="md:sticky md:top-5 self-start">
+        <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
@@ -128,12 +127,12 @@ const LocationItem = ({ location, index }) => {
             index % 2 === 0 ? "lg:pl-14" : "lg:pr-14"
           }`}
         >
-          <h4 className="text-2xl font-bold  text-secondary-color">
-            {title}
-          </h4>
-          {index === 2 && <h4 className="text-lg font-bold  text-gray-800">
-          Only for postal purpose*
-          </h4>}
+          <h4 className="text-2xl font-bold text-secondary-color">{title}</h4>
+          {index === 2 && (
+            <h4 className="text-lg font-bold text-gray-800">
+              Only for postal purpose*
+            </h4>
+          )}
           <ul className="space-y-2">
             {details.map((detail, index) => (
               <li key={index} className="flex items-center">
@@ -158,7 +157,7 @@ const LocationItem = ({ location, index }) => {
           <img
             src={image}
             alt="location"
-            className="w-full h-full object-cover hover:scale-125 transition-all duration-300"
+            className="object-cover w-full h-full transition-all duration-300 hover:scale-125"
           />
         </div>
       </div>

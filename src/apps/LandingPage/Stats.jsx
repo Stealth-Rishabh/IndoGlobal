@@ -16,15 +16,18 @@ const StatItem = memo(({ data, title }) => (
     <div className="text-5xl font-bold text-white sm:text-6xl">
       <NumberTicker
         value={data}
-        className="text-4xl font-bold text-white sm:text-6xl"
+        className="xs:text-4xl text-2xl font-bold text-white sm:text-6xl"
       />
-      <span className="ml-1 text-4xl font-bold text-white sm:text-6xl">+</span>
+      <span className="ml-1 xs:text-4xl text-2xl font-bold text-white sm:text-6xl">+</span>
     </div>
-    <div className="mt-3 text-sm font-medium text-gray-400 sm:text-xl">
+    <div className="mt-3 xs:text-sm text-xs font-medium text-gray-400 sm:text-xl">
       {title}
     </div>
   </div>
 ));
+
+// Set display name for the component
+StatItem.displayName = "StatItem";
 
 const Stats = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -51,15 +54,15 @@ const Stats = () => {
       <div className="absolute inset-0 z-20 bg-black opacity-70" />
       <div className="relative z-30 max-w-screen-xl px-4 mx-auto md:px-8">
         <WordPullUp
-          className="mb-8 text-4xl font-bold text-center text-white md:text-6xl sm:font-bold md:font-extrabold sm:text-5xl lg:text-6xl"
+          className="mb-8 xs:text-4xl text-3xl font-bold text-center text-white md:text-6xl sm:font-bold md:font-extrabold sm:text-5xl lg:text-6xl"
           words="INDO GLOBAL GROUP OF COLLEGES"
         />
         <Heading
           subtitle="Spanning 30+ acres, with 22+ years of academic excellence, over 10,000 alumni, and 20+ specialized courses, we continue to shape future professionals."
-          titleClassName="text-4xl md:text-6xl font-bold text-white"
-          subtitleClassName="text-gray-300 text-base md:text-lg"
+          
+          subtitleClassName="text-gray-300 xs:text-base text-sm md:text-lg"
         />
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-0 md:divide-x-2 md:divide-red-700">
+        <div className="grid grid-cols-2 xs:gap-8 gap-1 md:grid-cols-4 md:gap-0 md:divide-x-2 md:divide-red-700">
           {statsData.map((item, index) => (
             <StatItem key={index} data={item.data} title={item.title} />
           ))}

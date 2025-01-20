@@ -33,7 +33,7 @@ const CollegeLocation = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14 ">
-        <div className="md:sticky md:top-5 self-start">
+        <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
@@ -47,38 +47,36 @@ const CollegeLocation = () => {
 
           <section className="ezy__about2 light pt-10 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
             <div className="container ">
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
+              <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                 <div>
-                  <h2 className="lg:text-end text-4xl md:text-6xl leading-tight md:leading-normal tracking-wide font-light lg:pl-6 mb-0">
+                  <h2 className="mb-0 text-4xl font-light leading-tight tracking-wide lg:text-end md:text-6xl md:leading-normal lg:pl-6">
                     Late Sukhdev Kumar Singla
-                    <span className="block text-4xl mt-2 text-primary-color">
+                    <span className="block mt-2 text-4xl text-primary-color">
                       Chairman
                     </span>
                   </h2>
                 </div>
 
-                <div className="lg:px-4 my-6 lg:my-0">
+                <div className="my-6 lg:px-4 lg:my-0">
                   <div className="sm:min-h-[450px md:h-full bg-center bg-cover rounded-lg">
                     <img
                       src={chairmanImage}
                       alt="Chairman"
-                      className="h-full w-full object-cover r rounded-lg"
+                      className="object-cover w-full h-full rounded-lg r"
                     />
                   </div>
                 </div>
 
                 <div className="sm:col-span-2">
-                  <p className="text-2xl leading-relaxed mb-4 text-primary-color font-semibold">
+                  <p className="mb-4 text-2xl font-semibold leading-relaxed text-primary-color">
                     Dear Education Aspirants,
                   </p>
-                  <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
+                  <p className="mb-4 text-lg leading-relaxed text-justify text-gray-700">
                     Welcome to Indo Global Colleges. Our degrees in Engineering,
                     Architecture, MBA & Paramedical are a key step towards
                     senior positions in industry, commerce & public sector.
                   </p>
-                  <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
+                  <p className="mb-4 text-lg leading-relaxed text-justify text-gray-700">
                     Our programmes will provide you with challenge, stimulation,
                     variety and flexibility. The highly trained staff and your
                     fellow students will provide an unrivalled contribution to
@@ -87,7 +85,7 @@ const CollegeLocation = () => {
                     prepare you to meet the challenges in the fast developing
                     technological world.
                   </p>
-                  <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
+                  <p className="mb-4 text-lg leading-relaxed text-justify text-gray-700">
                     Our students have made us proud with university positions
                     and appreciable pass percentage in all courses. I hope the
                     students joining us will work with same fervour and
@@ -95,7 +93,7 @@ const CollegeLocation = () => {
                     excellence will not only broaden your knowledge but also
                     open many doors for you.
                   </p>
-                  <p className="text-lg leading-relaxed mb-4 text-justify text-gray-700">
+                  <p className="mb-4 text-lg leading-relaxed text-justify text-gray-700">
                     I pray that your stay at this institute of excellence will
                     not only broaden your knowledge but also open many doors for
                     you.
@@ -130,7 +128,7 @@ const LocationItem = ({ location, index }) => {
             index % 2 === 0 ? "lg:pl-14" : "lg:pr-14"
           }`}
         >
-          <h4 className="text-2xl font-bold mb-6 text-secondary-color">
+          <h4 className="mb-6 text-2xl font-bold text-secondary-color">
             {title}
           </h4>
           <ul className="space-y-2">
@@ -157,7 +155,7 @@ const LocationItem = ({ location, index }) => {
           <img
             src={image}
             alt="location"
-            className="w-full h-full object-cover hover:scale-125 transition-all duration-300"
+            className="object-cover w-full h-full transition-all duration-300 hover:scale-125"
           />
         </div>
       </div>

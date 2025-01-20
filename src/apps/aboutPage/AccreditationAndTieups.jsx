@@ -61,7 +61,7 @@ const AccreditationAndTieups = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
-        <div className="md:sticky md:top-5 self-start">
+        <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 md:col-span-3 sm:pt-12">

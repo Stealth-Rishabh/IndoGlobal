@@ -69,9 +69,9 @@ const SlideContent = memo(({ img }) => {
         />
       </div>
 
-      <div className="flex flex-row gap-4 ">
+      <div className="flex flex-row flex-wrap gap-4  ">
         <Link to="/courses" className="mt-">
-          <ShinyButton className="text-sm font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
+          <ShinyButton className="xs:text-sm text-xs font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
             Explore Courses
           </ShinyButton>
         </Link>
@@ -84,10 +84,10 @@ const SlideContent = memo(({ img }) => {
         <a href={Brochure} target="_blank" className="block sm:hidden">
           <div
            
-            className="sm:w-60 text-sm font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2"
+            className="sm:w-60 xs:text-sm text-xs font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2"
           >
             <span> BROCHURE</span>
-            <DownloadIcon className="size-4 mt-1" />
+            <DownloadIcon className="xs:size-4 size-3 mt-1" />
           </div>
         </a>
       </div>

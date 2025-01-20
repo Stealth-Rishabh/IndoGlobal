@@ -26,9 +26,9 @@ const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Gallery" }];
 const categories = [
   { id: "all", label: "All" },
   { id: "campus", label: "Campus" },
+  { id: "events", label: "Events" },
   { id: "infrastructure", label: "Infrastructure" },
   { id: "labs", label: "Labs" },
-  { id: "events", label: "Events" },
   { id: "sports", label: "Sports" },
 ];
 
@@ -132,7 +132,7 @@ const Gallery = () => {
 
           {/* Date Filter */}
           <Select value={dateFilter} onValueChange={setDateFilter}>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-full sm:w-[180px]">
               <SelectValue placeholder="Filter by date" />
             </SelectTrigger>
             <SelectContent>

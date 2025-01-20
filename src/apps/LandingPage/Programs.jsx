@@ -52,19 +52,19 @@ export default function Programs() {
             title="Programs Offered"
             subtitle="Explore our program offerings, including degree programs, undergraduate and graduate programs, and more."
             subtitleClassName="text-gray-500"
-            titleClassName="text-secondary-color mb-6 md:text-6xl text-4xl font-bold"
+            titleClassName="text-secondary-color mb-6 md:text-6xl xs:text-4xl font-bold"
           />
           <Tabs
             value={selectedTab}
             onValueChange={setSelectedTab}
             className="relative z-50 w-full"
           >
-            <TabsList className="grid grid-cols-3 p-0 w-full h-8 bg-white rounded-none sm:h-16">
+            <TabsList className="grid w-full h-8 grid-cols-3 p-0 bg-white rounded-none sm:h-16">
               {programData.map((category) => (
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="data-[state=active]:bg-red-500 data-[state=inactive]:bg-gray-200 py-1 h-full data-[state=active]:text-white text-sm sm:text-lg md:text-xl rounded-none border-r-2 border-gray-300 active:scale-95 transition-all   last:border-r-0"
+                  className="data-[state=active]:bg-red-500 data-[state=inactive]:bg-gray-200 py-1 h-full data-[state=active]:text-white xs:text-sm text-xs sm:text-lg md:text-xl rounded-none border-r-2 border-gray-300 active:scale-95 transition-all last:border-r-0"
                 >
                   {category.title}
                 </TabsTrigger>
@@ -85,8 +85,8 @@ export default function Programs() {
                           onClick={() => handleProgramClick(category.id, index)}
                           className={`cursor-pointer flex items-center ${
                             activePrograms[category.id] === index
-                              ? "text-red-500 text-lg drop-shadow-md sm:text-2xl font-semibold"
-                              : " text-black text-base sm:text-xl"
+                              ? "text-red-500 xs:text-lg text-sm sm:text-2xl font-semibold"
+                              : " text-black xs:text-sm text-xs sm:text-xl"
                           }`}
                           initial={{ opacity: 0, y: 20 }}
                           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -96,9 +96,9 @@ export default function Programs() {
                           }}
                         >
                           {activePrograms[category.id] === index ? (
-                            <SendHorizontal className="mr-2 w-5 h-5" />
+                            <SendHorizontal className="w-5 h-5 mr-2" />
                           ) : (
-                            <ChevronRight className="mr-2 w-5 h-5" />
+                            <ChevronRight className="w-5 h-5 mr-2" />
                           )}
                           {program.name}
                         </motion.li>
@@ -114,14 +114,14 @@ export default function Programs() {
                     className="bg-gray-900 text-white md:absolute md:w-[70%] md:-right-64 md:top-8 rounded-none  md:py-10 md:px-14  sm:-z-10 z-auto"
                   >
                     <CardHeader>
-                      <CardTitle className="text-3xl font-bold sm:text-3xl lg:text-5xl">
+                      <CardTitle className="xs:text-3xl text-2xl font-bold sm:text-3xl lg:text-5xl">
                         {activePrograms[category.id] !== null
                           ? category.programs[activePrograms[category.id]].name
                           : category.defaultCard.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="md:w-2/3">
-                      <CardDescription className="text-lg text-gray-300">
+                      <CardDescription className="xs:text-lg text-sm text-gray-300">
                         {activePrograms[category.id] !== null
                           ? category.programs[activePrograms[category.id]]
                               .description
@@ -129,14 +129,14 @@ export default function Programs() {
                       </CardDescription>
                       {activePrograms[category.id] !== null && (
                         <>
-                          <p className="mt-4 text-white">
+                          <p className="mt-4 xs:text-sm text-xs text-white">
                             <strong>Duration:</strong>{" "}
                             {
                               category.programs[activePrograms[category.id]]
                                 .duration
                             }
                           </p>
-                          <p className="mt-2 text-white">
+                          <p className="mt-2 xs:text-sm text-xs text-white">
                             <strong>Eligibility:</strong>{" "}
                             {
                               category.programs[activePrograms[category.id]]
@@ -145,7 +145,7 @@ export default function Programs() {
                           </p>
                         </>
                       )}
-                      <div className="flex relative gap-1 justify-between mt-8 z-100 sm:gap-5 sm:justify-start">
+                      <div className="relative flex scale-[0.8] -ml-6 xs:scale-100 xs:ml-0 justify-between gap-1 mt-8 z-100 sm:gap-5 sm:justify-start">
                         <Link
                           to={
                             activePrograms[category.id] !== null

@@ -77,10 +77,10 @@ const CoursesDetails = () => {
           breadcrumbItems={breadcrumbItems}
         />
         <Container className="container grid grid-cols-1 gap-14 md:grid-cols-4">
-          <div className="self-start md:sticky md:top-5">
+          <div className="self-start hidden md:block md:sticky md:top-5">
             <CourseSidebar />
           </div>
-          <div className="col-span-1 sm:pt-12 md:col-span-3">
+          <div className="col-span-1 pt-12 md:col-span-3">
             <CourseDetailsPage {...courseData} />
           </div>
         </Container>
@@ -99,7 +99,7 @@ const InfoBadges = ({ badges }) => (
       <Badge
         key={index}
         variant="secondary"
-        className="flex gap-1 items-center"
+        className="flex items-center gap-1"
       >
         <badge.icon className="w-4 h-4" />
         {badge.text}
@@ -123,7 +123,7 @@ const StarRating = ({ rating }) => (
 
 const ReviewCard = ({ review }) => (
   <div className="pb-4 border-b last:border-b-0">
-    <div className="flex justify-between items-center">
+    <div className="flex items-center justify-between">
       <h4 className="font-semibold">{review.name}</h4>
       <StarRating rating={review.rating} />
     </div>
@@ -165,7 +165,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
       <img
         src={image}
         alt={title}
-        className="object-cover mb-6 w-full aspect-video sm:aspect-auto  sm:h-96 rounded-lg"
+        className="object-cover w-full mb-6 rounded-lg aspect-video sm:aspect-auto sm:h-96"
       />
 
       <div className="flex flex-wrap gap-4 mb-8">
@@ -180,7 +180,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
       </div>
 
       <Tabs defaultValue="overview" className="mb-8">
-        <TabsList className="grid grid-cols-2 gap-1 mb-4 w-full md:grid-cols-5 sm:h-12 h-max sm:gap-0">
+        <TabsList className="grid w-full grid-cols-2 gap-1 mb-4 md:grid-cols-5 sm:h-12 h-max sm:gap-0">
           {tabs.map((tab) => (
             <TabsTrigger
               key={tab.label}
@@ -195,7 +195,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
 
         {/* Overview Tab */}
         <TabsContent value="overview">
-          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
+          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
               <CardTitle className="px-0 text-3xl text-secondary-color">
                 Course Overview
@@ -206,31 +206,31 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                 return (
                   <div key={index}>
                     {item.type === "heading" && (
-                      <h2 className="mt-6 mb-3 font-semibold text-xl sm:text-2xl text-secondary-color/90">
+                      <h2 className="mt-6 mb-3 text-xl font-semibold sm:text-2xl text-secondary-color/90">
                         {item.data}
                       </h2>
                     )}
                     {item.type === "sub-heading" && (
-                      <h3 className="mt-6 mb-3 font-semibold text-lg sm:text-lg text-secondary-color/80">
+                      <h3 className="mt-6 mb-3 text-lg font-semibold sm:text-lg text-secondary-color/80">
                         {item.data}
                       </h3>
                     )}
                     {item.type === "paragraph" && (
-                      <p className="text-gray-700 text-sm sm:text-base">
+                      <p className="text-sm text-gray-700 sm:text-base">
                         {item.data}
                       </p>
                     )}
                     {item.type === "list" && (
-                      <ul className=" space- list-disc grid grid-cols-1 sm:grid-cols-2 justify-items-start gap-4 items-start mb-4">
+                      <ul className="grid items-start grid-cols-1 gap-4 mb-4 list-disc  space- sm:grid-cols-2 justify-items-start">
                         {item.data.map((item, index) => (
                           <li
                             key={index}
-                            className="flex flex-row items-start list-none justify-start text-gray-600 text-sm sm:text-base"
+                            className="flex flex-row items-start justify-start text-sm text-gray-600 list-none sm:text-base"
                           >
-                            <span className="flex items-center w-6 mt-1 h-6 sm:w-4 sm:h-4 mr-2 ">
-                              <CheckSquare className="w-6 h-6" />
+                            <span className="flex items-center w-6 h-6 mr-2 sm:mt-1 sm:w-4 sm:h-4 ">
+                              <CheckSquare className="w-4 h-4 sm:w-6 sm:h-6" />
                             </span>
-                            <div className="text-gray-600 text-sm sm:text-base">
+                            <div className="text-sm text-gray-600 sm:text-base">
                               {item}
                             </div>
                           </li>
@@ -246,7 +246,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
 
         {/* Curriculum Tab */}
         <TabsContent value="curriculum">
-          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
+          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
               <CardTitle className="text-3xl text-secondary-color">
                 Course Curriculum
@@ -256,7 +256,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
               <Accordion type="single" collapsible className="w-full">
                 {subjects.map((subject, index) => (
                   <AccordionItem key={subject} value={`subject${index + 1}`}>
-                    <AccordionTrigger className="text-gray-600 text-lg">
+                    <AccordionTrigger className="text-lg text-gray-600">
                       {subject.year || subject.semester}
                     </AccordionTrigger>
                     <AccordionContent>
@@ -278,7 +278,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         </TabsContent>
         {/* Eligibility Tab */}
         <TabsContent value="eligibility">
-          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
+          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
               <CardTitle className="text-3xl text-secondary-color">
                 Eligibility Criteria
@@ -289,12 +289,12 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
                 return (
                   <div key={index}>
                     {item.type === "heading" && (
-                      <h2 className="mt-5 mb-2 font-semibold text-xl sm:text-xl text-secondary-color/90">
+                      <h2 className="mt-5 mb-2 text-xl font-semibold sm:text-xl text-secondary-color/90">
                         {item.data}
                       </h2>
                     )}
                     {item.type === "paragraph" && (
-                      <p className="text-gray-600 text-sm sm:text-base">
+                      <p className="text-sm text-gray-600 sm:text-base">
                         {item.data}
                       </p>
                     )}
@@ -307,7 +307,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
 
         {/* FAQs Tab */}
         <TabsContent value="faqs">
-          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
+          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
               <CardTitle className="text-3xl text-secondary-color">
                 FAQs
@@ -331,7 +331,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
         </TabsContent>
 
         <TabsContent value="reviews">
-          <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
+          <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
             <CardHeader className="px-0 sm:px-6">
               <CardTitle className="text-3xl text-secondary-color">
                 Student Reviews
@@ -360,7 +360,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
 
 //   {/* Instructor Tab */}
 //   <TabsContent value="instructor">
-//   <Card className="rounded-md border-0 shadow-none card lg:shadow sm:border">
+//   <Card className="border-0 rounded-md shadow-none card lg:shadow sm:border">
 //     <CardHeader className="px-0 sm:px-6">
 //       <CardTitle className="text-3xl">Course Instructor</CardTitle>
 //     </CardHeader>

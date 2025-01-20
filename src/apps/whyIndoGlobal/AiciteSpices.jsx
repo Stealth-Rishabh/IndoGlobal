@@ -6,11 +6,15 @@ import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import AboutSidebar from "../../components/AboutSidebar";
 
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckCircle, BookOpen, Users, Target, Lightbulb } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { CheckCircle, BookOpen, Users, Target, Lightbulb } from "lucide-react";
 import { useState } from "react";
 
 const sidebarLinks = [
@@ -45,7 +49,7 @@ const AiciteSpices = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
-        <div className="self-start md:sticky md:top-5">
+        <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3 ">
@@ -68,9 +72,8 @@ const AiciteSpices = () => {
 
 export default AiciteSpices;
 
-
 function AiciteSpicesItem() {
-  const [activeTab, setActiveTab] = useState("about")
+  const [activeTab, setActiveTab] = useState("about");
 
   const objectives = [
     "Enhance overall skills of students through various clubs",
@@ -81,16 +84,16 @@ function AiciteSpicesItem() {
     "Serve as a platform for communication skills and out-of-the-box thinking",
     "Improve event management, leadership qualities, and public speaking",
     "Promote understanding of national culture",
-    "Connect with alumni and industries for fund-raising to ensure club sustainability"
-  ]
+    "Connect with alumni and industries for fund-raising to ensure club sustainability",
+  ];
 
   const departments = [
     "Computer Science and Engineering",
     "Electronics and Communication Engineering",
     "Civil Engineering",
     "Mechanical Engineering",
-    "MBA"
-  ]
+    "MBA",
+  ];
 
   return (
     <div className=" mx-auto p space-y-8 ">
@@ -103,13 +106,33 @@ function AiciteSpicesItem() {
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="grid w-full grid-cols-4 sm:h-12 ">
-          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="about">About</TabsTrigger>
-          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="objectives">Objectives</TabsTrigger>
-          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="departments">Departments</TabsTrigger>
-          <TabsTrigger className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs" value="get-involved">Get Involved</TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs"
+            value="about"
+          >
+            About
+          </TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs"
+            value="objectives"
+          >
+            Objectives
+          </TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs"
+            value="departments"
+          >
+            Departments
+          </TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-blue-900  data-[state=active]:text-white h-full rounded-sm sm:text-base text-xs"
+            value="get-involved"
+          >
+            Get Involved
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="about" className="mt-6 ">
-          <Card className='rounded-sm shadow-sm'>
+          <Card className="rounded-sm shadow-sm">
             <CardHeader>
               <CardTitle className="flex items-center">
                 <BookOpen className="mr-2" />
@@ -118,19 +141,21 @@ function AiciteSpicesItem() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">
-                AICTE has introduced the SPICES program to sponsor the development of student clubs, 
-                aiming for the well-rounded growth of students by promoting their interests, creativity, 
-                and ethics.
+                AICTE has introduced the SPICES program to sponsor the
+                development of student clubs, aiming for the well-rounded growth
+                of students by promoting their interests, creativity, and
+                ethics.
               </p>
               <p>
-                As part of this initiative, Indo Global College of Engineering has formed various Clubs 
-                and Societies for the overall development of students across multiple departments.
+                As part of this initiative, Indo Global College of Engineering
+                has formed various Clubs and Societies for the overall
+                development of students across multiple departments.
               </p>
             </CardContent>
           </Card>
         </TabsContent>
         <TabsContent value="objectives" className="mt-6">
-          <Card className='rounded-sm shadow-sm'>
+          <Card className="rounded-sm shadow-sm">
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Target className="mr-2" />
@@ -150,7 +175,7 @@ function AiciteSpicesItem() {
           </Card>
         </TabsContent>
         <TabsContent value="departments" className="mt-6">
-          <Card className='rounded-sm shadow-sm'>
+          <Card className="rounded-sm shadow-sm">
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Users className="mr-2" />
@@ -172,7 +197,7 @@ function AiciteSpicesItem() {
           </Card>
         </TabsContent>
         <TabsContent value="get-involved" className="mt-6">
-          <Card className='rounded-sm shadow-sm'>
+          <Card className="rounded-sm shadow-sm">
             <CardHeader>
               <CardTitle className="flex items-center">
                 <Lightbulb className="mr-2" />
@@ -181,16 +206,18 @@ function AiciteSpicesItem() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">
-                Students are encouraged to participate in the various clubs and societies formed under 
-                the SPICES program. These activities will contribute to your personal growth, skill 
-                development, and overall college experience.
+                Students are encouraged to participate in the various clubs and
+                societies formed under the SPICES program. These activities will
+                contribute to your personal growth, skill development, and
+                overall college experience.
               </p>
               <Accordion type="single" collapsible>
                 <AccordionItem value="how-to-join">
                   <AccordionTrigger>How to Join?</AccordionTrigger>
                   <AccordionContent>
-                    To join a club or society under the SPICES program, contact your department coordinator 
-                    or visit the student affairs office. They will provide you with information about 
+                    To join a club or society under the SPICES program, contact
+                    your department coordinator or visit the student affairs
+                    office. They will provide you with information about
                     available clubs and the registration process.
                   </AccordionContent>
                 </AccordionItem>
@@ -201,7 +228,9 @@ function AiciteSpicesItem() {
                       <li>Enhance your skills and creativity</li>
                       <li>Network with peers and industry professionals</li>
                       <li>Gain leadership and management experience</li>
-                      <li>Contribute to your personal and professional growth</li>
+                      <li>
+                        Contribute to your personal and professional growth
+                      </li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
@@ -211,5 +240,5 @@ function AiciteSpicesItem() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
