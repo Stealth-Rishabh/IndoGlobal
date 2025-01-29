@@ -12,9 +12,9 @@ import {
 import { Star } from "lucide-react";
 import OrbitingCircles from "../../../components/ui/orbiting-circles";
 import ugam from "../../../assets/testimonial/Ugam.webp";
-import harpreet from "../../../assets/testimonial/Harpreet.webp";
+import harpreet from "../../../assets/testimonial/Harpreet.png";
 import mohd from "../../../assets/testimonial/Mohd.webp";
-import abhay from "../../../assets/testimonial/Abhay.webp";
+import masoom from "../../../assets/testimonial/Masoom.png";
 import rohith from "../../../assets/testimonial/Rohith.webp";
 import Heading from "../../../components/Heading";
 
@@ -46,11 +46,16 @@ export function Testimonials() {
       id: 1,
       image: harpreet,
       quote: "The faculty’s dedication shaped my career and achievements.",
-      name: "Er. Harpreet Kaur",
-      batch: "2009-2013",
-      position: "Head Draftsman, Municipal Corporation, Jalandhar",
+      name: "HARPREET BAINS",
+      batch: "2008-2012",
+      position: "Sr. Talent Acquisition Manager, Edifecs",
       message:
-        "My journey at Indo Global Colleges was transformative. The faculty’s dedication, unwavering support, and hands-on learning shaped my career. The values and knowledge I gained at Indo Global Colleges are the foundation of my professional achievements. I’m thrilled to share that I’ve successfully cleared the Punjab Public Service Commission (PPSC) exam and am now the Head Draftsman at the Municipal Corporation, Jalandhar. This milestone wouldn’t have been possible without the exceptional education and support I received at IGCE.",
+        `Harpreet Bains working as a Sr. Talent Acquisition Manager in Edifecs , which provides
+market-leading technology to its payer and health system customers, who serve nearly
+300 million people in the U.S. healthcare market. It gives me great pleasure to say with
+pride that I have completed my B. Tech (Computer Science Engineering) from Indo
+Global College of Engineering in 2012. The four years spent here were splendid and
+have helped me to grow better professionally &amp; personally.`,
     },
     {
       id: 2,
@@ -64,14 +69,20 @@ export function Testimonials() {
     },
     {
       id: 3,
-      image: abhay,
+      image: masoom,
       quote: "IGCE gave me the skills and confidence to excel in my career.",
-      name: "Abhay Prasad",
-      batch: "2016-2020",
+      name: "MASOOM",
+      batch: "",
       position:
-        "Supervisor, Nalco Water (Ecolab Company), Tata Steel Jamshedpur",
+        "CSE Graduate",
       message:
-        "As a Supervisor at Nalco Water, based at Tata Steel Jamshedpur since June 2022, I manage industrial water recirculation, chemical dosing, and hot water operations. I also focus on safety and cross-functional leadership as a Site Supervisor. My journey began as a Technical Support Executive at AEGIS, where I developed problem-solving and adaptability skills. Indo Global College of Engineering provided a strong academic foundation and diverse skills, empowering me to contribute to the success of my roles.",
+        `My experience at Indo global college has been truly transformative. The combination of
+dedicated faculty, a supportive community, and access to exceptional resources has
+empowered me both academically and personally. The curriculum not only challenged
+me to excel but also encouraged me to think critically and creatively. The vibrant
+campus life provided countless opportunities for growth, from clubs and events to
+meaningful friendships that will last a lifetime. Indo global college has prepared me to
+step confidently into the future, and I am proud to be part of its legacy`,
     },
     
   ];
