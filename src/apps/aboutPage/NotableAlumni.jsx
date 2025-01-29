@@ -18,7 +18,7 @@ import ritwik from "../../assets/testimonial/Ritwik.png";
 import gaurav from "../../assets/testimonial/Gaurav.png";
 import abhay from "../../assets/testimonial/Abhay.webp";
 import arif from "../../assets/testimonial/Mohd.webp";
-import devansh from "../../assets/testimonial/Devansh.png";
+import devansh from "../../assets/testimonial/devansh.png";
 import tanka from "../../assets/testimonial/tanka.png";
 import rojeena from "../../assets/testimonial/rojeena.png";
 import vijay from "../../assets/testimonial/vijay.png";
