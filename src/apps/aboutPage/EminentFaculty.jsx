@@ -20,7 +20,9 @@ const sidebarLinks = [
   { href: "/about/vision-mission", label: "Vision and Mission" },
   { href: "/about/leadership", label: "Leadership" },
   { href: "/about/eminent-faculty", label: "Eminent Faculty" },
+  { href: "/about/notable-alumni", label: "Notable Alumni" },
 ];
+
 
 const EminentFaculty = () => {
   return (

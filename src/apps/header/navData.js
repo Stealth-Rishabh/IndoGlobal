@@ -9,6 +9,7 @@ export const navlinks = [
       { name: "Vision & Mission", path: "/about/vision-mission" },
       { name: "Leadership", path: "/about/leadership" },
       { name: "Eminent Faculty", path: "/about/eminent-faculty" },
+      { name: "Notable Alumni", path: "/about/notable-alumni" },
     ],
   },
   {

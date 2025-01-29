@@ -21,9 +21,11 @@ import CollegeLocation from "./apps/aboutPage/CollegeLocation";
 import VisionAndMission from "./apps/aboutPage/VisionAndMission";
 import Leadership from "./apps/aboutPage/Leadership";
 import EminentFaculty from "./apps/aboutPage/EminentFaculty";
+import NotableAlumni from "./apps/aboutPage/NotableAlumni";
 import Admission from "./apps/admissions/Admission";
 // import Event from "./apps/highlights/Event";
 import Gallery from "./apps/highlights/Gallery";
+
 import CampusRecruitments from "./apps/placements/CampusRecruitments";
 import IndustrySpeaks from "./apps/placements/IndustrySpeaks";
 import IndustryTieUps from "./apps/placements/IndustryTieUps";
@@ -134,6 +136,18 @@ function App() {
               </Helmet>
               <EminentFaculty />
             </>
+          }
+        />
+        <Route
+          path="/about/notable-alumni"
+          element={
+            <>
+              <Helmet>
+                <title>Notable Alumni | Indo Global Colleges</title>
+              </Helmet>
+              <NotableAlumni />
+            </>
+
           }
         />
 
