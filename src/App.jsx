@@ -75,7 +75,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Indo Global Group of Colleges</title>
+                <title>
+                  Best Architecture & Engineering College in Chandigarh | IGEF
+                </title>
+                <meta
+                  name="description"
+                  content="Join Indo Global Group of Colleges, the best architecture & engineering college in Chandigarh. Explore B.Tech, MBA, Polytechnic & more. Apply today!"
+                />
               </Helmet>
               <Landing />
             </>
@@ -88,7 +94,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Accreditation & Tie-ups | Indo Global Colleges</title>
+                <title>
+                  IGEF Accreditation | Recognized Excellence in Education
+                </title>
+                <meta
+                  name="description"
+                  content="Explore the accreditations of IGEF, highlighting our commitment to academic excellence, global standards, and quality education for a brighter future."
+                />
               </Helmet>
               <AccreditationAndTieups />
             </>
@@ -99,7 +111,14 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>College Location | Indo Global Colleges</title>
+                <title>
+                  Location of Indo Global Education Foundation | IGEF Campus
+                  Details
+                </title>
+                <meta
+                  name="description"
+                  content="Explore the location of the Indo Global Education Foundation (IGEF). Discover campus details, accessibility, and directions to our vibrant learning hub."
+                />
               </Helmet>
               <CollegeLocation />
             </>
@@ -110,7 +129,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Vision & Mission | Indo Global Colleges</title>
+                <title>
+                  Vision and Mission | Indo Global Group of Colleges
+                </title>
+                <meta
+                  name="description"
+                  content="Discover the vision and mission of Indo Global Group of Colleges, fostering academic excellence and innovation for future leaders in education and industry."
+                />
               </Helmet>
               <VisionAndMission />
             </>
@@ -121,7 +146,11 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Leadership | Indo Global Colleges</title>
+                <title>Leadership at IGEF | Meet Our Visionary Team</title>
+                <meta
+                  name="description"
+                  content="Discover the leadership team of IGEF dedicated to excellence in education. Learn about our vision, mission, and commitment to shaping future leaders."
+                />
               </Helmet>
               <Leadership />
             </>
@@ -132,7 +161,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Eminent Faculty | Indo Global Colleges</title>
+                <title>
+                  Eminent Faculty at Indo Global Group of Colleges | IGEF
+                </title>
+                <meta
+                  name="description"
+                  content="Discover the experienced and accomplished faculty at Indo Global Group of Colleges. Learn how their expertise shapes future-ready professionals."
+                />
               </Helmet>
               <EminentFaculty />
             </>
@@ -144,10 +179,13 @@ function App() {
             <>
               <Helmet>
                 <title>Notable Alumni | Indo Global Colleges</title>
+                <meta
+                  name="description"
+                  content="Meet our notable alumni who have excelled in their fields and contributed to society."
+                />
               </Helmet>
               <NotableAlumni />
             </>
-
           }
         />
 
@@ -157,7 +195,14 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Courses | Indo Global Colleges</title>
+                <title>
+                  Explore Courses at Indo Global College - Top College in
+                  Chandigarh
+                </title>
+                <meta
+                  name="description"
+                  content="Check out the wide range of courses offered by Indo Global College, a leading engineering and architecture college in Chandigarh. Enroll in your dream course today!"
+                />
               </Helmet>
               <Courses />
             </>
@@ -169,6 +214,10 @@ function App() {
             <>
               <Helmet>
                 <title>Course Details | Indo Global Colleges</title>
+                <meta
+                  name="description"
+                  content="Get detailed information about the course you are interested in at Indo Global College."
+                />
               </Helmet>
               <CoursesDetails />
             </>
@@ -181,7 +230,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Admissions | Indo Global Colleges</title>
+                <title>
+                  Admissions - IGEF Institute | Apply Now for Your Future
+                </title>
+                <meta
+                  name="description"
+                  content="Explore admission details for IGEF Institute. Apply for undergraduate and postgraduate courses. Start your educational journey today!"
+                />
               </Helmet>
               <Admission />
             </>
@@ -194,7 +249,14 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Spotlights & Events | Indo Global Colleges</title>
+                <title>
+                  Spotlights | IGEF - Discover Inspirational Stories &
+                  Achievements
+                </title>
+                <meta
+                  name="description"
+                  content="Explore IGEF's Spotlights section to read inspiring stories, achievements, and highlights from our community, showcasing excellence in various fields."
+                />
               </Helmet>
               <SpotlightAndEvents />
             </>
@@ -205,7 +267,11 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Gallery | Indo Global Colleges</title>
+                <title>Gallery - IGEF | Capturing Moments of Excellence</title>
+                <meta
+                  name="description"
+                  content="Explore the gallery of IGEF showcasing events, achievements, and memorable moments. A visual journey of success and excellence at IGEF."
+                />
               </Helmet>
               <Gallery />
             </>
@@ -218,7 +284,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Campus Recruitments | Indo Global Colleges</title>
+                <title>
+                  Campus Recruitments at Indo Global College - Placement Drive
+                </title>
+                <meta
+                  name="description"
+                  content="Explore the campus recruitment opportunities at Indo Global College, one of the top engineering and architecture colleges in Chandigarh. Secure your future today!"
+                />
               </Helmet>
               <CampusRecruitments />
             </>
@@ -229,7 +301,14 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Industry Speaks | Indo Global Colleges</title>
+                <title>
+                  Industry Speaks - Placement Opportunities at Indo Global
+                  College
+                </title>
+                <meta
+                  name="description"
+                  content="Explore placement opportunities and industry insights at Indo Global College, one of the best engineering and architecture colleges in Chandigarh."
+                />
               </Helmet>
               <IndustrySpeaks />
             </>
@@ -240,7 +319,14 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Industry Tie-ups | Indo Global Colleges</title>
+                <title>
+                  Industry Tie-Ups at Indo Global College - Top Placement
+                  Support
+                </title>
+                <meta
+                  name="description"
+                  content="Explore industry tie-ups at Indo Global College, enhancing placements for students in engineering, architecture, and other top courses in Chandigarh."
+                />
               </Helmet>
               <IndustryTieUps />
             </>
@@ -251,7 +337,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Placement Activities | Indo Global Colleges</title>
+                <title>
+                  Top Placement Activities at Indo Global College, Chandigarh
+                </title>
+                <meta
+                  name="description"
+                  content="Explore placement activities at Indo Global College in Chandigarh. We provide excellent career opportunities for students in engineering, architecture, and more."
+                />
               </Helmet>
               <PlacementActivities />
             </>
@@ -262,7 +354,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Our Recruiters | Indo Global Colleges</title>
+                <title>
+                  Top Recruiters at Indo Global College - Placements & Careers
+                </title>
+                <meta
+                  name="description"
+                  content="Explore the top recruiters at Indo Global College, Chandigarh. We connect students with leading companies for placements in engineering, architecture, and more."
+                />
               </Helmet>
               <OurRecruiters />
             </>
@@ -276,6 +374,10 @@ function App() {
             <>
               <Helmet>
                 <title>Why Indo Global | Indo Global Colleges</title>
+                <meta
+                  name="description"
+                  content="Discover why Indo Global College is the best choice for your education in architecture and engineering."
+                />
               </Helmet>
             </>
           }
@@ -286,8 +388,12 @@ function App() {
             <>
               <Helmet>
                 <title>
-                  Industry Oriented Curriculum | Indo Global Colleges
+                  Industry-Oriented Curriculum at Indo Global College
                 </title>
+                <meta
+                  name="description"
+                  content="Discover Indo Global's industry-oriented curriculum, offering best-in-class architecture and engineering courses in Chandigarh. Prepare for a successful career in design & tech."
+                />
               </Helmet>
               <IndustryOrientedCurriculum />
             </>
@@ -299,6 +405,10 @@ function App() {
             <>
               <Helmet>
                 <title>Entrepreneurship | Indo Global Colleges</title>
+                <meta
+                  name="description"
+                  content="Explore the entrepreneurship programs at Indo Global College, designed to foster innovation and business acumen."
+                />
               </Helmet>
               <Entrepreneurship />
             </>
@@ -309,7 +419,14 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Sports Arena | Indo Global Colleges</title>
+                <title>
+                  Sports Arena at Indo Global - Top Architecture College in
+                  India
+                </title>
+                <meta
+                  name="description"
+                  content="Explore the state-of-the-art sports arena at Indo Global College, one of the top architecture colleges in Chandigarh, offering world-class facilities."
+                />
               </Helmet>
               <SportsArena />
             </>
@@ -320,7 +437,14 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Infrastructure | Indo Global Colleges</title>
+                <title>
+                  Best Architecture College in India | Indo Global
+                  Infrastructure
+                </title>
+                <meta
+                  name="description"
+                  content="Discover the best architecture colleges in India. Indo Global College offers top courses and infrastructure for aspiring architects in Chandigarh."
+                />
               </Helmet>
               <Infrastructure />
             </>
@@ -331,7 +455,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Transportation | Indo Global Colleges</title>
+                <title>
+                  Great Transportation at Indo Global College, Chandigarh
+                </title>
+                <meta
+                  name="description"
+                  content="Explore excellent transportation services at Indo Global College, Chandigarh, making it easy for students to commute to the best engineering and architecture colleges."
+                />
               </Helmet>
               <Transportation />
             </>
@@ -342,7 +472,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Student Security | Indo Global Colleges</title>
+                <title>
+                  Student Security at Indo Global College - Safe Campus
+                </title>
+                <meta
+                  name="description"
+                  content="Experience a secure learning environment at Indo Global College, one of the top colleges in Chandigarh. Prioritizing student safety and well-being."
+                />
               </Helmet>
               <StudentSecurity />
             </>
@@ -353,7 +489,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>AICTE SPICES | Indo Global Colleges</title>
+                <title>
+                  AICTE SPICES Program at Indo Global College - Chandigarh
+                </title>
+                <meta
+                  name="description"
+                  content="Join Indo Global College, Chandigarh, for AICTE SPICES Program. A top architecture and engineering college offering the best education in various disciplines."
+                />
               </Helmet>
               <AiciteSpices />
             </>
@@ -364,7 +506,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Hostels | Indo Global Colleges</title>
+                <title>
+                  Hostel Facilities at Indo Global College - Best in Chandigarh
+                </title>
+                <meta
+                  name="description"
+                  content="Experience top-class hostel facilities at Indo Global College, offering safe, comfortable, and affordable accommodations for students in Chandigarh."
+                />
               </Helmet>
               <Hostels />
             </>
@@ -378,6 +526,10 @@ function App() {
             <>
               <Helmet>
                 <title>Career</title>
+                <meta
+                  name="description"
+                  content="Explore career opportunities and pathways at Indo Global College."
+                />
               </Helmet>
               <Careers />
             </>
@@ -390,7 +542,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Contact Us</title>
+                <title>
+                  Contact IGEF - Reach Out to Us for Queries and Assistance
+                </title>
+                <meta
+                  name="description"
+                  content="Get in touch with the IGEF team for any queries, assistance, or information. Fill out the contact form or call us to connect. We're here to help you!"
+                />
               </Helmet>
               <Contact />
             </>
@@ -402,7 +560,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Online Learning Resources | Indo Global Colleges</title>
+                <title>
+                  Online Learning Resources - Indo Global Engineering College
+                </title>
+                <meta
+                  name="description"
+                  content="Explore top online learning resources at Indo Global College. Enhance your skills in architecture, engineering, and more with our expert-led programs."
+                />
               </Helmet>
               <OnlineLearningResources />
             </>
@@ -414,7 +578,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Student Grievance | Indo Global Colleges</title>
+                <title>
+                  Online Grievance Redressal System - Indo Global College
+                </title>
+                <meta
+                  name="description"
+                  content="Submit your grievances easily with Indo Global College's online grievance redressal system. We value your feedback for a better academic environment."
+                />
               </Helmet>
               <StudentGrievance />
             </>
@@ -425,7 +595,13 @@ function App() {
           element={
             <>
               <Helmet>
-                <title>Alumni Login | Indo Global Colleges</title>
+                <title>
+                  IGEF Alumni Login | Connect with Your Alumni Network
+                </title>
+                <meta
+                  name="description"
+                  content="Login to the IGEF Alumni Portal to reconnect with peers, explore opportunities, and stay updated on alumni events. Join your community today!"
+                />
               </Helmet>
               <AlumniLogin />
             </>
@@ -437,6 +613,10 @@ function App() {
             <>
               <Helmet>
                 <title>Alumni Signup | Indo Global Colleges</title>
+                <meta
+                  name="description"
+                  content="Sign up for the IGEF Alumni Portal to stay connected and access exclusive alumni resources."
+                />
               </Helmet>
               <AlumniSignup />
             </>
@@ -450,18 +630,11 @@ function App() {
 
 export default App;
 
-
-
-
-
-
-
-
-
-
-
-  {/* Blogs page */}
-        {/* <Route path="/blogs" element={
+{
+  /* Blogs page */
+}
+{
+  /* <Route path="/blogs" element={
           <>
             <Helmet>
               <title>Blogs | Indo Global Colleges</title>
@@ -476,4 +649,5 @@ export default App;
             </Helmet>
             <BlogDetails />
           </>
-        } /> */}
+        } /> */
+}
