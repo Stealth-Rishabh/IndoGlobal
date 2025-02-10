@@ -8,12 +8,18 @@ import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 // import { Link } from "react-router-dom";
 import AboutSidebar from "../../components/AboutSidebar";
+import Promila from "../../assets/about/faculty/Dr.Promila.png";
+import SsSekhon from "../../assets/about/faculty/Sekhon.webp";
+import Sonia from "../../assets/about/faculty/Sonia.webp";
+import Hardeep from "../../assets/about/faculty/Dr.Hardeep.png";
+// import SpAhuja from "../../assets/about/faculty/Dr.SpAhuja.png";
 
 const breadcrumbItems = [
   { href: "/", label: "Home" },
   { href: "/about/eminent-faculty", label: "About" },
   { label: "Eminent Faculty" },
 ];
+
 const sidebarLinks = [
   { href: "/about/accreditation", label: "Accreditation and Tie-ups" },
   { href: "/about/location", label: "Campus Location" },
@@ -22,7 +28,6 @@ const sidebarLinks = [
   { href: "/about/eminent-faculty", label: "Eminent Faculty" },
   { href: "/about/notable-alumni", label: "Notable Alumni" },
 ];
-
 
 const EminentFaculty = () => {
   return (
@@ -34,7 +39,7 @@ const EminentFaculty = () => {
         breadcrumbItems={breadcrumbItems}
       />
       <Container className="container relative grid grid-cols-1 md:grid-cols-4 gap-14">
-        <div className="hidden md:block  self-start md:sticky md:top-5">
+        <div className="self-start hidden md:block md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
@@ -62,27 +67,25 @@ export default EminentFaculty;
 const FacultyMember = () => {
   const team = [
     {
-      avatar:
-        "https://cdn.vectorstock.com/i/1000v/09/72/person-gray-photo-placeholder-woman-vector-25810972.jpg",
+      avatar: Promila,
       name: "Dr. Promila Kaushal",
       title: "Director",
       desc: "Indo Global College of Engineering",
     },
 
     {
-      avatar:
-        "https://th.bing.com/th/id/OIP.pA6t_4n5Y5TvS00-jLkhPwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
+      avatar: SsSekhon,
       name: "Ar. S. S. Sekhon",
       title: "Director",
       desc: "Indo Global College of Architecture",
     },
     {
-      avatar:
-        "https://cdn.vectorstock.com/i/1000v/09/72/person-gray-photo-placeholder-woman-vector-25810972.jpg",
+      avatar: Sonia,
       name: "Ar. Sonia Mittal",
       title: "Principal",
       desc: "Indo Global College of Architecture",
     },
+
     // {
     //   avatar:
     //     "https://th.bing.com/th/id/OIP.pA6t_4n5Y5TvS00-jLkhPwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
@@ -91,12 +94,12 @@ const FacultyMember = () => {
     //   desc: "Indo Global College of Education",
     // },
     {
-      avatar:
-        "https://th.bing.com/th/id/OIP.pA6t_4n5Y5TvS00-jLkhPwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
+      avatar: Hardeep,
       name: "Dr. Hardeep Singh Saini",
       title: "Principal",
       desc: "Indo Global College of Engineering",
     },
+
     {
       avatar:
         "https://th.bing.com/th/id/OIP.pA6t_4n5Y5TvS00-jLkhPwHaHa?w=500&h=500&rs=1&pid=ImgDetMain",
@@ -113,7 +116,7 @@ const FacultyMember = () => {
           <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {team.map((item, idx) => (
               <li key={idx}>
-                <div className="relative w-full overflow-hidden border-2 border-gray-100 rounded-md shadow-md h-60 sm:h-52 md:h-64">
+                <div className="relative w-full overflow-hidden border-2 border-gray-100 rounded-md shadow-md h-96 ">
                   <img
                     src={item.avatar}
                     className="object-cover object-center w-full h-full transition-all duration-300 shadow-md hover:scale-125 "
