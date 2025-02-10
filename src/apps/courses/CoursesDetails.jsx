@@ -21,6 +21,9 @@ import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
+import { seoConfig } from "../seoData/seoConfig";
+import SEO from "../../components/SEO";
+import { getCanonicalUrl } from "../seoData/seoConfig";
 
 const CoursesDetails = () => {
   const [showWidget, setShowWidget] = useState(false);
@@ -29,12 +32,17 @@ const CoursesDetails = () => {
     (course) => course.path === coursePath
   );
 
+  // Get SEO data directly from seoConfig instead of using getMetadata
+  const seoData = seoConfig.courses.paths[coursePath];
+
   if (!courseData) {
     return (
       <>
-        <Helmet>
-          <title>Course Not Found | Indo Global Colleges</title>
-        </Helmet>
+        <SEO
+          title="Course Not Found | Indo Global Colleges"
+          description="The requested course could not be found."
+          canonicalUrl={getCanonicalUrl(`/courses/${coursePath}`)}
+        />
         <div>Course not found</div>
       </>
     );
@@ -48,9 +56,14 @@ const CoursesDetails = () => {
 
   return (
     <section className="relative">
-      <Helmet>
-        <title>{courseData.title} | Indo Global Colleges</title>
-      </Helmet>
+      <SEO
+        title={seoData?.title || `${courseData.title} | Indo Global Colleges`}
+        description={
+          seoData?.description ||
+          `Learn more about ${courseData.title} at Indo Global Colleges`
+        }
+        canonicalUrl={getCanonicalUrl(`/courses/${coursePath}`)}
+      />
       <button
         onClick={() => setShowWidget(!showWidget)}
         className={`fixed  top-[30%] -right-10 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
