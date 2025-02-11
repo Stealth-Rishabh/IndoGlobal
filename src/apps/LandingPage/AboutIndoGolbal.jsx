@@ -1,5 +1,5 @@
 import img from '../../assets/AboutUs.webp';
-import WordPullUp from '../../components/ui/word-pull-up';
+import WordPullUp from '../../components/ui/word-pull-up2';
 import Container from '../../components/wrappers/Container';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';

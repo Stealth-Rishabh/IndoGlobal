@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Heading from "../../components/Heading";
+import Heading from "../../components/Heading2";
 import Container from "../../components/wrappers/Container";
 import PlacementCard from "./PlacementCard";
 import img1 from "../../assets/placement-img.svg";

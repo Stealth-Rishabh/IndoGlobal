@@ -10,7 +10,7 @@ import {
 import { motion } from "framer-motion";
 import { ChevronRight, SendHorizontal } from "lucide-react";
 import Container from "../../components/wrappers/Container";
-import Heading from "../../components/Heading";
+import Heading from "../../components/Heading2";
 import { programData } from "./programData";
 import ButtonSq from "../../components/ButtonSq";
 import { useInView } from "react-intersection-observer";

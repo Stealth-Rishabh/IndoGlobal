@@ -14,7 +14,7 @@ import Labs from "../../assets/Hero/Labs.webp";
 import Sports from "../../assets/Hero/Sports.webp";
 import Auditorium from "../../assets/Hero/Auditorium.webp";
 import BoxReveal from "../../components/ui/box-reveal";
-import WordPullUp from "../../components/ui/word-pull-up";
+import WordPullUp from "../../components/ui/word-pull-up2";
 import ShinyButton from "../../components/ui/shiny-button";
 import WordRotate from "@/components/ui/word-rotate";
 import { ChevronRight } from "lucide-react";
@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
 import Brochure from "../../assets/pdfs/IGEF Brochure.pdf";
 import { DownloadIcon } from "lucide-react";
 // Create separate optimized components for heavy animations
-const SlideContent = memo(({ img }) => {
+const SlideContent = memo(({ img, index }) => {
   return (
     <div className="size-full max-w-[90vw] sm:max-w-6xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[4%] left-[10%] sm:left-[8%] z-20 space-y-6">
       <AnimatedGradientText className="mx-0 rounded-md">
@@ -43,35 +43,49 @@ const SlideContent = memo(({ img }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <h2 className="text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-8xl sm:py-4 sm:tracking-wide drop-shadow-lg">
-          {img.tagline.split(" ").map((word, index) => (
-            <span
-              key={index}
-              className={index === 1 || index === 2 ? "text-[#DC2626]" : ""}
-            >
-              {word}
-              {index === 1 ? <br /> : " "}
-            </span>
-          ))}
-        </h2>
+        {index === 0 ? (
+          <h1 className="text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-[80px] sm:py-4 sm:tracking-wide drop-shadow-lg">
+            {img.tagline.split(" ").map((word, index) => (
+              <span
+                key={index}
+                className={index === 1 || index === 2 || index === 4 ? "text-[#DC2626]" : ""}
+              >
+                {word}
+                {index === 1 ? <br /> : " "}
+              </span>
+            ))}
+          </h1>
+        ) : (
+          <h2 className="text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-8xl sm:py-4 sm:tracking-wide drop-shadow-lg">
+            {img.tagline.split(" ").map((word, index) => (
+              <span
+                key={index}
+                className={index === 1 || index === 2 ? "text-[#DC2626]" : ""}
+              >
+                {word}
+                {index === 1 ? <br /> : " "}
+              </span>
+            ))}
+          </h2>
+        )}
       </BoxReveal>
 
-      <div className="hidden sm:block">
+      <div className="hidden sm:block ">
         <WordPullUp
           words={img.highlight}
           className="text-xl font-semibold md:text-3xl break-words text-slate-200 md:font-bold text-left max-w-[20rem] md:max-w-3xl"
         />
       </div>
-      <div className="sm:hidden block">
+      <div className="block sm:hidden">
         <WordRotate
           className="text-2xl font-bold md:text-3xl text-white md:font-bold text-left max-w-[20rem] md:max-w-3xl"
           words={img.highlights}
         />
       </div>
 
-      <div className="flex flex-row flex-wrap gap-4  ">
+      <div className="flex flex-row flex-wrap gap-4  !mt-10">
         <Link to="/courses" className="mt-">
-          <ShinyButton className="xs:text-sm text-xs font-bold text-white bg-white rounded-none sm:py-5 sm:px-10 lg:text-lg">
+          <ShinyButton className="text-xs font-bold text-white bg-white rounded-none xs:text-sm sm:py-5 sm:px-10 lg:text-lg">
             Explore Courses
           </ShinyButton>
         </Link>
@@ -82,12 +96,9 @@ const SlideContent = memo(({ img }) => {
           />
         </a>
         <a href={Brochure} target="_blank" className="block sm:hidden">
-          <div
-           
-            className="sm:w-60 xs:text-sm text-xs font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2"
-          >
+          <div className="sm:w-60 xs:text-sm text-xs font-bold bg-white text-gray-500 py-[8px] px-5 rounded-none flex flex-row w-full justify-center items-center gap-2">
             <span> BROCHURE</span>
-            <DownloadIcon className="xs:size-4 size-3 mt-1" />
+            <DownloadIcon className="mt-1 xs:size-4 size-3" />
           </div>
         </a>
       </div>
@@ -146,12 +157,12 @@ const HeroSlider = () => {
   const imgSlider = [
     {
       image: Events,
-      tagline: "Best Architecture & Engineering College",
+      tagline: "Best Architecture & Engineering College-IGEF",
       highlight:
         "Premier engineering education, cutting-edge architecture programs, and industry-ready training.",
       highlights: [
         "Premier engineering education",
-        "Cutting-edge architecture programs", 
+        "Cutting-edge architecture programs",
         "Industry-ready training",
       ],
     },
@@ -275,7 +286,7 @@ const HeroSlider = () => {
               className="w-full sm:h-full relative h-[420px] md:h-[calc(100vh-160px)] lg:h-[calc(100vh-120px)]"
             >
               <SlideImage img={img} />
-              <SlideContent img={img} />
+              <SlideContent img={img} index={index} />
             </CarouselItem>
           ))}
         </CarouselContent>

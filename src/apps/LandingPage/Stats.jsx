@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState } from "react";
 import bg from "../../assets/StatsBg.webp";
-import Heading from "../../components/Heading";
-import WordPullUp from "../../components/ui/word-pull-up";
+import Heading from "../../components/Heading2";
+import WordPullUp from "../../components/ui/word-pull-up2";
 import NumberTicker from "../../components/ui/number-ticker";
 
 const statsData = [

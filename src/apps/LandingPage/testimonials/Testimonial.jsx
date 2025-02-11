@@ -16,7 +16,7 @@ import harpreet from "../../../assets/testimonial/Harpreet.png";
 import mohd from "../../../assets/testimonial/Mohd.webp";
 import masoom from "../../../assets/testimonial/Masoom.png";
 import rohith from "../../../assets/testimonial/Rohith.webp";
-import Heading from "../../../components/Heading";
+import Heading from "../../../components/Heading2";
 
 export function Testimonials() {
   // Testimonials data array

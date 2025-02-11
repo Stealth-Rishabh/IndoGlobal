@@ -5,7 +5,7 @@ import img2 from "../../assets/blogs2.svg";
 import img3 from "../../assets/blogs3.svg";
 import img4 from "../../assets/blogs4.svg";
 import { Calendar } from "lucide-react";
-import Heading from "../../components/Heading";
+import Heading from "../../components/Heading2";
 import Container from "../../components/wrappers/Container";
 import { AnimatedList } from "@/components/ui/animated-list";
 export default function LatestBlogsAndEvents() {

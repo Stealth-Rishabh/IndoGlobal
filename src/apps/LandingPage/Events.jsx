@@ -15,7 +15,7 @@ import Container from "../../components/wrappers/Container";
 import img from "../../assets/EventImg.svg";
 import img2 from "../../assets/EventImg2.svg";
 import { Calendar } from "lucide-react";
-import Heading from "../../components/Heading";
+import Heading from "../../components/Heading2";
 import { Link } from "react-router-dom";
 // import BlurFade from "@/components/ui/blur-fade";
 const Events = () => {
@@ -156,9 +156,9 @@ const EventCard = ({
       <div
         className={`grid content-between p-5 space-y-2 text-white bg-red-600 sm:space-y-0 ${contentClassname}`}
       >
-        <h1 className="flex items-center text-sm font-bold tracking-wide text-white sm:text-xl">
+        <h2 className="flex items-center text-sm font-bold tracking-wide text-white sm:text-xl">
           {title.toUpperCase()}
-        </h1>
+        </h2>
         <div className="flex items-center text-xs font-medium sm:text-sm">
           <Calendar size={20} className="mr-2 text-white" /> {date}
         </div>
