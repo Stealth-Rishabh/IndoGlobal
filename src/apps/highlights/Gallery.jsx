@@ -38,7 +38,7 @@ const dateFilters = [
   { id: "upcoming", label: "Upcoming Events" },
 ];
 
-const Gallery = () => {
+const Gallery = ({ h1 }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [dateFilter, setDateFilter] = useState("all");
   const [focus, setFocus] = useState(null);
@@ -106,7 +106,7 @@ const Gallery = () => {
       />
       <Container className="py-12">
         <Heading
-          title="Explore Our Gallery"
+          title={h1}
           subtitle="Discover the highlights of our events and activities."
           titleClassName="text-secondary-color text-center text-4xl lg:text-5xl mb-4"
           subtitleClassName="text-gray-500 text-center mb-12 "

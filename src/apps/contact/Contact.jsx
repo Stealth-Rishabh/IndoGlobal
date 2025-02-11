@@ -14,7 +14,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 
-const Contact = () => {
+const Contact = ({ h1 }) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -220,9 +220,9 @@ const Contact = () => {
           {/* Form section */}
           <Card className="col-span-2 !mt-0 bg-white shadow-sm sm:order-2 order-1">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold sm:text-4xl sm:pb-5 text-secondary-color">
-                Get in touch with us.
-              </CardTitle>
+              <h1 className="text-3xl tracking-tight font-bold sm:text-4xl sm:pb-5 text-secondary-color">
+                {h1}
+              </h1>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-1 space-y-5">

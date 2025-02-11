@@ -25,7 +25,7 @@ const sidebarLinks = [
   { href: "/why-indo-global/hostel", label: "Hostel" },
 ];
 
-const Hostels = () => {
+const Hostels = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/why-indo-global/hostel", label: "Why Indo Global" },
@@ -45,7 +45,7 @@ const Hostels = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Hostel Facilities"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Experience comfortable, secure, and enjoyable campus life with our 

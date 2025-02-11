@@ -93,7 +93,7 @@ const imageItems = [
     mdHeight: "md:h-80",
   },
 ];
-const CampusRecruitments = () => {
+const CampusRecruitments = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/placements/campus-recruitments", label: "Placements" },
@@ -108,13 +108,13 @@ const CampusRecruitments = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
+      <Container className=" grid grid-cols-1 md:grid-cols-4 gap-14">
         <div className="md:sticky md:top-5 self-start">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
-        <div className="col-span-1 md:col-span-3 pt-12 space-y-14">
+        <div className="col-span-1 md:col-span-3 sm:pt-12 space-y-14">
           <Heading
-            title="Campus Recruitments"
+            title={h1}
             subtitle="Discover a world of career possibilities and growth with our campus placement programs"
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"

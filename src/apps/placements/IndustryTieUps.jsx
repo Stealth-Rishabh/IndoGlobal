@@ -21,7 +21,7 @@ const sidebarLinks = [
   { href: "/placements/placement-activities", label: "Placement Activities" },
   { href: "/placements/our-recruiters", label: "Our Recruiters" },
 ];
-const IndustryTieUps = () => {
+const IndustryTieUps = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/placements/industry-tie-ups ", label: "Placements" },
@@ -35,13 +35,13 @@ const IndustryTieUps = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
+      <Container className=" grid grid-cols-1 md:grid-cols-4 gap-14">
         <div className="md:sticky md:top-5 self-start">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
-        <div className="col-span-1 md:col-span-3 pt-12">
+        <div className="col-span-1 md:col-span-3 sm:pt-12">
           <Heading
-            title="Industry Partnerships"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Learn from industry experts to build intellectual, practical, and social skills, fostering leadership, social responsibility, and a commitment to lifelong learning."

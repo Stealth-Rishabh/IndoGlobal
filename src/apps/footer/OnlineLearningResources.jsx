@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { resourcesData } from "./data";
 // Data structure for resources
 import Heading from "../../components/Heading";
-export default function OnlineLearningResources() {
+export default function OnlineLearningResources({ h1 }) {
   const renderCards = (resources) => {
     return resources.map((resource, index) => {
       const IconComponent = resource.icon;
@@ -57,7 +57,7 @@ export default function OnlineLearningResources() {
     <div className="container py-8 mx-auto">
       <div className="p-4 mx-auto max-w-4xl">
         <Heading
-          title="Online Learning Resources"
+          title={h1}
           subtitle="Access a wide range of resources for your learning journey"
           titleClassName="text-secondary-color text-center lg:text-5xl"
           subtitleClassName="text-gray-500 text-center m-0 lg:text-lg lg:font-normal lg:max-w-full"

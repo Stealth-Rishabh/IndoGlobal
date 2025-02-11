@@ -53,7 +53,7 @@ const sidebarLinks = [
   { href: "/placements/placement-activities", label: "Placement Activities" },
   { href: "/placements/our-recruiters", label: "Our Recruiters" },
 ];
-const OurRecruiters = () => {
+const OurRecruiters = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/placements/our-recruiters", label: "Placements" },
@@ -67,13 +67,13 @@ const OurRecruiters = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
+      <Container className=" grid grid-cols-1 md:grid-cols-4 gap-14">
         <div className="md:sticky md:top-5 self-start">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
-        <div className="col-span-1 md:col-span-3 pt-12">
+        <div className="col-span-1 md:col-span-3 sm:pt-12">
           <Heading
-            title="Preferred Recruitment Destination"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Top companies across various industries now choose Indo Global Colleges as a preferred destination for on-campus recruitment. This success is driven by the dedicated efforts of the Placement Centre's team, who equip students with the skills and guidance needed to secure ideal placements and excel in their careers."

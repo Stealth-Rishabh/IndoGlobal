@@ -27,7 +27,7 @@ import { DownloadIcon } from "lucide-react";
 // Create separate optimized components for heavy animations
 const SlideContent = memo(({ img }) => {
   return (
-    <div className="size-full sm:max-w-5xl items-center justify-center overflow-hidden sm:pt-8 absolute top-16 sm:top-[4%] left-[10%] sm:left-[8%] z-20 space-y-6">
+    <div className="size-full max-w-[90vw] sm:max-w-6xl items-center justify-center overflow-hidden sm:pt-8 absolute top-10 sm:top-[4%] left-[10%] sm:left-[8%] z-20 space-y-6">
       <AnimatedGradientText className="mx-0 rounded-md">
         🔔 <hr className="h-4 mx-2 w-" />{" "}
         <span className="inline animate-gradient text-sm sm:text-xl bg-gradient-to-r from-[#fff] via-[#a80808] to-[#fff] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent">
@@ -59,7 +59,7 @@ const SlideContent = memo(({ img }) => {
       <div className="hidden sm:block">
         <WordPullUp
           words={img.highlight}
-          className="text-xl font-semibold md:text-3xl text-slate-200 md:font-bold text-left max-w-[20rem] md:max-w-3xl"
+          className="text-xl font-semibold md:text-3xl break-words text-slate-200 md:font-bold text-left max-w-[20rem] md:max-w-3xl"
         />
       </div>
       <div className="sm:hidden block">
@@ -144,6 +144,17 @@ const HeroSlider = () => {
   }, [api]);
 
   const imgSlider = [
+    {
+      image: Events,
+      tagline: "Best Architecture & Engineering College",
+      highlight:
+        "Premier engineering education, cutting-edge architecture programs, and industry-ready training.",
+      highlights: [
+        "Premier engineering education",
+        "Cutting-edge architecture programs", 
+        "Industry-ready training",
+      ],
+    },
     {
       image: Events,
       tagline: "Shaping Bright Futures Together",

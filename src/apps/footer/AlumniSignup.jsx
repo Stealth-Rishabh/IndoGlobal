@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, EyeOff } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "react-router-dom";
-export default function AlumniSignup() {
+export default function AlumniSignup({ h1 }) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -88,8 +88,8 @@ export default function AlumniSignup() {
     <div className="min-h-screen sm:py-20 flex items-center justify-center sm:p-4 bg-slate-50">
       <Card className="w-full max-w-2xl">
         <CardHeader>
-          <CardTitle className="text-2xl">Sign Up</CardTitle>
-          <p className="text-sm text-muted-foreground">
+          <h1 className="text-2xl tracking-tight font-semibold text-center">{h1}</h1>
+          <p className="text-sm text-center text-muted-foreground pb-5">
             Create your account to get started
           </p>
         </CardHeader>

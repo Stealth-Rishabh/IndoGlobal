@@ -23,7 +23,7 @@ const sidebarLinks = [
   { href: "/why-indo-global/hostel", label: "Hostel" },
 ];
 
-const Entrepreneurship = () => {
+const Entrepreneurship = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/why-indo-global/entrepreneurship", label: "Why Indo Global" },
@@ -43,7 +43,7 @@ const Entrepreneurship = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Entrepreneurship-Focused Curriculum"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Creating a dynamic learning environment where students build entrepreneurial skills, innovative thinking, and resilience to become successful, responsible leaders and change-makers."

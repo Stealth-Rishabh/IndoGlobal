@@ -5,7 +5,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
-function StudentGrievance() {
+function StudentGrievance({ h1 }) {
   const [formData, setFormData] = useState({
     course: '',
     semester: '',
@@ -81,7 +81,9 @@ function StudentGrievance() {
   return (
     <div className="min-h-screen sm:py-20 p-6 flex bg-slate-100 items-center justify-center">
       <div className="w-full max-w-3xl bg-white rounded-lg shadow-xl p-8">
-        <h1 className="text-2xl font-bold text-center mb-8 text-black">Student Grievance</h1>
+        <h1 className="text-2xl font-bold text-center mb-8 text-black">
+          {h1}
+        </h1>
 
         {successMessage && <p className="text-green-600 text-center">{successMessage}</p>}
 

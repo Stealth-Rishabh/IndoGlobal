@@ -46,7 +46,7 @@ const formatDate = (dateString) => {
   });
 };
 
-const SpotlightAndEvents = () => {
+const SpotlightAndEvents = ({ h1 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
@@ -157,7 +157,7 @@ const SpotlightAndEvents = () => {
       <Container className="container grid gap-14 relative">
         <div className="col-span-1 pt-12">
           <Heading
-            title="Experience the Vibrance of Campus Life"
+            title={h1}
             subtitle="Stay updated with the latest events, workshops, and seminars happening at our college. From cultural fests to academic conferences, we've got it all."
             titleClassName="text-secondary-color text-left lg:text-5xl text-center"
             subtitleClassName="hidden text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal text-center sm:block"

@@ -45,18 +45,18 @@ const WordPullUp = memo(
     );
 
     return (
-      <motion.h1
+      <motion.h2
         ref={ref}
         variants={wrapperFramerProps}
         initial="hidden"
         animate={inView ? "show" : "hidden"}
         className={cn(
-          "font-display text-center text-4xl font-bold drop-shadow-sm",
+          "font-display text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
           className
         )}
       >
         {wordElements}
-      </motion.h1>
+      </motion.h2>
     );
   }
 );

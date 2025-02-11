@@ -20,7 +20,7 @@ import { COURSE_DETAILS } from "./course-details";
 
 const breadcrumbItems = [{ href: "/", label: "Home" }, { label: "Courses" }];
 
-export default function Courses() {
+export default function Courses({ h1 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedCourse, setSelectedCourse] = useState("");
@@ -121,7 +121,7 @@ export default function Courses() {
       <Container className="container grid gap-14 relative">
         <div className="col-span-1 pt-12">
           <Heading
-            title="Explore Our Academic Programs"
+            title={h1}
             subtitle="Discover a wide range of courses designed to prepare you for success in your chosen field. From engineering to management, we offer diverse educational pathways."
             titleClassName="text-secondary-color text-left lg:text-5xl text-center"
             subtitleClassName="hidden md:block text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal text-center"

@@ -25,7 +25,7 @@ const sidebarLinks = [
 ];
 
 
-const CollegeLocation = () => {
+const Leadership = ({ h1 }) => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
@@ -40,7 +40,7 @@ const CollegeLocation = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Leadership"
+            title={h1}
             subtitle="Meet our visionary leaders who guide our institution with expertise and dedication. Our leadership team brings together decades of experience in education and administration to ensure excellence in every aspect of our academic journey."
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
@@ -112,55 +112,6 @@ const CollegeLocation = () => {
   );
 };
 
-export default CollegeLocation;
+export default Leadership;
 
-const LocationItem = ({ location, index }) => {
-  const { title, details, image } = location;
-  return (
-    <>
-      <div
-        className={`col-span-12 md:col-span-5 ${
-          index % 2 === 0
-            ? "order-1 md:order-2 md:col-start-6"
-            : "order-2 md:order-1 md:col-start-1"
-        }`}
-      >
-        <div
-          className={`flex flex-col justify-center ${
-            index % 2 === 0 ? "lg:pl-14" : "lg:pr-14"
-          }`}
-        >
-          <h4 className="mb-6 text-2xl font-bold text-secondary-color">
-            {title}
-          </h4>
-          <ul className="space-y-2">
-            {details.map((detail, index) => (
-              <li key={index} className="flex items-center">
-                <span className="mr-2 text-primary-color">{detail.icon}</span>
-                <span className="text-base text-gray-600 font-">
-                  {detail.text}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      {/* IMG */}
-      <div
-        className={`${
-          index % 2 === 0
-            ? "order-1 md:col-start-1"
-            : "order-1 md:order-2 md:col-start-6"
-        } col-span-12 md:col-span-5  mb-6 md:mb-0 mt-6 md:mt-0`}
-      >
-        <div className="overflow-hidden shadow-lg hover:drop-shadow-2x rounded-xl h-80">
-          <img
-            src={image}
-            alt="location"
-            className="object-cover w-full h-full transition-all duration-300 hover:scale-125"
-          />
-        </div>
-      </div>
-    </>
-  );
-};
+

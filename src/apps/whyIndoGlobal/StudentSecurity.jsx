@@ -29,7 +29,7 @@ const sidebarLinks = [
   { href: "/why-indo-global/hostel", label: "Hostel" },
 ];
 
-const StudentSecurity = () => {
+const StudentSecurity = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/why-indo-global/students-security ", label: "Why Indo Global" },
@@ -49,7 +49,7 @@ const StudentSecurity = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Campus Security and Safety"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Our campus is equipped with comprehensive security measures to ensure a safe and secure environment for all students, faculty, and staff. With 24/7 surveillance, trained security personnel, and emergency response systems, we prioritize safety to create a welcoming and worry-free campus experience."

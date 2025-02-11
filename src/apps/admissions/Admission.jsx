@@ -140,7 +140,7 @@ const TABS = [
   { value: "polytechnic", label: "Polytechnic" },
 ];
 
-const Admission = () => {
+const Admission = ({ h1 }) => {
   const [activeTab, setActiveTab] = useState(TABS[0].value);
   const [showWidget, setShowWidget] = useState(false);
   return (
@@ -172,7 +172,7 @@ const Admission = () => {
       <Container className="container relative grid gap-14">
         <div className="col-span-1 pt-12">
           <Heading
-            title="Start Your Journey Here"
+            title={h1}
             subtitle="Apply now for these exciting programs and take the first step towards your future in education. Our admission process is designed to help you succeed."
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal"

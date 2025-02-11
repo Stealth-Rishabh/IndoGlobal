@@ -47,7 +47,7 @@ const sidebarLinks = [
   { href: "/about/eminent-faculty", label: "Eminent Faculty" },
   { href: "/about/notable-alumni", label: "Notable Alumni" },
 ];
-const AccreditationAndTieups = () => {
+const AccreditationAndTieups = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/about/accreditation", label: "About" },
@@ -65,9 +65,9 @@ const AccreditationAndTieups = () => {
         <div className="hidden md:block  self-start md:sticky md:top-5">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
-        <div className="col-span-1 md:col-span-3 sm:pt-12">
+        <div className="col-span-1 md:col-span-3 pt-12">
           <Heading
-            title="Accreditation & Tie-ups"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="To provide a learning environment in which all students are challenged to develop their intellectual, practical and social skills in a holistic way focusing on leadership, socially responsible behaviour and lifelong learning."

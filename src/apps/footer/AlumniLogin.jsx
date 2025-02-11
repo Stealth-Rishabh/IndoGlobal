@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function AlumniLogin() {
+export default function AlumniLogin({ h1 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({ email: "", password: "", form: "" });
@@ -66,10 +66,10 @@ export default function AlumniLogin() {
 
   return (
     <div className="flex justify-center items-center py-5 bg-slate-50 sm:py-20 sm:p-4">
-      <Card className="w-full sm:max-w-sm rounded-none border-none shadow-none sm:border sm:border-gray-800 sm:shadow sm:rounded-xl sm:drop-shadow-sm">
+      <Card className="w-full sm:max-w-md rounded-none border-none shadow-none sm:border sm:border-gray-800 sm:shadow sm:rounded-xl sm:drop-shadow-sm">
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
-          <p className="text-sm text-muted-foreground">
+          <h1 className="text-2xl tracking-tight font-semibold text-center">{h1}</h1>
+          <p className="text-sm text-center text-muted-foreground">
             Enter your email below to login to your account
           </p>
         </CardHeader>

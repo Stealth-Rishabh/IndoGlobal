@@ -131,7 +131,7 @@ function App() {
                 description={seoConfig.about.accreditation.description}
                 canonicalUrl={getCanonicalUrl("/about/accreditation")}
               />
-              <AccreditationAndTieups />
+              <AccreditationAndTieups h1={seoConfig.about.accreditation.h1} />
             </>
           }
         />
@@ -144,7 +144,7 @@ function App() {
                 description={seoConfig.about.location.description}
                 canonicalUrl={getCanonicalUrl("/about/location")}
               />
-              <CollegeLocation />
+              <CollegeLocation h1={seoConfig.about.location.h1} />
             </>
           }
         />
@@ -157,7 +157,7 @@ function App() {
                 description={seoConfig.about.visionMission.description}
                 canonicalUrl={getCanonicalUrl("/about/vision-mission")}
               />
-              <VisionAndMission />
+              <VisionAndMission h1={seoConfig.about.visionMission.h1} />
             </>
           }
         />
@@ -170,7 +170,7 @@ function App() {
                 description={seoConfig.about.leadership.description}
                 canonicalUrl={getCanonicalUrl("/about/leadership")}
               />
-              <Leadership />
+              <Leadership h1={seoConfig.about.leadership.h1} />
             </>
           }
         />
@@ -183,7 +183,7 @@ function App() {
                 description={seoConfig.about.eminentFaculty.description}
                 canonicalUrl={getCanonicalUrl("/about/eminent-faculty")}
               />
-              <EminentFaculty />
+              <EminentFaculty h1={seoConfig.about.eminentFaculty.h1} />
             </>
           }
         />
@@ -191,12 +191,12 @@ function App() {
           path="/about/notable-alumni"
           element={
             <>
-              {/* <SEO
+              <SEO
                 title={seoConfig.about.notableAlumni.title}
                 description={seoConfig.about.notableAlumni.description}
                 canonicalUrl={getCanonicalUrl("/about/notable-alumni")}
-              /> */}
-              <NotableAlumni />
+              />
+              <NotableAlumni h1={seoConfig.about.notableAlumni.h1} />
             </>
           }
         />
@@ -211,7 +211,7 @@ function App() {
                 description={seoConfig.courses.index.description}
                 canonicalUrl={getCanonicalUrl("/courses")}
               />
-              <Courses />
+              <Courses h1={seoConfig.courses.index.h1} />
             </>
           }
         />
@@ -227,7 +227,7 @@ function App() {
                 description={seoConfig.admissions.description}
                 canonicalUrl={getCanonicalUrl("/admissions")}
               />
-              <Admission />
+              <Admission h1={seoConfig.admissions.h1} />
             </>
           }
         />
@@ -242,7 +242,7 @@ function App() {
                 description={seoConfig.spotlights.description}
                 canonicalUrl={getCanonicalUrl("/spotlights")}
               />
-              <SpotlightAndEvents />
+              <SpotlightAndEvents h1={seoConfig.spotlights.h1} />
             </>
           }
         />
@@ -255,7 +255,7 @@ function App() {
                 description={seoConfig.gallery.description}
                 canonicalUrl={getCanonicalUrl("/gallery")}
               />
-              <Gallery />
+              <Gallery h1={seoConfig.gallery.h1} />
             </>
           }
         />
@@ -274,7 +274,7 @@ function App() {
                   "/placements/campus-recruitments"
                 )}
               />
-              <CampusRecruitments />
+              <CampusRecruitments h1={seoConfig.placements.campusRecruitments.h1} />
             </>
           }
         />
@@ -287,7 +287,7 @@ function App() {
                 description={seoConfig.placements.industrySpeaks.description}
                 canonicalUrl={getCanonicalUrl("/placements/industry-speaks")}
               />
-              <IndustrySpeaks />
+              <IndustrySpeaks h1={seoConfig.placements.industrySpeaks.h1} />
             </>
           }
         />
@@ -300,7 +300,7 @@ function App() {
                 description={seoConfig.placements.industryTieUps.description}
                 canonicalUrl={getCanonicalUrl("/placements/industry-tie-ups")}
               />
-              <IndustryTieUps />
+              <IndustryTieUps h1={seoConfig.placements.industryTieUps.h1} />
             </>
           }
         />
@@ -317,7 +317,7 @@ function App() {
                   "/placements/placement-activities"
                 )}
               />
-              <PlacementActivities />
+              <PlacementActivities h1={seoConfig.placements.placementActivities.h1} />
             </>
           }
         />
@@ -330,7 +330,7 @@ function App() {
                 description={seoConfig.placements.ourRecruiters.description}
                 canonicalUrl={getCanonicalUrl("/placements/our-recruiters")}
               />
-              <OurRecruiters />
+              <OurRecruiters h1={seoConfig.placements.ourRecruiters.h1} />
             </>
           }
         />
@@ -361,7 +361,7 @@ function App() {
                   "/why-indo-global/industry-oriented-curriculum"
                 )}
               />
-              <IndustryOrientedCurriculum />
+              <IndustryOrientedCurriculum h1={seoConfig.whyIndoGlobal.industryOrientedCurriculum.h1} />
             </>
           }
         />
@@ -378,7 +378,7 @@ function App() {
                   "/why-indo-global/entrepreneurship"
                 )}
               />
-              <Entrepreneurship />
+              <Entrepreneurship h1={seoConfig.whyIndoGlobal.entrepreneurship.h1} />
             </>
           }
         />
@@ -391,7 +391,7 @@ function App() {
                 description={seoConfig.whyIndoGlobal.sportsArena.description}
                 canonicalUrl={getCanonicalUrl("/why-indo-global/sports-arena")}
               />
-              <SportsArena />
+              <SportsArena h1={seoConfig.whyIndoGlobal.sportsArena.h1} />
             </>
           }
         />
@@ -406,7 +406,7 @@ function App() {
                   "/why-indo-global/infrastructure"
                 )}
               />
-              <Infrastructure />
+              <Infrastructure h1={seoConfig.whyIndoGlobal.infrastructure.h1} />
             </>
           }
         />
@@ -423,7 +423,7 @@ function App() {
                   "/why-indo-global/great-transportation"
                 )}
               />
-              <Transportation />
+              <Transportation h1={seoConfig.whyIndoGlobal.greatTransportation.h1} />
             </>
           }
         />
@@ -440,7 +440,7 @@ function App() {
                   "/why-indo-global/students-security"
                 )}
               />
-              <StudentSecurity />
+              <StudentSecurity h1={seoConfig.whyIndoGlobal.studentsSecurity.h1} />
             </>
           }
         />
@@ -453,7 +453,7 @@ function App() {
                 description={seoConfig.whyIndoGlobal.aicteSpices.description}
                 canonicalUrl={getCanonicalUrl("/why-indo-global/aicte-spices")}
               />
-              <AiciteSpices />
+              <AiciteSpices h1={seoConfig.whyIndoGlobal.aicteSpices.h1} />
             </>
           }
         />
@@ -466,7 +466,7 @@ function App() {
                 description={seoConfig.whyIndoGlobal.hostel.description}
                 canonicalUrl={getCanonicalUrl("/why-indo-global/hostel")}
               />
-              <Hostels />
+              <Hostels h1={seoConfig.whyIndoGlobal.hostel.h1} />
             </>
           }
         />
@@ -481,7 +481,7 @@ function App() {
                 description={seoConfig.careers.description}
                 canonicalUrl={getCanonicalUrl("/careers")}
               />
-              <Careers />
+              <Careers h1={seoConfig.careers.h1} />
             </>
           }
         />
@@ -496,7 +496,7 @@ function App() {
                 description={seoConfig.contactUs.description}
                 canonicalUrl={getCanonicalUrl("/contact-us")}
               />
-              <Contact />
+              <Contact h1={seoConfig.contactUs.h1} />
             </>
           }
         />
@@ -510,7 +510,7 @@ function App() {
                 description={seoConfig.onlineLearningResources.description}
                 canonicalUrl={getCanonicalUrl("/online-learning-resources")}
               />
-              <OnlineLearningResources />
+              <OnlineLearningResources h1={seoConfig.onlineLearningResources.h1} />
             </>
           }
         />
@@ -524,7 +524,7 @@ function App() {
                 description={seoConfig.onlineGrievance.description}
                 canonicalUrl={getCanonicalUrl("/online-grievance")}
               />
-              <StudentGrievance />
+              <StudentGrievance h1={seoConfig.onlineGrievance.h1} />
             </>
           }
         />
@@ -537,7 +537,7 @@ function App() {
                 description={seoConfig.alumniLogin.description}
                 canonicalUrl={getCanonicalUrl("/alumni-login")}
               />
-              <AlumniLogin />
+              <AlumniLogin h1={seoConfig.alumniLogin.h1} />
             </>
           }
         />
@@ -550,7 +550,7 @@ function App() {
                 description={seoConfig.alumniSignup.description}
                 canonicalUrl={getCanonicalUrl("/alumni-signup")}
               />
-              <AlumniSignup />
+              <AlumniSignup h1={seoConfig.alumniSignup.h1} />
             </>
           }
         />

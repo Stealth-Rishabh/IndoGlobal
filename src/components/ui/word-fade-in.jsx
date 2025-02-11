@@ -28,7 +28,7 @@ export default function WordFadeIn({
   });
 
   return (
-    <motion.h1
+    <motion.h2
       ref={ref} // Attach the ref to the motion.h1 element
       variants={variants}
       initial="hidden"
@@ -43,6 +43,6 @@ export default function WordFadeIn({
           {word}{" "}
         </motion.span>
       ))}
-    </motion.h1>
+    </motion.h2>
   );
 }

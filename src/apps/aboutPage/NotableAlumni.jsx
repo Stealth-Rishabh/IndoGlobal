@@ -48,7 +48,7 @@ const sidebarLinks = [
   { href: "/about/notable-alumni", label: "Notable Alumni" },
 ];
 
-const EminentFaculty = () => {
+const NotableAlumni = ({ h1 }) => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
@@ -63,7 +63,7 @@ const EminentFaculty = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="IGEF Notable Alumni"
+            title={h1}
             subtitle=""
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal"
@@ -80,7 +80,7 @@ const EminentFaculty = () => {
   );
 };
 
-export default EminentFaculty;
+export default NotableAlumni;
 
 const testimonials = [
   {

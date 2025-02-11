@@ -88,7 +88,7 @@ const sidebarLinks = [
   { href: "/placements/our-recruiters", label: "Our Recruiters" },
 ];
 
-const PlacementActivities = () => {
+const PlacementActivities = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/placements/placement-activities", label: "Placements" },
@@ -103,13 +103,13 @@ const PlacementActivities = () => {
         imageAlt="Placement Activities"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
+      <Container className=" grid grid-cols-1 md:grid-cols-4 gap-14">
         <div className="md:sticky md:top-5 self-start">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
-        <div className="col-span-1 md:col-span-3  space-y-5 pt-12">
+        <div className="col-span-1 md:col-span-3  space-y-5 sm:pt-12">
           <Heading
-            title="Training & Placement Cell"
+            title={h1}
             subtitle="Indo Global Colleges have a full-fledged Training & Placement Cell which is integral to our institution. 
         We maintain strong industry networks and provide regular guidance to ensure our students are well-prepared 
         for their professional careers. Our focus extends beyond placements to comprehensive skill development 

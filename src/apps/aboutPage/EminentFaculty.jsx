@@ -29,7 +29,7 @@ const sidebarLinks = [
   { href: "/about/notable-alumni", label: "Notable Alumni" },
 ];
 
-const EminentFaculty = () => {
+const EminentFaculty = ({ h1 }) => {
   return (
     <div className="relative min-h-screen">
       <ImgAndBreadcrumb
@@ -44,7 +44,7 @@ const EminentFaculty = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Our Dedicated Faculty Members"
+            title={h1}
             subtitle="With over 22 PhDs, 100+ M.Techs, and 40+ MBAs, our distinguished faculty brings together exceptional academic credentials and rich industry experience to provide world-class education."
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full font-normal"
@@ -147,10 +147,10 @@ const FacultyAbout = () => {
           <div className="col-span-12 lg:col-span-6">
             <div className="text-left md:pr-20">
               <p className="uppercase opacity-75 ">Indo Global Colleges</p>
-              <h1 className="text-4xl font-light leading-tight tracking-wide uppercase md:text-6xl">
+              <h2 className="text-4xl font-light leading-tight tracking-wide uppercase md:text-6xl">
                 EMINENT <span className="font-bold">FACULTY</span>
                 <span className="inline-flex w-3 h-3 ml-2 rounded-full bg-secondary-color"></span>
-              </h1>
+              </h2>
               <p className="mt-4 mb-6 text-xl leading-normal opacity-75">
                 The backbone of any academic institution is its faculty. Indo
                 Global is proud to have an outstanding and dedicated

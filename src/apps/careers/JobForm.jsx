@@ -70,7 +70,7 @@ const QUALIFICATIONS = {
   other: ["Other"],
 };
 
-export default function JobForm() {
+export default function JobForm({ h1 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedQualification, setSelectedQualification] = useState("");
   const [otherQualification, setOtherQualification] = useState("");
@@ -90,9 +90,9 @@ export default function JobForm() {
     <div className="min-h-screen  ">
       <Card className="mx-auto max-w-3xl rounded-none sm:rounded-lg">
         <CardHeader className="space-y-1 text-center">
-          <CardTitle className=" text-2xl sm:text-3xl">
-            University Job Application
-          </CardTitle>
+          <h1 className=" text-2xl sm:text-3xl">
+            {h1}
+          </h1>
           <CardDescription className="text-sm sm:text-lg">
             Apply for academic and administrative positions
           </CardDescription>

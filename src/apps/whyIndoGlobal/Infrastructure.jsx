@@ -26,7 +26,7 @@ const sidebarLinks = [
   { href: "/why-indo-global/hostel", label: "Hostel" },
 ];
 
-const Infrastructure = () => {
+const Infrastructure = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/why-indo-global/infrastructure", label: "Why Indo Global" },
@@ -46,8 +46,8 @@ const Infrastructure = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Campus Infrastructure"
-            titleClassName="text-secondary-color text-left text-3xl sm:text-5xl"
+            title={h1}
+            titleClassName="text-secondary-color text-left text-3xl lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Our college infrastructure is designed to provide students with an enriching academic and social environment. Featuring modern classrooms, high-tech labs, collaborative spaces, and recreational facilities, we support holistic development and inspire academic and personal growth."
             className=""
@@ -93,9 +93,9 @@ const InfrastructureItems = ({ data, index }) => {
             }`}
           >
             {/* <h6 className="font-medium opacity-70 mb-2">Hello Visitor,</h6> */}
-            <h1 className="text-2xl sm:text-3xl leading-none font-bold uppercase tracking-wider mb-2">
+            <h2 className="text-2xl sm:text-3xl leading-none font-bold uppercase tracking-wider mb-2">
               {title}
-            </h1>
+            </h2>
             <hr className="bg-blue-600 h-1 rounded-[3px] w-12 opacity-100 my-6" />
             <p className="opacity-70 mb-2 text-justify">{description}</p>
             <ul className="flex flex-col ezy__about9-features mt-5">

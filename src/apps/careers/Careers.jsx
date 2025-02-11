@@ -1,10 +1,10 @@
 
 import JobForm from './JobForm'
 
-const Careers = () => {
+const Careers = ({ h1 }) => {
   return (
     <section className='p-0 sm:p-10 bg-slate-100'>
-        <JobForm/>
+        <JobForm h1={h1}/>
     </section>
   )
 }

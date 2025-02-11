@@ -17,14 +17,14 @@ const Heading = memo(
       >
         {title && (
           <WordPullUp
-            className={`text-center text-3xl font-bold sm:font-bold md:font-extrabold sm:text-5xl lg:text-6xl ${titleClassName}`}
+            className={`text-center text-3xl font-semibold sm:font-bold md:font-bold sm:text-5xl md:text-5xl lg:text-6xl ${titleClassName}`}
             words={title}
           />
         )}
 
         {subtitle && (
           <WordFadeIn
-            className={`mx-auto max-w-screen-md xs:text-base text-sm text-center sm:text-lg lg:text-xl font-medium sm:font-semibold ${subtitleClassName}`}
+            className={`mx-auto max-w-screen-md xs:text-base text-sm text-center sm:text-lg md:text-lg lg:text-xl font-normal sm:font-semibold ${subtitleClassName}`}
             words={subtitle}
             delay={0.05}
           />

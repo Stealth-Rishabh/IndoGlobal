@@ -27,7 +27,7 @@ const sidebarLinks = [
   { href: "/why-indo-global/hostel", label: "Hostel" },
 ];
 
-const Transportation = () => {
+const Transportation = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/why-indo-global/great-transportation", label: "Why Indo Global" },
@@ -47,7 +47,7 @@ const Transportation = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Reliable Transportation Services"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="We provide convenient and safe transportation options for students, ensuring easy access to and from campus. Our fleet of well-maintained vehicles offers reliable service, helping students focus on their studies while enjoying stress-free commutes."
@@ -115,7 +115,7 @@ const FeatureItem = ({ feature, index }) => (
         />
       </div>
     </div>
-    <div className="col-span-12 md:col-span-6 relative z-20 p-0">
+    <div className="col-span-12 md:col-span-6 bg-slate-100 relative z-20 p-0">
       <div
         className={cn("p-6 hover:translate-y-5 duration-300 ", {
           "md:ml-4": !(index % 2),

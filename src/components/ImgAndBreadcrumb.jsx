@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { Ellipsis, ChevronRightIcon } from "lucide-react";
-import WordPullUp from "./ui/word-pull-up";
+import WordPullUp from "./ui/word-pull-up2";
 
 const ITEMS_TO_DISPLAY = 3;
 

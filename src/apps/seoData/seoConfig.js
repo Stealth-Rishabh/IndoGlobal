@@ -39,6 +39,12 @@ export const seoConfig = {
       description: "Discover the experienced and accomplished faculty at Indo Global Group of Colleges. Learn how their expertise shapes future-ready professionals.",
       h1: "Meet Our Eminent Faculty at Indo Global Group of Colleges",
     },
+    notableAlumni: {
+      path: "/about/notable-alumni",
+      title: "Notable Alumni of Indo Global Group of Colleges | IGEF",
+      description: "Explore the success stories of our notable alumni who have made significant contributions to various fields.",
+      h1: "Notable Alumni of Indo Global Group of Colleges",
+    },
   },
 
   courses: {

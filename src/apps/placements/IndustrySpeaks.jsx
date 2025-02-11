@@ -20,7 +20,7 @@ const sidebarLinks = [
   { href: "/placements/placement-activities", label: "Placement Activities" },
   { href: "/placements/our-recruiters", label: "Our Recruiters" },
 ];
-const IndustrySpeaks = () => {
+const IndustrySpeaks = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/placements/industry-speaks", label: "Placements" },
@@ -34,19 +34,19 @@ const IndustrySpeaks = () => {
         imageAlt="Description of the image"
         breadcrumbItems={breadcrumbItems}
       />
-      <Container className="container grid grid-cols-1 md:grid-cols-4 gap-14">
+      <Container className=" grid grid-cols-1 md:grid-cols-4 gap-14">
         <div className="md:sticky md:top-5 self-start">
           <AboutSidebar sidebarLinks={sidebarLinks} />
         </div>
-        <div className="col-span-1 md:col-span-3 pt-12">
+        <div className="col-span-1 md:col-span-3 sm:pt-12">
           <Heading
-            title="Industry Insights"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Gain valuable insights from industry experts on developing intellectual, practical, and social skills, with a focus on leadership, socially responsible behavior, and lifelong learning."
           />
           <Testimonials />
-          <FacultyAbout />
+          <IndustrySpeakers  />
         </div>
       </Container>
       <Stats />
@@ -172,7 +172,7 @@ const Testimonials = () => {
   );
 };
 
-const FacultyAbout = () => {
+const IndustrySpeakers = ({ h1 }) => {
   return (
     <section className="ezy__about11 pt-20 sm:px-8 light  bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
       <div className="container ">
@@ -180,10 +180,10 @@ const FacultyAbout = () => {
           <div className="col-span-12 lg:col-span-6">
             <div className="text-left md:pr-20">
               <p className="opacity-75 uppercase ">Indo Global Colleges</p>
-              <h1 className="text-4xl md:text-6xl leading-tight font-light uppercase tracking-wide">
+              <h2 className="text-4xl md:text-6xl leading-tight font-light uppercase tracking-wide">
                 EMINENT <span className="font-bold">GUEST SPEAKERS</span>
                 <span className="inline-flex w-3 h-3 rounded-full bg-secondary-color ml-2"></span>
-              </h1>
+              </h2>
               <p className="text-xl leading-normal opacity-75 mt-4 mb-6">
                 Be part of an institution renowned for extensive industry
                 interaction wherein IGC students have interacted with the

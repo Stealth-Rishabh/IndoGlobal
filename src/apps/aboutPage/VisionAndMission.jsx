@@ -77,7 +77,7 @@ const sidebarLinks = [
   { href: "/about/notable-alumni", label: "Notable Alumni" },
 ];
 
-const VisionAndMission = () => {
+const VisionAndMission = ({ h1 }) => {
   return (
     <div className="min-h-screen ">
       <ImgAndBreadcrumb
@@ -92,7 +92,7 @@ const VisionAndMission = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Vision & Mission"
+            title={h1}
             subtitle="Our vision is to be a leading technology education institution. Our mission is to equip students with the knowledge and skills for successful careers in the tech industry."
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"

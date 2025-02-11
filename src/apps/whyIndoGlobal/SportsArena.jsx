@@ -25,7 +25,7 @@ const sidebarLinks = [
   { href: "/why-indo-global/hostel", label: "Hostel" },
 ];
 
-const SportsArena = () => {
+const SportsArena = ({ h1 }) => {
   const breadcrumbItems = [
     { href: "/", label: "Home" },
     { href: "/why-indo-global/sports-arena", label: "Why Indo Global" },
@@ -45,7 +45,7 @@ const SportsArena = () => {
         </div>
         <div className="col-span-1 pt-12 md:col-span-3">
           <Heading
-            title="Sports-Centric Curriculum"
+            title={h1}
             titleClassName="text-secondary-color text-left lg:text-5xl"
             subtitleClassName="text-gray-500 text-justify m-0 lg:text-lg lg:font-normal lg:max-w-full"
             subtitle="Building a comprehensive learning environment that fosters athletic skill, teamwork, discipline, and resilience, preparing students to excel in sports and lead with integrity on and off the field."
@@ -90,9 +90,9 @@ const Gallery = ({ imageItems }) => {
         </div>
       ))}
       <div className="col-span-1 sm:col-span-2 md:col-span-3 mt- pl-1">
-        <h1 className="text-3xl md:text-4xl leading-none font-bold mb-3 text-secondary-color/90">
+        <h2 className="text-3xl md:text-4xl leading-none font-bold mb-3 text-secondary-color/90">
           {title}
-        </h1>
+        </h2>
         <p className="text-base leading-6 mb-6 text-gray-500 text-justify ">
           {description}
         </p>

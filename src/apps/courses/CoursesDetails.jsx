@@ -94,7 +94,7 @@ const CoursesDetails = () => {
             <CourseSidebar />
           </div>
           <div className="col-span-1 pt-12 md:col-span-3">
-            <CourseDetailsPage {...courseData} />
+            <CourseDetailsPage {...courseData} h1={seoData.h1} />
           </div>
         </Container>
         {/* <Stats /> */}
@@ -145,7 +145,7 @@ const ReviewCard = ({ review }) => (
 );
 
 // Validate `COURSE_DETAILS` data before using it
-function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
+function CourseDetailsPage({ badges = [], title = "", image, tabs = [], h1 }) {
   // Extract content from tabs
   const overview = tabs.find((tab) => tab.label === "overview")?.content || [];
 
@@ -171,7 +171,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [] }) {
   return (
     <div className="container mx-auto">
       <h1 className="mb-4 text-3xl font-bold md:text-4xl text-secondary-color">
-        {title}
+        {h1}
       </h1>
       <InfoBadges badges={badges} />
 
