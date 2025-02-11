@@ -8,10 +8,10 @@ import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 // import { Link } from "react-router-dom";
 import AboutSidebar from "../../components/AboutSidebar";
-import Promila from "../../assets/about/faculty/Dr.Promila.png";
+import Promila from "../../assets/about/faculty/Dr.Promila.webp";
 import SsSekhon from "../../assets/about/faculty/Sekhon.webp";
 import Sonia from "../../assets/about/faculty/Sonia.webp";
-import Hardeep from "../../assets/about/faculty/Dr.Hardeep.png";
+import Hardeep from "../../assets/about/faculty/Dr.Hardeep.webp";
 // import SpAhuja from "../../assets/about/faculty/Dr.SpAhuja.png";
 
 const breadcrumbItems = [
