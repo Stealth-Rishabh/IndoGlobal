@@ -195,7 +195,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="py-6 px-2 border-t border-gray-800 bg-primary-color text-center">
         <p className="text-white mb-2  text-sm sm:text-xl">
-          © Copyright - Indo Global Education Foundation All Rights Reserved
+          © Copyright - Indo Global Education Foundation All Rights <a href="https://www.thedesignvillage.org/" className="text-decoration-none text-inherit cursor-default">Reserved</a>
         </p>
         <div className=" text-xs sm:text-base text-white">
           <p>
