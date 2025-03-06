@@ -1,0 +1,407 @@
+@media only screen and (max-width: 1024px) {
+
+    #hero.container-fluid,
+    #hero.container-fluid .row {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+
+    .bc-img01.bc-img4 {
+        background-image: url(../images/4-m.png);
+        /* height: 520px ; */
+    }
+
+    .desktop,
+    .course__section:before,
+    .course__section:after,
+    .core__section .core__Block .core__card:after {
+        display: block;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .dsu-intro {
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    .dsu-form {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid var(--bg-red);
+    }
+
+    .dsu-addmission {
+        margin-top: 0px;
+        padding: 0px;
+        text-align: center;
+        margin-right: 0rem;
+    }
+
+    .bc-img01 {
+        background-image: none;
+        background-attachment: initial;
+        height: auto;
+        padding: 1rem 0px;
+        /* background-image: linear-gradient(to bottom, #043957 0%, rgb(4, 57, 87) 50%, rgb(4, 57, 87) 100%); */
+        /* background-image: url(../images/newbannermobile.jpg); */
+        /* background-position: top;
+        background-size: inherit; */
+        background-image: url(../images/1.jpg);
+        height: 400px;
+    }
+    /* .bc-img01::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 69%;
+        top: 319px;
+        left: 0;
+        background-color: #720001;
+    } */
+    /* .bc-img01::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color:rgb(114 0 1 / 60%);
+        top: 0;
+        left: 0;
+        z-index: 1;
+    } */
+    #back-top {
+        display: none !important;
+    }
+
+    .comprehensive__section .courses__Block {
+        margin-right: 0;
+    }
+
+    .students__section .students__block .students__block__bg {
+        margin-top: 0;
+    }
+
+    #sticky.applyBox {
+        position: relative !important;
+        top: 0 !important;
+        right: 0px !important;
+    }
+
+    .mx-5 {
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
+    }
+
+    .download-sec .blog-text {
+        width: 100%;
+    }
+
+    .step__section .step__column .carousel-outer {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .core__section .core__Block {
+        margin-top: 0;
+        padding-right: 0 !important;
+        margin-right: 0;
+    }
+
+    .widget-title h2,
+    .widget-title p {
+        padding-left: 0;
+    }
+
+    .step__section .step__column .carousel-outer .step__item ul.listing li,
+    .step__section .step__column .carousel-outer .step__item ul.listing li:after {
+        font-size: 14px;
+    }
+
+    .dsu-addmission .bannerContent h1 {
+        font-size: 1.8rem;
+    }
+
+    .hr {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .dsu-addmission .bannerContent strong {
+        font-size: 1.5rem;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .dsu-addmission .bannerContent p {
+        font-size: 1.2rem !important;
+    }
+
+    h2.resp-accordion {
+        color: var(--text-dark);
+        background: var(--bg-yellow);
+    }
+
+    h2.resp-tab-active {
+        background: var(--bg-red) !important;
+    }
+
+    #gallery-slides.owl-theme .owl-nav {
+        position: relative;
+        margin-top: 22px;
+        right: 0;
+        top: 0;
+    }
+    
+    
+
+    .ranking-section .rankingitem .ranking-content:after {
+        height: 30%;
+    }
+
+    .ranking-section .ranking-content {
+        max-width: 221px;
+    }
+
+    .header .logo__right span {
+        float: none;
+        margin-top: 7px;
+        width: 100%;
+        line-height: 1;
+    }
+
+    .core__section,
+    .comprehensive__section {
+        padding-top: 1.5rem !important;
+    }
+
+    .comprehensive__section .courses__Block .program__item {
+        height: auto;
+        margin-top: 1.5rem;
+    }
+
+    .bc-img01 {
+        position: relative;
+    }
+
+    .fsize3 {
+        font-size: 2rem;
+    }
+
+    /* .sideNavi a.telphone {
+        display: none !important;
+    } */
+
+    .dsu-addmission .bannerContent.pt-5 {
+        padding-top: 0;
+    }
+
+    .widget-title h2:after {
+        width: 120px;
+        height: 120px;
+    }
+
+    .dsu-addmission .bannerContent ul {
+        margin-left: 0;
+        text-align: left;
+        list-style: none;
+    }
+
+    .dsu-addmission .bannerContent ul li b {
+        font-size: initial;
+    }
+
+    .students__item.mt-5,
+    .widget-title.mb-5 {
+        margin-top: 0rem !important;
+        margin-bottom: 0 !important;
+    }
+}
+@media (max-width:767px){
+    .bc-img01.bc-img4 {
+        background-image: url(../images/4-m.png);
+        height: 433px;
+    }
+}
+@media only screen and (max-width: 736px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .thankyou-sec .hero-thankyou .bc-img01 .thankyou__dv {
+        width: 100%;
+        margin: 20% 0;
+    }
+
+    .gat-section .fsize24 {
+        font-size: 18px;
+    }
+
+    .hero-sectionn .carousel-control-prev {
+        left: 0px;
+    }
+
+    .hero-sectionn .carousel-control-next {
+        right: 0px;
+    }
+
+    .important__dv .table tr td,
+    .important__dv .table tr th {
+        padding: 1rem;
+    }
+
+    .students__section .students__block .students__item .students__wrap .students__con h6 {
+        font-size: 1.5rem;
+    }
+
+    .header .header-absolute .mobile__dv a span {
+        display: none;
+    }
+
+    .header .header-absolute .mobile__dv a {
+        padding: 8px 1rem;
+        font-size: 1rem;
+    }
+
+    .ranking-section .rankingitem .ranking-content .ranking-logo {
+        width: auto;
+        height: auto;
+        line-height: normal;
+    }
+
+    .video-button i {
+        font-size: 1rem;
+    }
+
+    .video-button {
+        width: 60px;
+        height: 60px;
+        line-height: 66px;
+    }
+
+    .video-play-fluid h2 {
+        top: 8%;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    /* .sideNavi {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        top: auto;
+        right: auto;
+        left: 0;
+        z-index: 50;
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .sideNavi a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 12px 2px;
+    } */
+
+    .footer {
+        /* height: 80px; */
+        font-size: 10px;
+        padding: 0.5rem 0 !important;
+        line-height: 1.5;
+    }
+
+    /* .sideNavi .sideNavi-flex {
+        display: flex;
+    }
+
+    .sideNavi-item {
+        width: 100%;
+    } */
+
+
+}
+/* @media(max-width:600px){
+    .bc-img01.bc-img4 {
+        background-image: url(../images/4-m.png);
+        height: 366px;
+    }
+} */
+@media only screen and (max-width: 568px) {
+    .dsu-form {
+        width: 100%;
+    }
+
+}
+@media(max-width:557px){
+    .bc-img01.bc-img4 {
+        background-image: url(../images/4-m.png);
+        height: 345px;
+    } 
+}
+@media only screen and (max-width: 480px) {
+
+    h1,
+    h2,
+    h3,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .fsize28 {
+        font-size: 22px;
+    }
+
+    .thankyou-sec .hero-thankyou .bc-img01 .thankyou__dv h3 {
+        font-size: 3em;
+    }
+
+    .thankyou-sec .hero-thankyou .bc-img01 .thankyou__dv p {
+        font-size: 16px;
+    }
+
+    .thankyou-sec .hero-thankyou .bc-img01 {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/banner.jpg);
+    }
+    /* .bc-img01.bc-img4 {
+        background-image: url(../images/4-m.png);
+        height: 300px;
+    } */
+
+    section.affiliate_sec {
+        margin-top: -28px;
+    }
+   
+}
+
+@media only screen and (max-width: 414px) {}
+
+@media only screen and (max-width: 384px) {}
+
+
+@media only screen and (max-width: 360px) {}
+
+@media only screen and (max-width: 320px) {}
