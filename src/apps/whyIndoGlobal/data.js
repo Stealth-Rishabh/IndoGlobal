@@ -71,27 +71,27 @@ export const sportsData = [
       "Our Fitness Club encourages students to prioritize physical health and well-being, providing resources and activities that promote endurance, strength, and a balanced lifestyle. Through a variety of fitness programs, students cultivate discipline, resilience, and a passion for healthy living, empowering them to excel both academically and personally.",
     items: [
       {
-        src: "https://img.freepik.com/free-photo/yoga-park_23-2147645731.jpg?t=st=1733826001~exp=1733829601~hmac=d599e99e9cf075b90850a2f444e22c9e326a9dee62646b886badefb7bcd22dde&w=1060",
+        src: "https://img.freepik.com/free-photo/yoga-park_23-2147645731.jpg",
         alt: "Photo by Minh Pham",
         label: "Yoga",
         height: "h-48",
         mdHeight: "md:col-span-2 md:h-80",
       },
       {
-        src: "https://img.freepik.com/free-photo/man-face-down-lifting-arms-legs_1163-765.jpg?t=st=1733826068~exp=1733829668~hmac=5fc1af6c031c80d66dcfa00029c9761cfba4033e9bac4247a0fe22e3f1120409&w=1060",
+        src: "https://img.freepik.com/free-photo/man-face-down-lifting-arms-legs_1163-765.jpg",
         alt: "Photo by Magicle",
         label: "Strength Training",
         height: "h-48",
         mdHeight: "md:h-80",
       },
       {
-        src: "https://img.freepik.com/free-photo/pleased-young-sporty-man-wearing-headband-wristband-holding-dumbbells-with-yoga-mat_141793-89495.jpg?t=st=1733826243~exp=1733829843~hmac=0fdffae70742e80db8900613d66f40d0383dc4f1a837838c8f1c4bfb17cb60f7&w=996",
+        src: "https://img.freepik.com/free-photo/pleased-young-sporty-man-wearing-headband-wristband-holding-dumbbells-with-yoga-mat_141793-89495.jpg",
         label: "Cardio Sessions",
         height: "h-48",
         mdHeight: "md:h-80",
       },
       {
-        src: "https://img.freepik.com/free-photo/focused-young-indian-man-meditating-lotus-pose_1262-12658.jpg?t=st=1733826303~exp=1733829903~hmac=e7a4f4b7fed9d5b236f7023a5a8b6b1d4e3b6e5be4e79d9db198a6a0e2e27a6b&w=1060",
+        src: "https://img.freepik.com/free-photo/focused-young-indian-man-meditating-lotus-pose_1262-12658.jpg",
         alt: "Photo by Lorenzo Herrera",
         label: "Meditation",
         height: "h-48",
