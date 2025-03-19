@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Header from "./apps/header/Header";
 import Landing from "./apps/LandingPage/Landing";
+import NotFound from "./apps/notFound/NotFound";
 
 import "./App.css";
 import Footer from "./apps/footer/Footer";
@@ -274,7 +275,9 @@ function App() {
                   "/placements/campus-recruitments"
                 )}
               />
-              <CampusRecruitments h1={seoConfig.placements.campusRecruitments.h1} />
+              <CampusRecruitments
+                h1={seoConfig.placements.campusRecruitments.h1}
+              />
             </>
           }
         />
@@ -317,7 +320,9 @@ function App() {
                   "/placements/placement-activities"
                 )}
               />
-              <PlacementActivities h1={seoConfig.placements.placementActivities.h1} />
+              <PlacementActivities
+                h1={seoConfig.placements.placementActivities.h1}
+              />
             </>
           }
         />
@@ -361,7 +366,9 @@ function App() {
                   "/why-indo-global/industry-oriented-curriculum"
                 )}
               />
-              <IndustryOrientedCurriculum h1={seoConfig.whyIndoGlobal.industryOrientedCurriculum.h1} />
+              <IndustryOrientedCurriculum
+                h1={seoConfig.whyIndoGlobal.industryOrientedCurriculum.h1}
+              />
             </>
           }
         />
@@ -378,7 +385,9 @@ function App() {
                   "/why-indo-global/entrepreneurship"
                 )}
               />
-              <Entrepreneurship h1={seoConfig.whyIndoGlobal.entrepreneurship.h1} />
+              <Entrepreneurship
+                h1={seoConfig.whyIndoGlobal.entrepreneurship.h1}
+              />
             </>
           }
         />
@@ -423,7 +432,9 @@ function App() {
                   "/why-indo-global/great-transportation"
                 )}
               />
-              <Transportation h1={seoConfig.whyIndoGlobal.greatTransportation.h1} />
+              <Transportation
+                h1={seoConfig.whyIndoGlobal.greatTransportation.h1}
+              />
             </>
           }
         />
@@ -440,7 +451,9 @@ function App() {
                   "/why-indo-global/students-security"
                 )}
               />
-              <StudentSecurity h1={seoConfig.whyIndoGlobal.studentsSecurity.h1} />
+              <StudentSecurity
+                h1={seoConfig.whyIndoGlobal.studentsSecurity.h1}
+              />
             </>
           }
         />
@@ -510,7 +523,9 @@ function App() {
                 description={seoConfig.onlineLearningResources.description}
                 canonicalUrl={getCanonicalUrl("/online-learning-resources")}
               />
-              <OnlineLearningResources h1={seoConfig.onlineLearningResources.h1} />
+              <OnlineLearningResources
+                h1={seoConfig.onlineLearningResources.h1}
+              />
             </>
           }
         />
@@ -554,6 +569,9 @@ function App() {
             </>
           }
         />
+
+        {/* 404 Not Found - This should be the last route */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
