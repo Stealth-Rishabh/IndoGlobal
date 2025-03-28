@@ -9,6 +9,7 @@ import {
   Phone,
   Mail,
   Globe,
+  ExternalLink,
   // Download,
 } from "lucide-react";
 import {Badge} from "@/components/ui/badge";
@@ -24,6 +25,7 @@ export default function Footer() {
     {
       label: "Quick Links",
       items: [
+        { name: "Fee Payment", path: "https://pay.webfront.in/#/merchantinfo/indo-global-education-foundation/7651", isLink: true },
         { name: "Admissions", path: "/admissions" },
         { name: "Courses", path: "/courses" },
         { name: "Events & Spotights", path: "/spotlights" },
@@ -105,6 +107,9 @@ export default function Footer() {
       // Open in new tab instead of downloading
       window.open(item.path, "_blank");
     }
+    if (item.isLink) {
+      window.open(item.path, "_blank");
+    }
   };
 
   return (
@@ -166,16 +171,24 @@ export default function Footer() {
                       <a href="/blog" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
                         {item.name}
                       </a>
-                    ) : item.isDownload ? (
+                    ) : item.isDownload || item.isLink ? (
                       <button
                         onClick={() => handleItemClick(item)}
                         className="flex relative items-center justify-start hover:text-red-600 group transition-colors"
                       >
                         {item.name}
-                        <Download size={16} className="ml-2 group-hover:animate-bounce" />
-                        <Badge className="absolute hidden sm:block -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">
-                          PDF
-                        </Badge>
+                        {item.isDownload && (
+                          <Download size={16} className="ml-2 group-hover:animate-bounce" />
+                        )}
+                        {item.isLink && (
+                          <ExternalLink size={16} className="ml-2 group-hover:animate-bounce" />
+                        )}
+
+                        {item.isDownload && (
+                          <Badge className="absolute hidden sm:block -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">
+                            PDF
+                          </Badge>
+                        )}
                       </button>
                     ) : (
                       <Link
