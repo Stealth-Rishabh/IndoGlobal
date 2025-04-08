@@ -8,7 +8,7 @@ import {
 
 import { useEffect } from "react";
 
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 import Header from "./apps/header/Header";
 import Landing from "./apps/LandingPage/Landing";
 import NotFound from "./apps/notFound/NotFound";

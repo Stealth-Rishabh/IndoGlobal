@@ -54,7 +54,7 @@ const AboutSidebar = ({ sidebarLinks }) => {
             </Link>
           ))}
         </nav>
-        <Link to="/contact-us">
+        <Link to="https://admissions.igef.net">
           <Button className="w-full px-4 py-2 mb-6 font-bold text-white rounded bg-primary-color hover:bg-red-600">
             Apply Online
           </Button>

@@ -182,7 +182,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [], h1 }) {
       />
 
       <div className="flex flex-wrap gap-4 mb-8">
-        <Link to="/contact-us">
+        <Link to="https://admissions.igef.net">
           <Button className="flex-grow sm:flex-grow-0">Apply Now</Button>
         </Link>
         <a href={Brochure} target="_blank">

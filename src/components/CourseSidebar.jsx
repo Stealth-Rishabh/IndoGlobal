@@ -180,7 +180,7 @@ export default function CourseSidebar() {
           ))}
         </nav>
 
-        <Link to="/contact-us">
+        <Link to="https://admissions.igef.net">
           <Button className="w-full px-4 py-2 mb-6 font-bold text-white rounded bg-primary-color hover:bg-red-600 transition-colors duration-200">
             Apply Online
           </Button>

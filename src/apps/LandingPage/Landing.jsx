@@ -15,6 +15,7 @@ import Stats from "./Stats";
 import { Testimonials } from "./testimonials/Testimonial";
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 const sectionVariants = {
   hidden: { scale: 0.8, opacity: 0 }, // Starting state (small and transparent)
   visible: {
@@ -83,6 +84,14 @@ const Landing = () => {
         }`}
       >
         Quick Enquiry
+      </button>
+      <button
+       
+        className={`fixed  top-[55%] -right-14 translate-y-1/2 z-[9998] bg-primary-color text-white px-4 py-2 rounded-tr-md rounded-tl-md shadow-lg hover:bg-primary-color/90 -rotate-90 ${
+          showWidget ? "hidden" : ""
+        }`}
+      >
+        <Link to="https://admissions.igef.net">Online Admissions</Link>
       </button>
       <X
         onClick={() => setShowWidget(false)}

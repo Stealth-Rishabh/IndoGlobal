@@ -147,18 +147,19 @@ export default function Programs() {
                       )}
                       <div className="relative flex scale-[0.8] -ml-6 xs:scale-100 xs:ml-0 justify-between gap-1 mt-8 z-100 sm:gap-5 sm:justify-start">
                         <Link
-                          to={
-                            activePrograms[category.id] !== null
-                              ? category.programs[activePrograms[category.id]]
-                                  .path
-                              : category.defaultCard.path
-                          }
+                          // to={
+                          //   activePrograms[category.id] !== null
+                          //     ? category.programs[activePrograms[category.id]]
+                          //         .path
+                          //     : category.defaultCard.path
+                          // }
+                          to="https://admissions.igef.net"
                         >
                           <ButtonSq
                             className="text-xs text-white bg-red-500 sm:text-base hover:bg-red-600 w-fit"
                             iconDiv="bg-red-800"
                             label="Apply Now"
-                            to="/contact-us"
+                            to="https://admissions.igef.net"
                           />
                         </Link>
 

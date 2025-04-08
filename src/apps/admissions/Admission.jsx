@@ -3,7 +3,7 @@ import img from "../../assets/admissionsBanner.webp";
 import shaping from "../../assets/Admissions.webp";
 import Container from "../../components/wrappers/Container";
 import Heading from "../../components/Heading";
-import AboutSidebar from "../../components/AboutSidebar";
+// import AboutSidebar from "../../components/AboutSidebar";
 import Stats from "../../components/Stats";
 import Newsletter from "../../components/Newsletter";
 import { useState } from "react";
@@ -225,9 +225,9 @@ const renderTable = (courses) => (
       <TableRow>
         <TableHead>S.No</TableHead>
         <TableHead>Name</TableHead>
-        <TableHead>Duration</TableHead>
-        <TableHead>Eligibility</TableHead>
-        <TableHead>Type</TableHead>
+        <TableHead className="hidden sm:table-cell">Duration</TableHead>
+        <TableHead className="hidden sm:table-cell">Eligibility</TableHead>
+        <TableHead className="hidden sm:table-cell">Type</TableHead>
         <TableHead className="text-center">Action</TableHead>
       </TableRow>
     </TableHeader>
@@ -240,17 +240,17 @@ const renderTable = (courses) => (
           <TableCell className="text-xs text-gray-600 sm:text-base">
             {course.name}
           </TableCell>
-          <TableCell className="text-xs text-gray-600 sm:text-base">
+          <TableCell className="text-xs text-gray-600 sm:text-base hidden sm:table-cell">
             {course.duration}
           </TableCell>
-          <TableCell className="text-xs text-gray-600 sm:text-base">
+          <TableCell className="text-xs text-gray-600 sm:text-base hidden sm:table-cell">
             {course.eligibility}
           </TableCell>
-          <TableCell className="text-xs text-gray-600 sm:text-base">
+          <TableCell className="text-xs text-gray-600 sm:text-base hidden sm:table-cell">
             {course.type}
           </TableCell>
           <TableCell className="text-center">
-            <Link to="/contact-us">
+            <Link to="https://admissions.igef.net">
               <Button variant="outline" size="sm">
                 Apply Now
               </Button>

@@ -68,6 +68,7 @@ export default function Footer() {
     {
       label: "More Info",
       items: [
+        { name: "Online Admissions", path: "https://admissions.igef.net" },
         {
           name: "Mandatory Disclosure",
           path: MandatoryDisclosure,
@@ -184,7 +185,7 @@ export default function Footer() {
                           <ExternalLink size={16} className="ml-2 group-hover:animate-bounce" />
                         )}
 
-                        {item.isDownload && (
+                          {item.isDownload && (
                           <Badge className="absolute hidden sm:block -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">
                             PDF
                           </Badge>
