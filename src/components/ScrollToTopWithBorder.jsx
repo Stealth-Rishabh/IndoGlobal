@@ -45,7 +45,7 @@ const ScrollToTopWithBorder = () => {
           <Button
             onClick={scrollToTop}
           size="icon"
-          className="fixed bottom-6 right-6 z-50  bg-slate-800 text-white shadow-md hover:bg-blue-600 transition drop-shadow-lg animate-bounce"
+          className="fixed bottom-6 left-6 z-50  bg-slate-800 text-white shadow-md hover:bg-blue-600 transition drop-shadow-lg animate-bounce"
         >
           <ArrowUpIcon className="w-4 h-4" />
           </Button>
