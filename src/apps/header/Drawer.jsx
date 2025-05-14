@@ -54,7 +54,7 @@ const Drawer = () => {
             <SheetTrigger className="lg:hidden block">
                 <PanelLeft className="w-8 h-8 text-slate-200" />
             </SheetTrigger>
-            <SheetContent className="bg-primary-color overflow-auto">
+            <SheetContent className="bg-primary-color overflow-auto z-[999]">
                 <SheetHeader>
                     <SheetTitle className="text-white text-2xl font-bold text-left">Indo Global</SheetTitle>
                     <SheetDescription className="text-white text-left pt-5">

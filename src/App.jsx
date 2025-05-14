@@ -54,6 +54,7 @@ import StudentGrievance from "./apps/footer/StudentGrievance";
 import AlumniLogin from "./apps/footer/AlumniLogin";
 import AlumniSignup from "./apps/footer/AlumniSignup";
 import SEO from "./components/SEO";
+import CallUsButton from "./components/CallUsButton";
 import {
   getSeoDataByPath,
   getCanonicalUrl,
@@ -106,6 +107,9 @@ function App() {
       <ScrollToTop />
       <ScrollToTopWithBorder />
       <Header />
+      <a href="tel:+91-7307211222" className=" fixed sm:hidden z-[60] bottom-14 -right-5">
+        <CallUsButton />
+      </a>
       <Routes>
         {/* home page */}
         <Route

@@ -1,6 +1,6 @@
 
 import { FacebookIcon, Instagram, Youtube, MapPin, Mail, Phone, Linkedin } from "lucide-react"
-
+import { PulsatingButton } from "@/components/magicui/pulsating-button";
 export default function BannerNav() {
   return (
     <div className="bg-gray-100 py-2 px-4 text-sm hidden sm:block">
@@ -34,8 +34,10 @@ export default function BannerNav() {
             <span>contact@igef.net</span>
           </a>
           <a href="tel:+91-7307211222" className="flex items-center">
-            <Phone size={16} className="text-red-600 mr-1" />
-            <span>+91-7307211222</span>
+            <PulsatingButton className="bg-red-600">
+           
+            <span className="text-white flex items-center">  <Phone size={16} className="text-white mr-1" />+91-7307211222</span>
+            </PulsatingButton>
           </a>
         </div>
       </div>

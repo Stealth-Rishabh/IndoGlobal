@@ -55,6 +55,8 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%
   }
+  .theme {
+    --animate-pulse: pulse var(--duration) ease-out infinite}
 }
 @layer base {
   * {
@@ -65,8 +67,6 @@
   }
 }
 
-
-
 @media (min-width: 1280px) {
   .container {
       max-width: 1280px;
@@ -76,7 +76,6 @@
 .npf_wgts .widget_container {
   max-width: 600px;
 }
-
 
 ::-webkit-scrollbar {
   width: 0.5vw;
@@ -95,9 +94,27 @@
   background: #414141;
 }
 
-
 .widget_container {
   padding: 23px !important;
   background-color: #043957;
   color: #fff;
+}
+
+@theme inline {
+  @keyframes pulse {
+  0%, 100% {
+    boxShadow: 0 0 0 0 var(--pulse-color);
+    }
+  50% {
+    boxShadow: 0 0 0 8px var(--pulse-color);
+    }
+  }
+  @keyframes pulse {
+  0%, 100% {
+    boxShadow: 0 0 0 0 var(--pulse-color);
+    }
+  50% {
+    boxShadow: 0 0 0 8px var(--pulse-color);
+    }
+  }
 }
