@@ -110,7 +110,7 @@ function App() {
       <Header />
       <a
         href="tel:+91-7307211222"
-        className=" fixed sm:hidden z-[60] bottom-14 -right-5"
+        className=" fixed sm:hidden z-[60] bottom-16 -right-20"
       >
         <CallUsButton />
       </a>

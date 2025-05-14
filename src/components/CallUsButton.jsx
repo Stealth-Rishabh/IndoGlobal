@@ -29,7 +29,7 @@ export default function CallUsButton() {
         className="relative flex items-center justify-center bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
         initial={{ width: 56, height: 56 }}
         animate={{
-          width: expanded ? 140 : 56,
+          width: expanded ? 160 : 100,
         }}
         transition={springConfig}
         aria-label="Call us"
@@ -55,8 +55,8 @@ export default function CallUsButton() {
         <motion.div
           className="flex items-center justify-center w-full"
           animate={{
-            justifyContent: expanded ? "flex-start" : "center",
-            paddingLeft: expanded ? "16px" : "0px",
+            justifyContent: expanded ? "flex-start" : "flex-start",
+            paddingLeft: expanded ? "16px" : "16px",
           }}
           transition={springConfig}
         >
