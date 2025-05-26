@@ -42,6 +42,16 @@ import {
           },
           {
             type: "heading",
+            data:
+              "Specialisations",
+          },
+          {
+            type: "paragraph",
+            data:
+              "HR | Marketing | Finance | MIS | Operations Management | Business Analytics",
+          },
+          {
+            type: "heading",
             data: "Our MBA Program Includes",
           },
           {
@@ -68,6 +78,8 @@ import {
             data:
               "We at IGEC provide students with the much-needed corporate experience to groom them as industry-ready professionals. Students gain firsthand experience by working in real-life business environments, allowing them to learn essential skills and gain the expertise required by prospective employers. Considered one of the best MBA colleges in Punjab, Indo Global Colleges have corporate tie-ups with industry leaders like IBM Center of Excellence and Campus Business Park and have signed memorandums of understanding (MoUs) with leading automotive brand Ashok Leyland for skill development initiatives and with “E-Drona” for project assignments and completion.",
           },
+          
+          
         ],
       },
       {
@@ -85,55 +97,55 @@ import {
           },
         ],
       },
-      {
-        label: "curriculum",
-        icon: React.createElement(List, { className: "w-4 h-4" }),
-        content: [
-          {
-            label: "Subjects",
-            type: "list",
-            data: [
-              {
-                year: "First Year",
-                data: [
-                  "Introduction to Management",
-                  "Financial Accounting",
-                  "Marketing Principles",
-                  "Organizational Behavior",
-                  "Quantitative Methods",
-                  "Business Communication",
-                  "Economics for Managers",
-                ],
-              },
-              {
-                year: "Second Year",
-                data: [
-                  "Specialization Courses",
-                  "Strategic Management",
-                  "Operations Management",
-                  "Human Resource Management",
-                  "Business Analytics",
-                  "International Business",
-                  "Elective Courses",
-                ],
-              },
-            ],
-          },
-          {
-            label: "Key Features",
-            type: "list",
-            data: [
-              "Wide choice of specializations with the possibility of combining industry-wise and functional specializations",
-              "Industry-ready curriculum aligned with current industry standards",
-              "Hands-on experience through live case studies, projects, and seminars",
-              "Opportunities for internships and industry visits to enhance practical knowledge",
-              "Soft skill training to develop professional behavior and interpersonal skills",
-              "Mentorship and career counseling by industry experts",
-              "Global exposure through guest lectures and international faculty interactions",
-            ],
-          },
-        ],
-      },
+      // {
+      //   label: "curriculum",
+      //   icon: React.createElement(List, { className: "w-4 h-4" }),
+      //   content: [
+      //     {
+      //       label: "Subjects",
+      //       type: "list",
+      //       data: [
+      //         {
+      //           year: "First Year",
+      //           data: [
+      //             "Introduction to Management",
+      //             "Financial Accounting",
+      //             "Marketing Principles",
+      //             "Organizational Behavior",
+      //             "Quantitative Methods",
+      //             "Business Communication",
+      //             "Economics for Managers",
+      //           ],
+      //         },
+      //         {
+      //           year: "Second Year",
+      //           data: [
+      //             "Specialization Courses",
+      //             "Strategic Management",
+      //             "Operations Management",
+      //             "Human Resource Management",
+      //             "Business Analytics",
+      //             "International Business",
+      //             "Elective Courses",
+      //           ],
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       label: "Key Features",
+      //       type: "list",
+      //       data: [
+      //         "Wide choice of specializations with the possibility of combining industry-wise and functional specializations",
+      //         "Industry-ready curriculum aligned with current industry standards",
+      //         "Hands-on experience through live case studies, projects, and seminars",
+      //         "Opportunities for internships and industry visits to enhance practical knowledge",
+      //         "Soft skill training to develop professional behavior and interpersonal skills",
+      //         "Mentorship and career counseling by industry experts",
+      //         "Global exposure through guest lectures and international faculty interactions",
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         label: "faqs",
         icon: React.createElement(HelpCircle, { className: "w-4 h-4" }),
