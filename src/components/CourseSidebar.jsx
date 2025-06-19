@@ -102,6 +102,12 @@ export default function CourseSidebar() {
         },
       ],
     },
+    {
+      name: "Pharmacy",
+      courses: [
+        { href: "/courses/b-pharmacy", label: "B.Pharmacy" },
+      ],
+    },
   ];
 
   useEffect(() => {

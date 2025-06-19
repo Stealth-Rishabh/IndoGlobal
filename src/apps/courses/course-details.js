@@ -14,6 +14,7 @@ import { BCA } from "./management-data/bca";
 import { BSC_MEDICAL_LABORATORY_SCIENCES } from "./paramedical-data/bsc-medical-laboratory-sciences";
 import { BSC_RADIOLOGY_IMAGING_TECHNOLOGY } from "./paramedical-data/bsc-radiology-imaging-technology";
 import { BSC_OPERATION_THEATRE_TECHNOLOGY } from "./paramedical-data/bsc-operation-theatre-technology";
+import { B_PHARMACY } from "./pharmacy-data/b-pharmacy";
 export const COURSE_DETAILS = [
   BTECH_IN_COMP_ENGG,
   BTECH_IN_CIVIL_ENGG,
@@ -31,4 +32,5 @@ export const COURSE_DETAILS = [
   BSC_MEDICAL_LABORATORY_SCIENCES,
   BSC_RADIOLOGY_IMAGING_TECHNOLOGY,
   BSC_OPERATION_THEATRE_TECHNOLOGY,
+  B_PHARMACY,
 ];

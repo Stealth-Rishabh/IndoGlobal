@@ -118,6 +118,15 @@ export const navlinks = [
               },
             ],
           },
+          {
+            name: "Pharmacy",
+            courses: [
+              {
+                name: "Bachelor of Pharmacy (B.Pharmacy)",
+                path: "/courses/b-pharmacy",
+              },
+            ],
+          },
         ],
       },
     ],

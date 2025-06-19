@@ -41,6 +41,7 @@ export default function Courses({ h1 }) {
       "Management and Technology",
       "Architecture",
       "Paramedical Courses",
+      "Pharmacy",
     ],
     []
   );

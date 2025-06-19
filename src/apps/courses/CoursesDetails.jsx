@@ -18,7 +18,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { COURSE_DETAILS } from "./course-details";
 import { Star, CheckSquare, X } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
 import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
 import { seoConfig } from "../seoData/seoConfig";
