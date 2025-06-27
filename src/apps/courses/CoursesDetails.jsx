@@ -20,7 +20,7 @@ import { Star, CheckSquare, X } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 
 import NoPaperFormsWidget from "../../CRM/NoPaperFormsWidget";
-import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
+// import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
 import { seoConfig } from "../seoData/seoConfig";
 import SEO from "../../components/SEO";
 import { getCanonicalUrl } from "../seoData/seoConfig";
@@ -145,7 +145,7 @@ const ReviewCard = ({ review }) => (
 );
 
 // Validate `COURSE_DETAILS` data before using it
-function CourseDetailsPage({ badges = [], title = "", image, tabs = [], h1 }) {
+function CourseDetailsPage({ badges = [], title = "", image, tabs = [], h1, brochure }) {
   // Extract content from tabs
   const overview = tabs.find((tab) => tab.label === "overview")?.content || [];
 
@@ -185,7 +185,7 @@ function CourseDetailsPage({ badges = [], title = "", image, tabs = [], h1 }) {
         <Link to="https://admissions.igef.net">
           <Button className="flex-grow sm:flex-grow-0">Apply Now</Button>
         </Link>
-        <a href={Brochure} target="_blank">
+        <a href={brochure} target="_blank">
           <Button variant="outline" className="flex-grow sm:flex-grow-0">
             Download Brochure
           </Button>

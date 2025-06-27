@@ -16,6 +16,7 @@ export const BSC_OPERATION_THEATRE_TECHNOLOGY = {
   category: "Paramedical Courses",
   group: "Paramedical Course",
   image: img,
+  brochure: "/brochures/Brochure paramedical.pdf",
   badges: [
     { icon: Clock, text: "4 Years" },
     { icon: GraduationCap, text: "Bachelor's Degree" },

@@ -15,6 +15,7 @@ export const POLYTECHNIC_IN_CIVIL_ENGINEERING = {
     category: "Polytechnic / Polytechnic Lateral Entry", 
     group: "Polytechnic Course",
     image: img,
+    brochure: "/brochures/IGC Main Brochure.pdf",
     badges: [
         { icon: Clock, text: "3 Years" },
         { icon: GraduationCap, text: "Diploma" },

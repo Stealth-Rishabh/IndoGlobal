@@ -15,7 +15,8 @@ import {
     title: "Bachelor of Computer Applications (BCA)",
     category: "Management and Technology",
     group: "BCA Course",
-    image: img,
+    image: img, 
+    brochure: "/brochures/IGC Main Brochure.pdf",
     badges: [
       { icon: Clock, text: "3 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },

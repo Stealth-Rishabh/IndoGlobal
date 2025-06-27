@@ -17,7 +17,7 @@ import { Download } from "lucide-react";
 
 import MandatoryDisclosure from "../../assets/pdfs/Mandatory-Discl-IGCE.pdf";
 import GrievanceRedressal from "../../assets/pdfs/Grievance Committee_IGEF.pdf";
-import Brochure from "../../assets/pdfs/igc_pamphlet.pdf";
+
 export default function Footer() {
 
   const [badge, setBadge] = useState(false);
@@ -36,7 +36,7 @@ export default function Footer() {
         { name: "Placements", path: "/placements/campus-recruitments" },
         { name: "Blogs", path: "/blogs" },
         { name: "Contact Us", path: "/contact-us" },
-        { name: "Download Brochure", path: Brochure, isDownload: true, isBadge: badge },
+        { name: "Download Brochure", path: "/brochures/IGC Main Brochure.pdf", isDownload: true, isBadge: badge },
       ],
     },
     {

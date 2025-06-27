@@ -15,6 +15,8 @@ import {
     category: "B.Tech / B.tech Lateral Entry",
     group: "B.Tech Course",
     image: img,
+    brochure: "/brochures/IGC Main Brochure.pdf",
+    
     badges: [
       { icon: Clock, text: "4 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },

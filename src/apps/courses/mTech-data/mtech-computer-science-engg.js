@@ -16,6 +16,7 @@ export const MTECH_IN_COMPUTER_SCIENCE_ENGINEERING = {
     category: "M.Tech",
     group: "M.Tech Course",
     image: img,
+    brochure: "/brochures/IGC Main Brochure.pdf",
     badges: [
         { icon: Clock, text: "2 Years" },
         { icon: GraduationCap, text: "Master's Degree" },

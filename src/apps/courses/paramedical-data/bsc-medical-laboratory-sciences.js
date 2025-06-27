@@ -16,6 +16,7 @@ export const BSC_MEDICAL_LABORATORY_SCIENCES = {
   category: "Paramedical Courses",
   group: "Paramedical Course",
   image: img,
+  brochure: "/brochures/Brochure paramedical.pdf",
   badges: [
     { icon: Clock, text: "3 Years" },
     { icon: GraduationCap, text: "Bachelor's Degree" },

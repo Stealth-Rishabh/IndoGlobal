@@ -16,6 +16,7 @@ export const B_PHARMACY = {
   category: "Pharmacy",
   group: "Pharmacy Course",
   image: img,
+  brochure: "/brochures/PHARMACY BROCHURE.pdf",
   badges: [
     { icon: Clock, text: "4 Years" },
     { icon: GraduationCap, text: "Bachelor's Degree" },

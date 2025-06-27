@@ -18,6 +18,7 @@ import {
     category: "Management and Technology",
     group: "MBA Course",
     image: img,
+    brochure: "/brochures/MBA BROCHURE.pdf",
     badges: [
       { icon: Clock, text: "2 Years" },
       { icon: GraduationCap, text: "Master's Degree" },

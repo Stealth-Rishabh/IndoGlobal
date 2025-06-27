@@ -6,7 +6,7 @@ import {
     MapPin,
     List,
     HelpCircle,
-    User,
+    
   } from "lucide-react";
   import React from "react";
   import img from "../../../assets/courses/bba.webp";
@@ -17,6 +17,7 @@ import {
     category: "Management and Technology",
     group: "BBA Course",
     image: img,
+    brochure: "/brochures/IGC Main Brochure.pdf",
     badges: [
       { icon: Clock, text: "3 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },

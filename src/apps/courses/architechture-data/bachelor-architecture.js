@@ -16,6 +16,7 @@ import {
     category: "Architecture",
     group: "B.Arch Course",
     image: img,
+    brochure: "/brochures/Architecture Brochure.pdf",
     badges: [
       { icon: Clock, text: "5 Years" },
       { icon: GraduationCap, text: "Bachelor's Degree" },
