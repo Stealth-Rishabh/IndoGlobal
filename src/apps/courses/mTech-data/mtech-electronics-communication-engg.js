@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import React from "react";
 import img from "../../../assets/courses/mtech-elec.webp";
-export const MTECH_IN_ELECTRONICS_COMMUNICATION_ENGINEERING = {
+export const MTECH_EC_DATA = {
   path: "mtech-electronics-communication-engineering",
   title: "M.Tech Electronics & Communication Engineering",
   category: "M.Tech",

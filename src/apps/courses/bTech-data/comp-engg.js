@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import React from "react";
 import img from "../../../assets/courses/btech-comp.webp";
-export const BTECH_IN_COMP_ENGG = {
+export const BTECH_CS_DATA = {
   path: "btech-computer-science-engineering",
   title: "B.Tech Computer Science Engineering",
   category: "B.Tech / B.tech Lateral Entry",
@@ -28,10 +28,9 @@ export const BTECH_IN_COMP_ENGG = {
       label: "overview",
       icon: React.createElement(BookOpen, { className: "w-4 h-4" }),
       content: [
-    
         {
           type: "paragraph",
-          data: "B.Tech in Computer Science and Engineering (4 years) aims to develop a strong foundation in mathematics, science, and computing systems, focusing on theoretical foundations of computation and computer systems and software and hardware system development."
+          data: "B.Tech in Computer Science and Engineering (4 years) aims to develop a strong foundation in mathematics, science, and computing systems, focusing on theoretical foundations of computation and computer systems and software and hardware system development.",
         },
         {
           type: "heading",

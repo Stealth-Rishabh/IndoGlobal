@@ -28,14 +28,17 @@ export const navlinks = [
                 path: "/courses/btech-mechanical-engineering",
               },
               {
-                name: "Computer Science Engineering", 
+                name: "Computer Science Engineering",
                 path: "/courses/btech-computer-science-engineering",
               },
               {
                 name: "Electronics and Communication Engineering",
                 path: "/courses/btech-electronics-communication-engineering",
               },
-              { name: "Civil Engineering", path: "/courses/btech-civil-engineering" },
+              {
+                name: "Civil Engineering",
+                path: "/courses/btech-civil-engineering",
+              },
             ],
           },
           {
@@ -56,7 +59,10 @@ export const navlinks = [
           {
             name: "Engineering (M.Tech)",
             courses: [
-              { name: "Civil Engineering", path: "/courses/mtech-civil-engineering" },
+              {
+                name: "Civil Engineering",
+                path: "/courses/mtech-civil-engineering",
+              },
               {
                 name: "Computer Science Engineering",
                 path: "/courses/mtech-computer-science-engineering",
@@ -74,7 +80,7 @@ export const navlinks = [
                 name: "Bachelor of Computer Application (BCA)",
                 path: "/courses/bachelor-of-computer-applications",
               },
-              
+
               {
                 name: "Bachelor of Business Administration (BBA)",
                 path: "/courses/bachelor-of-business-administration",
@@ -98,7 +104,10 @@ export const navlinks = [
                 name: "Mechanical Engineering",
                 path: "/courses/polytechnic-mechanical-engineering",
               },
-              { name: "Civil Engineering", path: "/courses/polytechnic-civil-engineering" },
+              {
+                name: "Civil Engineering",
+                path: "/courses/polytechnic-civil-engineering",
+              },
             ],
           },
           {
@@ -115,6 +124,18 @@ export const navlinks = [
               {
                 name: "B.Sc. Operation Theatre Technology",
                 path: "/courses/bsc-in-operation-theatre",
+              },
+              {
+                name: "B.Sc Cardiac Care Technology",
+                path: "/courses/bsc-in-cardiac-care-technology",
+              },
+              {
+                name: "M.Sc Radiology & Imaging Technology",
+                path: "/courses/msc-in-radiology-imaging-technology",
+              },
+              {
+                name: "M.Sc Medical Laboratory Sciences (Biochemistry)",
+                path: "/courses/msc-in-medical-laboratory-sciences-biochemistry",
               },
             ],
           },
