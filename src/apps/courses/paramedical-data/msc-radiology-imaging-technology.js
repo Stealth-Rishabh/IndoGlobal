@@ -8,7 +8,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import React from "react";
-import img from "../../../assets/courses/bsc-radio.webp";
+import img from "../../../assets/courses/msc-rit.webp";
 
 export const MSC_RADIOLOGY_IMAGING_TECHNOLOGY = {
   path: "msc-in-radiology-imaging-technology",

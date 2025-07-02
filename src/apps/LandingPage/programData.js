@@ -39,7 +39,15 @@ export const programData = [
           duration: "3 years",
           eligibility: "10+2 with PCB, minimum 50% aggregate",
           path : '/courses/bsc-in-medical-laboratory-science'
+        },
+        {
+          name: "B.Pharmacy",
+          description: "This program trains students in the field of pharmacy, preparing them for careers in the pharmaceutical industry.",
+          duration: "4 years",
+          eligibility: "10+2 with PCB, minimum 50% aggregate",
+          path : '/courses/b-pharmacy'
         }
+
       ],
       defaultCard: {
         title: "Undergraduate Programs",
@@ -79,6 +87,13 @@ export const programData = [
         //   eligibility: "Bachelor's degree in relevant discipline, minimum 55% aggregate",
         //   path : '/courses/m.sc.-(data-science)'
         // }
+        {
+          name: "M.Sc in Paramedical",
+          description: "This program trains students in the field of paramedical, preparing them for careers in the pharmaceutical industry.",
+          duration: "2 years",
+          eligibility: "B.Sc in Paramedical, minimum 50% aggregate",
+          path : '/courses/msc-in-radiology-imaging-technology'
+        }
       ],
       defaultCard: {
         title: "Postgraduate Programs",

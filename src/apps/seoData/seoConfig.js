@@ -168,6 +168,24 @@ export const seoConfig = {
           "Enroll in B.Sc. in Operation Theatre at IGEF, one of the best engineering colleges in Chandigarh. Pursue your dreams with top courses in healthcare.",
         h1: "B.Sc. in Operation Theatre - Best Course at IGEF College Chandigarh",
       },
+      "bsc-in-cardiac-care-technology": {
+        title: "B.Sc. in Cardiac Care Technology at IGEF - Top College in Chandigarh",
+        description:
+          "Enroll in B.Sc. in Cardiac Care Technology at IGEF, one of the best engineering colleges in Chandigarh. Pursue your dreams with top courses in healthcare.",
+        h1: "B.Sc. in Cardiac Care Technology - Best Course at IGEF College Chandigarh",
+      },
+      "msc-in-radiology-imaging-technology": {
+        title: "M.Sc. in Radiology & Imaging Technology at IGEF - Top College in Chandigarh",
+        description:
+          "Enroll in M.Sc. in Radiology & Imaging Technology at IGEF, one of the best engineering colleges in Chandigarh. Pursue your dreams with top courses in healthcare.",
+        h1: "M.Sc. in Radiology & Imaging Technology - Best Course at IGEF College Chandigarh",
+      },
+      "msc-in-medical-laboratory-sciences-biochemistry": {
+        title: "M.Sc. in Medical Laboratory Sciences (Biochemistry) at IGEF - Top College in Chandigarh",
+        description:
+          "Enroll in M.Sc. in Medical Laboratory Sciences (Biochemistry) at IGEF, one of the best engineering colleges in Chandigarh. Pursue your dreams with top courses in healthcare.",
+        h1: "M.Sc. in Medical Laboratory Sciences (Biochemistry) - Best Course at IGEF College Chandigarh",
+      },
       "b-pharmacy": {
         title: "B.Pharmacy Course | Top Pharmacy College in Chandigarh",
         description:

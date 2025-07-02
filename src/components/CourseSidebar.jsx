@@ -100,6 +100,18 @@ export default function CourseSidebar() {
           href: "/courses/bsc-in-operation-theatre",
           label: "B.Sc Operation Theatre Technology",
         },
+        {
+          href: "/courses/bsc-in-cardiac-care-technology",
+          label: "B.Sc Cardiac Care Technology",
+        },
+        {
+          href: "/courses/msc-in-radiology-imaging-technology",
+          label: "M.Sc Radiology & Imaging Technology",
+        },
+        {
+          href: "/courses/msc-in-medical-laboratory-sciences-biochemistry",
+          label: "M.Sc Medical Laboratory Sciences (Biochemistry)",
+        },
       ],
     },
     {

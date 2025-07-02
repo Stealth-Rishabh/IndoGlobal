@@ -19,6 +19,7 @@ import { MSC_RADIOLOGY_IMAGING_TECHNOLOGY } from "./paramedical-data/msc-radiolo
 import { MSC_MEDICAL_LABORATORY_SCIENCES_BIOCHEMISTRY } from "./paramedical-data/msc-medical-laboratory-sciences-biochemistry";
 import { B_PHARMACY } from "./pharmacy-data/b-pharmacy";
 
+
 export const COURSE_DETAILS = [
   ARCHITECTURE_DATA,
   BTECH_DATA,

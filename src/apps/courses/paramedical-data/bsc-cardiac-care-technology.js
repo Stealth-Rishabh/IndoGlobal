@@ -8,7 +8,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import React from "react";
-import img from "../../../assets/courses/bsc-medical.webp";
+import img from "../../../assets/courses/bsc-cct.webp";
 
 export const BSC_CARDIAC_CARE_TECHNOLOGY = {
   path: "bsc-in-cardiac-care-technology",
