@@ -38,6 +38,7 @@ export default function Footer() {
         { name: "Contact Us", path: "/contact-us" },
         { name: "Download Brochure", path: "/brochures/IGC Main Brochure.pdf", isDownload: true, isBadge: badge },
       ],
+      
     },
     {
       label: "About Us",
