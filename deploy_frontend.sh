@@ -11,11 +11,11 @@ git pull origin main
 
 # Install dependencies
 echo "Installing dependencies..."
-npm install
+pnpm install
 
 # Build the project
 echo "Building project..."
-npm run build
+pnpm run build
 
 # Copy build output to LIVE SITE ROOT
 echo "Copying build output to live site..."
