@@ -10,9 +10,7 @@ export default function PrivacyPolicy({ h1 = "Privacy Policy" }) {
             {h1}
           </h1>
           <p className="text-gray-600 text-center text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-            This Privacy Policy explains how Indo Global Education Foundation
-            (&quot;IGEF&quot;, &quot;we&quot;, &quot;us&quot;) collects, uses, and protects your personal
-            information when you use our website and services.
+            This Privacy Policy explains how Indo Global Education Foundation (IGEF) collects, uses, and protects your personal information when you use our website and services.
           </p>
         </div>
 
