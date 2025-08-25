@@ -12,20 +12,23 @@ import {
   ExternalLink,
   // Download,
 } from "lucide-react";
-import {Badge} from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { Download } from "lucide-react";
 
 import MandatoryDisclosure from "../../assets/pdfs/Mandatory-Discl-IGCE.pdf";
 import GrievanceRedressal from "../../assets/pdfs/Grievance Committee_IGEF.pdf";
 
 export default function Footer() {
-
   const [badge, setBadge] = useState(false);
   const footerSections = [
     {
       label: "Quick Links",
       items: [
-        { name: "Fee Payment", path: "https://pay.webfront.in/#/merchantinfo/indo-global-education-foundation/7651", isLink: true },
+        {
+          name: "Fee Payment",
+          path: "https://pay.webfront.in/#/merchantinfo/indo-global-education-foundation/7651",
+          isLink: true,
+        },
         { name: "Admissions", path: "/admissions" },
         { name: "Courses", path: "/courses" },
         { name: "Events & Spotights", path: "/spotlights" },
@@ -36,9 +39,13 @@ export default function Footer() {
         { name: "Placements", path: "/placements/campus-recruitments" },
         { name: "Blogs", path: "/blogs" },
         { name: "Contact Us", path: "/contact-us" },
-        { name: "Download Brochure", path: "/brochures/IGC Main Brochure.pdf", isDownload: true, isBadge: badge },
+        {
+          name: "Download Brochure",
+          path: "/brochures/IGC Main Brochure.pdf",
+          isDownload: true,
+          isBadge: badge,
+        },
       ],
-      
     },
     {
       label: "About Us",
@@ -80,6 +87,8 @@ export default function Footer() {
         { name: "Jobs @Indo Global", path: "/careers" },
         { name: "View Virtual Tour", path: "/" },
         { name: "Contact Directory", path: "/contact-us" },
+        { name: "Privacy Policy", path: "/privacy-policy" },
+        { name: "Terms & Conditions", path: "/terms-and-conditions" },
       ],
     },
   ];
@@ -142,7 +151,11 @@ export default function Footer() {
               Campus Address{" "}
             </h3>
             <p className="text-sm">INDO GLOBAL EDUCATION CITY</p>
-            <a href="https://maps.app.goo.gl/NL7WpXRs7wDYNTEu5" target="_blank" className="text-sm">
+            <a
+              href="https://maps.app.goo.gl/NL7WpXRs7wDYNTEu5"
+              target="_blank"
+              className="text-sm"
+            >
               ABHIPUR-New Chandigarh-140109, District Mohali (Punjab)
             </a>
             <a href="tel:0160-5036000" className="flex items-center text-sm">
@@ -155,7 +168,10 @@ export default function Footer() {
             >
               <Globe size={18} className="mr-2" /> www.igef.net
             </a>
-            <a href="mailto:contact@igef.net" className="flex items-center text-sm">
+            <a
+              href="mailto:contact@igef.net"
+              className="flex items-center text-sm"
+            >
               <Mail size={18} className="mr-2" /> contact@igef.net
             </a>
           </div>
@@ -170,7 +186,12 @@ export default function Footer() {
                 {section.items.map((item) => (
                   <li key={item.name} className="text-sm">
                     {item.name === "Blogs" ? (
-                      <a href="/blog" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">
+                      <a
+                        href="/blog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-red-600 transition-colors"
+                      >
                         {item.name}
                       </a>
                     ) : item.isDownload || item.isLink ? (
@@ -180,13 +201,19 @@ export default function Footer() {
                       >
                         {item.name}
                         {item.isDownload && (
-                          <Download size={16} className="ml-2 group-hover:animate-bounce" />
+                          <Download
+                            size={16}
+                            className="ml-2 group-hover:animate-bounce"
+                          />
                         )}
                         {item.isLink && (
-                          <ExternalLink size={16} className="ml-2 group-hover:animate-bounce" />
+                          <ExternalLink
+                            size={16}
+                            className="ml-2 group-hover:animate-bounce"
+                          />
                         )}
 
-                          {item.isDownload && (
+                        {item.isDownload && (
                           <Badge className="absolute hidden sm:block -top-4 -right-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-red-600 text-[10px]">
                             PDF
                           </Badge>
@@ -210,7 +237,13 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="py-6 px-2 border-t border-gray-800 bg-primary-color text-center">
         <p className="text-white mb-2  text-sm sm:text-xl">
-          © Copyright - Indo Global Education Foundation All Rights <a href="https://www.thedesignvillage.org/" className="text-decoration-none text-inherit cursor-default">Reserved</a>
+          © Copyright - Indo Global Education Foundation All Rights{" "}
+          <a
+            href="https://www.thedesignvillage.org/"
+            className="text-decoration-none text-inherit cursor-default"
+          >
+            Reserved
+          </a>
         </p>
         <div className=" text-xs sm:text-base text-white">
           <p>

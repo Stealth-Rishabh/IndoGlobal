@@ -56,6 +56,8 @@ import AlumniSignup from "./apps/footer/AlumniSignup";
 import SEO from "./components/SEO";
 import CallUsButton from "./components/CallUsButton";
 import ChatBot from "./components/ChatBot";
+import TermsAndConditions from "./apps/legal/TermsAndConditions";
+import PrivacyPolicy from "./apps/legal/PrivacyPolicy";
 import {
   getSeoDataByPath,
   getCanonicalUrl,
@@ -520,6 +522,33 @@ function App() {
                 canonicalUrl={getCanonicalUrl("/contact-us")}
               />
               <Contact h1={seoConfig.contactUs.h1} />
+            </>
+          }
+        />
+
+        <Route
+          path="/terms-and-conditions"
+          element={
+            <>
+              <SEO
+                title={seoConfig.legal.terms.title}
+                description={seoConfig.legal.terms.description}
+                canonicalUrl={getCanonicalUrl("/terms-and-conditions")}
+              />
+              <TermsAndConditions h1={seoConfig.legal.terms.h1} />
+            </>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <>
+              <SEO
+                title={seoConfig.legal.privacy.title}
+                description={seoConfig.legal.privacy.description}
+                canonicalUrl={getCanonicalUrl("/privacy-policy")}
+              />
+              <PrivacyPolicy h1={seoConfig.legal.privacy.h1} />
             </>
           }
         />
